@@ -42,7 +42,8 @@
     "queue-manager",
     "checkpoint-planner",
     "tool-before-task",
-    "time-estimate-lab"
+    "time-estimate-lab",
+    "plandoreview"
   ],
   "banner": [
     "circuit-path",

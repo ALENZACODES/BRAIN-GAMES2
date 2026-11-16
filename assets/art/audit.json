@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 86,
+  "validated_images": 87,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -43,7 +43,6 @@
       "personal-experiment-lab",
       "perspective-finder",
       "perspective-switch",
-      "plandoreview",
       "probability-marbles",
       "ratio-kitchen",
       "relative-position",
@@ -378,6 +377,12 @@
     {
       "file": "time-estimate-lab.webp",
       "bytes": 149320,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "plandoreview.webp",
+      "bytes": 142096,
       "width": 1024,
       "height": 1536
     },
