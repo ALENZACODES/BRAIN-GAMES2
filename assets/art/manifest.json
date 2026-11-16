@@ -54,7 +54,8 @@
     "analogy-workshop",
     "proof-path",
     "delivery-planner",
-    "calendar-tetris"
+    "calendar-tetris",
+    "kitchen-conductor"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

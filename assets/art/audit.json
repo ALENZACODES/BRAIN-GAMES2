@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 53,
+  "validated_images": 54,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -110,7 +110,6 @@
       "ifthen-builder",
       "information-value",
       "instruction-builder",
-      "kitchen-conductor",
       "landmark-ordering",
       "limited-moves",
       "main-idea-finder",
@@ -471,6 +470,12 @@
     {
       "file": "calendar-tetris-banner.webp",
       "bytes": 152950,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "kitchen-conductor-banner.webp",
+      "bytes": 113852,
       "width": 1536,
       "height": 1024
     }
