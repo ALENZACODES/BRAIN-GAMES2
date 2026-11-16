@@ -228,5 +228,10 @@
     "id": "kitchen-conductor",
     "kind": "banner",
     "blob_sha": "78c954755d740702b7c60b62a02a4ece644b4e87"
+  },
+  {
+    "id": "limited-moves",
+    "kind": "poster",
+    "blob_sha": "7791acf46e69387453d2607db9f564f362dcf6d1"
   }
 ]
