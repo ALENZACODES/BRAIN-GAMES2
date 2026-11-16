@@ -55,7 +55,8 @@
     "relative-position",
     "shadow-match",
     "route-reconstruction",
-    "symmetry-workshop"
+    "symmetry-workshop",
+    "packing-rotation"
   ],
   "banner": [
     "circuit-path",
