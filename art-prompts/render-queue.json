@@ -723,5 +723,10 @@
     "id": "data-detective",
     "kind": "poster",
     "blob_sha": "d223811b8b33b2b3031ec1c7370ad337a47ac1b1"
+  },
+  {
+    "id": "data-detective",
+    "kind": "banner",
+    "blob_sha": "f3c4c27786f2e63228a5f2560b1cbdd98bbb688a"
   }
 ]
