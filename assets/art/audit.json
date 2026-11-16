@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 75,
+  "validated_images": 76,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -114,7 +114,6 @@
       "queue-manager",
       "ratio-kitchen",
       "relative-position",
-      "replanning-storm",
       "route-reconstruction",
       "sample-size-studio",
       "scale-mapper",
@@ -581,6 +580,12 @@
     {
       "file": "goal-decomposer-banner.webp",
       "bytes": 134768,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "replanning-storm-banner.webp",
+      "bytes": 151532,
       "width": 1536,
       "height": 1024
     }
