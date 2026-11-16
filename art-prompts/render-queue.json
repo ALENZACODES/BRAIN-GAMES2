@@ -493,5 +493,10 @@
     "id": "shadow-match",
     "kind": "poster",
     "blob_sha": "02404d71ff22420fb8e51933791f85ee4d1f3aeb"
+  },
+  {
+    "id": "shadow-match",
+    "kind": "banner",
+    "blob_sha": "a5bb6031dcf4d8b871a8f74b02a2e43f446dcac3"
   }
 ]
