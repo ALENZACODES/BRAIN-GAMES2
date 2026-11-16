@@ -448,5 +448,10 @@
     "id": "hidden-blocks",
     "kind": "banner",
     "blob_sha": "b1241ea99c24fd82c1afb04aee5427b489fb689f"
+  },
+  {
+    "id": "map-rotation",
+    "kind": "poster",
+    "blob_sha": "84b3dd4857d80688ce2259028e58bfea35708dfb"
   }
 ]
