@@ -333,5 +333,10 @@
     "id": "replanning-storm",
     "kind": "poster",
     "blob_sha": "c235719e65ed4badf7344bf29c9939624789e6fb"
+  },
+  {
+    "id": "replanning-storm",
+    "kind": "banner",
+    "blob_sha": "126b7428b2e864ecea55ffef92b3f8ba73bd7bfd"
   }
 ]
