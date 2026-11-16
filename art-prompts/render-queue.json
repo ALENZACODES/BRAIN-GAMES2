@@ -348,5 +348,10 @@
     "id": "budget-builder",
     "kind": "banner",
     "blob_sha": "15b36c5e1194194d55c635d28c7fe6cb1de2332b"
+  },
+  {
+    "id": "queue-manager",
+    "kind": "poster",
+    "blob_sha": "41daeeb6ac7172aea1513bf4a31c9bbd7931c679"
   }
 ]
