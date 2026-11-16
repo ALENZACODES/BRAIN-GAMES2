@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 159,
+  "validated_images": 160,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -39,7 +39,6 @@
       "framing-mirror",
       "ifthen-builder",
       "information-value",
-      "patterned-arithmetic",
       "personal-experiment-lab",
       "perspective-switch",
       "sample-size-studio",
@@ -700,7 +699,7 @@
     },
     {
       "file": "priority-desk-banner.webp",
-      "bytes": 129600,
+      "bytes": 127928,
       "width": 1536,
       "height": 1024
     },
@@ -1001,6 +1000,12 @@
     {
       "file": "unit-switch-banner.webp",
       "bytes": 94936,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "patterned-arithmetic-banner.webp",
+      "bytes": 82482,
       "width": 1536,
       "height": 1024
     }

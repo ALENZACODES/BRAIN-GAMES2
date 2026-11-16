@@ -160,7 +160,8 @@
     "ratio-kitchen",
     "data-detective",
     "probability-marbles",
-    "unit-switch"
+    "unit-switch",
+    "patterned-arithmetic"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
