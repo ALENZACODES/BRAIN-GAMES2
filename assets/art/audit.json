@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 169,
+  "validated_images": 170,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -23,7 +23,6 @@
     "banner": [
       "alternative-explanation",
       "breakpoint-planner",
-      "confirmation-trap",
       "decision-journal",
       "distraction-budget",
       "error-detective",
@@ -1051,6 +1050,12 @@
     {
       "file": "sample-size-studio-banner.webp",
       "bytes": 84188,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "confirmation-trap-banner.webp",
+      "bytes": 86972,
       "width": 1536,
       "height": 1024
     }
