@@ -193,5 +193,10 @@
     "id": "proof-path",
     "kind": "poster",
     "blob_sha": "69359d593186c0ec62a387f0b0925f5b417e1da3"
+  },
+  {
+    "id": "proof-path",
+    "kind": "banner",
+    "blob_sha": "ccaf86b5ed1743b7869b0a40e6ac11c9f1509493"
   }
 ]
