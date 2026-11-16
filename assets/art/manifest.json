@@ -94,7 +94,8 @@
     "distraction-budget",
     "error-detective",
     "strategy-selector",
-    "breakpoint-planner"
+    "breakpoint-planner",
+    "alternative-explanation"
   ],
   "banner": [
     "circuit-path",

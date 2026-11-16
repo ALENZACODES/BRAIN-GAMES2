@@ -1,10 +1,9 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 190,
+  "validated_images": 191,
   "missing": {
     "poster": [
-      "alternative-explanation",
       "decision-journal",
       "personal-experiment-lab",
       "perspective-switch",
@@ -586,6 +585,12 @@
     {
       "file": "breakpoint-planner.webp",
       "bytes": 108868,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "alternative-explanation.webp",
+      "bytes": 115502,
       "width": 1024,
       "height": 1536
     },
