@@ -43,7 +43,8 @@
     "checkpoint-planner",
     "tool-before-task",
     "time-estimate-lab",
-    "plandoreview"
+    "plandoreview",
+    "folded-paper"
   ],
   "banner": [
     "circuit-path",

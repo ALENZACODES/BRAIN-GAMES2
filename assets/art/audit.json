@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 88,
+  "validated_images": 89,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -23,7 +23,6 @@
       "estimate-first",
       "evidence-match",
       "evidence-updater",
-      "folded-paper",
       "forecast-tournament",
       "framing-mirror",
       "hidden-blocks",
@@ -382,6 +381,12 @@
     {
       "file": "plandoreview.webp",
       "bytes": 142096,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "folded-paper.webp",
+      "bytes": 85466,
       "width": 1024,
       "height": 1536
     },
