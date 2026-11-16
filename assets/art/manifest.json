@@ -58,7 +58,8 @@
     "delivery-planner",
     "calendar-tetris",
     "kitchen-conductor",
-    "limited-moves"
+    "limited-moves",
+    "priority-desk"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
