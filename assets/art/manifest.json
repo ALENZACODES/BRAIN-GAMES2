@@ -97,7 +97,8 @@
     "breakpoint-planner",
     "alternative-explanation",
     "perspective-switch",
-    "decision-journal"
+    "decision-journal",
+    "transfer-mission"
   ],
   "banner": [
     "circuit-path",
