@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 99,
+  "validated_images": 100,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -81,7 +81,6 @@
       "instruction-builder",
       "landmark-ordering",
       "main-idea-finder",
-      "map-rotation",
       "meaning-in-context",
       "mental-checkout",
       "occlusion-detective",
@@ -701,6 +700,12 @@
     {
       "file": "hidden-blocks-banner.webp",
       "bytes": 63412,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "map-rotation-banner.webp",
+      "bytes": 123456,
       "width": 1536,
       "height": 1024
     }
