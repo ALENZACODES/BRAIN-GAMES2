@@ -59,7 +59,8 @@
     "packing-rotation",
     "scale-mapper",
     "landmark-ordering",
-    "tile-navigation"
+    "tile-navigation",
+    "occlusion-detective"
   ],
   "banner": [
     "circuit-path",

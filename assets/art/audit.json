@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 120,
+  "validated_images": 121,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -29,7 +29,6 @@
       "main-idea-finder",
       "meaning-in-context",
       "mental-checkout",
-      "occlusion-detective",
       "patterned-arithmetic",
       "percentage-transformer",
       "personal-experiment-lab",
@@ -446,6 +445,12 @@
     {
       "file": "tile-navigation.webp",
       "bytes": 109238,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "occlusion-detective.webp",
+      "bytes": 92456,
       "width": 1024,
       "height": 1536
     },
