@@ -703,5 +703,10 @@
     "id": "mental-checkout",
     "kind": "poster",
     "blob_sha": "c93f8f23acf288d38bc4b7ef9a9a76d1507abbe5"
+  },
+  {
+    "id": "mental-checkout",
+    "kind": "banner",
+    "blob_sha": "8392b175516c43c332719d92e77f64b06a3192ef"
   }
 ]
