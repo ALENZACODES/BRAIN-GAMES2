@@ -623,5 +623,10 @@
     "id": "concise-messenger",
     "kind": "poster",
     "blob_sha": "72ea4185ed765b4df20da17edf2e9fec08730976"
+  },
+  {
+    "id": "concise-messenger",
+    "kind": "banner",
+    "blob_sha": "623725be2097d80e7ea0de79a037f5c438058a7c"
   }
 ]
