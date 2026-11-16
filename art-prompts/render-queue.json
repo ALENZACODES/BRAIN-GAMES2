@@ -754,5 +754,10 @@
     "id": "patterned-arithmetic",
     "kind": "poster",
     "blob_sha": "9749e28a0b4990c2e22b76846738337ae2d9bbac"
+  },
+  {
+    "id": "patterned-arithmetic",
+    "kind": "banner",
+    "blob_sha": "a80aba622162f58ba95d4e1ac5ccefdb3b8ac862"
   }
 ]
