@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 58,
+  "validated_images": 59,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -73,7 +73,6 @@
       "transfer-mission",
       "travel-buffer",
       "unit-switch",
-      "warehouse-stack",
       "word-ladder"
     ],
     "banner": [
@@ -322,6 +321,12 @@
     {
       "file": "priority-desk.webp",
       "bytes": 119398,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "warehouse-stack.webp",
+      "bytes": 136058,
       "width": 1024,
       "height": 1536
     },
