@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 56,
+  "validated_images": 57,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -51,7 +51,6 @@
       "perspective-finder",
       "perspective-switch",
       "plandoreview",
-      "priority-desk",
       "probability-marbles",
       "queue-manager",
       "ratio-kitchen",
@@ -318,6 +317,12 @@
     {
       "file": "limited-moves.webp",
       "bytes": 141240,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "priority-desk.webp",
+      "bytes": 119398,
       "width": 1024,
       "height": 1536
     },
