@@ -628,5 +628,10 @@
     "id": "concise-messenger",
     "kind": "banner",
     "blob_sha": "623725be2097d80e7ea0de79a037f5c438058a7c"
+  },
+  {
+    "id": "ambiguity-detective",
+    "kind": "poster",
+    "blob_sha": "7ce4381999669828937d45623461429638ff256d"
   }
 ]
