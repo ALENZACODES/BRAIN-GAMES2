@@ -828,5 +828,10 @@
     "id": "framing-mirror",
     "kind": "poster",
     "blob_sha": "f0a2810d976b1dcec6ea7fd8fd5aed055531e483"
+  },
+  {
+    "id": "framing-mirror",
+    "kind": "banner",
+    "blob_sha": "e0b375f13eca7ed75bcb9b03fc02a20b621f3091"
   }
 ]
