@@ -98,5 +98,10 @@
     "id": "minimal-clue",
     "kind": "banner",
     "blob_sha": "86bd5fcc6eafc8c5c3ebe6634b387f32138bc6f8"
+  },
+  {
+    "id": "counterexample-hunt",
+    "kind": "poster",
+    "blob_sha": "a5f9eddb9e975ddac8484d687843e1e5b26f41e8"
   }
 ]
