@@ -30,7 +30,8 @@
     "truthful-robots",
     "constraint-garden",
     "cause-and-effect-machine",
-    "minimal-clue"
+    "minimal-clue",
+    "counterexample-hunt"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
