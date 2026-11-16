@@ -83,7 +83,8 @@
     "confidence-compass",
     "evidence-updater",
     "base-rate-detective",
-    "sample-size-studio"
+    "sample-size-studio",
+    "confirmation-trap"
   ],
   "banner": [
     "circuit-path",
