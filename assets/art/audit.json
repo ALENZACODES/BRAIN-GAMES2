@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 165,
+  "validated_images": 167,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -16,7 +16,6 @@
       "information-value",
       "personal-experiment-lab",
       "perspective-switch",
-      "sample-size-studio",
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
@@ -24,7 +23,6 @@
     ],
     "banner": [
       "alternative-explanation",
-      "base-rate-detective",
       "breakpoint-planner",
       "confirmation-trap",
       "decision-journal",
@@ -543,6 +541,12 @@
       "height": 1536
     },
     {
+      "file": "sample-size-studio.webp",
+      "bytes": 69776,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -1031,6 +1035,12 @@
     {
       "file": "evidence-updater-banner.webp",
       "bytes": 103444,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "base-rate-detective-banner.webp",
+      "bytes": 98380,
       "width": 1536,
       "height": 1024
     }

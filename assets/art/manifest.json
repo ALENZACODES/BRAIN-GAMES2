@@ -82,7 +82,8 @@
     "patterned-arithmetic",
     "confidence-compass",
     "evidence-updater",
-    "base-rate-detective"
+    "base-rate-detective",
+    "sample-size-studio"
   ],
   "banner": [
     "circuit-path",
@@ -166,7 +167,8 @@
     "unit-switch",
     "patterned-arithmetic",
     "confidence-compass",
-    "evidence-updater"
+    "evidence-updater",
+    "base-rate-detective"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
