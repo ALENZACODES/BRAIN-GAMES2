@@ -688,5 +688,10 @@
     "id": "estimate-first",
     "kind": "banner",
     "blob_sha": "88973264ff7bfeaaf9f4c4b43f81b32ee06f66c9"
+  },
+  {
+    "id": "percentage-transformer",
+    "kind": "poster",
+    "blob_sha": "4fb271e647c2a67a5dab52317c5699afa15db958"
   }
 ]
