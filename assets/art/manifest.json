@@ -39,7 +39,8 @@
     "goal-decomposer",
     "replanning-storm",
     "budget-builder",
-    "queue-manager"
+    "queue-manager",
+    "checkpoint-planner"
   ],
   "banner": [
     "circuit-path",
