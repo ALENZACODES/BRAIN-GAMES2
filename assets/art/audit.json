@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 173,
+  "validated_images": 174,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -25,7 +25,6 @@
       "distraction-budget",
       "error-detective",
       "forecast-tournament",
-      "framing-mirror",
       "ifthen-builder",
       "information-value",
       "personal-experiment-lab",
@@ -1071,6 +1070,12 @@
     {
       "file": "sunk-cost-expedition-banner.webp",
       "bytes": 99774,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "framing-mirror-banner.webp",
+      "bytes": 111656,
       "width": 1536,
       "height": 1024
     }
