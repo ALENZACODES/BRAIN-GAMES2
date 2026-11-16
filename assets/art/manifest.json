@@ -20,7 +20,8 @@
     "hidden-transformation",
     "necessary-or-sufficient",
     "puzzle-repair",
-    "set-builder"
+    "set-builder",
+    "invariant-hunt"
   ],
   "banner": [
     "circuit-path",
