@@ -379,7 +379,8 @@
   {
     "id": "tool-before-task",
     "kind": "banner",
-    "blob_sha": "8ede602d7985c57166679c6f758904d3bafb6fe8"
+    "blob_sha": "526a7030ef58afaf028cca6c8e549291351e84a0",
+    "replace": true
   },
   {
     "id": "time-estimate-lab",
