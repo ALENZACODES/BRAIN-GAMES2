@@ -12,7 +12,8 @@
     "sequence-laboratory",
     "truthful-robots",
     "constraint-garden",
-    "cause-and-effect-machine"
+    "cause-and-effect-machine",
+    "minimal-clue"
   ],
   "banner": [
     "circuit-path",
