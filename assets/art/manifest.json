@@ -81,7 +81,8 @@
     "unit-switch",
     "patterned-arithmetic",
     "confidence-compass",
-    "evidence-updater"
+    "evidence-updater",
+    "base-rate-detective"
   ],
   "banner": [
     "circuit-path",

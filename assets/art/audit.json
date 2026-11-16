@@ -1,11 +1,10 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 164,
+  "validated_images": 165,
   "missing": {
     "poster": [
       "alternative-explanation",
-      "base-rate-detective",
       "breakpoint-planner",
       "confirmation-trap",
       "decision-journal",
@@ -538,6 +537,12 @@
       "height": 1536
     },
     {
+      "file": "base-rate-detective.webp",
+      "bytes": 89466,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -923,7 +928,7 @@
     },
     {
       "file": "meaning-in-context-banner.webp",
-      "bytes": 91330,
+      "bytes": 145110,
       "width": 1536,
       "height": 1024
     },
