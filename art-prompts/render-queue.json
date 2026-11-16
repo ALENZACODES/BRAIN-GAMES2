@@ -458,5 +458,10 @@
     "id": "map-rotation",
     "kind": "banner",
     "blob_sha": "ee1cfca7714c6566e8608702ec01aa169d47b003"
+  },
+  {
+    "id": "path-integration",
+    "kind": "poster",
+    "blob_sha": "c8aaa58f9378171c6a8ec815c0375f40019ac56d"
   }
 ]
