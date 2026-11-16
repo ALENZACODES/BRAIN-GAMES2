@@ -523,5 +523,10 @@
     "id": "packing-rotation",
     "kind": "poster",
     "blob_sha": "b43e734e068d7736762a1186c3794d409597b4f4"
+  },
+  {
+    "id": "packing-rotation",
+    "kind": "banner",
+    "blob_sha": "dde57d9041cacd507c2cf55d77c97fc7919d3d79"
   }
 ]
