@@ -847,7 +847,8 @@
   {
     "id": "information-value",
     "kind": "poster",
-    "blob_sha": "357da9fed727fd7706f7e0ece02acac8960b4c11"
+    "blob_sha": "ba27f9b5f40b8e43e700110595aff2285aabc4fc",
+    "replace": true
   },
   {
     "id": "information-value",
