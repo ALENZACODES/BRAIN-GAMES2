@@ -16,7 +16,8 @@
     "minimal-clue",
     "counterexample-hunt",
     "bridge-limits",
-    "tile-equation"
+    "tile-equation",
+    "hidden-transformation"
   ],
   "banner": [
     "circuit-path",
