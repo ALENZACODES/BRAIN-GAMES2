@@ -150,7 +150,8 @@
     "main-idea-finder",
     "evidence-match",
     "estimate-first",
-    "percentage-transformer"
+    "percentage-transformer",
+    "mental-checkout"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
