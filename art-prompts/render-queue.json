@@ -113,5 +113,10 @@
     "id": "bridge-limits",
     "kind": "poster",
     "blob_sha": "25cf93a53cec07074734a92ea195e434f81ffbfd"
+  },
+  {
+    "id": "bridge-limits",
+    "kind": "banner",
+    "blob_sha": "5aea76591daaf206302d95ec2f86956e19e23e11"
   }
 ]
