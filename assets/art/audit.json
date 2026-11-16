@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 92,
+  "validated_images": 93,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -39,7 +39,6 @@
       "patterned-arithmetic",
       "percentage-transformer",
       "personal-experiment-lab",
-      "perspective-finder",
       "perspective-switch",
       "probability-marbles",
       "ratio-kitchen",
@@ -390,6 +389,12 @@
     {
       "file": "cube-net.webp",
       "bytes": 91300,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "perspective-finder.webp",
+      "bytes": 80034,
       "width": 1024,
       "height": 1536
     },
