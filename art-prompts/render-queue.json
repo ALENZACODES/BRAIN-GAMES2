@@ -813,5 +813,10 @@
     "id": "confirmation-trap",
     "kind": "banner",
     "blob_sha": "1ed82502976263f1103b740b0c606c998be4d41d"
+  },
+  {
+    "id": "sunk-cost-expedition",
+    "kind": "poster",
+    "blob_sha": "c67e22fdb30c9f2adc51775284ce6056626b0b43"
   }
 ]
