@@ -93,5 +93,10 @@
     "id": "minimal-clue",
     "kind": "poster",
     "blob_sha": "cdfb277a9f4ae082f491096e89509d954406765a"
+  },
+  {
+    "id": "minimal-clue",
+    "kind": "banner",
+    "blob_sha": "86bd5fcc6eafc8c5c3ebe6634b387f32138bc6f8"
   }
 ]
