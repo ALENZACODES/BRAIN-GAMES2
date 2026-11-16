@@ -133,5 +133,10 @@
     "id": "hidden-transformation",
     "kind": "poster",
     "blob_sha": "c8fd45d4e6241201a4007eaf14c64181ea3eb59a"
+  },
+  {
+    "id": "hidden-transformation",
+    "kind": "banner",
+    "blob_sha": "9568f3267e81df394721d618a37750a69c4cbb27"
   }
 ]
