@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 119,
+  "validated_images": 120,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -83,7 +83,6 @@
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
-      "tile-navigation",
       "transfer-mission",
       "unit-switch",
       "word-ladder"
@@ -801,6 +800,12 @@
     {
       "file": "landmark-ordering-banner.webp",
       "bytes": 106430,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "tile-navigation-banner.webp",
+      "bytes": 109878,
       "width": 1536,
       "height": 1024
     }
