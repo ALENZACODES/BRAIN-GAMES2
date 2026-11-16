@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 158,
+  "validated_images": 159,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -17,7 +17,6 @@
       "framing-mirror",
       "ifthen-builder",
       "information-value",
-      "patterned-arithmetic",
       "personal-experiment-lab",
       "perspective-switch",
       "sample-size-studio",
@@ -522,6 +521,12 @@
     {
       "file": "unit-switch.webp",
       "bytes": 86330,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "patterned-arithmetic.webp",
+      "bytes": 81516,
       "width": 1024,
       "height": 1536
     },
