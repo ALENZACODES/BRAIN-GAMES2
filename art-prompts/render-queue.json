@@ -783,5 +783,10 @@
     "id": "evidence-updater",
     "kind": "banner",
     "blob_sha": "f185ddbf4357c74351f5b6e948a84c8f35905480"
+  },
+  {
+    "id": "base-rate-detective",
+    "kind": "poster",
+    "blob_sha": "b5f25a16e1de5b3f6fe9a43b3faf6f1d41d32c14"
   }
 ]
