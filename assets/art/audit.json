@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 47,
+  "validated_images": 48,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -135,7 +135,6 @@
       "plandoreview",
       "priority-desk",
       "probability-marbles",
-      "proof-path",
       "queue-manager",
       "ratio-kitchen",
       "relative-position",
@@ -441,6 +440,12 @@
     {
       "file": "analogy-workshop-banner.webp",
       "bytes": 105500,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "proof-path-banner.webp",
+      "bytes": 111828,
       "width": 1536,
       "height": 1024
     }

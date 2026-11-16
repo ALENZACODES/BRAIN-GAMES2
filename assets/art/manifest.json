@@ -48,7 +48,8 @@
     "puzzle-repair",
     "set-builder",
     "invariant-hunt",
-    "analogy-workshop"
+    "analogy-workshop",
+    "proof-path"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
