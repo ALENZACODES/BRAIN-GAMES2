@@ -843,5 +843,10 @@
     "id": "forecast-tournament",
     "kind": "banner",
     "blob_sha": "01d7ca76dcc34105e676fc1fb4197dd783b4a436"
+  },
+  {
+    "id": "information-value",
+    "kind": "poster",
+    "blob_sha": "357da9fed727fd7706f7e0ece02acac8960b4c11"
   }
 ]
