@@ -934,5 +934,10 @@
     "id": "perspective-switch",
     "kind": "banner",
     "blob_sha": "8a23c1a132d4f158276bfc92a7066e7090a3bf75"
+  },
+  {
+    "id": "decision-journal",
+    "kind": "poster",
+    "blob_sha": "6953c65c42194cf96e8ae1847e3e56e5058b4028"
   }
 ]
