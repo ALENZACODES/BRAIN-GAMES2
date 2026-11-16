@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 43,
+  "validated_images": 44,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -118,7 +118,6 @@
       "ifthen-builder",
       "information-value",
       "instruction-builder",
-      "invariant-hunt",
       "kitchen-conductor",
       "landmark-ordering",
       "limited-moves",
@@ -421,6 +420,12 @@
     {
       "file": "set-builder-banner.webp",
       "bytes": 89884,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "invariant-hunt-banner.webp",
+      "bytes": 86864,
       "width": 1536,
       "height": 1024
     }

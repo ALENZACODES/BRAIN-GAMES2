@@ -44,7 +44,8 @@
     "hidden-transformation",
     "necessary-or-sufficient",
     "puzzle-repair",
-    "set-builder"
+    "set-builder",
+    "invariant-hunt"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
