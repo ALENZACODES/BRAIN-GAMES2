@@ -328,5 +328,10 @@
     "id": "goal-decomposer",
     "kind": "banner",
     "blob_sha": "443fa7069a10cf33a32603581ec9681f14ca00fb"
+  },
+  {
+    "id": "replanning-storm",
+    "kind": "poster",
+    "blob_sha": "c235719e65ed4badf7344bf29c9939624789e6fb"
   }
 ]
