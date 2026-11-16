@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 141,
+  "validated_images": 142,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -51,7 +51,6 @@
       "framing-mirror",
       "ifthen-builder",
       "information-value",
-      "main-idea-finder",
       "mental-checkout",
       "patterned-arithmetic",
       "percentage-transformer",
@@ -911,6 +910,12 @@
     {
       "file": "instruction-builder-banner.webp",
       "bytes": 97950,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "main-idea-finder-banner.webp",
+      "bytes": 98776,
       "width": 1536,
       "height": 1024
     }
