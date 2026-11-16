@@ -30,7 +30,8 @@
     "limited-moves",
     "priority-desk",
     "warehouse-stack",
-    "battery-expedition"
+    "battery-expedition",
+    "dependency-builder"
   ],
   "banner": [
     "circuit-path",

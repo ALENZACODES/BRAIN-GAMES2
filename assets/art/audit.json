@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 62,
+  "validated_images": 63,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -20,7 +20,6 @@
       "cube-net",
       "data-detective",
       "decision-journal",
-      "dependency-builder",
       "distraction-budget",
       "error-detective",
       "estimate-first",
@@ -330,6 +329,12 @@
     {
       "file": "battery-expedition.webp",
       "bytes": 141568,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "dependency-builder.webp",
+      "bytes": 144620,
       "width": 1024,
       "height": 1536
     },
