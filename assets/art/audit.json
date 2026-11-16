@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 189,
+  "validated_images": 190,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -12,7 +12,6 @@
     ],
     "banner": [
       "alternative-explanation",
-      "breakpoint-planner",
       "decision-journal",
       "personal-experiment-lab",
       "perspective-switch",
@@ -1151,6 +1150,12 @@
     {
       "file": "strategy-selector-banner.webp",
       "bytes": 106004,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "breakpoint-planner-banner.webp",
+      "bytes": 74106,
       "width": 1536,
       "height": 1024
     }

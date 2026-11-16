@@ -190,7 +190,8 @@
     "ifthen-builder",
     "distraction-budget",
     "error-detective",
-    "strategy-selector"
+    "strategy-selector",
+    "breakpoint-planner"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
