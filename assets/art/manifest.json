@@ -36,7 +36,8 @@
     "packing-constraints",
     "rescue-sequence",
     "maintenance-window",
-    "goal-decomposer"
+    "goal-decomposer",
+    "replanning-storm"
   ],
   "banner": [
     "circuit-path",
