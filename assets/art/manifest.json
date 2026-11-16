@@ -47,7 +47,8 @@
     "folded-paper",
     "cube-net",
     "perspective-finder",
-    "shape-assembly"
+    "shape-assembly",
+    "hidden-blocks"
   ],
   "banner": [
     "circuit-path",

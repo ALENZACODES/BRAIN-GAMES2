@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 96,
+  "validated_images": 97,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -24,7 +24,6 @@
       "evidence-updater",
       "forecast-tournament",
       "framing-mirror",
-      "hidden-blocks",
       "ifthen-builder",
       "information-value",
       "instruction-builder",
@@ -398,6 +397,12 @@
     {
       "file": "shape-assembly.webp",
       "bytes": 93230,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "hidden-blocks.webp",
+      "bytes": 84926,
       "width": 1024,
       "height": 1536
     },
