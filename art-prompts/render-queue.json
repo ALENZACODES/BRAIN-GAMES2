@@ -233,5 +233,10 @@
     "id": "limited-moves",
     "kind": "poster",
     "blob_sha": "7791acf46e69387453d2607db9f564f362dcf6d1"
+  },
+  {
+    "id": "limited-moves",
+    "kind": "banner",
+    "blob_sha": "b5a8fc4cc41138b610bd8b073e30359f80892c7d"
   }
 ]
