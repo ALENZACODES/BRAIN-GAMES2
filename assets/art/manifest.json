@@ -63,7 +63,8 @@
     "occlusion-detective",
     "construction-blueprint",
     "word-ladder",
-    "category-sprint"
+    "category-sprint",
+    "meaning-in-context"
   ],
   "banner": [
     "circuit-path",

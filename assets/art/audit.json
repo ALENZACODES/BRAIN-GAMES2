@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 128,
+  "validated_images": 129,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -25,7 +25,6 @@
       "information-value",
       "instruction-builder",
       "main-idea-finder",
-      "meaning-in-context",
       "mental-checkout",
       "patterned-arithmetic",
       "percentage-transformer",
@@ -462,6 +461,12 @@
     {
       "file": "category-sprint.webp",
       "bytes": 119186,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "meaning-in-context.webp",
+      "bytes": 85668,
       "width": 1024,
       "height": 1536
     },
