@@ -954,5 +954,10 @@
     "id": "transfer-mission",
     "kind": "banner",
     "blob_sha": "bbe494b6b2e1c2e0ae7c7dfb10592325a6992949"
+  },
+  {
+    "id": "personal-experiment-lab",
+    "kind": "poster",
+    "blob_sha": "17a3e08f60fb3607529ab3ad2cdc882c5451754a"
   }
 ]
