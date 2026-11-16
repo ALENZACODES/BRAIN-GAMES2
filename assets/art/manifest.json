@@ -64,7 +64,8 @@
     "construction-blueprint",
     "word-ladder",
     "category-sprint",
-    "meaning-in-context"
+    "meaning-in-context",
+    "sentence-repair"
   ],
   "banner": [
     "circuit-path",
