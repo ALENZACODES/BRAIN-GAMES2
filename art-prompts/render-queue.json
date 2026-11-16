@@ -148,5 +148,10 @@
     "id": "necessary-or-sufficient",
     "kind": "banner",
     "blob_sha": "be85c10b7f078876ba0a7c94f99afc655ac7f144"
+  },
+  {
+    "id": "puzzle-repair",
+    "kind": "poster",
+    "blob_sha": "ee4036b8f625eaf1a07031cc9be32ad707b4a62a"
   }
 ]
