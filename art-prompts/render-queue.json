@@ -823,5 +823,10 @@
     "id": "sunk-cost-expedition",
     "kind": "banner",
     "blob_sha": "b4994d7f2a3a729c6b9a63f072cd6a1c2999fe40"
+  },
+  {
+    "id": "framing-mirror",
+    "kind": "poster",
+    "blob_sha": "f0a2810d976b1dcec6ea7fd8fd5aed055531e483"
   }
 ]
