@@ -793,5 +793,10 @@
     "id": "base-rate-detective",
     "kind": "banner",
     "blob_sha": "ecf07e9e4b7c14c463b46b01954685b794d50c42"
+  },
+  {
+    "id": "sample-size-studio",
+    "kind": "poster",
+    "blob_sha": "35766b9be752a898d7cb17ff94d7b9574b687343"
   }
 ]
