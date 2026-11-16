@@ -46,7 +46,8 @@
     "necessary-or-sufficient",
     "puzzle-repair",
     "set-builder",
-    "invariant-hunt"
+    "invariant-hunt",
+    "analogy-workshop"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
