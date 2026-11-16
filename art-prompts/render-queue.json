@@ -418,5 +418,10 @@
     "id": "cube-net",
     "kind": "banner",
     "blob_sha": "acb5a66185d075686211c1e81ed5e1ea447f89da"
+  },
+  {
+    "id": "perspective-finder",
+    "kind": "poster",
+    "blob_sha": "cb9dcdb70f41e6c86e70c90cba17cb2b3e0ded65"
   }
 ]
