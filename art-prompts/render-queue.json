@@ -123,5 +123,10 @@
     "id": "tile-equation",
     "kind": "poster",
     "blob_sha": "34e0c21208a63c72dd98fa5db535f6a52eb294cd"
+  },
+  {
+    "id": "tile-equation",
+    "kind": "banner",
+    "blob_sha": "cff783bb13e2b0d2dea7c10f7554ca7f30e9428d"
   }
 ]
