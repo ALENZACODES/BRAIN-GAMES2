@@ -69,7 +69,8 @@
     "concise-messenger",
     "ambiguity-detective",
     "analogy-bridge",
-    "instruction-builder"
+    "instruction-builder",
+    "main-idea-finder"
   ],
   "banner": [
     "circuit-path",
