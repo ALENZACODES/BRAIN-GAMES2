@@ -38,7 +38,8 @@
     "maintenance-window",
     "goal-decomposer",
     "replanning-storm",
-    "budget-builder"
+    "budget-builder",
+    "queue-manager"
   ],
   "banner": [
     "circuit-path",

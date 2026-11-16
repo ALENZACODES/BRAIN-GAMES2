@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 78,
+  "validated_images": 79,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -46,7 +46,6 @@
       "perspective-switch",
       "plandoreview",
       "probability-marbles",
-      "queue-manager",
       "ratio-kitchen",
       "relative-position",
       "route-reconstruction",
@@ -362,6 +361,12 @@
     {
       "file": "budget-builder.webp",
       "bytes": 162024,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "queue-manager.webp",
+      "bytes": 123260,
       "width": 1024,
       "height": 1536
     },
