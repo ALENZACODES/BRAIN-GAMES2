@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 127,
+  "validated_images": 128,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -47,7 +47,6 @@
       "analogy-bridge",
       "base-rate-detective",
       "breakpoint-planner",
-      "category-sprint",
       "concise-messenger",
       "confidence-compass",
       "confirmation-trap",
@@ -841,6 +840,12 @@
     {
       "file": "word-ladder-banner.webp",
       "bytes": 121508,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "category-sprint-banner.webp",
+      "bytes": 130646,
       "width": 1536,
       "height": 1024
     }
