@@ -1,0 +1,1202 @@
+[
+ {
+  "n": 101,
+  "id": "rule-detective",
+  "title": "Rule Detective",
+  "playable": false,
+  "poster_prompt": "POSTER for \"rule-detective\". Scene: A cinematic scene that visualises this game concept without any text: Infer the rule separating accepted and rejected objects. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"rule-detective\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/rule-detective.webp",
+   "assets/art/rule-detective-banner.webp"
+  ]
+ },
+ {
+  "n": 102,
+  "id": "mini-logic-houses",
+  "title": "Mini Logic Houses",
+  "playable": false,
+  "poster_prompt": "POSTER for \"mini-logic-houses\". Scene: A cinematic scene that visualises this game concept without any text: Assign people, pets, and objects to houses using clues. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"mini-logic-houses\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/mini-logic-houses.webp",
+   "assets/art/mini-logic-houses-banner.webp"
+  ]
+ },
+ {
+  "n": 103,
+  "id": "circuit-path",
+  "title": "Circuit Path",
+  "playable": true,
+  "poster_prompt": "POSTER for \"circuit-path\". Scene: A puzzle board of brass and glass pipe tiles on a workbench, some tiles rotated, one continuous channel already glowing electric cyan from a small power core on the left to a bulb on the right. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"circuit-path\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/circuit-path.webp",
+   "assets/art/circuit-path-banner.webp"
+  ]
+ },
+ {
+  "n": 104,
+  "id": "balance-mystery",
+  "title": "Balance Mystery",
+  "playable": false,
+  "poster_prompt": "POSTER for \"balance-mystery\". Scene: A cinematic scene that visualises this game concept without any text: Use a limited number of balance-scale comparisons to find an unusual object. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"balance-mystery\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/balance-mystery.webp",
+   "assets/art/balance-mystery-banner.webp"
+  ]
+ },
+ {
+  "n": 105,
+  "id": "sequence-laboratory",
+  "title": "Sequence Laboratory",
+  "playable": false,
+  "poster_prompt": "POSTER for \"sequence-laboratory\". Scene: A cinematic scene that visualises this game concept without any text: Identify the next item in a rule-based sequence. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"sequence-laboratory\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/sequence-laboratory.webp",
+   "assets/art/sequence-laboratory-banner.webp"
+  ]
+ },
+ {
+  "n": 106,
+  "id": "truthful-robots",
+  "title": "Truthful Robots",
+  "playable": false,
+  "poster_prompt": "POSTER for \"truthful-robots\". Scene: A cinematic scene that visualises this game concept without any text: Determine which fictional robots make consistent true or false statements. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"truthful-robots\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/truthful-robots.webp",
+   "assets/art/truthful-robots-banner.webp"
+  ]
+ },
+ {
+  "n": 107,
+  "id": "constraint-garden",
+  "title": "Constraint Garden",
+  "playable": false,
+  "poster_prompt": "POSTER for \"constraint-garden\". Scene: A cinematic scene that visualises this game concept without any text: Place plants so every row and neighbour rule is satisfied. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"constraint-garden\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/constraint-garden.webp",
+   "assets/art/constraint-garden-banner.webp"
+  ]
+ },
+ {
+  "n": 108,
+  "id": "cause-and-effect-machine",
+  "title": "Cause-and-Effect Machine",
+  "playable": false,
+  "poster_prompt": "POSTER for \"cause-and-effect-machine\". Scene: A cinematic scene that visualises this game concept without any text: Operate switches to discover which ones control different outputs. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"cause-and-effect-machine\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/cause-and-effect-machine.webp",
+   "assets/art/cause-and-effect-machine-banner.webp"
+  ]
+ },
+ {
+  "n": 109,
+  "id": "minimal-clue",
+  "title": "Minimal Clue",
+  "playable": false,
+  "poster_prompt": "POSTER for \"minimal-clue\". Scene: A cinematic scene that visualises this game concept without any text: Solve a mystery while choosing which additional clues to reveal. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"minimal-clue\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/minimal-clue.webp",
+   "assets/art/minimal-clue-banner.webp"
+  ]
+ },
+ {
+  "n": 110,
+  "id": "counterexample-hunt",
+  "title": "Counterexample Hunt",
+  "playable": false,
+  "poster_prompt": "POSTER for \"counterexample-hunt\". Scene: A cinematic scene that visualises this game concept without any text: Find the example that disproves a proposed rule. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"counterexample-hunt\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/counterexample-hunt.webp",
+   "assets/art/counterexample-hunt-banner.webp"
+  ]
+ },
+ {
+  "n": 111,
+  "id": "number-lock",
+  "title": "Number Lock",
+  "playable": true,
+  "poster_prompt": "POSTER for \"number-lock\". Scene: A massive circular vault door in a cinematic underground chamber, ornate brass combination dials with glowing coloured gems, light spilling from the seams as if about to open. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"number-lock\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/number-lock.webp",
+   "assets/art/number-lock-banner.webp"
+  ]
+ },
+ {
+  "n": 112,
+  "id": "bridge-limits",
+  "title": "Bridge Limits",
+  "playable": false,
+  "poster_prompt": "POSTER for \"bridge-limits\". Scene: A cinematic scene that visualises this game concept without any text: Route fictional vehicles across bridges with specified capacities. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"bridge-limits\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/bridge-limits.webp",
+   "assets/art/bridge-limits-banner.webp"
+  ]
+ },
+ {
+  "n": 113,
+  "id": "tile-equation",
+  "title": "Tile Equation",
+  "playable": false,
+  "poster_prompt": "POSTER for \"tile-equation\". Scene: A cinematic scene that visualises this game concept without any text: Arrange number and operator tiles to produce a target. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"tile-equation\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/tile-equation.webp",
+   "assets/art/tile-equation-banner.webp"
+  ]
+ },
+ {
+  "n": 114,
+  "id": "hidden-transformation",
+  "title": "Hidden Transformation",
+  "playable": false,
+  "poster_prompt": "POSTER for \"hidden-transformation\". Scene: A cinematic scene that visualises this game concept without any text: Infer how a machine transforms shapes from input–output examples. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"hidden-transformation\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/hidden-transformation.webp",
+   "assets/art/hidden-transformation-banner.webp"
+  ]
+ },
+ {
+  "n": 115,
+  "id": "necessary-or-sufficient",
+  "title": "Necessary or Sufficient",
+  "playable": false,
+  "poster_prompt": "POSTER for \"necessary-or-sufficient\". Scene: A cinematic scene that visualises this game concept without any text: Classify statements about a fictional system as necessary, sufficient, both, or neither. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"necessary-or-sufficient\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/necessary-or-sufficient.webp",
+   "assets/art/necessary-or-sufficient-banner.webp"
+  ]
+ },
+ {
+  "n": 116,
+  "id": "puzzle-repair",
+  "title": "Puzzle Repair",
+  "playable": false,
+  "poster_prompt": "POSTER for \"puzzle-repair\". Scene: A cinematic scene that visualises this game concept without any text: Change one clue or tile to make an inconsistent puzzle solvable. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"puzzle-repair\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/puzzle-repair.webp",
+   "assets/art/puzzle-repair-banner.webp"
+  ]
+ },
+ {
+  "n": 117,
+  "id": "set-builder",
+  "title": "Set Builder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"set-builder\". Scene: A cinematic scene that visualises this game concept without any text: Select objects satisfying a combination of inclusion and exclusion rules. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"set-builder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/set-builder.webp",
+   "assets/art/set-builder-banner.webp"
+  ]
+ },
+ {
+  "n": 118,
+  "id": "invariant-hunt",
+  "title": "Invariant Hunt",
+  "playable": false,
+  "poster_prompt": "POSTER for \"invariant-hunt\". Scene: A cinematic scene that visualises this game concept without any text: Discover what remains unchanged while a board undergoes legal moves. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"invariant-hunt\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/invariant-hunt.webp",
+   "assets/art/invariant-hunt-banner.webp"
+  ]
+ },
+ {
+  "n": 119,
+  "id": "analogy-workshop",
+  "title": "Analogy Workshop",
+  "playable": false,
+  "poster_prompt": "POSTER for \"analogy-workshop\". Scene: A cinematic scene that visualises this game concept without any text: Complete relationships such as “rotation is to orientation as resizing is to …” Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"analogy-workshop\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/analogy-workshop.webp",
+   "assets/art/analogy-workshop-banner.webp"
+  ]
+ },
+ {
+  "n": 120,
+  "id": "proof-path",
+  "title": "Proof Path",
+  "playable": false,
+  "poster_prompt": "POSTER for \"proof-path\". Scene: A cinematic scene that visualises this game concept without any text: Arrange reasoning steps into a valid explanation. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: teal and aqua with crisp white highlights.",
+  "banner_prompt": "BANNER for \"proof-path\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/proof-path.webp",
+   "assets/art/proof-path-banner.webp"
+  ]
+ },
+ {
+  "n": 121,
+  "id": "delivery-planner",
+  "title": "Delivery Planner",
+  "playable": false,
+  "poster_prompt": "POSTER for \"delivery-planner\". Scene: A cinematic scene that visualises this game concept without any text: Plan a route visiting every delivery point within a distance budget. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"delivery-planner\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/delivery-planner.webp",
+   "assets/art/delivery-planner-banner.webp"
+  ]
+ },
+ {
+  "n": 122,
+  "id": "calendar-tetris",
+  "title": "Calendar Tetris",
+  "playable": false,
+  "poster_prompt": "POSTER for \"calendar-tetris\". Scene: A cinematic scene that visualises this game concept without any text: Fit fictional appointments into a day without conflicts. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"calendar-tetris\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/calendar-tetris.webp",
+   "assets/art/calendar-tetris-banner.webp"
+  ]
+ },
+ {
+  "n": 123,
+  "id": "kitchen-conductor",
+  "title": "Kitchen Conductor",
+  "playable": false,
+  "poster_prompt": "POSTER for \"kitchen-conductor\". Scene: A cinematic scene that visualises this game concept without any text: Start fictional cooking steps so all dishes finish together. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"kitchen-conductor\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/kitchen-conductor.webp",
+   "assets/art/kitchen-conductor-banner.webp"
+  ]
+ },
+ {
+  "n": 124,
+  "id": "limited-moves",
+  "title": "Limited Moves",
+  "playable": false,
+  "poster_prompt": "POSTER for \"limited-moves\". Scene: A cinematic scene that visualises this game concept without any text: Solve a board puzzle within a fixed number of actions. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"limited-moves\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/limited-moves.webp",
+   "assets/art/limited-moves-banner.webp"
+  ]
+ },
+ {
+  "n": 125,
+  "id": "priority-desk",
+  "title": "Priority Desk",
+  "playable": false,
+  "poster_prompt": "POSTER for \"priority-desk\". Scene: A cinematic scene that visualises this game concept without any text: Order tasks using displayed deadlines, values, and dependencies. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"priority-desk\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/priority-desk.webp",
+   "assets/art/priority-desk-banner.webp"
+  ]
+ },
+ {
+  "n": 126,
+  "id": "warehouse-stack",
+  "title": "Warehouse Stack",
+  "playable": false,
+  "poster_prompt": "POSTER for \"warehouse-stack\". Scene: A cinematic scene that visualises this game concept without any text: Arrange containers so needed items can be retrieved with few unnecessary moves. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"warehouse-stack\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/warehouse-stack.webp",
+   "assets/art/warehouse-stack-banner.webp"
+  ]
+ },
+ {
+  "n": 127,
+  "id": "battery-expedition",
+  "title": "Battery Expedition",
+  "playable": false,
+  "poster_prompt": "POSTER for \"battery-expedition\". Scene: A cinematic scene that visualises this game concept without any text: Reach landmarks while managing a fictional robot’s charge. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"battery-expedition\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/battery-expedition.webp",
+   "assets/art/battery-expedition-banner.webp"
+  ]
+ },
+ {
+  "n": 128,
+  "id": "dependency-builder",
+  "title": "Dependency Builder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"dependency-builder\". Scene: A cinematic scene that visualises this game concept without any text: Complete a project by arranging prerequisite tasks correctly. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"dependency-builder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/dependency-builder.webp",
+   "assets/art/dependency-builder-banner.webp"
+  ]
+ },
+ {
+  "n": 129,
+  "id": "travel-buffer",
+  "title": "Travel Buffer",
+  "playable": false,
+  "poster_prompt": "POSTER for \"travel-buffer\". Scene: A cinematic scene that visualises this game concept without any text: Schedule a journey using travel times and explicitly stated delay possibilities. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"travel-buffer\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/travel-buffer.webp",
+   "assets/art/travel-buffer-banner.webp"
+  ]
+ },
+ {
+  "n": 130,
+  "id": "packing-constraints",
+  "title": "Packing Constraints",
+  "playable": false,
+  "poster_prompt": "POSTER for \"packing-constraints\". Scene: A cinematic scene that visualises this game concept without any text: Pack required objects into a limited container. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"packing-constraints\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/packing-constraints.webp",
+   "assets/art/packing-constraints-banner.webp"
+  ]
+ },
+ {
+  "n": 131,
+  "id": "rescue-sequence",
+  "title": "Rescue Sequence",
+  "playable": false,
+  "poster_prompt": "POSTER for \"rescue-sequence\". Scene: A cinematic scene that visualises this game concept without any text: Move fictional stranded characters to safety while respecting capacity rules. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"rescue-sequence\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/rescue-sequence.webp",
+   "assets/art/rescue-sequence-banner.webp"
+  ]
+ },
+ {
+  "n": 132,
+  "id": "maintenance-window",
+  "title": "Maintenance Window",
+  "playable": false,
+  "poster_prompt": "POSTER for \"maintenance-window\". Scene: A cinematic scene that visualises this game concept without any text: Schedule machine maintenance while keeping enough fictional production active. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"maintenance-window\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/maintenance-window.webp",
+   "assets/art/maintenance-window-banner.webp"
+  ]
+ },
+ {
+  "n": 133,
+  "id": "goal-decomposer",
+  "title": "Goal Decomposer",
+  "playable": false,
+  "poster_prompt": "POSTER for \"goal-decomposer\". Scene: A cinematic scene that visualises this game concept without any text: Break a fictional goal into actionable steps and order them. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"goal-decomposer\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/goal-decomposer.webp",
+   "assets/art/goal-decomposer-banner.webp"
+  ]
+ },
+ {
+  "n": 134,
+  "id": "replanning-storm",
+  "title": "Replanning Storm",
+  "playable": false,
+  "poster_prompt": "POSTER for \"replanning-storm\". Scene: A cinematic scene that visualises this game concept without any text: Adapt an existing route after a road closes. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"replanning-storm\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/replanning-storm.webp",
+   "assets/art/replanning-storm-banner.webp"
+  ]
+ },
+ {
+  "n": 135,
+  "id": "budget-builder",
+  "title": "Budget Builder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"budget-builder\". Scene: A cinematic scene that visualises this game concept without any text: Allocate fictional tokens across projects to meet stated goals. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"budget-builder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/budget-builder.webp",
+   "assets/art/budget-builder-banner.webp"
+  ]
+ },
+ {
+  "n": 136,
+  "id": "queue-manager",
+  "title": "Queue Manager",
+  "playable": false,
+  "poster_prompt": "POSTER for \"queue-manager\". Scene: A cinematic scene that visualises this game concept without any text: Process fictional jobs to minimise waiting under a specified scoring rule. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"queue-manager\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/queue-manager.webp",
+   "assets/art/queue-manager-banner.webp"
+  ]
+ },
+ {
+  "n": 137,
+  "id": "checkpoint-planner",
+  "title": "Checkpoint Planner",
+  "playable": false,
+  "poster_prompt": "POSTER for \"checkpoint-planner\". Scene: A cinematic scene that visualises this game concept without any text: Choose where to save progress during a simulated expedition with restart risks. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"checkpoint-planner\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/checkpoint-planner.webp",
+   "assets/art/checkpoint-planner-banner.webp"
+  ]
+ },
+ {
+  "n": 138,
+  "id": "tool-before-task",
+  "title": "Tool Before Task",
+  "playable": false,
+  "poster_prompt": "POSTER for \"tool-before-task\". Scene: A cinematic scene that visualises this game concept without any text: Gather the necessary tools before attempting each fictional repair. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"tool-before-task\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/tool-before-task.webp",
+   "assets/art/tool-before-task-banner.webp"
+  ]
+ },
+ {
+  "n": 139,
+  "id": "time-estimate-lab",
+  "title": "Time Estimate Lab",
+  "playable": false,
+  "poster_prompt": "POSTER for \"time-estimate-lab\". Scene: A cinematic scene that visualises this game concept without any text: Estimate how long a puzzle will take, complete it, then compare estimate and outcome. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"time-estimate-lab\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/time-estimate-lab.webp",
+   "assets/art/time-estimate-lab-banner.webp"
+  ]
+ },
+ {
+  "n": 140,
+  "id": "plan-do-review",
+  "title": "Plan–Do–Review",
+  "playable": false,
+  "poster_prompt": "POSTER for \"plan-do-review\". Scene: A cinematic scene that visualises this game concept without any text: Write or select a plan, execute it in a simulation, and choose a revision afterward. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.",
+  "banner_prompt": "BANNER for \"plan-do-review\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/plan-do-review.webp",
+   "assets/art/plan-do-review-banner.webp"
+  ]
+ },
+ {
+  "n": 141,
+  "id": "rotation-match",
+  "title": "Rotation Match",
+  "playable": true,
+  "poster_prompt": "POSTER for \"rotation-match\". Scene: Two identical faceted crystal sculptures floating side by side, one rotated in mid-air with a soft circular motion trail, a third mirror-image crystal standing in shadow as a decoy. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"rotation-match\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/rotation-match.webp",
+   "assets/art/rotation-match-banner.webp"
+  ]
+ },
+ {
+  "n": 142,
+  "id": "folded-paper",
+  "title": "Folded Paper",
+  "playable": false,
+  "poster_prompt": "POSTER for \"folded-paper\". Scene: A cinematic scene that visualises this game concept without any text: Predict where holes appear after a folded sheet is unfolded. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"folded-paper\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/folded-paper.webp",
+   "assets/art/folded-paper-banner.webp"
+  ]
+ },
+ {
+  "n": 143,
+  "id": "cube-net",
+  "title": "Cube Net",
+  "playable": false,
+  "poster_prompt": "POSTER for \"cube-net\". Scene: A cinematic scene that visualises this game concept without any text: Select which flat net folds into a displayed cube. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"cube-net\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/cube-net.webp",
+   "assets/art/cube-net-banner.webp"
+  ]
+ },
+ {
+  "n": 144,
+  "id": "perspective-finder",
+  "title": "Perspective Finder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"perspective-finder\". Scene: A cinematic scene that visualises this game concept without any text: Identify how a block arrangement looks from another direction. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"perspective-finder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/perspective-finder.webp",
+   "assets/art/perspective-finder-banner.webp"
+  ]
+ },
+ {
+  "n": 145,
+  "id": "mirror-maze",
+  "title": "Mirror Maze",
+  "playable": true,
+  "poster_prompt": "POSTER for \"mirror-maze\". Scene: A dark hall of angled mirrors arranged on a grid floor, a single golden laser beam entering from one side and zig-zagging between three mirrors, volumetric haze making the beam visible. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"mirror-maze\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/mirror-maze.webp",
+   "assets/art/mirror-maze-banner.webp"
+  ]
+ },
+ {
+  "n": 146,
+  "id": "shape-assembly",
+  "title": "Shape Assembly",
+  "playable": false,
+  "poster_prompt": "POSTER for \"shape-assembly\". Scene: A cinematic scene that visualises this game concept without any text: Combine pieces into a target silhouette. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"shape-assembly\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/shape-assembly.webp",
+   "assets/art/shape-assembly-banner.webp"
+  ]
+ },
+ {
+  "n": 147,
+  "id": "hidden-blocks",
+  "title": "Hidden Blocks",
+  "playable": false,
+  "poster_prompt": "POSTER for \"hidden-blocks\". Scene: A cinematic scene that visualises this game concept without any text: Infer the number of cubes in a stack using visible views and stated construction rules. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"hidden-blocks\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/hidden-blocks.webp",
+   "assets/art/hidden-blocks-banner.webp"
+  ]
+ },
+ {
+  "n": 148,
+  "id": "map-rotation",
+  "title": "Map Rotation",
+  "playable": false,
+  "poster_prompt": "POSTER for \"map-rotation\". Scene: A cinematic scene that visualises this game concept without any text: Use a rotated map to select the correct travel direction. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"map-rotation\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/map-rotation.webp",
+   "assets/art/map-rotation-banner.webp"
+  ]
+ },
+ {
+  "n": 149,
+  "id": "path-integration",
+  "title": "Path Integration",
+  "playable": false,
+  "poster_prompt": "POSTER for \"path-integration\". Scene: A cinematic scene that visualises this game concept without any text: Watch movements away from a starting point, then indicate the direction back. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"path-integration\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/path-integration.webp",
+   "assets/art/path-integration-banner.webp"
+  ]
+ },
+ {
+  "n": 150,
+  "id": "cross-section-studio",
+  "title": "Cross-Section Studio",
+  "playable": false,
+  "poster_prompt": "POSTER for \"cross-section-studio\". Scene: A cinematic scene that visualises this game concept without any text: Predict the shape revealed when a solid is sliced. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"cross-section-studio\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/cross-section-studio.webp",
+   "assets/art/cross-section-studio-banner.webp"
+  ]
+ },
+ {
+  "n": 151,
+  "id": "relative-position",
+  "title": "Relative Position",
+  "playable": false,
+  "poster_prompt": "POSTER for \"relative-position\". Scene: A cinematic scene that visualises this game concept without any text: Arrange objects according to clues such as “A is behind B and left of C.” Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"relative-position\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/relative-position.webp",
+   "assets/art/relative-position-banner.webp"
+  ]
+ },
+ {
+  "n": 152,
+  "id": "shadow-match",
+  "title": "Shadow Match",
+  "playable": false,
+  "poster_prompt": "POSTER for \"shadow-match\". Scene: A cinematic scene that visualises this game concept without any text: Match a three-dimensional object to its projected shadow. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"shadow-match\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/shadow-match.webp",
+   "assets/art/shadow-match-banner.webp"
+  ]
+ },
+ {
+  "n": 153,
+  "id": "route-reconstruction",
+  "title": "Route Reconstruction",
+  "playable": false,
+  "poster_prompt": "POSTER for \"route-reconstruction\". Scene: A cinematic scene that visualises this game concept without any text: Watch a route from a first-person view and rebuild it on a map. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"route-reconstruction\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/route-reconstruction.webp",
+   "assets/art/route-reconstruction-banner.webp"
+  ]
+ },
+ {
+  "n": 154,
+  "id": "symmetry-workshop",
+  "title": "Symmetry Workshop",
+  "playable": false,
+  "poster_prompt": "POSTER for \"symmetry-workshop\". Scene: A cinematic scene that visualises this game concept without any text: Complete the missing half of a pattern. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"symmetry-workshop\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/symmetry-workshop.webp",
+   "assets/art/symmetry-workshop-banner.webp"
+  ]
+ },
+ {
+  "n": 155,
+  "id": "packing-rotation",
+  "title": "Packing Rotation",
+  "playable": false,
+  "poster_prompt": "POSTER for \"packing-rotation\". Scene: A cinematic scene that visualises this game concept without any text: Rotate objects to fit them through a shaped opening. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"packing-rotation\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/packing-rotation.webp",
+   "assets/art/packing-rotation-banner.webp"
+  ]
+ },
+ {
+  "n": 156,
+  "id": "scale-mapper",
+  "title": "Scale Mapper",
+  "playable": false,
+  "poster_prompt": "POSTER for \"scale-mapper\". Scene: A cinematic scene that visualises this game concept without any text: Reconstruct a layout at a different scale. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"scale-mapper\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/scale-mapper.webp",
+   "assets/art/scale-mapper-banner.webp"
+  ]
+ },
+ {
+  "n": 157,
+  "id": "landmark-ordering",
+  "title": "Landmark Ordering",
+  "playable": false,
+  "poster_prompt": "POSTER for \"landmark-ordering\". Scene: A cinematic scene that visualises this game concept without any text: Infer the order of landmarks from several partial views. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"landmark-ordering\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/landmark-ordering.webp",
+   "assets/art/landmark-ordering-banner.webp"
+  ]
+ },
+ {
+  "n": 158,
+  "id": "tile-navigation",
+  "title": "Tile Navigation",
+  "playable": false,
+  "poster_prompt": "POSTER for \"tile-navigation\". Scene: A cinematic scene that visualises this game concept without any text: Navigate a token using relative commands such as forward, left, and right. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"tile-navigation\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/tile-navigation.webp",
+   "assets/art/tile-navigation-banner.webp"
+  ]
+ },
+ {
+  "n": 159,
+  "id": "occlusion-detective",
+  "title": "Occlusion Detective",
+  "playable": false,
+  "poster_prompt": "POSTER for \"occlusion-detective\". Scene: A cinematic scene that visualises this game concept without any text: Identify a partially hidden shape from its visible fragments. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"occlusion-detective\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/occlusion-detective.webp",
+   "assets/art/occlusion-detective-banner.webp"
+  ]
+ },
+ {
+  "n": 160,
+  "id": "construction-blueprint",
+  "title": "Construction Blueprint",
+  "playable": false,
+  "poster_prompt": "POSTER for \"construction-blueprint\". Scene: A cinematic scene that visualises this game concept without any text: Build a block structure from top, front, and side views. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: cobalt and ice blue with prismatic edge light.",
+  "banner_prompt": "BANNER for \"construction-blueprint\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/construction-blueprint.webp",
+   "assets/art/construction-blueprint-banner.webp"
+  ]
+ },
+ {
+  "n": 161,
+  "id": "word-ladder",
+  "title": "Word Ladder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"word-ladder\". Scene: A cinematic scene that visualises this game concept without any text: Change one letter at a time to transform one word into another. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"word-ladder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/word-ladder.webp",
+   "assets/art/word-ladder-banner.webp"
+  ]
+ },
+ {
+  "n": 162,
+  "id": "category-sprint",
+  "title": "Category Sprint",
+  "playable": false,
+  "poster_prompt": "POSTER for \"category-sprint\". Scene: A cinematic scene that visualises this game concept without any text: Produce words belonging to a category without repeats. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"category-sprint\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/category-sprint.webp",
+   "assets/art/category-sprint-banner.webp"
+  ]
+ },
+ {
+  "n": 163,
+  "id": "meaning-in-context",
+  "title": "Meaning in Context",
+  "playable": false,
+  "poster_prompt": "POSTER for \"meaning-in-context\". Scene: A cinematic scene that visualises this game concept without any text: Choose the intended meaning of a word in a sentence. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"meaning-in-context\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/meaning-in-context.webp",
+   "assets/art/meaning-in-context-banner.webp"
+  ]
+ },
+ {
+  "n": 164,
+  "id": "sentence-repair",
+  "title": "Sentence Repair",
+  "playable": false,
+  "poster_prompt": "POSTER for \"sentence-repair\". Scene: A cinematic scene that visualises this game concept without any text: Rearrange fragments into a clear, grammatical sentence. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"sentence-repair\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/sentence-repair.webp",
+   "assets/art/sentence-repair-banner.webp"
+  ]
+ },
+ {
+  "n": 165,
+  "id": "concise-messenger",
+  "title": "Concise Messenger",
+  "playable": false,
+  "poster_prompt": "POSTER for \"concise-messenger\". Scene: A cinematic scene that visualises this game concept without any text: Shorten a message while retaining its essential meaning. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"concise-messenger\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/concise-messenger.webp",
+   "assets/art/concise-messenger-banner.webp"
+  ]
+ },
+ {
+  "n": 166,
+  "id": "ambiguity-detective",
+  "title": "Ambiguity Detective",
+  "playable": false,
+  "poster_prompt": "POSTER for \"ambiguity-detective\". Scene: A cinematic scene that visualises this game concept without any text: Identify why a sentence has multiple possible meanings and choose a clearer revision. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"ambiguity-detective\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/ambiguity-detective.webp",
+   "assets/art/ambiguity-detective-banner.webp"
+  ]
+ },
+ {
+  "n": 167,
+  "id": "analogy-bridge",
+  "title": "Analogy Bridge",
+  "playable": false,
+  "poster_prompt": "POSTER for \"analogy-bridge\". Scene: A cinematic scene that visualises this game concept without any text: Match word pairs sharing the same relationship. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"analogy-bridge\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/analogy-bridge.webp",
+   "assets/art/analogy-bridge-banner.webp"
+  ]
+ },
+ {
+  "n": 168,
+  "id": "instruction-builder",
+  "title": "Instruction Builder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"instruction-builder\". Scene: A cinematic scene that visualises this game concept without any text: Arrange steps so another character can complete a task. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"instruction-builder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/instruction-builder.webp",
+   "assets/art/instruction-builder-banner.webp"
+  ]
+ },
+ {
+  "n": 169,
+  "id": "main-idea-finder",
+  "title": "Main-Idea Finder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"main-idea-finder\". Scene: A cinematic scene that visualises this game concept without any text: Choose the sentence best summarising a short passage. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"main-idea-finder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/main-idea-finder.webp",
+   "assets/art/main-idea-finder-banner.webp"
+  ]
+ },
+ {
+  "n": 170,
+  "id": "evidence-match",
+  "title": "Evidence Match",
+  "playable": false,
+  "poster_prompt": "POSTER for \"evidence-match\". Scene: A cinematic scene that visualises this game concept without any text: Match a claim to the passage that actually supports it. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"evidence-match\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/evidence-match.webp",
+   "assets/art/evidence-match-banner.webp"
+  ]
+ },
+ {
+  "n": 171,
+  "id": "number-line-navigator",
+  "title": "Number Line Navigator",
+  "playable": true,
+  "poster_prompt": "POSTER for \"number-line-navigator\". Scene: A glowing tightrope-like line stretching across a canyon at dusk, small luminous tick-marks along it, a lantern-bearing explorer figure (silhouette, no face) placing a glowing marker on the line. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"number-line-navigator\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/number-line-navigator.webp",
+   "assets/art/number-line-navigator-banner.webp"
+  ]
+ },
+ {
+  "n": 172,
+  "id": "estimate-first",
+  "title": "Estimate First",
+  "playable": false,
+  "poster_prompt": "POSTER for \"estimate-first\". Scene: A cinematic scene that visualises this game concept without any text: Estimate an arithmetic answer before calculating it exactly. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"estimate-first\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/estimate-first.webp",
+   "assets/art/estimate-first-banner.webp"
+  ]
+ },
+ {
+  "n": 173,
+  "id": "fraction-duel",
+  "title": "Fraction Duel",
+  "playable": true,
+  "poster_prompt": "POSTER for \"fraction-duel\". Scene: Two ornate pies on pedestals facing each other like duelists in a spotlight, each sliced into a different number of glowing segments, one with more filled, sparks between them. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"fraction-duel\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/fraction-duel.webp",
+   "assets/art/fraction-duel-banner.webp"
+  ]
+ },
+ {
+  "n": 174,
+  "id": "percentage-transformer",
+  "title": "Percentage Transformer",
+  "playable": false,
+  "poster_prompt": "POSTER for \"percentage-transformer\". Scene: A cinematic scene that visualises this game concept without any text: Match percentages, decimals, fractions, and visual proportions. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"percentage-transformer\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/percentage-transformer.webp",
+   "assets/art/percentage-transformer-banner.webp"
+  ]
+ },
+ {
+  "n": 175,
+  "id": "mental-checkout",
+  "title": "Mental Checkout",
+  "playable": false,
+  "poster_prompt": "POSTER for \"mental-checkout\". Scene: A cinematic scene that visualises this game concept without any text: Calculate fictional purchase totals and change. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"mental-checkout\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/mental-checkout.webp",
+   "assets/art/mental-checkout-banner.webp"
+  ]
+ },
+ {
+  "n": 176,
+  "id": "ratio-kitchen",
+  "title": "Ratio Kitchen",
+  "playable": false,
+  "poster_prompt": "POSTER for \"ratio-kitchen\". Scene: A cinematic scene that visualises this game concept without any text: Scale a fictional recipe while preserving ingredient ratios. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"ratio-kitchen\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/ratio-kitchen.webp",
+   "assets/art/ratio-kitchen-banner.webp"
+  ]
+ },
+ {
+  "n": 177,
+  "id": "data-detective",
+  "title": "Data Detective",
+  "playable": false,
+  "poster_prompt": "POSTER for \"data-detective\". Scene: A cinematic scene that visualises this game concept without any text: Answer questions from a small chart or table. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"data-detective\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/data-detective.webp",
+   "assets/art/data-detective-banner.webp"
+  ]
+ },
+ {
+  "n": 178,
+  "id": "probability-marbles",
+  "title": "Probability Marbles",
+  "playable": false,
+  "poster_prompt": "POSTER for \"probability-marbles\". Scene: A cinematic scene that visualises this game concept without any text: Predict the chance of drawing a particular marble from a visible bag. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"probability-marbles\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/probability-marbles.webp",
+   "assets/art/probability-marbles-banner.webp"
+  ]
+ },
+ {
+  "n": 179,
+  "id": "unit-switch",
+  "title": "Unit Switch",
+  "playable": false,
+  "poster_prompt": "POSTER for \"unit-switch\". Scene: A cinematic scene that visualises this game concept without any text: Convert quantities between clearly specified units. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"unit-switch\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/unit-switch.webp",
+   "assets/art/unit-switch-banner.webp"
+  ]
+ },
+ {
+  "n": 180,
+  "id": "patterned-arithmetic",
+  "title": "Patterned Arithmetic",
+  "playable": false,
+  "poster_prompt": "POSTER for \"patterned-arithmetic\". Scene: A cinematic scene that visualises this game concept without any text: Find an efficient way to calculate a result using grouping, complements, or decomposition. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: rose and crimson with cream highlights.",
+  "banner_prompt": "BANNER for \"patterned-arithmetic\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/patterned-arithmetic.webp",
+   "assets/art/patterned-arithmetic-banner.webp"
+  ]
+ },
+ {
+  "n": 181,
+  "id": "confidence-compass",
+  "title": "Confidence Compass",
+  "playable": false,
+  "poster_prompt": "POSTER for \"confidence-compass\". Scene: A cinematic scene that visualises this game concept without any text: Answer questions and assign confidence before receiving feedback. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"confidence-compass\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/confidence-compass.webp",
+   "assets/art/confidence-compass-banner.webp"
+  ]
+ },
+ {
+  "n": 182,
+  "id": "evidence-updater",
+  "title": "Evidence Updater",
+  "playable": false,
+  "poster_prompt": "POSTER for \"evidence-updater\". Scene: A cinematic scene that visualises this game concept without any text: Estimate which fictional explanation is likely, then revise after new clues. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"evidence-updater\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/evidence-updater.webp",
+   "assets/art/evidence-updater-banner.webp"
+  ]
+ },
+ {
+  "n": 183,
+  "id": "base-rate-detective",
+  "title": "Base-Rate Detective",
+  "playable": false,
+  "poster_prompt": "POSTER for \"base-rate-detective\". Scene: A cinematic scene that visualises this game concept without any text: Judge a fictional classification problem using both prevalence and test accuracy. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"base-rate-detective\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/base-rate-detective.webp",
+   "assets/art/base-rate-detective-banner.webp"
+  ]
+ },
+ {
+  "n": 184,
+  "id": "sample-size-studio",
+  "title": "Sample-Size Studio",
+  "playable": false,
+  "poster_prompt": "POSTER for \"sample-size-studio\". Scene: A cinematic scene that visualises this game concept without any text: Decide which of two observations provides stronger evidence about a simulated process. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"sample-size-studio\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/sample-size-studio.webp",
+   "assets/art/sample-size-studio-banner.webp"
+  ]
+ },
+ {
+  "n": 185,
+  "id": "confirmation-trap",
+  "title": "Confirmation Trap",
+  "playable": false,
+  "poster_prompt": "POSTER for \"confirmation-trap\". Scene: A cinematic scene that visualises this game concept without any text: Choose the next test that best distinguishes competing explanations. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"confirmation-trap\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/confirmation-trap.webp",
+   "assets/art/confirmation-trap-banner.webp"
+  ]
+ },
+ {
+  "n": 186,
+  "id": "sunk-cost-expedition",
+  "title": "Sunk-Cost Expedition",
+  "playable": false,
+  "poster_prompt": "POSTER for \"sunk-cost-expedition\". Scene: A cinematic scene that visualises this game concept without any text: Decide whether to continue a fictional project after costs and future prospects change. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"sunk-cost-expedition\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/sunk-cost-expedition.webp",
+   "assets/art/sunk-cost-expedition-banner.webp"
+  ]
+ },
+ {
+  "n": 187,
+  "id": "framing-mirror",
+  "title": "Framing Mirror",
+  "playable": false,
+  "poster_prompt": "POSTER for \"framing-mirror\". Scene: A cinematic scene that visualises this game concept without any text: Make choices presented in equivalent gain and loss formats, then compare responses. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"framing-mirror\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/framing-mirror.webp",
+   "assets/art/framing-mirror-banner.webp"
+  ]
+ },
+ {
+  "n": 188,
+  "id": "forecast-tournament",
+  "title": "Forecast Tournament",
+  "playable": false,
+  "poster_prompt": "POSTER for \"forecast-tournament\". Scene: A cinematic scene that visualises this game concept without any text: Predict outcomes of transparent simulated events. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"forecast-tournament\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/forecast-tournament.webp",
+   "assets/art/forecast-tournament-banner.webp"
+  ]
+ },
+ {
+  "n": 189,
+  "id": "information-value",
+  "title": "Information Value",
+  "playable": false,
+  "poster_prompt": "POSTER for \"information-value\". Scene: A cinematic scene that visualises this game concept without any text: Decide whether buying a clue is worth its fictional token cost. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"information-value\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/information-value.webp",
+   "assets/art/information-value-banner.webp"
+  ]
+ },
+ {
+  "n": 190,
+  "id": "stop-searching-challenge",
+  "title": "Stop-Searching Challenge",
+  "playable": false,
+  "poster_prompt": "POSTER for \"stop-searching-challenge\". Scene: A cinematic scene that visualises this game concept without any text: Inspect options sequentially and decide when to choose. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"stop-searching-challenge\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/stop-searching-challenge.webp",
+   "assets/art/stop-searching-challenge-banner.webp"
+  ]
+ },
+ {
+  "n": 191,
+  "id": "if-then-builder",
+  "title": "If–Then Builder",
+  "playable": false,
+  "poster_prompt": "POSTER for \"if-then-builder\". Scene: A cinematic scene that visualises this game concept without any text: Turn a fictional intention into a specific cue–action plan. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"if-then-builder\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/if-then-builder.webp",
+   "assets/art/if-then-builder-banner.webp"
+  ]
+ },
+ {
+  "n": 192,
+  "id": "distraction-budget",
+  "title": "Distraction Budget",
+  "playable": false,
+  "poster_prompt": "POSTER for \"distraction-budget\". Scene: A cinematic scene that visualises this game concept without any text: Configure a simulated workspace before completing a task with optional interruptions. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"distraction-budget\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/distraction-budget.webp",
+   "assets/art/distraction-budget-banner.webp"
+  ]
+ },
+ {
+  "n": 193,
+  "id": "error-detective",
+  "title": "Error Detective",
+  "playable": false,
+  "poster_prompt": "POSTER for \"error-detective\". Scene: A cinematic scene that visualises this game concept without any text: Inspect a worked solution, locate the first error, and correct it. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"error-detective\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/error-detective.webp",
+   "assets/art/error-detective-banner.webp"
+  ]
+ },
+ {
+  "n": 194,
+  "id": "strategy-selector",
+  "title": "Strategy Selector",
+  "playable": false,
+  "poster_prompt": "POSTER for \"strategy-selector\". Scene: A cinematic scene that visualises this game concept without any text: Choose a method before solving a puzzle, then review whether it suited the problem. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"strategy-selector\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/strategy-selector.webp",
+   "assets/art/strategy-selector-banner.webp"
+  ]
+ },
+ {
+  "n": 195,
+  "id": "breakpoint-planner",
+  "title": "Breakpoint Planner",
+  "playable": false,
+  "poster_prompt": "POSTER for \"breakpoint-planner\". Scene: A cinematic scene that visualises this game concept without any text: Schedule pauses across a simulated workload and observe results under the displayed model. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"breakpoint-planner\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/breakpoint-planner.webp",
+   "assets/art/breakpoint-planner-banner.webp"
+  ]
+ },
+ {
+  "n": 196,
+  "id": "alternative-explanation",
+  "title": "Alternative Explanation",
+  "playable": false,
+  "poster_prompt": "POSTER for \"alternative-explanation\". Scene: A cinematic scene that visualises this game concept without any text: Generate or select multiple plausible explanations before choosing what evidence to gather. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"alternative-explanation\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/alternative-explanation.webp",
+   "assets/art/alternative-explanation-banner.webp"
+  ]
+ },
+ {
+  "n": 197,
+  "id": "perspective-switch",
+  "title": "Perspective Switch",
+  "playable": false,
+  "poster_prompt": "POSTER for \"perspective-switch\". Scene: A cinematic scene that visualises this game concept without any text: Review a fictional disagreement from each character’s stated information and goals. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"perspective-switch\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/perspective-switch.webp",
+   "assets/art/perspective-switch-banner.webp"
+  ]
+ },
+ {
+  "n": 198,
+  "id": "decision-journal",
+  "title": "Decision Journal",
+  "playable": false,
+  "poster_prompt": "POSTER for \"decision-journal\". Scene: A cinematic scene that visualises this game concept without any text: Record a prediction and reason, observe a simulated outcome, then review the original judgement. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"decision-journal\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/decision-journal.webp",
+   "assets/art/decision-journal-banner.webp"
+  ]
+ },
+ {
+  "n": 199,
+  "id": "transfer-mission",
+  "title": "Transfer Mission",
+  "playable": false,
+  "poster_prompt": "POSTER for \"transfer-mission\". Scene: A cinematic scene that visualises this game concept without any text: After practising a skill, attempt a new task with different visuals, content, and response demands. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"transfer-mission\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/transfer-mission.webp",
+   "assets/art/transfer-mission-banner.webp"
+  ]
+ },
+ {
+  "n": 200,
+  "id": "personal-experiment-lab",
+  "title": "Personal Experiment Lab",
+  "playable": false,
+  "poster_prompt": "POSTER for \"personal-experiment-lab\". Scene: A cinematic scene that visualises this game concept without any text: Compare two strategies—such as grouping versus repetition—across matched memory tasks. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.",
+  "banner_prompt": "BANNER for \"personal-experiment-lab\" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).",
+  "save_as": [
+   "assets/art/personal-experiment-lab.webp",
+   "assets/art/personal-experiment-lab-banner.webp"
+  ]
+ }
+]

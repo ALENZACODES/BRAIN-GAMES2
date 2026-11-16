@@ -1,0 +1,1802 @@
+[
+ {
+  "n": 1,
+  "title": "Parcel Sequence",
+  "cat": "Working memory and short-term recall",
+  "play": "Watch numbered parcels arrive, then select them in their original order.",
+  "skill": "Sequential recall and waiting until information finishes arriving.",
+  "prog": "Add parcels or insert a delay; score correct sequence length.",
+  "code": "Generate an array of parcel IDs, animate presentation, then compare the response array with the answer."
+ },
+ {
+  "n": 2,
+  "title": "Reverse Radio",
+  "cat": "Working memory and short-term recall",
+  "play": "Hear a sequence of digits and enter it backwards.",
+  "skill": "Holding information while mentally rearranging it.",
+  "prog": "Increase sequence length; measure exact accuracy and longest completed span.",
+  "code": "Play prerecorded digits or generated speech; reverse the original array for evaluation. Provide a separate visual mode."
+ },
+ {
+  "n": 3,
+  "title": "Window Watch",
+  "cat": "Working memory and short-term recall",
+  "play": "Several windows illuminate briefly; select their locations after the lights disappear.",
+  "skill": "Visual location memory and deliberate observation.",
+  "prog": "Increase grid size, illuminated windows, or recall delay.",
+  "code": "Sample unique grid coordinates, hide them after presentation, and compare selected and target coordinate sets."
+ },
+ {
+  "n": 4,
+  "title": "Café Orders",
+  "cat": "Working memory and short-term recall",
+  "play": "Remember several customers’ drinks and deliver each to the correct person.",
+  "skill": "Associating people with requested information.",
+  "prog": "Add customers, modifiers, and similar orders; score complete deliveries.",
+  "code": "Store customer–order mappings and validate item assignments. Use selectable buttons as an alternative to dragging."
+ },
+ {
+  "n": 5,
+  "title": "Last Three",
+  "cat": "Working memory and short-term recall",
+  "play": "Symbols arrive continuously. When the stream stops, report the final three.",
+  "skill": "Updating memory and discarding information that is no longer relevant.",
+  "prog": "Increase the retained count or stream variability.",
+  "code": "Maintain a fixed-length queue and compare it with the player’s ordered response."
+ },
+ {
+  "n": 6,
+  "title": "Colour Ledger",
+  "cat": "Working memory and short-term recall",
+  "play": "Track the most recent object placed in each labelled colour category.",
+  "skill": "Updating several small memory records.",
+  "prog": "Add categories or more frequent updates; score correct final assignments.",
+  "code": "Maintain a map from category ID to latest object ID. Pair colours with text or symbols."
+ },
+ {
+  "n": 7,
+  "title": "Running Balance",
+  "cat": "Working memory and short-term recall",
+  "play": "Start with ten tokens, mentally apply additions and removals, then report the balance.",
+  "skill": "Working memory during simple arithmetic.",
+  "prog": "Add operations or enlarge quantities; score final accuracy.",
+  "code": "Generate an operation list and calculate the answer using an integer reducer."
+ },
+ {
+  "n": 8,
+  "title": "Shape–Sound Pairs",
+  "cat": "Working memory and short-term recall",
+  "play": "Learn which sound belongs to each shape, then choose the matching partner.",
+  "skill": "Associations across two information formats.",
+  "prog": "Add pairs or similar sounds; track accuracy by pair.",
+  "code": "Store a bijective shape–audio mapping and generate balanced distractors. Offer an independently scored visual alternative."
+ },
+ {
+  "n": 9,
+  "title": "Pocket Inventory",
+  "cat": "Working memory and short-term recall",
+  "play": "Study a backpack’s contents, then identify what disappeared, appeared, or changed.",
+  "skill": "Item recall and careful comparison.",
+  "prog": "Increase inventory size and number of changes.",
+  "code": "Create an initial item set, apply logged mutations, and evaluate answers against the mutation list."
+ },
+ {
+  "n": 10,
+  "title": "Number–Letter Mixer",
+  "cat": "Working memory and short-term recall",
+  "play": "See a mixed sequence such as B–3–A–1; return numbers ascending, then letters alphabetically.",
+  "skill": "Holding and reorganising information.",
+  "prog": "Add items; score ordering accuracy before speed.",
+  "code": "Partition generated tokens by type, sort each partition, and concatenate the expected answer."
+ },
+ {
+  "n": 11,
+  "title": "Moving Shelves",
+  "cat": "Working memory and short-term recall",
+  "play": "Remember objects on shelves while the shelves swap positions; find a requested object.",
+  "skill": "Tracking remembered identities through movement.",
+  "prog": "Add swaps or shelves; measure identification accuracy.",
+  "code": "Maintain stable shelf IDs and update their screen positions through a permutation model."
+ },
+ {
+  "n": 12,
+  "title": "Echo Grid",
+  "cat": "Working memory and short-term recall",
+  "play": "Watch a path flash across a grid and reproduce the same route.",
+  "skill": "Spatial sequence memory.",
+  "prog": "Lengthen the route or introduce revisits.",
+  "code": "Generate a coordinate sequence, play its highlights, and compare ordered selections. Distinguish it from static location recall."
+ },
+ {
+  "n": 13,
+  "title": "Two-Back Orchard",
+  "cat": "Working memory and short-term recall",
+  "play": "Mark whether the current fruit matches the fruit shown two turns earlier.",
+  "skill": "Continuous memory updating and resisting recent distractors.",
+  "prog": "Adjust the comparison lag and presentation interval.",
+  "code": "Keep stimulus history and label each eligible trial using history[t] === history[t - n]."
+ },
+ {
+  "n": 14,
+  "title": "Message Relay",
+  "cat": "Working memory and short-term recall",
+  "play": "Read a short message, complete a brief distraction task, then answer factual questions about it.",
+  "skill": "Retaining information across interruptions.",
+  "prog": "Add message details or lengthen the interruption.",
+  "code": "Use authored message–question–answer records; score factual recall without requiring identical wording."
+ },
+ {
+  "n": 15,
+  "title": "Pattern Extension",
+  "cat": "Working memory and short-term recall",
+  "play": "Remember a growing sequence; each round adds one new symbol.",
+  "skill": "Cumulative recall and consistent rehearsal.",
+  "prog": "Add symbols and later change presentation tempo.",
+  "code": "Append one generated token to the sequence after each successful reproduction."
+ },
+ {
+  "n": 16,
+  "title": "Seat Planner",
+  "cat": "Working memory and short-term recall",
+  "play": "Study a seating chart, then place each named guest back into the correct seat.",
+  "skill": "Name–location associations.",
+  "prog": "Add guests and similar names; score exact placements.",
+  "code": "Generate a guest-to-seat map and compare the reconstructed layout with the original."
+ },
+ {
+  "n": 17,
+  "title": "Memory Arithmetic",
+  "cat": "Working memory and short-term recall",
+  "play": "Remember a small grid of numbers, hide it, then answer questions about selected cells.",
+  "skill": "Recall combined with calculation.",
+  "prog": "Increase grid size or question complexity.",
+  "code": "Store the hidden matrix and generate questions from explicit cell references and arithmetic operators."
+ },
+ {
+  "n": 18,
+  "title": "Interrupted Sequence",
+  "cat": "Working memory and short-term recall",
+  "play": "Memorise a sequence, make one unrelated judgement, then continue reproducing the sequence.",
+  "skill": "Resuming a task after interruption.",
+  "prog": "Vary interruption timing and sequence length.",
+  "code": "Preserve the current response index in the game state; evaluate interruption and recall performance separately."
+ },
+ {
+  "n": 19,
+  "title": "Direction Stack",
+  "cat": "Working memory and short-term recall",
+  "play": "Read instructions such as north, east, south; report the final position without moving a marker.",
+  "skill": "Updating an internal spatial representation.",
+  "prog": "Add directions, distances, and starting locations.",
+  "code": "Reduce direction vectors into a final coordinate and compare the selected destination."
+ },
+ {
+  "n": 20,
+  "title": "Feature Binding",
+  "cat": "Working memory and short-term recall",
+  "play": "Remember combinations of shape, pattern, and location; identify whether a later combination appeared.",
+  "skill": "Remembering relationships between features.",
+  "prog": "Add objects and recombined distractors.",
+  "code": "Represent objects as tuples and generate lures that reuse individual features in previously unseen combinations."
+ },
+ {
+  "n": 21,
+  "title": "Name Garden",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn fictional characters’ names and recall them after intervening rounds.",
+  "skill": "Name association and retrieval.",
+  "prog": "Add names and extend retrieval intervals.",
+  "code": "Store character–name pairs and schedule later questions using a per-item review queue."
+ },
+ {
+  "n": 22,
+  "title": "Object–Place Museum",
+  "cat": "Long-term learning and retrieval",
+  "play": "Place unusual objects in museum rooms, then identify where each belongs.",
+  "skill": "Location-based associations.",
+  "prog": "Expand the museum and delay recall.",
+  "code": "Model rooms as nodes and store object-to-room assignments with item-level recall history."
+ },
+ {
+  "n": 23,
+  "title": "Story Anchors",
+  "cat": "Long-term learning and retrieval",
+  "play": "Read a short story and later reconstruct its key events.",
+  "skill": "Event recall and organising information into a narrative.",
+  "prog": "Add events or increase the delay.",
+  "code": "Use authored event arrays, distractor cards, and order constraints to evaluate reconstructions."
+ },
+ {
+  "n": 24,
+  "title": "Vocabulary Voyage",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn unfamiliar words through examples, then retrieve their meanings in new sentences.",
+  "skill": "Vocabulary learning through retrieval.",
+  "prog": "Move from recognition to typed recall.",
+  "code": "Use curated entries with definitions, examples, accepted answers, and spaced review dates."
+ },
+ {
+  "n": 25,
+  "title": "Symbol Dictionary",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn the meanings of invented symbols and interpret short symbol messages.",
+  "skill": "Stable symbol–meaning associations.",
+  "prog": "Add symbols and longer messages.",
+  "code": "Generate a session dictionary and evaluate decoded messages against that mapping."
+ },
+ {
+  "n": 26,
+  "title": "Landmark Return",
+  "cat": "Long-term learning and retrieval",
+  "play": "Explore a small map, leave it, then return to previously visited landmarks.",
+  "skill": "Delayed spatial recall.",
+  "prog": "Add branching routes and longer gaps.",
+  "code": "Store a map graph, visited landmarks, and destination answers; distinguish recall from route efficiency."
+ },
+ {
+  "n": 27,
+  "title": "Pair Builder",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn arbitrary object pairs, then supply the missing partner.",
+  "skill": "Associative recall.",
+  "prog": "Increase pair count and distractor similarity.",
+  "code": "Maintain pair records and generate both recognition and recall trials from the same dataset."
+ },
+ {
+  "n": 28,
+  "title": "Recipe Recall",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn a fictional recipe, then reconstruct ingredients and preparation order.",
+  "skill": "Remembering grouped information and procedures.",
+  "prog": "Add ingredients, quantities, and steps.",
+  "code": "Store ingredient sets and ordered action lists; score omissions, additions, and ordering separately."
+ },
+ {
+  "n": 29,
+  "title": "Yesterday’s Board",
+  "cat": "Long-term learning and retrieval",
+  "play": "Revisit yesterday’s object board and identify which items were present.",
+  "skill": "Delayed recognition across sessions.",
+  "prog": "Increase item count and distractor resemblance.",
+  "code": "Persist board seeds and presentation timestamps; never substitute same-session results for next-day recall."
+ },
+ {
+  "n": 30,
+  "title": "Fact Ladder",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn a small factual topic, retrieve key facts, then apply them to a new question.",
+  "skill": "Retrieval followed by application.",
+  "prog": "Increase the number of connected facts.",
+  "code": "Use sourced content packs with prerequisite relationships and separately scored recall and application questions."
+ },
+ {
+  "n": 31,
+  "title": "Sound Signature",
+  "cat": "Long-term learning and retrieval",
+  "play": "Associate fictional machines with sound patterns, then identify the machines later.",
+  "skill": "Auditory recognition and association.",
+  "prog": "Add machines or make patterns more similar.",
+  "code": "Store audio-pattern IDs and machine mappings; preload sounds and record playback completion."
+ },
+ {
+  "n": 32,
+  "title": "Face–Detail Match",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn a fictional character’s name and hobby, then recall the correct combination.",
+  "skill": "Remembering person-related details.",
+  "prog": "Add characters and overlapping hobbies.",
+  "code": "Use licensed or original portraits and structured profiles; avoid inferring personality from appearance."
+ },
+ {
+  "n": 33,
+  "title": "Category Hooks",
+  "cat": "Long-term learning and retrieval",
+  "play": "Organise items into categories before recalling them without the category labels.",
+  "skill": "Deliberate organisation as a memory strategy.",
+  "prog": "Add items and less obvious groupings.",
+  "code": "Record grouping choices and later recall; compare performance without presenting strategy effects as guaranteed."
+ },
+ {
+  "n": 34,
+  "title": "Forgotten Item Rescue",
+  "cat": "Long-term learning and retrieval",
+  "play": "Retry previously missed items after a suitable gap.",
+  "skill": "Returning to difficult material.",
+  "prog": "Increase delay after successful recall.",
+  "code": "Maintain item-level error history and a scheduler that prioritises overdue, repeatedly missed items."
+ },
+ {
+  "n": 35,
+  "title": "Timeline Traveller",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn events in a fictional world and later place them in chronological order.",
+  "skill": "Temporal associations.",
+  "prog": "Add events and closer dates.",
+  "code": "Generate canonical event timestamps and score pairwise ordering or exact positions."
+ },
+ {
+  "n": 36,
+  "title": "Rule Recall",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn the rules of an imaginary sport, then apply them after playing another game.",
+  "skill": "Delayed retrieval of instructions.",
+  "prog": "Add exceptions and scenario complexity.",
+  "code": "Represent rules as explicit predicates and generate scenarios with known outcomes."
+ },
+ {
+  "n": 37,
+  "title": "Password Palace",
+  "cat": "Long-term learning and retrieval",
+  "play": "Remember made-up access codes associated with fictional rooms.",
+  "skill": "Associating arbitrary sequences with contextual cues.",
+  "prog": "Lengthen codes and increase room count.",
+  "code": "Generate synthetic codes only; never request, import, or store the player’s real passwords."
+ },
+ {
+  "n": 38,
+  "title": "Detail Detective",
+  "cat": "Long-term learning and retrieval",
+  "play": "Study a scene and answer delayed questions about specific details.",
+  "skill": "Encoding details intentionally.",
+  "prog": "Add relevant objects and longer delays.",
+  "code": "Construct scenes from structured object metadata so every question has a defensible answer."
+ },
+ {
+  "n": 39,
+  "title": "Learn–Teach Cards",
+  "cat": "Long-term learning and retrieval",
+  "play": "Learn a concept and arrange explanation cards to teach it back.",
+  "skill": "Organising and retrieving an explanation.",
+  "prog": "Add distractors and prerequisite steps.",
+  "code": "Evaluate required concepts and ordering constraints; allow multiple valid explanations where appropriate."
+ },
+ {
+  "n": 40,
+  "title": "Memory Confidence",
+  "cat": "Long-term learning and retrieval",
+  "play": "Answer a recall question and predict how likely the answer is correct.",
+  "skill": "Awareness of uncertainty.",
+  "prog": "Vary delay and similarity; report accuracy alongside confidence calibration.",
+  "code": "Save confidence before feedback and compare confidence bins with actual correctness over many trials."
+ },
+ {
+  "n": 41,
+  "title": "Target Harbour",
+  "cat": "Attention and distraction control",
+  "play": "Select boats matching a target symbol while ignoring other boats.",
+  "skill": "Selective attention.",
+  "prog": "Add distractors or increase their similarity.",
+  "code": "Spawn labelled entities and record hits, misses, and false selections separately."
+ },
+ {
+  "n": 42,
+  "title": "Central Arrow",
+  "cat": "Attention and distraction control",
+  "play": "Report the direction of the central arrow while surrounding arrows point elsewhere.",
+  "skill": "Focusing on the relevant feature.",
+  "prog": "Vary surrounding-arrow conflict and response windows.",
+  "code": "Generate congruent and incongruent trials with balanced correct directions."
+ },
+ {
+  "n": 43,
+  "title": "Quiet Signal",
+  "cat": "Attention and distraction control",
+  "play": "Monitor a slow stream and respond only to a rare target.",
+  "skill": "Sustained attention.",
+  "prog": "Extend blocks or vary target frequency.",
+  "code": "Pre-generate target schedules with spacing constraints; measure omissions and false alarms, not just reaction speed."
+ },
+ {
+  "n": 44,
+  "title": "Changing Shopfront",
+  "cat": "Attention and distraction control",
+  "play": "Compare alternating street scenes and identify the changed feature.",
+  "skill": "Systematic visual inspection.",
+  "prog": "Add objects or subtler changes.",
+  "code": "Render two scene states separated by a blank interval; use logged property changes as the answer."
+ },
+ {
+  "n": 45,
+  "title": "Multiple-Object Tracker",
+  "cat": "Attention and distraction control",
+  "play": "Memorise several marked moving objects and identify them after their markings disappear.",
+  "skill": "Tracking several targets.",
+  "prog": "Add targets or increase movement complexity.",
+  "code": "Maintain stable object IDs, bounded motion, collision handling, and a target-ID set."
+ },
+ {
+  "n": 46,
+  "title": "Pattern Search",
+  "cat": "Attention and distraction control",
+  "play": "Find a specific pattern among visually similar tiles.",
+  "skill": "Feature search and checking before responding.",
+  "prog": "Increase tile count and similarity.",
+  "code": "Generate one valid target and controlled distractors; validate target uniqueness."
+ },
+ {
+  "n": 47,
+  "title": "Sound Sentinel",
+  "cat": "Attention and distraction control",
+  "play": "Listen to a sequence of sounds and respond only to a designated pattern.",
+  "skill": "Auditory selective attention.",
+  "prog": "Add similar distractors and longer gaps.",
+  "code": "Schedule audio through Web Audio and evaluate responses relative to actual scheduled onset times."
+ },
+ {
+  "n": 48,
+  "title": "Dual Watch",
+  "cat": "Attention and distraction control",
+  "play": "Monitor two gauges and respond when either crosses its own marked threshold.",
+  "skill": "Dividing attention across information sources.",
+  "prog": "Add independent events; score each gauge separately.",
+  "code": "Simulate two time series with logged crossing events and separate response windows."
+ },
+ {
+  "n": 49,
+  "title": "Relevant Detail",
+  "cat": "Attention and distraction control",
+  "play": "Answer a specific question about a busy scene while ignoring irrelevant objects.",
+  "skill": "Goal-directed inspection.",
+  "prog": "Add irrelevant detail without changing the requested information.",
+  "code": "Generate questions from scene metadata and track selection errors by distractor type."
+ },
+ {
+  "n": 50,
+  "title": "Odd Rhythm",
+  "cat": "Attention and distraction control",
+  "play": "Identify the beat where a repeating rhythm changes.",
+  "skill": "Monitoring temporal patterns.",
+  "prog": "Use longer patterns or smaller timing differences.",
+  "code": "Schedule beat arrays and introduce one controlled mutation. Include device calibration before timed scoring."
+ },
+ {
+  "n": 51,
+  "title": "Peripheral Locator",
+  "cat": "Attention and distraction control",
+  "play": "Keep a central task active, then report where a brief outer symbol appeared.",
+  "skill": "Distributing visual attention.",
+  "prog": "Adjust distance, exposure, and central-task complexity.",
+  "code": "Render central and peripheral events independently. Without eye tracking, do not claim to measure fixation."
+ },
+ {
+  "n": 52,
+  "title": "Proofreader’s Desk",
+  "cat": "Attention and distraction control",
+  "play": "Find specific typographical errors in short passages.",
+  "skill": "Careful checking against a defined rule.",
+  "prog": "Increase passage length and error subtlety.",
+  "code": "Inject known errors into clean text and retain character-level answer offsets."
+ },
+ {
+  "n": 53,
+  "title": "Feature Intersection",
+  "cat": "Attention and distraction control",
+  "play": "Find the object matching both a requested shape and a requested pattern.",
+  "skill": "Combining relevant visual features.",
+  "prog": "Add objects that match only one feature.",
+  "code": "Generate feature tuples and guarantee exactly one intersection target."
+ },
+ {
+  "n": 54,
+  "title": "Signal Queue",
+  "cat": "Attention and distraction control",
+  "play": "Watch two brief signals in a stream, then report both in order.",
+  "skill": "Detecting closely spaced events.",
+  "prog": "Vary spacing and distractor density.",
+  "code": "Generate timestamped stimulus sequences and score first-target and second-target identification separately."
+ },
+ {
+  "n": 55,
+  "title": "Search Without Repeating",
+  "cat": "Attention and distraction control",
+  "play": "Search containers for a hidden item while avoiding containers already checked.",
+  "skill": "Systematic search and monitoring previous actions.",
+  "prog": "Add containers; allow an optional visible marking strategy.",
+  "code": "Track opened container IDs and score redundant checks separately from successful discovery."
+ },
+ {
+  "n": 56,
+  "title": "Conversation Filter",
+  "cat": "Attention and distraction control",
+  "play": "Follow one labelled speaker’s message while ignoring interleaved messages from others.",
+  "skill": "Attending to a selected information source.",
+  "prog": "Add speakers and similar content.",
+  "code": "Interleave authored message streams and ask questions based only on the designated speaker."
+ },
+ {
+  "n": 57,
+  "title": "Target Count",
+  "cat": "Attention and distraction control",
+  "play": "Count occurrences of a specified symbol in a briefly displayed board.",
+  "skill": "Focused scanning and accurate counting.",
+  "prog": "Add distractors or increase board size.",
+  "code": "Generate a board with a known target count; score absolute counting error."
+ },
+ {
+  "n": 58,
+  "title": "Alert or Routine",
+  "cat": "Attention and distraction control",
+  "play": "Inspect fictional system messages and flag only those meeting an explicit alert rule.",
+  "skill": "Distinguishing relevant events from routine information.",
+  "prog": "Add near-miss messages.",
+  "code": "Evaluate message attributes with a deterministic rule engine; separately track missed alerts and unnecessary alerts."
+ },
+ {
+  "n": 59,
+  "title": "Moving Reading Window",
+  "cat": "Attention and distraction control",
+  "play": "Read a passage revealed in small sections, then answer comprehension questions.",
+  "skill": "Maintaining attention across successive text segments.",
+  "prog": "Adjust segment size and optional pacing.",
+  "code": "Reveal authored text chunks in sequence; score comprehension rather than equating faster reading with better performance."
+ },
+ {
+  "n": 60,
+  "title": "Focus Recovery",
+  "cat": "Attention and distraction control",
+  "play": "Complete a sorting task, handle a brief interruption, then resume where you stopped.",
+  "skill": "Recovering task context.",
+  "prog": "Vary interruption timing and task complexity.",
+  "code": "Save task position before interruption; measure resumption errors and time separately."
+ },
+ {
+  "n": 61,
+  "title": "Go–Hold Garden",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Pick ordinary fruit but withhold responses to marked fruit.",
+  "skill": "Response restraint.",
+  "prog": "Vary the proportion of hold trials and presentation speed.",
+  "code": "Label each trial go or no-go; record correct responses, omissions, and commission errors."
+ },
+ {
+  "n": 62,
+  "title": "Stop the Delivery",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Begin selecting a destination, but cancel when a stop signal appears.",
+  "skill": "Cancelling a prepared response.",
+  "prog": "Adjust stop-signal delay.",
+  "code": "Schedule stop trials and log stop timing precisely; treat browser results as game measures, not clinical assessments."
+ },
+ {
+  "n": 63,
+  "title": "Ink Interpreter",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Identify a word’s ink colour while ignoring the colour named by the word.",
+  "skill": "Resolving competing responses.",
+  "prog": "Add incompatible trials and response choices.",
+  "code": "Generate word–ink pairs and score the ink attribute. Offer a separate non-colour conflict task."
+ },
+ {
+  "n": 64,
+  "title": "Rule Switch Station",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Sort objects by shape until a cue changes the rule to size.",
+  "skill": "Switching attention between explicit rules.",
+  "prog": "Increase switch frequency.",
+  "code": "Store the active rule and label each trial as repeat or switch for separate scoring."
+ },
+ {
+  "n": 65,
+  "title": "Opposite Compass",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Select the direction opposite to the displayed arrow.",
+  "skill": "Applying a rule against an automatic response.",
+  "prog": "Add a clear cue that alternates between same and opposite.",
+  "code": "Map directions to vectors and use vector negation for opposite answers."
+ },
+ {
+  "n": 66,
+  "title": "Day–Night Signals",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Respond “night” to a sun and “day” to a moon under the displayed rule.",
+  "skill": "Suppressing a familiar association.",
+  "prog": "Introduce occasional rule changes.",
+  "code": "Evaluate symbol–response mappings from an explicit rule table rather than hard-coded button positions."
+ },
+ {
+  "n": 67,
+  "title": "Category Flip",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Classify the same object by different properties across rounds.",
+  "skill": "Viewing one item through multiple categories.",
+  "prog": "Move from two properties to three.",
+  "code": "Use objects with authored categorical attributes and a per-trial property cue."
+ },
+ {
+  "n": 68,
+  "title": "Traffic Exception",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Follow a routing rule except when a clearly marked exception applies.",
+  "skill": "Checking exceptions before acting.",
+  "prog": "Add nested but understandable conditions.",
+  "code": "Implement ordered predicates and test exception precedence. Use fictional traffic rules rather than teaching real driving behaviour."
+ },
+ {
+  "n": 69,
+  "title": "Reverse Sort",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Sort ascending until a cue requires descending order.",
+  "skill": "Reconfiguring a familiar response.",
+  "prog": "Add longer lists and more switches.",
+  "code": "Generate numeric arrays and derive expected order from the current direction flag."
+ },
+ {
+  "n": 70,
+  "title": "Keep or Discard",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Retain cards meeting the current rule while discarding tempting near-matches.",
+  "skill": "Filtering and restraint.",
+  "prog": "Add compound conditions.",
+  "code": "Define card predicates and generate examples that isolate individual rule violations."
+ },
+ {
+  "n": 71,
+  "title": "Mirror Controls",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Move a token through a maze while an announced mode reverses left and right controls.",
+  "skill": "Adapting action mappings.",
+  "prog": "Increase maze complexity before adding switches.",
+  "code": "Apply a control-transform function before movement; provide a persistent mode indicator."
+ },
+ {
+  "n": 72,
+  "title": "Question Switch",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Alternate between “Is it living?” and “Is it larger than a chair?”",
+  "skill": "Responding to the current question.",
+  "prog": "Increase rule-switch frequency and item variety.",
+  "code": "Use curated items with unambiguous attributes; exclude objects whose classification depends on context."
+ },
+ {
+  "n": 73,
+  "title": "Forbidden Number",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Count upward, replacing multiples of a specified number with a symbol.",
+  "skill": "Monitoring an ongoing sequence while applying exceptions.",
+  "prog": "Add a second replacement rule.",
+  "code": "Use modulo predicates and define how overlapping rules resolve."
+ },
+ {
+  "n": 74,
+  "title": "Change the Sorting Law",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Infer a hidden sorting rule from feedback, then notice when it changes.",
+  "skill": "Revising a strategy when evidence changes.",
+  "prog": "Increase possible rules and reduce redundant examples.",
+  "code": "Maintain hidden rule states and ensure feedback sequences permit reasonable inference."
+ },
+ {
+  "n": 75,
+  "title": "Relevant Dimension",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Judge either an object’s displayed size or the quantity it represents, depending on a cue.",
+  "skill": "Selecting the relevant dimension.",
+  "prog": "Add conflicting size–quantity pairings.",
+  "code": "Generate independent visual-size and numeric-value attributes; evaluate only the cued attribute."
+ },
+ {
+  "n": 76,
+  "title": "Pause Before Choice",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Wait for all clues before selecting an answer; early choices remain provisional.",
+  "skill": "Deliberation before commitment.",
+  "prog": "Add clues that overturn first impressions.",
+  "code": "Stage clue releases and log provisional versus final choices; reward evidence use rather than waiting alone."
+ },
+ {
+  "n": 77,
+  "title": "Exception Collector",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Collect items from one category unless a badge overrides the category rule.",
+  "skill": "Conditional response control.",
+  "prog": "Increase exception frequency and visual similarity.",
+  "code": "Generate category and badge attributes independently; evaluate a documented Boolean expression."
+ },
+ {
+  "n": 78,
+  "title": "Mixed-Operation Relay",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Apply addition or subtraction according to each card’s symbol.",
+  "skill": "Switching procedures accurately.",
+  "prog": "Add multiplication and longer chains.",
+  "code": "Dispatch operations from symbol IDs and generate values that avoid unintended ambiguity or excessive arithmetic."
+ },
+ {
+  "n": 79,
+  "title": "Strategy Reset",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Solve several puzzles with one method, then encounter a puzzle requiring a different method.",
+  "skill": "Recognising when a habitual approach stops working.",
+  "prog": "Increase superficial similarity between puzzle types.",
+  "code": "Use authored puzzle families with validated solutions and record repeated ineffective actions."
+ },
+ {
+  "n": 80,
+  "title": "Undo the Habit",
+  "cat": "Inhibition and cognitive flexibility",
+  "play": "Learn a response mapping, then practise a clearly announced replacement mapping.",
+  "skill": "Updating learned associations.",
+  "prog": "Add mappings or lengthen the initial learning phase.",
+  "code": "Keep old and new answer tables; classify errors that specifically repeat the previous mapping."
+ },
+ {
+  "n": 81,
+  "title": "Symbol Twins",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Decide whether two symbol strings are identical.",
+  "skill": "Quick, accurate comparison.",
+  "prog": "Lengthen strings and make differences subtler.",
+  "code": "Generate matching pairs or mutate one indexed symbol; score accuracy and correct-response time separately."
+ },
+ {
+  "n": 82,
+  "title": "Code Key",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Use a visible key to translate symbols into numbers.",
+  "skill": "Efficient lookup and association.",
+  "prog": "Add key entries; optionally hide the key in a separately scored mode.",
+  "code": "Generate a mapping table and translation queue; distinguish lookup trials from memory trials."
+ },
+ {
+  "n": 83,
+  "title": "Bigger Value",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Select the larger of two numbers.",
+  "skill": "Numerical comparison.",
+  "prog": "Add decimals, negatives, and closer values.",
+  "code": "Generate numeric pairs with controlled distance and render consistent notation."
+ },
+ {
+  "n": 84,
+  "title": "Rapid Category",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Classify items into two clearly defined categories.",
+  "skill": "Efficient categorisation.",
+  "prog": "Add more similar examples.",
+  "code": "Draw from a curated labelled dataset and balance categories to prevent response guessing."
+ },
+ {
+  "n": 85,
+  "title": "Matching Stream",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Compare each new card with a permanently visible reference.",
+  "skill": "Rapid comparison without a memory requirement.",
+  "prog": "Increase feature complexity.",
+  "code": "Keep the reference visible and generate trials with controlled matching and nonmatching proportions."
+ },
+ {
+  "n": 86,
+  "title": "Letter Locator",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Find a named letter in a small grid.",
+  "skill": "Visual scanning.",
+  "prog": "Add letters and similar distractors.",
+  "code": "Generate a grid with one target and assign keyboard-accessible cell controls."
+ },
+ {
+  "n": 87,
+  "title": "Quantity Glance",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Briefly view a small dot group and report its quantity.",
+  "skill": "Rapid small-quantity recognition.",
+  "prog": "Adjust exposure and spatial arrangement.",
+  "code": "Generate non-overlapping dots with known count; keep larger estimation tasks separately scored."
+ },
+ {
+  "n": 88,
+  "title": "Same Meaning",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Match a written number with its equivalent dot group or numeral.",
+  "skill": "Translating between representations.",
+  "prog": "Add larger quantities and closer distractors.",
+  "code": "Generate all answer representations from one canonical numeric value."
+ },
+ {
+  "n": 89,
+  "title": "Pattern Passport",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Decide whether a tile matches a visible pattern template.",
+  "skill": "Fast feature comparison.",
+  "prog": "Add rotations and small differences.",
+  "code": "Compare structured tile matrices; explicitly specify whether rotation counts as a match."
+ },
+ {
+  "n": 90,
+  "title": "Route Flash",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Select which of two visible routes has fewer steps.",
+  "skill": "Rapid spatial comparison.",
+  "prog": "Use closer route lengths.",
+  "code": "Generate grid paths, calculate step counts, and ensure visual styling does not reveal the answer accidentally."
+ },
+ {
+  "n": 91,
+  "title": "Word–Picture Match",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Decide whether a displayed word names the pictured object.",
+  "skill": "Fast semantic matching.",
+  "prog": "Use closer semantic distractors.",
+  "code": "Use curated word–image records with accepted regional vocabulary and language-specific labels."
+ },
+ {
+  "n": 92,
+  "title": "Missing Piece Sprint",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Choose the piece that completes a simple visual pattern.",
+  "skill": "Rapid structural matching.",
+  "prog": "Add answer options and pattern complexity.",
+  "code": "Remove a known component and generate distractors by controlled geometric mutations."
+ },
+ {
+  "n": 93,
+  "title": "Order Check",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Decide whether a sequence is correctly sorted.",
+  "skill": "Efficient sequence inspection.",
+  "prog": "Increase length and use nearby swaps.",
+  "code": "Generate sorted arrays and inject logged inversions; evaluate using the selected comparison rule."
+ },
+ {
+  "n": 94,
+  "title": "One Different",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Find the sole object that differs from the rest.",
+  "skill": "Detecting a distinguishing feature.",
+  "prog": "Increase item count and reduce feature contrast.",
+  "code": "Generate a shared base object and mutate exactly one feature on one item."
+ },
+ {
+  "n": 95,
+  "title": "Rapid Equation Check",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Mark simple equations correct or incorrect.",
+  "skill": "Arithmetic checking.",
+  "prog": "Increase operand size and plausible error types.",
+  "code": "Generate equations from exact arithmetic and construct false results using controlled offsets."
+ },
+ {
+  "n": 96,
+  "title": "Sound Pair Check",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Decide whether two short sound patterns match.",
+  "skill": "Auditory comparison.",
+  "prog": "Lengthen patterns and use smaller differences.",
+  "code": "Generate tone sequences and mutate pitch, order, or duration; score each difference type independently."
+ },
+ {
+  "n": 97,
+  "title": "Orientation Check",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Decide whether two arrows face the same direction.",
+  "skill": "Rapid orientation discrimination.",
+  "prog": "Add more possible angles.",
+  "code": "Store canonical angles and compare them modulo a full rotation."
+ },
+ {
+  "n": 98,
+  "title": "Fraction Flash",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Match a shaded shape to the correct fraction.",
+  "skill": "Recognising proportional representations.",
+  "prog": "Introduce equivalent fractions and varied shapes.",
+  "code": "Generate numerator–denominator pairs and render equal-area partitions; avoid unequal segments."
+ },
+ {
+  "n": 99,
+  "title": "Duplicate Detector",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Identify the repeated item in a visible list.",
+  "skill": "Fast checking for repetition.",
+  "prog": "Lengthen the list and increase similarity.",
+  "code": "Sample unique tokens, duplicate one, and shuffle; validate that no accidental second duplicate exists."
+ },
+ {
+  "n": 100,
+  "title": "Accuracy Pacekeeper",
+  "cat": "Processing speed and rapid comparison",
+  "play": "Complete comparison tasks at a self-selected pace, then adjust pace while preserving accuracy.",
+  "skill": "Balancing speed with care.",
+  "prog": "Change complexity rather than imposing an arbitrary faster target.",
+  "code": "Calculate block accuracy and median correct-response time; display the trade-off without collapsing it into one score."
+ },
+ {
+  "n": 101,
+  "title": "Rule Detective",
+  "cat": "Logic and problem-solving",
+  "play": "Infer the rule separating accepted and rejected objects.",
+  "skill": "Hypothesis testing.",
+  "prog": "Add rule dimensions and exceptions.",
+  "code": "Generate examples from a hidden predicate; let players request informative test cases."
+ },
+ {
+  "n": 102,
+  "title": "Mini Logic Houses",
+  "cat": "Logic and problem-solving",
+  "play": "Assign people, pets, and objects to houses using clues.",
+  "skill": "Deduction and tracking constraints.",
+  "prog": "Add houses and clue relationships.",
+  "code": "Generate a complete solution, derive clues, and use a solver to check uniqueness."
+ },
+ {
+  "n": 103,
+  "title": "Circuit Path",
+  "cat": "Logic and problem-solving",
+  "play": "Rotate connectors to link a power source to a target.",
+  "skill": "Relational reasoning.",
+  "prog": "Add branches and blocked tiles.",
+  "code": "Represent connectors as graph edges and test source-to-target reachability after each rotation."
+ },
+ {
+  "n": 104,
+  "title": "Balance Mystery",
+  "cat": "Logic and problem-solving",
+  "play": "Use a limited number of balance-scale comparisons to find an unusual object.",
+  "skill": "Planning informative comparisons.",
+  "prog": "Add objects and vary whether the odd object is heavier or lighter.",
+  "code": "Maintain candidate hypotheses and simulate scale outcomes from hidden weights."
+ },
+ {
+  "n": 105,
+  "title": "Sequence Laboratory",
+  "cat": "Logic and problem-solving",
+  "play": "Identify the next item in a rule-based sequence.",
+  "skill": "Pattern inference.",
+  "prog": "Introduce alternating and interleaved rules.",
+  "code": "Generate sequences from explicit rule families; reject questions with multiple plausible answers among the choices."
+ },
+ {
+  "n": 106,
+  "title": "Truthful Robots",
+  "cat": "Logic and problem-solving",
+  "play": "Determine which fictional robots make consistent true or false statements.",
+  "skill": "Propositional reasoning.",
+  "prog": "Add linked statements.",
+  "code": "Encode statements as Boolean expressions and enumerate assignments; accept only puzzles with a unique intended solution."
+ },
+ {
+  "n": 107,
+  "title": "Constraint Garden",
+  "cat": "Logic and problem-solving",
+  "play": "Place plants so every row and neighbour rule is satisfied.",
+  "skill": "Constraint satisfaction.",
+  "prog": "Add plant types and restrictions.",
+  "code": "Use a backtracking solver to generate and validate boards; show exactly which constraints are violated."
+ },
+ {
+  "n": 108,
+  "title": "Cause-and-Effect Machine",
+  "cat": "Logic and problem-solving",
+  "play": "Operate switches to discover which ones control different outputs.",
+  "skill": "Controlled experimentation.",
+  "prog": "Add interacting switches.",
+  "code": "Use a hidden Boolean circuit and log experiments; reward identifying a consistent model."
+ },
+ {
+  "n": 109,
+  "title": "Minimal Clue",
+  "cat": "Logic and problem-solving",
+  "play": "Solve a mystery while choosing which additional clues to reveal.",
+  "skill": "Seeking useful information.",
+  "prog": "Add candidates and less informative clues.",
+  "code": "Maintain a candidate set and calculate how each clue partitions it; score solution accuracy and clue cost."
+ },
+ {
+  "n": 110,
+  "title": "Counterexample Hunt",
+  "cat": "Logic and problem-solving",
+  "play": "Find the example that disproves a proposed rule.",
+  "skill": "Testing claims instead of only confirming them.",
+  "prog": "Use more subtle counterexamples.",
+  "code": "Evaluate all options against a formal rule and ensure exactly one violates the claim."
+ },
+ {
+  "n": 111,
+  "title": "Number Lock",
+  "cat": "Logic and problem-solving",
+  "play": "Infer a hidden numeric code from positional feedback.",
+  "skill": "Deduction from partial information.",
+  "prog": "Increase code length and symbol choices.",
+  "code": "Calculate exact-position and wrong-position matches with duplicate-aware counting."
+ },
+ {
+  "n": 112,
+  "title": "Bridge Limits",
+  "cat": "Logic and problem-solving",
+  "play": "Route fictional vehicles across bridges with specified capacities.",
+  "skill": "Applying constraints and checking totals.",
+  "prog": "Add bridges, dependencies, and competing routes.",
+  "code": "Model a capacity-constrained graph and validate every crossing against explicit rules."
+ },
+ {
+  "n": 113,
+  "title": "Tile Equation",
+  "cat": "Logic and problem-solving",
+  "play": "Arrange number and operator tiles to produce a target.",
+  "skill": "Arithmetic reasoning and search.",
+  "prog": "Add operations and placement constraints.",
+  "code": "Evaluate expression trees with defined precedence; use exact fractions where division is allowed."
+ },
+ {
+  "n": 114,
+  "title": "Hidden Transformation",
+  "cat": "Logic and problem-solving",
+  "play": "Infer how a machine transforms shapes from input–output examples.",
+  "skill": "Abstract rule discovery.",
+  "prog": "Compose transformations such as rotation and feature replacement.",
+  "code": "Implement transformation functions and generate candidate rules that examples can distinguish."
+ },
+ {
+  "n": 115,
+  "title": "Necessary or Sufficient",
+  "cat": "Logic and problem-solving",
+  "play": "Classify statements about a fictional system as necessary, sufficient, both, or neither.",
+  "skill": "Precise conditional reasoning.",
+  "prog": "Add chained conditions.",
+  "code": "Generate truth tables and derive correct classifications from them."
+ },
+ {
+  "n": 116,
+  "title": "Puzzle Repair",
+  "cat": "Logic and problem-solving",
+  "play": "Change one clue or tile to make an inconsistent puzzle solvable.",
+  "skill": "Diagnosing contradictions.",
+  "prog": "Increase puzzle size and repair choices.",
+  "code": "Introduce one controlled inconsistency into a valid puzzle and verify allowed repairs with a solver."
+ },
+ {
+  "n": 117,
+  "title": "Set Builder",
+  "cat": "Logic and problem-solving",
+  "play": "Select objects satisfying a combination of inclusion and exclusion rules.",
+  "skill": "Set logic.",
+  "prog": "Add intersections and complements.",
+  "code": "Represent object attributes as sets or bitmasks and evaluate the displayed set expression."
+ },
+ {
+  "n": 118,
+  "title": "Invariant Hunt",
+  "cat": "Logic and problem-solving",
+  "play": "Discover what remains unchanged while a board undergoes legal moves.",
+  "skill": "Structural reasoning.",
+  "prog": "Introduce less obvious invariants.",
+  "code": "Generate transformations preserving a chosen property, such as parity, and test candidate explanations."
+ },
+ {
+  "n": 119,
+  "title": "Analogy Workshop",
+  "cat": "Logic and problem-solving",
+  "play": "Complete relationships such as “rotation is to orientation as resizing is to …”",
+  "skill": "Relational comparison.",
+  "prog": "Move from concrete to abstract relations.",
+  "code": "Use authored relation templates and distractors representing specific relation errors."
+ },
+ {
+  "n": 120,
+  "title": "Proof Path",
+  "cat": "Logic and problem-solving",
+  "play": "Arrange reasoning steps into a valid explanation.",
+  "skill": "Checking logical dependencies.",
+  "prog": "Add irrelevant or invalid steps.",
+  "code": "Represent prerequisites as a directed graph and validate whether the selected order supports the conclusion."
+ },
+ {
+  "n": 121,
+  "title": "Delivery Planner",
+  "cat": "Planning and executive organisation",
+  "play": "Plan a route visiting every delivery point within a distance budget.",
+  "skill": "Looking ahead before acting.",
+  "prog": "Add locations and delivery constraints.",
+  "code": "Use a weighted graph and calculate feasible routes; compare with the optimal route for small boards."
+ },
+ {
+  "n": 122,
+  "title": "Calendar Tetris",
+  "cat": "Planning and executive organisation",
+  "play": "Fit fictional appointments into a day without conflicts.",
+  "skill": "Scheduling and respecting constraints.",
+  "prog": "Add travel time, deadlines, and fixed appointments.",
+  "code": "Use interval arithmetic and explicit availability windows; validate overlaps and travel gaps."
+ },
+ {
+  "n": 123,
+  "title": "Kitchen Conductor",
+  "cat": "Planning and executive organisation",
+  "play": "Start fictional cooking steps so all dishes finish together.",
+  "skill": "Coordinating dependencies and durations.",
+  "prog": "Add shared equipment and more dishes.",
+  "code": "Model recipes as task graphs with resource locks and a simulated clock."
+ },
+ {
+  "n": 124,
+  "title": "Limited Moves",
+  "cat": "Planning and executive organisation",
+  "play": "Solve a board puzzle within a fixed number of actions.",
+  "skill": "Planning before committing.",
+  "prog": "Increase search depth.",
+  "code": "Generate states from known solutions and use breadth-first search to verify the minimum move count."
+ },
+ {
+  "n": 125,
+  "title": "Priority Desk",
+  "cat": "Planning and executive organisation",
+  "play": "Order tasks using displayed deadlines, values, and dependencies.",
+  "skill": "Explicit prioritisation.",
+  "prog": "Introduce competing constraints.",
+  "code": "Define the objective mathematically and score against it; avoid pretending one task order is universally best."
+ },
+ {
+  "n": 126,
+  "title": "Warehouse Stack",
+  "cat": "Planning and executive organisation",
+  "play": "Arrange containers so needed items can be retrieved with few unnecessary moves.",
+  "skill": "Anticipating future access.",
+  "prog": "Add containers and retrieval stages.",
+  "code": "Represent stacks as arrays and simulate the full retrieval sequence."
+ },
+ {
+  "n": 127,
+  "title": "Battery Expedition",
+  "cat": "Planning and executive organisation",
+  "play": "Reach landmarks while managing a fictional robot’s charge.",
+  "skill": "Resource planning.",
+  "prog": "Add recharge points and uncertain costs in clearly labelled modes.",
+  "code": "Use graph search over position-and-energy states; reject generated maps without a feasible route."
+ },
+ {
+  "n": 128,
+  "title": "Dependency Builder",
+  "cat": "Planning and executive organisation",
+  "play": "Complete a project by arranging prerequisite tasks correctly.",
+  "skill": "Recognising what must happen first.",
+  "prog": "Add parallel tasks and shared resources.",
+  "code": "Generate acyclic task graphs and validate topological order."
+ },
+ {
+  "n": 129,
+  "title": "Travel Buffer",
+  "cat": "Planning and executive organisation",
+  "play": "Schedule a journey using travel times and explicitly stated delay possibilities.",
+  "skill": "Allowing for uncertainty.",
+  "prog": "Add connections and varied delay distributions.",
+  "code": "Simulate outcomes from displayed distributions and compare punctuality across plans."
+ },
+ {
+  "n": 130,
+  "title": "Packing Constraints",
+  "cat": "Planning and executive organisation",
+  "play": "Pack required objects into a limited container.",
+  "skill": "Combining spatial and priority constraints.",
+  "prog": "Add irregular shapes and weight limits.",
+  "code": "Use grid occupancy masks and a solver to check that required objects can fit."
+ },
+ {
+  "n": 131,
+  "title": "Rescue Sequence",
+  "cat": "Planning and executive organisation",
+  "play": "Move fictional stranded characters to safety while respecting capacity rules.",
+  "skill": "Multi-step planning.",
+  "prog": "Add transport and ordering constraints.",
+  "code": "Model valid states and transitions; search for solutions and flag illegal moves immediately."
+ },
+ {
+  "n": 132,
+  "title": "Maintenance Window",
+  "cat": "Planning and executive organisation",
+  "play": "Schedule machine maintenance while keeping enough fictional production active.",
+  "skill": "Planning around competing requirements.",
+  "prog": "Add dependencies and time windows.",
+  "code": "Simulate machine availability and evaluate output against explicit thresholds."
+ },
+ {
+  "n": 133,
+  "title": "Goal Decomposer",
+  "cat": "Planning and executive organisation",
+  "play": "Break a fictional goal into actionable steps and order them.",
+  "skill": "Turning a broad objective into a plan.",
+  "prog": "Add missing prerequisites and unnecessary steps.",
+  "code": "Use authored goal templates and prerequisite graphs; explain why selected steps are required."
+ },
+ {
+  "n": 134,
+  "title": "Replanning Storm",
+  "cat": "Planning and executive organisation",
+  "play": "Adapt an existing route after a road closes.",
+  "skill": "Revising a plan after new information.",
+  "prog": "Add closures and time constraints.",
+  "code": "Modify graph edges during the round and recompute feasible paths from the current position."
+ },
+ {
+  "n": 135,
+  "title": "Budget Builder",
+  "cat": "Planning and executive organisation",
+  "play": "Allocate fictional tokens across projects to meet stated goals.",
+  "skill": "Comparing trade-offs under a limit.",
+  "prog": "Add dependencies and minimum commitments.",
+  "code": "Use integer allocation models and explicit utility tables; show several valid trade-offs when appropriate."
+ },
+ {
+  "n": 136,
+  "title": "Queue Manager",
+  "cat": "Planning and executive organisation",
+  "play": "Process fictional jobs to minimise waiting under a specified scoring rule.",
+  "skill": "Scheduling decisions.",
+  "prog": "Add arrival times and different job lengths.",
+  "code": "Use a discrete-event simulator and compare completion schedules against the announced objective."
+ },
+ {
+  "n": 137,
+  "title": "Checkpoint Planner",
+  "cat": "Planning and executive organisation",
+  "play": "Choose where to save progress during a simulated expedition with restart risks.",
+  "skill": "Balancing progress and recovery costs.",
+  "prog": "Vary checkpoint cost and failure probability.",
+  "code": "Simulate reproducible outcome sequences and compare strategies across many runs."
+ },
+ {
+  "n": 138,
+  "title": "Tool Before Task",
+  "cat": "Planning and executive organisation",
+  "play": "Gather the necessary tools before attempting each fictional repair.",
+  "skill": "Preparation and prerequisite checking.",
+  "prog": "Add shared tools and carrying limits.",
+  "code": "Define required-tool sets and validate inventory before permitting task completion."
+ },
+ {
+  "n": 139,
+  "title": "Time Estimate Lab",
+  "cat": "Planning and executive organisation",
+  "play": "Estimate how long a puzzle will take, complete it, then compare estimate and outcome.",
+  "skill": "Calibrating planning estimates.",
+  "prog": "Introduce unfamiliar puzzle types.",
+  "code": "Save estimates before starting and calculate signed and absolute estimation error."
+ },
+ {
+  "n": 140,
+  "title": "Plan–Do–Review",
+  "cat": "Planning and executive organisation",
+  "play": "Write or select a plan, execute it in a simulation, and choose a revision afterward.",
+  "skill": "Reflecting on strategy.",
+  "prog": "Add longer scenarios and changing conditions.",
+  "code": "Store planned actions and executed events separately; generate feedback from the differences."
+ },
+ {
+  "n": 141,
+  "title": "Rotation Match",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Choose which object is a rotated version of a target.",
+  "skill": "Mental rotation.",
+  "prog": "Increase angular difference and shape complexity.",
+  "code": "Generate vector shapes and rotate coordinates; create mirrored distractors separately."
+ },
+ {
+  "n": 142,
+  "title": "Folded Paper",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Predict where holes appear after a folded sheet is unfolded.",
+  "skill": "Spatial transformation.",
+  "prog": "Add folds and hole positions.",
+  "code": "Apply reflection transforms to punched coordinates in reverse fold order."
+ },
+ {
+  "n": 143,
+  "title": "Cube Net",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Select which flat net folds into a displayed cube.",
+  "skill": "Relating two-dimensional and three-dimensional structures.",
+  "prog": "Add face markings and rotations.",
+  "code": "Map net faces to cube orientations and validate adjacency and opposing faces."
+ },
+ {
+  "n": 144,
+  "title": "Perspective Finder",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Identify how a block arrangement looks from another direction.",
+  "skill": "Perspective transformation.",
+  "prog": "Add blocks and occlusion.",
+  "code": "Store a three-dimensional occupancy grid and render orthographic views from selected directions."
+ },
+ {
+  "n": 145,
+  "title": "Mirror Maze",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Predict a light beam’s path through mirrors.",
+  "skill": "Sequential spatial prediction.",
+  "prog": "Add mirrors and branches.",
+  "code": "Trace rays through a grid using reflection rules; detect loops and validate the exit."
+ },
+ {
+  "n": 146,
+  "title": "Shape Assembly",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Combine pieces into a target silhouette.",
+  "skill": "Part-to-whole reasoning.",
+  "prog": "Add pieces and allow rotation.",
+  "code": "Use polygon or grid masks to test coverage, overlaps, and boundary violations."
+ },
+ {
+  "n": 147,
+  "title": "Hidden Blocks",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Infer the number of cubes in a stack using visible views and stated construction rules.",
+  "skill": "Spatial inference.",
+  "prog": "Add layers and viewpoints.",
+  "code": "Generate voxel models and ensure the supplied views uniquely determine the requested answer."
+ },
+ {
+  "n": 148,
+  "title": "Map Rotation",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Use a rotated map to select the correct travel direction.",
+  "skill": "Switching between map and viewer orientation.",
+  "prog": "Add arbitrary rotation angles.",
+  "code": "Transform world coordinates into screen coordinates with a rotation matrix."
+ },
+ {
+  "n": 149,
+  "title": "Path Integration",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Watch movements away from a starting point, then indicate the direction back.",
+  "skill": "Updating relative position.",
+  "prog": "Add turns and variable distances.",
+  "code": "Sum movement vectors and calculate the return vector; score angle and distance error separately."
+ },
+ {
+  "n": 150,
+  "title": "Cross-Section Studio",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Predict the shape revealed when a solid is sliced.",
+  "skill": "Visualising internal geometry.",
+  "prog": "Add oblique cuts and compound solids.",
+  "code": "Begin with authored solid–plane combinations and validated polygon cross-sections."
+ },
+ {
+  "n": 151,
+  "title": "Relative Position",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Arrange objects according to clues such as “A is behind B and left of C.”",
+  "skill": "Spatial relationships.",
+  "prog": "Add objects and chained clues.",
+  "code": "Evaluate coordinates against relational constraints and allow multiple valid layouts when clues permit them."
+ },
+ {
+  "n": 152,
+  "title": "Shadow Match",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Match a three-dimensional object to its projected shadow.",
+  "skill": "Projection reasoning.",
+  "prog": "Change light direction and object orientation.",
+  "code": "Project mesh vertices onto a plane and compare candidate silhouettes."
+ },
+ {
+  "n": 153,
+  "title": "Route Reconstruction",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Watch a route from a first-person view and rebuild it on a map.",
+  "skill": "Translating between spatial representations.",
+  "prog": "Add intersections and repeated landmarks.",
+  "code": "Generate both views from one underlying graph and compare the reconstructed edge sequence."
+ },
+ {
+  "n": 154,
+  "title": "Symmetry Workshop",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Complete the missing half of a pattern.",
+  "skill": "Reflection and spatial correspondence.",
+  "prog": "Add diagonal axes and multiple symmetry rules.",
+  "code": "Reflect coordinates across a defined axis and compare cell or vector placements."
+ },
+ {
+  "n": 155,
+  "title": "Packing Rotation",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Rotate objects to fit them through a shaped opening.",
+  "skill": "Orientation and fit judgement.",
+  "prog": "Add asymmetric shapes and tighter tolerances.",
+  "code": "Transform object polygons and perform containment checks against the opening."
+ },
+ {
+  "n": 156,
+  "title": "Scale Mapper",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Reconstruct a layout at a different scale.",
+  "skill": "Proportional spatial reasoning.",
+  "prog": "Use non-integer scaling factors.",
+  "code": "Apply a scale transform to source coordinates and score normalised position error."
+ },
+ {
+  "n": 157,
+  "title": "Landmark Ordering",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Infer the order of landmarks from several partial views.",
+  "skill": "Integrating spatial evidence.",
+  "prog": "Add overlapping views and distractors.",
+  "code": "Convert views into ordering constraints and solve for layouts consistent with all observations."
+ },
+ {
+  "n": 158,
+  "title": "Tile Navigation",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Navigate a token using relative commands such as forward, left, and right.",
+  "skill": "Orientation-dependent movement.",
+  "prog": "Add turns and longer command sequences.",
+  "code": "Maintain position plus heading; translate relative commands into world-coordinate movements."
+ },
+ {
+  "n": 159,
+  "title": "Occlusion Detective",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Identify a partially hidden shape from its visible fragments.",
+  "skill": "Inferring whole forms from incomplete information.",
+  "prog": "Increase occlusion while retaining distinguishable evidence.",
+  "code": "Mask known shapes and reject trials where multiple options fit the visible region equally well."
+ },
+ {
+  "n": 160,
+  "title": "Construction Blueprint",
+  "cat": "Spatial reasoning and mental imagery",
+  "play": "Build a block structure from top, front, and side views.",
+  "skill": "Combining spatial constraints.",
+  "prog": "Add height and footprint complexity.",
+  "code": "Compare voxel projections with target views; accept alternative structures when the views do not uniquely specify one."
+ },
+ {
+  "n": 161,
+  "title": "Word Ladder",
+  "cat": "Language and numerical reasoning",
+  "play": "Change one letter at a time to transform one word into another.",
+  "skill": "Vocabulary retrieval and planning.",
+  "prog": "Increase word length and shortest-path distance.",
+  "code": "Build a dictionary graph linking words one letter apart; use breadth-first search to validate solutions."
+ },
+ {
+  "n": 162,
+  "title": "Category Sprint",
+  "cat": "Language and numerical reasoning",
+  "play": "Produce words belonging to a category without repeats.",
+  "skill": "Lexical retrieval.",
+  "prog": "Narrow categories or add starting-letter restrictions.",
+  "code": "Validate entries against curated category lists; normalise spelling variants and track duplicates."
+ },
+ {
+  "n": 163,
+  "title": "Meaning in Context",
+  "cat": "Language and numerical reasoning",
+  "play": "Choose the intended meaning of a word in a sentence.",
+  "skill": "Contextual interpretation.",
+  "prog": "Add more ambiguous words.",
+  "code": "Use authored sentences and sense-specific answer sets rather than dictionary definitions alone."
+ },
+ {
+  "n": 164,
+  "title": "Sentence Repair",
+  "cat": "Language and numerical reasoning",
+  "play": "Rearrange fragments into a clear, grammatical sentence.",
+  "skill": "Syntax and sequencing.",
+  "prog": "Add clauses and distractors.",
+  "code": "Store accepted arrangements or grammar constraints; allow equivalent valid constructions."
+ },
+ {
+  "n": 165,
+  "title": "Concise Messenger",
+  "cat": "Language and numerical reasoning",
+  "play": "Shorten a message while retaining its essential meaning.",
+  "skill": "Identifying important information.",
+  "prog": "Tighten the word budget.",
+  "code": "Start with selectable phrase deletion and authored essential-fact checks; avoid unreliable unrestricted semantic grading."
+ },
+ {
+  "n": 166,
+  "title": "Ambiguity Detective",
+  "cat": "Language and numerical reasoning",
+  "play": "Identify why a sentence has multiple possible meanings and choose a clearer revision.",
+  "skill": "Precise communication.",
+  "prog": "Add pronoun, scope, and modifier ambiguity.",
+  "code": "Use authored ambiguity categories and validated revisions."
+ },
+ {
+  "n": 167,
+  "title": "Analogy Bridge",
+  "cat": "Language and numerical reasoning",
+  "play": "Match word pairs sharing the same relationship.",
+  "skill": "Verbal relational reasoning.",
+  "prog": "Introduce subtler relationships.",
+  "code": "Label pairs by relation type and create distractors based on association without the required relationship."
+ },
+ {
+  "n": 168,
+  "title": "Instruction Builder",
+  "cat": "Language and numerical reasoning",
+  "play": "Arrange steps so another character can complete a task.",
+  "skill": "Clear procedural communication.",
+  "prog": "Add prerequisites and optional steps.",
+  "code": "Execute the selected instruction sequence in a small deterministic simulation."
+ },
+ {
+  "n": 169,
+  "title": "Main-Idea Finder",
+  "cat": "Language and numerical reasoning",
+  "play": "Choose the sentence best summarising a short passage.",
+  "skill": "Distinguishing central ideas from supporting details.",
+  "prog": "Lengthen passages and use plausible partial summaries.",
+  "code": "Use authored passages with explanation-backed answers and distractors representing specific comprehension errors."
+ },
+ {
+  "n": 170,
+  "title": "Evidence Match",
+  "cat": "Language and numerical reasoning",
+  "play": "Match a claim to the passage that actually supports it.",
+  "skill": "Reading for evidence.",
+  "prog": "Add related but insufficient passages.",
+  "code": "Store explicit claim–evidence relationships and explain unsupported inference errors."
+ },
+ {
+  "n": 171,
+  "title": "Number Line Navigator",
+  "cat": "Language and numerical reasoning",
+  "play": "Place a number on an unmarked or partly marked number line.",
+  "skill": "Numerical magnitude.",
+  "prog": "Add negatives, decimals, and fractions.",
+  "code": "Map numeric values to coordinates and score error relative to the displayed range."
+ },
+ {
+  "n": 172,
+  "title": "Estimate First",
+  "cat": "Language and numerical reasoning",
+  "play": "Estimate an arithmetic answer before calculating it exactly.",
+  "skill": "Checking whether results are plausible.",
+  "prog": "Add larger values and mixed operations.",
+  "code": "Save the estimate separately, compute the exact result, and display relative estimation error."
+ },
+ {
+  "n": 173,
+  "title": "Fraction Duel",
+  "cat": "Language and numerical reasoning",
+  "play": "Select the larger of two fractions.",
+  "skill": "Proportional comparison.",
+  "prog": "Use closer values and unlike denominators.",
+  "code": "Compare fractions through integer cross-multiplication, avoiding floating-point rounding errors."
+ },
+ {
+  "n": 174,
+  "title": "Percentage Transformer",
+  "cat": "Language and numerical reasoning",
+  "play": "Match percentages, decimals, fractions, and visual proportions.",
+  "skill": "Moving between numeric representations.",
+  "prog": "Add less familiar equivalent values.",
+  "code": "Store canonical rational values and generate equivalent display formats."
+ },
+ {
+  "n": 175,
+  "title": "Mental Checkout",
+  "cat": "Language and numerical reasoning",
+  "play": "Calculate fictional purchase totals and change.",
+  "skill": "Multi-step arithmetic.",
+  "prog": "Add discounts and explicitly stated taxes.",
+  "code": "Use integer cents and configurable fictional pricing rules; show an itemised solution afterward."
+ },
+ {
+  "n": 176,
+  "title": "Ratio Kitchen",
+  "cat": "Language and numerical reasoning",
+  "play": "Scale a fictional recipe while preserving ingredient ratios.",
+  "skill": "Multiplicative reasoning.",
+  "prog": "Add fractional serving changes.",
+  "code": "Represent quantities as rational numbers and multiply every ingredient by the same scale factor."
+ },
+ {
+  "n": 177,
+  "title": "Data Detective",
+  "cat": "Language and numerical reasoning",
+  "play": "Answer questions from a small chart or table.",
+  "skill": "Reading numerical evidence.",
+  "prog": "Add comparisons and multi-step calculations.",
+  "code": "Generate charts and answers from the same data model; label units and axes explicitly."
+ },
+ {
+  "n": 178,
+  "title": "Probability Marbles",
+  "cat": "Language and numerical reasoning",
+  "play": "Predict the chance of drawing a particular marble from a visible bag.",
+  "skill": "Basic probability reasoning.",
+  "prog": "Add multiple draws and replacement rules.",
+  "code": "Calculate exact probabilities and simulate repeated draws to compare predictions with long-run frequencies."
+ },
+ {
+  "n": 179,
+  "title": "Unit Switch",
+  "cat": "Language and numerical reasoning",
+  "play": "Convert quantities between clearly specified units.",
+  "skill": "Dimensional reasoning and checking units.",
+  "prog": "Add multi-step conversions.",
+  "code": "Use a unit registry with exact conversion factors where possible and enforce compatible dimensions."
+ },
+ {
+  "n": 180,
+  "title": "Patterned Arithmetic",
+  "cat": "Language and numerical reasoning",
+  "play": "Find an efficient way to calculate a result using grouping, complements, or decomposition.",
+  "skill": "Flexible calculation strategies.",
+  "prog": "Introduce problems suited to different methods.",
+  "code": "Provide selectable transformation steps and verify that each preserves the original expression’s value."
+ },
+ {
+  "n": 181,
+  "title": "Confidence Compass",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Answer questions and assign confidence before receiving feedback.",
+  "skill": "Matching certainty to actual knowledge.",
+  "prog": "Add unfamiliar topics and deceptive distractors.",
+  "code": "Store predicted probabilities and outcomes; show calibration curves after enough trials, with clear sample sizes."
+ },
+ {
+  "n": 182,
+  "title": "Evidence Updater",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Estimate which fictional explanation is likely, then revise after new clues.",
+  "skill": "Updating beliefs when evidence changes.",
+  "prog": "Add stronger and weaker evidence.",
+  "code": "Generate scenarios with explicit prior probabilities and likelihoods; calculate reference updates."
+ },
+ {
+  "n": 183,
+  "title": "Base-Rate Detective",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Judge a fictional classification problem using both prevalence and test accuracy.",
+  "skill": "Considering background frequencies.",
+  "prog": "Vary prevalence and false-positive rates.",
+  "code": "Generate population-count tables and derive answers from actual counts. Avoid medical screening scenarios."
+ },
+ {
+  "n": 184,
+  "title": "Sample-Size Studio",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Decide which of two observations provides stronger evidence about a simulated process.",
+  "skill": "Considering sample size and uncertainty.",
+  "prog": "Add noisy and unbalanced samples.",
+  "code": "Simulate draws from known distributions and display intervals or repeated-sampling demonstrations."
+ },
+ {
+  "n": 185,
+  "title": "Confirmation Trap",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Choose the next test that best distinguishes competing explanations.",
+  "skill": "Seeking potentially disconfirming evidence.",
+  "prog": "Add plausible but uninformative tests.",
+  "code": "Maintain explicit hypotheses and rank test usefulness by expected reduction in uncertainty."
+ },
+ {
+  "n": 186,
+  "title": "Sunk-Cost Expedition",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Decide whether to continue a fictional project after costs and future prospects change.",
+  "skill": "Separating past expenditure from future consequences.",
+  "prog": "Add emotionally appealing story details.",
+  "code": "Calculate future options from remaining costs and benefits; explain the comparison without rewarding past spending itself."
+ },
+ {
+  "n": 187,
+  "title": "Framing Mirror",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Make choices presented in equivalent gain and loss formats, then compare responses.",
+  "skill": "Noticing wording effects.",
+  "prog": "Add more complex equivalent descriptions.",
+  "code": "Generate paired scenarios from one outcome table and separate them to reduce immediate recognition."
+ },
+ {
+  "n": 188,
+  "title": "Forecast Tournament",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Predict outcomes of transparent simulated events.",
+  "skill": "Probabilistic forecasting and revision.",
+  "prog": "Add interacting variables.",
+  "code": "Use seeded simulations and proper probability scoring; explain that simulation skill does not establish real-world forecasting ability."
+ },
+ {
+  "n": 189,
+  "title": "Information Value",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Decide whether buying a clue is worth its fictional token cost.",
+  "skill": "Comparing information cost with decision value.",
+  "prog": "Add clues with different reliability.",
+  "code": "Model possible states, actions, payoffs, and clue likelihoods; calculate expected value with and without information."
+ },
+ {
+  "n": 190,
+  "title": "Stop-Searching Challenge",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Inspect options sequentially and decide when to choose.",
+  "skill": "Balancing search cost and opportunity.",
+  "prog": "Vary the option distribution and whether earlier options remain available.",
+  "code": "Implement explicit search rules and simulate benchmark strategies under those same rules."
+ },
+ {
+  "n": 191,
+  "title": "If–Then Builder",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Turn a fictional intention into a specific cue–action plan.",
+  "skill": "Connecting a situation with an actionable response.",
+  "prog": "Add conflicting cues and vague distractors.",
+  "code": "Use structured fields for cue, action, and context; evaluate specificity using authored criteria."
+ },
+ {
+  "n": 192,
+  "title": "Distraction Budget",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Configure a simulated workspace before completing a task with optional interruptions.",
+  "skill": "Proactively managing distractions.",
+  "prog": "Add interruption types and competing priorities.",
+  "code": "Simulate notification schedules and compare task outcomes across configurations while controlling task difficulty."
+ },
+ {
+  "n": 193,
+  "title": "Error Detective",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Inspect a worked solution, locate the first error, and correct it.",
+  "skill": "Diagnosing mistakes rather than guessing again.",
+  "prog": "Add longer reasoning chains.",
+  "code": "Generate valid solution steps, inject one error, and track downstream consequences."
+ },
+ {
+  "n": 194,
+  "title": "Strategy Selector",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Choose a method before solving a puzzle, then review whether it suited the problem.",
+  "skill": "Selecting strategies deliberately.",
+  "prog": "Introduce several puzzle families.",
+  "code": "Tag puzzles with applicable strategies and log chosen methods, hints, accuracy, and completion time."
+ },
+ {
+  "n": 195,
+  "title": "Breakpoint Planner",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Schedule pauses across a simulated workload and observe results under the displayed model.",
+  "skill": "Planning rest and reviewing workload assumptions.",
+  "prog": "Vary workload patterns.",
+  "code": "Use a clearly labelled fictional performance model; do not present simulated outcomes as personalised health guidance."
+ },
+ {
+  "n": 196,
+  "title": "Alternative Explanation",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Generate or select multiple plausible explanations before choosing what evidence to gather.",
+  "skill": "Avoiding premature conclusions.",
+  "prog": "Add misleading surface details.",
+  "code": "Use authored causal scenarios and score explanation distinctness and evidence relevance, not agreement with one unsupported story."
+ },
+ {
+  "n": 197,
+  "title": "Perspective Switch",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Review a fictional disagreement from each character’s stated information and goals.",
+  "skill": "Considering another viewpoint.",
+  "prog": "Add differing information access.",
+  "code": "Store character knowledge and goals explicitly; evaluate answers against stated facts without inferring emotions from faces."
+ },
+ {
+  "n": 198,
+  "title": "Decision Journal",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Record a prediction and reason, observe a simulated outcome, then review the original judgement.",
+  "skill": "Separating decision quality from luck.",
+  "prog": "Add noisy outcomes.",
+  "code": "Save an immutable pre-outcome entry and compare expected-value reasoning with realised results."
+ },
+ {
+  "n": 199,
+  "title": "Transfer Mission",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "After practising a skill, attempt a new task with different visuals, content, and response demands.",
+  "skill": "Applying a strategy in another context.",
+  "prog": "Increase distance from the original task.",
+  "code": "Keep training and evaluation item banks separate; measure improvement on unseen tasks without assuming broad transfer."
+ },
+ {
+  "n": 200,
+  "title": "Personal Experiment Lab",
+  "cat": "Decision-making, behavioural habits, and metacognition",
+  "play": "Compare two strategies—such as grouping versus repetition—across matched memory tasks.",
+  "skill": "Testing personal assumptions systematically.",
+  "prog": "Add repeated sessions and delayed recall.",
+  "code": "Randomise strategy order, counterbalance matched item sets, and report differences with sample size and uncertainty."
+ }
+]
