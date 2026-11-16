@@ -128,5 +128,10 @@
     "id": "tile-equation",
     "kind": "banner",
     "blob_sha": "cff783bb13e2b0d2dea7c10f7554ca7f30e9428d"
+  },
+  {
+    "id": "hidden-transformation",
+    "kind": "poster",
+    "blob_sha": "c8fd45d4e6241201a4007eaf14c64181ea3eb59a"
   }
 ]
