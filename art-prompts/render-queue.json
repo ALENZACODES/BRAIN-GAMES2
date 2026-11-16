@@ -158,5 +158,10 @@
     "id": "puzzle-repair",
     "kind": "banner",
     "blob_sha": "d8d9f1b7f73a95f4938c52c27da65d651cabb64f"
+  },
+  {
+    "id": "set-builder",
+    "kind": "poster",
+    "blob_sha": "c6cee0714d6059b2aba25c0705da5bdf1c8ae4a8"
   }
 ]
