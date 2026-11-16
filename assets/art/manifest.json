@@ -64,7 +64,8 @@
     "limited-moves",
     "priority-desk",
     "warehouse-stack",
-    "battery-expedition"
+    "battery-expedition",
+    "dependency-builder"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
