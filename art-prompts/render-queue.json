@@ -78,5 +78,10 @@
     "id": "constraint-garden",
     "kind": "banner",
     "blob_sha": "3f3bf0bea92cbf1102b3ce98160670672d3b31a5"
+  },
+  {
+    "id": "cause-and-effect-machine",
+    "kind": "poster",
+    "blob_sha": "14e4639e85b30a341fb0eff185b0c90a2ac00422"
   }
 ]
