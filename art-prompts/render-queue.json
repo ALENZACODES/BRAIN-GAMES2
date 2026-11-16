@@ -268,5 +268,10 @@
     "id": "battery-expedition",
     "kind": "banner",
     "blob_sha": "5e31117dabc0e96a1d55acd7e3c60422b3bda10c"
+  },
+  {
+    "id": "dependency-builder",
+    "kind": "poster",
+    "blob_sha": "d3d754595f3a5c1c7a9be85d5dd534c0a34836ba"
   }
 ]
