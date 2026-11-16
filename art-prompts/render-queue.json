@@ -188,5 +188,10 @@
     "id": "analogy-workshop",
     "kind": "banner",
     "blob_sha": "a01464bc4cc0a770bdf69ab35f9274887456e10c"
+  },
+  {
+    "id": "proof-path",
+    "kind": "poster",
+    "blob_sha": "69359d593186c0ec62a387f0b0925f5b417e1da3"
   }
 ]
