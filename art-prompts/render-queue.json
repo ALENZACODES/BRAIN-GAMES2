@@ -208,5 +208,10 @@
     "id": "delivery-planner",
     "kind": "banner",
     "blob_sha": "9c385587376d6b3f51ea84d7eb61e480738ba7a3"
+  },
+  {
+    "id": "calendar-tetris",
+    "kind": "poster",
+    "blob_sha": "8b0daf11007f37ed55d658e69f0a7e815c051258"
   }
 ]
