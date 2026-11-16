@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 133,
+  "validated_images": 134,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -44,7 +44,6 @@
       "analogy-bridge",
       "base-rate-detective",
       "breakpoint-planner",
-      "concise-messenger",
       "confidence-compass",
       "confirmation-trap",
       "data-detective",
@@ -871,6 +870,12 @@
     {
       "file": "sentence-repair-banner.webp",
       "bytes": 87608,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "concise-messenger-banner.webp",
+      "bytes": 71156,
       "width": 1536,
       "height": 1024
     }
