@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 177,
+  "validated_images": 178,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -23,7 +23,6 @@
       "distraction-budget",
       "error-detective",
       "ifthen-builder",
-      "information-value",
       "personal-experiment-lab",
       "perspective-switch",
       "stop-searching-challenge",
@@ -1091,6 +1090,12 @@
     {
       "file": "forecast-tournament-banner.webp",
       "bytes": 100354,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "information-value-banner.webp",
+      "bytes": 95224,
       "width": 1536,
       "height": 1024
     }

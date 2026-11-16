@@ -178,7 +178,8 @@
     "confirmation-trap",
     "sunk-cost-expedition",
     "framing-mirror",
-    "forecast-tournament"
+    "forecast-tournament",
+    "information-value"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
