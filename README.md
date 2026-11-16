@@ -51,3 +51,38 @@ Use **`MASTER_IMAGE_PROMPT.md`** (paste it once into the image generator), then 
 - Some concepts are simplified to fit a phone screen; each game’s *How to play* describes exactly what it does.
 - Games that rely on written content (vocabulary, passages, word lists) draw from small built-in banks, so items repeat after many runs.
 - Retention features are built and tested for correctness. Whether they make people return can only be measured with real players.
+
+## Project structure
+
+```text
+BRAIN-GAMES2/
+├── .github/
+│   └── workflows/          # CI workflows (1 file)
+├── art-prompts/            # Artwork prompts and import script (4 files)
+├── assets/                 # Game artwork
+│   └── art/                # 203 files
+├── css/                    # Styles (1 file)
+├── icons/                  # App icons (4 files)
+├── js/                     # Application code
+│   ├── games/              # The games (12 files)
+│   ├── app.js              # Hub, game pages, results and settings
+│   ├── art.js              # Procedural key art
+│   ├── catalog.json        # Game catalogue
+│   ├── config.js
+│   ├── engine.js           # Puzzles, scoring, saves and streaks
+│   ├── gfx.js              # SVG glyphs, icons and charts
+│   ├── kit.js
+│   └── play.js             # Shared trial templates
+├── tests/                  # Automated tests
+│   ├── retention.mjs
+│   ├── run.mjs
+│   └── validate.mjs
+├── tools/                  # Registry generator (1 file)
+├── .nojekyll
+├── index.html              # App shell
+├── manifest.webmanifest    # Web app manifest
+├── MASTER_IMAGE_PROMPT.md  # Artwork style brief
+├── package.json            # npm scripts and dependencies
+├── README.md               # This file
+└── sw.js                   # Service worker for offline use
+```
