@@ -130,7 +130,8 @@
     "occlusion-detective",
     "construction-blueprint",
     "word-ladder",
-    "category-sprint"
+    "category-sprint",
+    "meaning-in-context"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
