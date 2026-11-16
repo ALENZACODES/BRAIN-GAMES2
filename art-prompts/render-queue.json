@@ -633,5 +633,10 @@
     "id": "ambiguity-detective",
     "kind": "poster",
     "blob_sha": "7ce4381999669828937d45623461429638ff256d"
+  },
+  {
+    "id": "ambiguity-detective",
+    "kind": "banner",
+    "blob_sha": "26c20b1922fa9f834097731ffb7203be562edc47"
   }
 ]
