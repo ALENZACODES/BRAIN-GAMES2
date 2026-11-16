@@ -408,5 +408,10 @@
     "id": "folded-paper",
     "kind": "banner",
     "blob_sha": "eddee7aef52791a03e6ec27b022a505253586aa0"
+  },
+  {
+    "id": "cube-net",
+    "kind": "poster",
+    "blob_sha": "360aaade624c7d75df7444f4ceac97c379ef33ef"
   }
 ]
