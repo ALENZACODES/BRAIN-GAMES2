@@ -19,7 +19,8 @@
     "tile-equation",
     "hidden-transformation",
     "necessary-or-sufficient",
-    "puzzle-repair"
+    "puzzle-repair",
+    "set-builder"
   ],
   "banner": [
     "circuit-path",
