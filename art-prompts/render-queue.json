@@ -43,5 +43,10 @@
     "id": "balance-mystery",
     "kind": "poster",
     "blob_sha": "2f6677126a83a5f1e814ff47543cee9a09a8f584"
+  },
+  {
+    "id": "balance-mystery",
+    "kind": "banner",
+    "blob_sha": "e223e841e0c5680ecc616e582ca8dcb3cb3c899f"
   }
 ]
