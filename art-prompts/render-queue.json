@@ -108,5 +108,10 @@
     "id": "counterexample-hunt",
     "kind": "banner",
     "blob_sha": "b0bea49303faedab5ce87b6869c780f214144bde"
+  },
+  {
+    "id": "bridge-limits",
+    "kind": "poster",
+    "blob_sha": "25cf93a53cec07074734a92ea195e434f81ffbfd"
   }
 ]
