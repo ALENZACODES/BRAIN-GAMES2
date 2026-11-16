@@ -103,5 +103,10 @@
     "id": "counterexample-hunt",
     "kind": "poster",
     "blob_sha": "a5f9eddb9e975ddac8484d687843e1e5b26f41e8"
+  },
+  {
+    "id": "counterexample-hunt",
+    "kind": "banner",
+    "blob_sha": "b0bea49303faedab5ce87b6869c780f214144bde"
   }
 ]
