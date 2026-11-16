@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 108,
+  "validated_images": 109,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -38,7 +38,6 @@
       "perspective-switch",
       "probability-marbles",
       "ratio-kitchen",
-      "route-reconstruction",
       "sample-size-studio",
       "scale-mapper",
       "sentence-repair",
@@ -422,6 +421,12 @@
     {
       "file": "shadow-match.webp",
       "bytes": 104934,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "route-reconstruction.webp",
+      "bytes": 149296,
       "width": 1024,
       "height": 1536
     },

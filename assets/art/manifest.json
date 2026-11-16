@@ -53,7 +53,8 @@
     "path-integration",
     "cross-section-studio",
     "relative-position",
-    "shadow-match"
+    "shadow-match",
+    "route-reconstruction"
   ],
   "banner": [
     "circuit-path",
