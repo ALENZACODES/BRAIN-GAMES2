@@ -17,7 +17,8 @@
     "counterexample-hunt",
     "bridge-limits",
     "tile-equation",
-    "hidden-transformation"
+    "hidden-transformation",
+    "necessary-or-sufficient"
   ],
   "banner": [
     "circuit-path",
