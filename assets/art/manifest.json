@@ -4,7 +4,8 @@
     "number-lock"
   ],
   "banner": [
-    "circuit-path"
+    "circuit-path",
+    "number-lock"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
