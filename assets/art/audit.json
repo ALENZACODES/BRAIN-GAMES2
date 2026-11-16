@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 95,
+  "validated_images": 96,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -102,7 +102,6 @@
       "scale-mapper",
       "sentence-repair",
       "shadow-match",
-      "shape-assembly",
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
@@ -681,6 +680,12 @@
     {
       "file": "perspective-finder-banner.webp",
       "bytes": 63568,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "shape-assembly-banner.webp",
+      "bytes": 97872,
       "width": 1536,
       "height": 1024
     }
