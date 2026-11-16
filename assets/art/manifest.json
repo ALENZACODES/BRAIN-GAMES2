@@ -68,7 +68,8 @@
     "sentence-repair",
     "concise-messenger",
     "ambiguity-detective",
-    "analogy-bridge"
+    "analogy-bridge",
+    "instruction-builder"
   ],
   "banner": [
     "circuit-path",
