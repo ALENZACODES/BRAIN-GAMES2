@@ -894,5 +894,10 @@
     "id": "error-detective",
     "kind": "banner",
     "blob_sha": "7ae0bad486ec49e45bbf5b0aab08295dad3d28a4"
+  },
+  {
+    "id": "strategy-selector",
+    "kind": "poster",
+    "blob_sha": "e7069d723bb49b079122b8d0cc898a095a40c2bc"
   }
 ]
