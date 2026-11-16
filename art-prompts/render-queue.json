@@ -518,5 +518,10 @@
     "id": "symmetry-workshop",
     "kind": "banner",
     "blob_sha": "781d2569fbcb1eb345942f86145d68eddc0c0114"
+  },
+  {
+    "id": "packing-rotation",
+    "kind": "poster",
+    "blob_sha": "b43e734e068d7736762a1186c3794d409597b4f4"
   }
 ]
