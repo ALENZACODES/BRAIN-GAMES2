@@ -598,5 +598,10 @@
     "id": "category-sprint",
     "kind": "banner",
     "blob_sha": "1eb3826800f3c438630ec7606da1042d66f41785"
+  },
+  {
+    "id": "meaning-in-context",
+    "kind": "poster",
+    "blob_sha": "2a65df357fb7aed8c4de2b0908e6a14e821300be"
   }
 ]
