@@ -1,14 +1,13 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 197,
+  "validated_images": 198,
   "missing": {
     "poster": [
       "personal-experiment-lab"
     ],
     "banner": [
-      "personal-experiment-lab",
-      "transfer-mission"
+      "personal-experiment-lab"
     ]
   },
   "files": [
@@ -1191,6 +1190,12 @@
     {
       "file": "decision-journal-banner.webp",
       "bytes": 111500,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "transfer-mission-banner.webp",
+      "bytes": 138464,
       "width": 1536,
       "height": 1024
     }
