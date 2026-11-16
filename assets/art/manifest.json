@@ -50,7 +50,8 @@
     "shape-assembly",
     "hidden-blocks",
     "map-rotation",
-    "path-integration"
+    "path-integration",
+    "cross-section-studio"
   ],
   "banner": [
     "circuit-path",

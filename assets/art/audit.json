@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 102,
+  "validated_images": 103,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -14,7 +14,6 @@
       "confidence-compass",
       "confirmation-trap",
       "construction-blueprint",
-      "cross-section-studio",
       "data-detective",
       "decision-journal",
       "distraction-budget",
@@ -410,6 +409,12 @@
     {
       "file": "path-integration.webp",
       "bytes": 126126,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "cross-section-studio.webp",
+      "bytes": 80474,
       "width": 1024,
       "height": 1536
     },
