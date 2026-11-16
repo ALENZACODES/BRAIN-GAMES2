@@ -54,7 +54,8 @@
     "cross-section-studio",
     "relative-position",
     "shadow-match",
-    "route-reconstruction"
+    "route-reconstruction",
+    "symmetry-workshop"
   ],
   "banner": [
     "circuit-path",
