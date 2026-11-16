@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 167,
+  "validated_images": 168,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -34,7 +34,6 @@
       "information-value",
       "personal-experiment-lab",
       "perspective-switch",
-      "sample-size-studio",
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
@@ -1041,6 +1040,12 @@
     {
       "file": "base-rate-detective-banner.webp",
       "bytes": 98380,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sample-size-studio-banner.webp",
+      "bytes": 84188,
       "width": 1536,
       "height": 1024
     }
