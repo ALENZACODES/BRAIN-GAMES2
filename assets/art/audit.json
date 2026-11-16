@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 186,
+  "validated_images": 187,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -9,7 +9,6 @@
       "decision-journal",
       "personal-experiment-lab",
       "perspective-switch",
-      "strategy-selector",
       "transfer-mission"
     ],
     "banner": [
@@ -578,6 +577,12 @@
     {
       "file": "error-detective.webp",
       "bytes": 101696,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "strategy-selector.webp",
+      "bytes": 102228,
       "width": 1024,
       "height": 1536
     },

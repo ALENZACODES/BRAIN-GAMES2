@@ -92,7 +92,8 @@
     "stop-searching-challenge",
     "ifthen-builder",
     "distraction-budget",
-    "error-detective"
+    "error-detective",
+    "strategy-selector"
   ],
   "banner": [
     "circuit-path",
