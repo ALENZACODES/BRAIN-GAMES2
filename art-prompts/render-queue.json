@@ -653,5 +653,10 @@
     "id": "instruction-builder",
     "kind": "poster",
     "blob_sha": "24cbdb68831f5206cd83b8d8c6a705489ee06bb1"
+  },
+  {
+    "id": "instruction-builder",
+    "kind": "banner",
+    "blob_sha": "ced49ff4510c229eb21b0d4124f133280056ad4d"
   }
 ]
