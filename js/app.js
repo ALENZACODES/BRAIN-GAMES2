@@ -146,9 +146,9 @@ async function gamePage(meta, q) {
   const hist = rec.history.filter((x) => !x.u).slice(-10);
   const hasDaily = rec.daily[today] != null;
   frame(h('div', { class: 'gpage' },
-    h('div', { class: 'hero' }, posterEl(meta), h('div', { class: 'hinfo' },
-      h('a', { href: '#/', class: 'back' }, '← All games'), h('span', { class: 'gcat', style: { '--c': catHue(meta.cat) } }, CAT_SHORT[meta.cat]), h('h1', {}, meta.title),
-      h('p', { class: 'lede' }, meta.play), h('p', { class: 'muted' }, h('b', {}, 'Trains: '), meta.skill))),
+    h('div', { class: 'bhero' }, posterEl(meta, 'banner'), h('a', { href: '#/', class: 'back' }, '← All games'), h('div', { class: 'bover' },
+      h('span', { class: 'gcat', style: { '--c': catHue(meta.cat) } }, CAT_SHORT[meta.cat]), h('h1', {}, meta.title))),
+    h('p', { class: 'lede' }, meta.play), h('p', { class: 'muted' }, h('b', {}, 'Trains: '), meta.skill),
     from ? h('div', { class: 'banner' }, `🎯 ${from} challenged you${target ? ` to beat ${fmt(target)} points` : ''}. Same puzzles, same start. Go!`) : null,
     daily ? h('div', { class: 'banner' }, hasDaily ? `Today’s run done: ${fmt(rec.daily[today])}. You can still beat it.` : '📅 Today’s seed: everyone gets the same puzzles.') : null,
     h('div', { class: 'actions' },
@@ -251,7 +251,7 @@ function results(game, meta, stats, res, o) {
   let versus = null;
   if (o.target) versus = h('div', { class: 'banner ' + (stats.score >= o.target ? 'win' : '') }, stats.score >= o.target ? `🏆 You beat ${o.from}: ${fmt(stats.score)} vs ${fmt(o.target)}` : `${o.from} still leads: ${fmt(o.target)} vs your ${fmt(stats.score)}. Rematch?`);
   frame(h('div', { class: 'results' },
-    h('div', { class: 'rhead' }, posterEl(meta), h('div', {}, h('span', { class: 'muted' }, o.daily ? 'Daily run' : 'Run complete'), h('h1', {}, meta.title), scoreEl, h('small', {}, 'points'),
+    h('div', { class: 'rhead rb' }, posterEl(meta, 'banner'), h('div', { class: 'bover' }, h('span', { class: 'muted' }, o.daily ? 'Daily run' : 'Run complete'), h('h1', {}, meta.title), scoreEl, h('small', {}, 'points'),
       res.newBest ? h('span', { class: 'badge gold' }, '★ New personal best') : res.firstRun ? h('span', { class: 'badge' }, 'First run!') : null,
       stats.cleared ? h('span', { class: 'badge' }, 'Full clear +' + fmt(500 * stats.maxLevel)) : null)),
     versus,

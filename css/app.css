@@ -274,3 +274,11 @@ input[type=text],input:not([type]),textarea{width:100%;margin-top:4px;padding:12
 @media(max-width:520px){.skill{grid-template-columns:110px 1fr 60px}}
 .skill .mbar{grid-column:auto}
 @media(max-width:440px){.wm small{display:none}.wm b{font-size:12px;letter-spacing:.14em}.chip{padding:6px 9px;gap:3px;font-size:13px}.chip.lvl .xpbar{display:none}.chips{gap:5px}.logo svg{width:28px;height:28px}}
+/* ===== landscape banners (game page + results) ===== */
+.bhero,.rhead.rb{position:relative;display:block;margin:6px 0 14px;border-radius:26px;overflow:hidden;aspect-ratio:3/2;max-height:420px;width:100%;border:1px solid var(--line);box-shadow:0 24px 60px #000a;background:#000}
+.bhero>.poster,.rhead.rb>.poster{position:absolute;inset:0;width:100%;height:100%;border-radius:0;aspect-ratio:auto;border:0;box-shadow:none}
+.bover{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:6px;background:linear-gradient(transparent,#000c 55%,#000e)}
+.bhero .back{position:absolute;top:12px;left:14px;padding:6px 12px;border-radius:99px;background:#0008;backdrop-filter:blur(6px);color:#fff}
+.bover h1{text-shadow:0 2px 14px #000}.rhead.rb .bover{padding-top:90px}.rhead.rb .muted{color:#ffffffcc}
+.gpage>.lede{margin-top:4px}
+@media(min-width:760px){.bhero,.rhead.rb{aspect-ratio:16/7}}
