@@ -438,5 +438,10 @@
     "id": "shape-assembly",
     "kind": "banner",
     "blob_sha": "9e8701e880db92081e686e7e6aae795f6514adb8"
+  },
+  {
+    "id": "hidden-blocks",
+    "kind": "poster",
+    "blob_sha": "fb26fd2a250d7d7302a0137264963de67c30c019"
   }
 ]
