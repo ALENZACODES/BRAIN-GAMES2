@@ -1,11 +1,10 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 187,
+  "validated_images": 189,
   "missing": {
     "poster": [
       "alternative-explanation",
-      "breakpoint-planner",
       "decision-journal",
       "personal-experiment-lab",
       "perspective-switch",
@@ -17,7 +16,6 @@
       "decision-journal",
       "personal-experiment-lab",
       "perspective-switch",
-      "strategy-selector",
       "transfer-mission"
     ]
   },
@@ -587,6 +585,12 @@
       "height": 1536
     },
     {
+      "file": "breakpoint-planner.webp",
+      "bytes": 108868,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -1141,6 +1145,12 @@
     {
       "file": "error-detective-banner.webp",
       "bytes": 114888,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "strategy-selector-banner.webp",
+      "bytes": 106004,
       "width": 1536,
       "height": 1024
     }

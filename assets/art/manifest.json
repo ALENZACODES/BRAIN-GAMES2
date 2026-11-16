@@ -93,7 +93,8 @@
     "ifthen-builder",
     "distraction-budget",
     "error-detective",
-    "strategy-selector"
+    "strategy-selector",
+    "breakpoint-planner"
   ],
   "banner": [
     "circuit-path",
@@ -188,7 +189,8 @@
     "stop-searching-challenge",
     "ifthen-builder",
     "distraction-budget",
-    "error-detective"
+    "error-detective",
+    "strategy-selector"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
