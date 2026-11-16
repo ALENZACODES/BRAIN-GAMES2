@@ -4,7 +4,8 @@
     "number-lock",
     "rotation-match",
     "mirror-maze",
-    "number-line-navigator"
+    "number-line-navigator",
+    "fraction-duel"
   ],
   "banner": [
     "circuit-path",
