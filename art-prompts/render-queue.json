@@ -168,5 +168,10 @@
     "id": "set-builder",
     "kind": "banner",
     "blob_sha": "f7ab2001b2aa9469c7822d4fa24bbcad3ab87b68"
+  },
+  {
+    "id": "invariant-hunt",
+    "kind": "poster",
+    "blob_sha": "3272348a9fbb63b0c301b033917a8d67a340f845"
   }
 ]
