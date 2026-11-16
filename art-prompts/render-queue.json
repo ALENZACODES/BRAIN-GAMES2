@@ -468,5 +468,10 @@
     "id": "path-integration",
     "kind": "banner",
     "blob_sha": "e3e341e32a6693db404748b8f79a33a6317a460f"
+  },
+  {
+    "id": "cross-section-studio",
+    "kind": "poster",
+    "blob_sha": "f4c6c8a7ad766c46244f342ce77bcd504cf2281e"
   }
 ]
