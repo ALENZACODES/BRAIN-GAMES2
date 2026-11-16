@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 193,
+  "validated_images": 194,
   "missing": {
     "poster": [
       "decision-journal",
@@ -11,7 +11,6 @@
     "banner": [
       "decision-journal",
       "personal-experiment-lab",
-      "perspective-switch",
       "transfer-mission"
     ]
   },
@@ -1171,6 +1170,12 @@
     {
       "file": "alternative-explanation-banner.webp",
       "bytes": 101732,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "perspective-switch-banner.webp",
+      "bytes": 96692,
       "width": 1536,
       "height": 1024
     }

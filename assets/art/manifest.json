@@ -194,7 +194,8 @@
     "error-detective",
     "strategy-selector",
     "breakpoint-planner",
-    "alternative-explanation"
+    "alternative-explanation",
+    "perspective-switch"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
