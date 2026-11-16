@@ -308,5 +308,10 @@
     "id": "rescue-sequence",
     "kind": "banner",
     "blob_sha": "0521fd730f38ca0c097c3b1ef70c638f97208e02"
+  },
+  {
+    "id": "maintenance-window",
+    "kind": "poster",
+    "blob_sha": "de187fb71fd8ab7babc65d1e73616c6a3042b749"
   }
 ]
