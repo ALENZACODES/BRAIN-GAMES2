@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 35,
+  "validated_images": 36,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -119,7 +119,6 @@
       "framing-mirror",
       "goal-decomposer",
       "hidden-blocks",
-      "hidden-transformation",
       "ifthen-builder",
       "information-value",
       "instruction-builder",
@@ -381,6 +380,12 @@
     {
       "file": "tile-equation-banner.webp",
       "bytes": 106220,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "hidden-transformation-banner.webp",
+      "bytes": 90552,
       "width": 1536,
       "height": 1024
     }

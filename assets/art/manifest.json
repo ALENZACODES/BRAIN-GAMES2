@@ -36,7 +36,8 @@
     "minimal-clue",
     "counterexample-hunt",
     "bridge-limits",
-    "tile-equation"
+    "tile-equation",
+    "hidden-transformation"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
