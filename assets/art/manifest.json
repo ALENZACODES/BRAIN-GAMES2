@@ -61,7 +61,8 @@
     "landmark-ordering",
     "tile-navigation",
     "occlusion-detective",
-    "construction-blueprint"
+    "construction-blueprint",
+    "word-ladder"
   ],
   "banner": [
     "circuit-path",
