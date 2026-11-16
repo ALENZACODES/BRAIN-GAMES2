@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 125,
+  "validated_images": 126,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -79,8 +79,7 @@
       "strategy-selector",
       "sunk-cost-expedition",
       "transfer-mission",
-      "unit-switch",
-      "word-ladder"
+      "unit-switch"
     ]
   },
   "files": [
@@ -831,6 +830,12 @@
     {
       "file": "construction-blueprint-banner.webp",
       "bytes": 81070,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "word-ladder-banner.webp",
+      "bytes": 121508,
       "width": 1536,
       "height": 1024
     }
