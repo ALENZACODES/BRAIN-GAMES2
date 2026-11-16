@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 113,
+  "validated_images": 114,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -76,7 +76,6 @@
       "meaning-in-context",
       "mental-checkout",
       "occlusion-detective",
-      "packing-rotation",
       "patterned-arithmetic",
       "percentage-transformer",
       "personal-experiment-lab",
@@ -771,6 +770,12 @@
     {
       "file": "symmetry-workshop-banner.webp",
       "bytes": 104110,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "packing-rotation-banner.webp",
+      "bytes": 115682,
       "width": 1536,
       "height": 1024
     }
