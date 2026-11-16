@@ -95,7 +95,8 @@
     "error-detective",
     "strategy-selector",
     "breakpoint-planner",
-    "alternative-explanation"
+    "alternative-explanation",
+    "perspective-switch"
   ],
   "banner": [
     "circuit-path",
