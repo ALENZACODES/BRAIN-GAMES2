@@ -613,5 +613,10 @@
     "id": "sentence-repair",
     "kind": "poster",
     "blob_sha": "799b24ea2f7feeaa7ddae231125e871fe11b8199"
+  },
+  {
+    "id": "sentence-repair",
+    "kind": "banner",
+    "blob_sha": "8e6929750e25479ef42d3556a5a8183ba17dcd23"
   }
 ]
