@@ -73,5 +73,10 @@
     "id": "constraint-garden",
     "kind": "poster",
     "blob_sha": "4e888350355cb7b2404fd043a052ce6c63ba8f2d"
+  },
+  {
+    "id": "constraint-garden",
+    "kind": "banner",
+    "blob_sha": "3f3bf0bea92cbf1102b3ce98160670672d3b31a5"
   }
 ]
