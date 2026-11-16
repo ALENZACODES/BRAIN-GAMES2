@@ -914,5 +914,10 @@
     "id": "breakpoint-planner",
     "kind": "banner",
     "blob_sha": "40f030006242f30fa33ba3ed6066eb3d1b4270b4"
+  },
+  {
+    "id": "alternative-explanation",
+    "kind": "poster",
+    "blob_sha": "62fc8e1d5f97653a36115c30c45c4591aac60da4"
   }
 ]
