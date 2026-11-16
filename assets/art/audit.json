@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 105,
+  "validated_images": 106,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -87,7 +87,6 @@
       "perspective-switch",
       "probability-marbles",
       "ratio-kitchen",
-      "relative-position",
       "route-reconstruction",
       "sample-size-studio",
       "scale-mapper",
@@ -731,6 +730,12 @@
     {
       "file": "cross-section-studio-banner.webp",
       "bytes": 61738,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "relative-position-banner.webp",
+      "bytes": 93038,
       "width": 1536,
       "height": 1024
     }

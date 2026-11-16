@@ -106,7 +106,8 @@
     "hidden-blocks",
     "map-rotation",
     "path-integration",
-    "cross-section-studio"
+    "cross-section-studio",
+    "relative-position"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
