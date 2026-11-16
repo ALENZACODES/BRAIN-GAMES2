@@ -583,5 +583,10 @@
     "id": "word-ladder",
     "kind": "poster",
     "blob_sha": "167952f0ebdf3024c5fd1193f7794a2109dc6b5c"
+  },
+  {
+    "id": "word-ladder",
+    "kind": "banner",
+    "blob_sha": "edb4e9c4b545f2a0c95b7d312ca832616733a9f5"
   }
 ]
