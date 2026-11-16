@@ -15,7 +15,8 @@
     "cause-and-effect-machine",
     "minimal-clue",
     "counterexample-hunt",
-    "bridge-limits"
+    "bridge-limits",
+    "tile-equation"
   ],
   "banner": [
     "circuit-path",
