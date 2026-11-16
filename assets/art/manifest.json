@@ -84,7 +84,8 @@
     "evidence-updater",
     "base-rate-detective",
     "sample-size-studio",
-    "confirmation-trap"
+    "confirmation-trap",
+    "sunk-cost-expedition"
   ],
   "banner": [
     "circuit-path",
@@ -171,7 +172,8 @@
     "evidence-updater",
     "base-rate-detective",
     "sample-size-studio",
-    "confirmation-trap"
+    "confirmation-trap",
+    "sunk-cost-expedition"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

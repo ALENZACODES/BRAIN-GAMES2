@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 170,
+  "validated_images": 172,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -17,7 +17,6 @@
       "perspective-switch",
       "stop-searching-challenge",
       "strategy-selector",
-      "sunk-cost-expedition",
       "transfer-mission"
     ],
     "banner": [
@@ -34,7 +33,6 @@
       "perspective-switch",
       "stop-searching-challenge",
       "strategy-selector",
-      "sunk-cost-expedition",
       "transfer-mission"
     ]
   },
@@ -550,6 +548,12 @@
       "height": 1536
     },
     {
+      "file": "sunk-cost-expedition.webp",
+      "bytes": 145698,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -1056,6 +1060,12 @@
     {
       "file": "confirmation-trap-banner.webp",
       "bytes": 86972,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sunk-cost-expedition-banner.webp",
+      "bytes": 99774,
       "width": 1536,
       "height": 1024
     }
