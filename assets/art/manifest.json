@@ -57,7 +57,8 @@
     "route-reconstruction",
     "symmetry-workshop",
     "packing-rotation",
-    "scale-mapper"
+    "scale-mapper",
+    "landmark-ordering"
   ],
   "banner": [
     "circuit-path",

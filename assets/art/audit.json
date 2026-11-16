@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 116,
+  "validated_images": 117,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -26,7 +26,6 @@
       "ifthen-builder",
       "information-value",
       "instruction-builder",
-      "landmark-ordering",
       "main-idea-finder",
       "meaning-in-context",
       "mental-checkout",
@@ -438,6 +437,12 @@
     {
       "file": "scale-mapper.webp",
       "bytes": 103190,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "landmark-ordering.webp",
+      "bytes": 115304,
       "width": 1024,
       "height": 1536
     },
