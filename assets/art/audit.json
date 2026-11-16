@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 115,
+  "validated_images": 116,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -82,7 +82,6 @@
       "probability-marbles",
       "ratio-kitchen",
       "sample-size-studio",
-      "scale-mapper",
       "sentence-repair",
       "stop-searching-challenge",
       "strategy-selector",
@@ -781,6 +780,12 @@
     {
       "file": "packing-rotation-banner.webp",
       "bytes": 115682,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "scale-mapper-banner.webp",
+      "bytes": 87920,
       "width": 1536,
       "height": 1024
     }

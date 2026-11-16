@@ -116,7 +116,8 @@
     "shadow-match",
     "route-reconstruction",
     "symmetry-workshop",
-    "packing-rotation"
+    "packing-rotation",
+    "scale-mapper"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
