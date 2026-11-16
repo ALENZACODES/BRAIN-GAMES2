@@ -62,7 +62,8 @@
     "tile-navigation",
     "occlusion-detective",
     "construction-blueprint",
-    "word-ladder"
+    "word-ladder",
+    "category-sprint"
   ],
   "banner": [
     "circuit-path",
