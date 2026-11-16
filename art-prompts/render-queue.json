@@ -638,5 +638,10 @@
     "id": "ambiguity-detective",
     "kind": "banner",
     "blob_sha": "26c20b1922fa9f834097731ffb7203be562edc47"
+  },
+  {
+    "id": "analogy-bridge",
+    "kind": "poster",
+    "blob_sha": "a205c36da39f6c54be7820e2cb27bd43cf98c7ba"
   }
 ]
