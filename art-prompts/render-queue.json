@@ -323,5 +323,10 @@
     "id": "goal-decomposer",
     "kind": "poster",
     "blob_sha": "a66aee0d9fef34af873586e9e1896926d68719ad"
+  },
+  {
+    "id": "goal-decomposer",
+    "kind": "banner",
+    "blob_sha": "443fa7069a10cf33a32603581ec9681f14ca00fb"
   }
 ]
