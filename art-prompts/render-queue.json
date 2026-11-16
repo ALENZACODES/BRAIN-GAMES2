@@ -683,5 +683,10 @@
     "id": "estimate-first",
     "kind": "poster",
     "blob_sha": "b9eca43ed67917bc2b39e5f54de7faa778d124fb"
+  },
+  {
+    "id": "estimate-first",
+    "kind": "banner",
+    "blob_sha": "88973264ff7bfeaaf9f4c4b43f81b32ee06f66c9"
   }
 ]
