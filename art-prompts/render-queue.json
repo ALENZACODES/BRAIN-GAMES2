@@ -728,5 +728,10 @@
     "id": "data-detective",
     "kind": "banner",
     "blob_sha": "f3c4c27786f2e63228a5f2560b1cbdd98bbb688a"
+  },
+  {
+    "id": "probability-marbles",
+    "kind": "poster",
+    "blob_sha": "7a5d5fbe20aa2f57477d8dbdb8afab1d2f25f5b1"
   }
 ]
