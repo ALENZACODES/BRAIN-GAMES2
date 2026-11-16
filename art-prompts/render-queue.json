@@ -53,5 +53,10 @@
     "id": "sequence-laboratory",
     "kind": "poster",
     "blob_sha": "1ca8ca33d4f956bd52fda199a12bb9b02536406f"
+  },
+  {
+    "id": "sequence-laboratory",
+    "kind": "banner",
+    "blob_sha": "6a8230bf28c91d7ec38ba9699f9c4dac25c6159a"
   }
 ]
