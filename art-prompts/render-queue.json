@@ -463,5 +463,10 @@
     "id": "path-integration",
     "kind": "poster",
     "blob_sha": "c8aaa58f9378171c6a8ec815c0375f40019ac56d"
+  },
+  {
+    "id": "path-integration",
+    "kind": "banner",
+    "blob_sha": "e3e341e32a6693db404748b8f79a33a6317a460f"
   }
 ]
