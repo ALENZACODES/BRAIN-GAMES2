@@ -138,5 +138,10 @@
     "id": "hidden-transformation",
     "kind": "banner",
     "blob_sha": "9568f3267e81df394721d618a37750a69c4cbb27"
+  },
+  {
+    "id": "necessary-or-sufficient",
+    "kind": "poster",
+    "blob_sha": "97ceaa355f3a0ed23f9481bc2679ed1a06283055"
   }
 ]
