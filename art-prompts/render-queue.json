@@ -68,5 +68,10 @@
     "id": "truthful-robots",
     "kind": "banner",
     "blob_sha": "66bfe9b9a74f54bca465930f780a621c9b7e61a3"
+  },
+  {
+    "id": "constraint-garden",
+    "kind": "poster",
+    "blob_sha": "4e888350355cb7b2404fd043a052ce6c63ba8f2d"
   }
 ]
