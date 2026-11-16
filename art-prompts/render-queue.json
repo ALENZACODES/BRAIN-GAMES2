@@ -513,5 +513,10 @@
     "id": "symmetry-workshop",
     "kind": "poster",
     "blob_sha": "0d7ee83c969a1e1fdb69d3dc9efb061ef3bf9f4a"
+  },
+  {
+    "id": "symmetry-workshop",
+    "kind": "banner",
+    "blob_sha": "781d2569fbcb1eb345942f86145d68eddc0c0114"
   }
 ]
