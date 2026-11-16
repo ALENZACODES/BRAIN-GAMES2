@@ -803,5 +803,10 @@
     "id": "sample-size-studio",
     "kind": "banner",
     "blob_sha": "76ee4cfd4441be0fdcbe3ec7233022caf1364efb"
+  },
+  {
+    "id": "confirmation-trap",
+    "kind": "poster",
+    "blob_sha": "f21604ee6cae55826396d6acc244d7eff208c21e"
   }
 ]
