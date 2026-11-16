@@ -760,5 +760,10 @@
     "id": "patterned-arithmetic",
     "kind": "banner",
     "blob_sha": "a80aba622162f58ba95d4e1ac5ccefdb3b8ac862"
+  },
+  {
+    "id": "confidence-compass",
+    "kind": "poster",
+    "blob_sha": "5fda75b6439fe705b005480e72ccbf50a1fd33bc"
   }
 ]
