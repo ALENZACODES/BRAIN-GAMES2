@@ -2,7 +2,8 @@
   "poster": [
     "circuit-path",
     "number-lock",
-    "rotation-match"
+    "rotation-match",
+    "mirror-maze"
   ],
   "banner": [
     "circuit-path",
