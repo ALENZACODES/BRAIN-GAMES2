@@ -218,5 +218,10 @@
     "id": "calendar-tetris",
     "kind": "banner",
     "blob_sha": "665e3211cd0757b8e129b15f623d2c3372f2290b"
+  },
+  {
+    "id": "kitchen-conductor",
+    "kind": "poster",
+    "blob_sha": "af4ad49702954e5d6b5a447e2510367c19322c34"
   }
 ]
