@@ -19,6 +19,8 @@ def main():
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ["GH_TOKEN"]
     ART.mkdir(parents=True, exist_ok=True)
+    receipt_path = ART / "import-receipts.json"
+    receipts = json.loads(receipt_path.read_text(encoding="utf-8")) if receipt_path.exists() else {}
     imported = []
     for entry in queue:
         game_id, kind, blob_sha = entry["id"], entry["kind"], entry["blob_sha"]
@@ -29,7 +31,8 @@ def main():
         expected = (1024, 1536) if kind == "poster" else (1536, 1024)
         name = game_id + ("-banner" if kind == "banner" else "") + ".webp"
         destination = ART / name
-        if destination.exists() and game_id in manifest[kind]:
+        replace_needed = entry.get("replace", False) and receipts.get(name) != blob_sha
+        if destination.exists() and game_id in manifest[kind] and not replace_needed:
             with Image.open(destination) as existing:
                 if existing.format == "WEBP" and existing.size == expected and destination.stat().st_size < 250000:
                     continue
@@ -60,10 +63,31 @@ def main():
                 raise ValueError("WebP validation failed")
             verified.load()
         destination.write_bytes(encoded)
+        receipts[name] = blob_sha
         if game_id not in manifest[kind]:
             manifest[kind].append(game_id)
         imported.append({"file": name, "bytes": len(encoded)})
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    receipt_path.write_text(json.dumps(receipts, indent=2) + "\n", encoding="utf-8")
+    expected_ids = {game["id"] for game in json.loads((ROOT / "art-prompts" / "prompts.json").read_text(encoding="utf-8"))}
+    audited = []
+    missing = {}
+    for kind in ("poster", "banner"):
+        listed = manifest[kind]
+        if len(listed) != len(set(listed)) or not set(listed).issubset(expected_ids):
+            raise ValueError("Invalid manifest ids for " + kind)
+        missing[kind] = sorted(expected_ids - set(listed))
+        for game_id in listed:
+            name = game_id + ("-banner" if kind == "banner" else "") + ".webp"
+            path = ART / name
+            expected = (1024, 1536) if kind == "poster" else (1536, 1024)
+            with Image.open(path) as checked:
+                if checked.format != "WEBP" or checked.size != expected or path.stat().st_size >= 250000:
+                    raise ValueError("Art audit failed: " + name)
+                checked.load()
+            audited.append({"file": name, "bytes": path.stat().st_size, "width": expected[0], "height": expected[1]})
+    report = {"complete": not any(missing.values()), "expected_images": len(expected_ids) * 2, "validated_images": len(audited), "missing": missing, "files": audited}
+    (ART / "audit.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"imported": imported, "total": len(manifest["poster"]) + len(manifest["banner"])}))
 
 if __name__ == "__main__":
