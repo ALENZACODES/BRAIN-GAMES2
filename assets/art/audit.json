@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 91,
+  "validated_images": 92,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -71,7 +71,6 @@
       "confirmation-trap",
       "construction-blueprint",
       "cross-section-studio",
-      "cube-net",
       "data-detective",
       "decision-journal",
       "distraction-budget",
@@ -661,6 +660,12 @@
     {
       "file": "folded-paper-banner.webp",
       "bytes": 76936,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "cube-net-banner.webp",
+      "bytes": 87590,
       "width": 1536,
       "height": 1024
     }
