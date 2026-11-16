@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 69,
+  "validated_images": 70,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -120,7 +120,6 @@
       "ratio-kitchen",
       "relative-position",
       "replanning-storm",
-      "rescue-sequence",
       "route-reconstruction",
       "sample-size-studio",
       "scale-mapper",
@@ -551,6 +550,12 @@
     {
       "file": "packing-constraints-banner.webp",
       "bytes": 145768,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "rescue-sequence-banner.webp",
+      "bytes": 156420,
       "width": 1536,
       "height": 1024
     }
