@@ -13,7 +13,8 @@
     "truthful-robots",
     "constraint-garden",
     "cause-and-effect-machine",
-    "minimal-clue"
+    "minimal-clue",
+    "counterexample-hunt"
   ],
   "banner": [
     "circuit-path",

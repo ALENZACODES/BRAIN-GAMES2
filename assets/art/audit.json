@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 28,
+  "validated_images": 29,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -20,7 +20,6 @@
       "confidence-compass",
       "confirmation-trap",
       "construction-blueprint",
-      "counterexample-hunt",
       "cross-section-studio",
       "cube-net",
       "data-detective",
@@ -262,6 +261,12 @@
     {
       "file": "minimal-clue.webp",
       "bytes": 105868,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "counterexample-hunt.webp",
+      "bytes": 93680,
       "width": 1024,
       "height": 1536
     },
