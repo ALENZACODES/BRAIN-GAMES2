@@ -29,7 +29,8 @@
     "kitchen-conductor",
     "limited-moves",
     "priority-desk",
-    "warehouse-stack"
+    "warehouse-stack",
+    "battery-expedition"
   ],
   "banner": [
     "circuit-path",

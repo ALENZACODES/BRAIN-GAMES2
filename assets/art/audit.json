@@ -1,14 +1,13 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 60,
+  "validated_images": 61,
   "missing": {
     "poster": [
       "alternative-explanation",
       "ambiguity-detective",
       "analogy-bridge",
       "base-rate-detective",
-      "battery-expedition",
       "breakpoint-planner",
       "budget-builder",
       "category-sprint",
@@ -326,6 +325,12 @@
     {
       "file": "warehouse-stack.webp",
       "bytes": 136058,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "battery-expedition.webp",
+      "bytes": 141568,
       "width": 1024,
       "height": 1536
     },
