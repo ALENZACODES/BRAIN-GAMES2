@@ -353,5 +353,10 @@
     "id": "queue-manager",
     "kind": "poster",
     "blob_sha": "41daeeb6ac7172aea1513bf4a31c9bbd7931c679"
+  },
+  {
+    "id": "queue-manager",
+    "kind": "banner",
+    "blob_sha": "b753374efccc2b7a9a9def7e188f0e8d4725eb58"
   }
 ]
