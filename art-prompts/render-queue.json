@@ -203,5 +203,10 @@
     "id": "delivery-planner",
     "kind": "poster",
     "blob_sha": "759617b1baa5814aa7dab5c9965a376fed14826d"
+  },
+  {
+    "id": "delivery-planner",
+    "kind": "banner",
+    "blob_sha": "9c385587376d6b3f51ea84d7eb61e480738ba7a3"
   }
 ]
