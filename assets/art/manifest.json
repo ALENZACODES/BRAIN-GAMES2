@@ -68,7 +68,8 @@
     "warehouse-stack",
     "battery-expedition",
     "dependency-builder",
-    "travel-buffer"
+    "travel-buffer",
+    "packing-constraints"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

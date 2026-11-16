@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 67,
+  "validated_images": 68,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -108,7 +108,6 @@
       "meaning-in-context",
       "mental-checkout",
       "occlusion-detective",
-      "packing-constraints",
       "packing-rotation",
       "path-integration",
       "patterned-arithmetic",
@@ -541,6 +540,12 @@
     {
       "file": "travel-buffer-banner.webp",
       "bytes": 149226,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "packing-constraints-banner.webp",
+      "bytes": 145768,
       "width": 1536,
       "height": 1024
     }
