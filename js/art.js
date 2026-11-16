@@ -103,6 +103,21 @@ ${emblem(g.cat, hue, id, g.id, g.n)}
 </svg>`;
 }
 
+// Catalogue titles retain separators that the artwork prompt IDs omit.
+const ART_IDS = {
+  "shape-sound-pairs": "shapesound-pairs",
+  "number-letter-mixer": "numberletter-mixer",
+  "object-place-museum": "objectplace-museum",
+  "face-detail-match": "facedetail-match",
+  "learn-teach-cards": "learnteach-cards",
+  "go-hold-garden": "gohold-garden",
+  "day-night-signals": "daynight-signals",
+  "word-picture-match": "wordpicture-match",
+  "plan-do-review": "plandoreview",
+  "if-then-builder": "ifthen-builder"
+};
+export const artId = (id) => ART_IDS[id] || id;
+
 let manifestP;
 export function artManifest() {
   return (manifestP ||= fetch('assets/art/manifest.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({})));
@@ -114,11 +129,12 @@ export function posterEl(g, kind = 'poster') {
   el.innerHTML = posterSVG(g, kind === 'banner' ? { w: 300, h: 400 } : undefined);
   artManifest().then((m) => {
     const list = m[kind] || [];
-    if (!list.includes(g.id)) return;
+    const id = artId(g.id);
+    if (!list.includes(id)) return;
     const img = new Image();
     img.alt = ''; img.decoding = 'async';
     img.onload = () => { img.classList.add('in'); el.append(img); };
-    img.src = `assets/art/${g.id}${kind === 'banner' ? '-banner' : ''}.webp`;
+    img.src = `assets/art/${id}${kind === 'banner' ? '-banner' : ''}.webp`;
   });
   return el;
 }
