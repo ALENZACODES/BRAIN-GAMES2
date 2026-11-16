@@ -8,7 +8,8 @@
     "fraction-duel",
     "rule-detective",
     "mini-logic-houses",
-    "balance-mystery"
+    "balance-mystery",
+    "sequence-laboratory"
   ],
   "banner": [
     "circuit-path",
@@ -19,7 +20,8 @@
     "fraction-duel",
     "rule-detective",
     "mini-logic-houses",
-    "balance-mystery"
+    "balance-mystery",
+    "sequence-laboratory"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
