@@ -553,5 +553,10 @@
     "id": "tile-navigation",
     "kind": "poster",
     "blob_sha": "52aa356df14ff17cd59454287cd604d26ab88b62"
+  },
+  {
+    "id": "tile-navigation",
+    "kind": "banner",
+    "blob_sha": "5ff6cd0d25fbd2e49190e6059abb721c5d72a07d"
   }
 ]
