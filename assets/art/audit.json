@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 23,
+  "validated_images": 24,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -110,7 +110,6 @@
       "concise-messenger",
       "confidence-compass",
       "confirmation-trap",
-      "constraint-garden",
       "construction-blueprint",
       "counterexample-hunt",
       "cross-section-studio",
@@ -321,6 +320,12 @@
     {
       "file": "truthful-robots-banner.webp",
       "bytes": 98534,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "constraint-garden-banner.webp",
+      "bytes": 177654,
       "width": 1536,
       "height": 1024
     }

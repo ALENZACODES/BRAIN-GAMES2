@@ -24,7 +24,8 @@
     "mini-logic-houses",
     "balance-mystery",
     "sequence-laboratory",
-    "truthful-robots"
+    "truthful-robots",
+    "constraint-garden"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
