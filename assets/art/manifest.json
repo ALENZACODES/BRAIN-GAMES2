@@ -146,7 +146,8 @@
     "analogy-bridge",
     "instruction-builder",
     "main-idea-finder",
-    "evidence-match"
+    "evidence-match",
+    "estimate-first"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
