@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 156,
+  "validated_images": 158,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -24,8 +24,7 @@
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
-      "transfer-mission",
-      "unit-switch"
+      "transfer-mission"
     ],
     "banner": [
       "alternative-explanation",
@@ -48,8 +47,7 @@
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
-      "transfer-mission",
-      "unit-switch"
+      "transfer-mission"
     ]
   },
   "files": [
@@ -522,6 +520,12 @@
       "height": 1536
     },
     {
+      "file": "unit-switch.webp",
+      "bytes": 86330,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -986,6 +990,12 @@
     {
       "file": "probability-marbles-banner.webp",
       "bytes": 106932,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "unit-switch-banner.webp",
+      "bytes": 94936,
       "width": 1536,
       "height": 1024
     }

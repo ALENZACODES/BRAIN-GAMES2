@@ -77,7 +77,8 @@
     "mental-checkout",
     "ratio-kitchen",
     "data-detective",
-    "probability-marbles"
+    "probability-marbles",
+    "unit-switch"
   ],
   "banner": [
     "circuit-path",
@@ -157,7 +158,8 @@
     "mental-checkout",
     "ratio-kitchen",
     "data-detective",
-    "probability-marbles"
+    "probability-marbles",
+    "unit-switch"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
