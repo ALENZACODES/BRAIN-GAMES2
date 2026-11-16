@@ -65,7 +65,8 @@
     "word-ladder",
     "category-sprint",
     "meaning-in-context",
-    "sentence-repair"
+    "sentence-repair",
+    "concise-messenger"
   ],
   "banner": [
     "circuit-path",
