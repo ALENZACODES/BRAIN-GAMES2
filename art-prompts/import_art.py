@@ -16,6 +16,19 @@ def main():
     queue = json.loads(QUEUE.read_text(encoding="utf-8"))
     manifest_path = ART / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    aliases = {"plan-do-review":"plandoreview","if-then-builder":"ifthen-builder"}
+    for entry in queue:
+        entry["id"] = aliases.get(entry["id"], entry["id"])
+    for kind in ("poster", "banner"):
+        suffix = ("-banner" if kind == "banner" else "") + ".webp"
+        for old_id, new_id in aliases.items():
+            old_path, new_path = ART / (old_id + suffix), ART / (new_id + suffix)
+            if old_path.exists():
+                if not new_path.exists():
+                    old_path.rename(new_path)
+                else:
+                    old_path.unlink()
+        manifest[kind] = list(dict.fromkeys(aliases.get(game_id, game_id) for game_id in manifest[kind]))
     repository = os.environ["GITHUB_REPOSITORY"]
     token = os.environ["GH_TOKEN"]
     ART.mkdir(parents=True, exist_ok=True)
