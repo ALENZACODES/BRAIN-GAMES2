@@ -373,7 +373,8 @@
   {
     "id": "tool-before-task",
     "kind": "poster",
-    "blob_sha": "2acc53ae2bce5efded63a8b460705fa3b9e0c83e"
+    "blob_sha": "2ced4434efd97bfc9f30f9faa659a4417c3a7456",
+    "replace": true
   },
   {
     "id": "tool-before-task",
