@@ -1,12 +1,10 @@
 {
-  "complete": false,
+  "complete": true,
   "expected_images": 200,
-  "validated_images": 199,
+  "validated_images": 200,
   "missing": {
     "poster": [],
-    "banner": [
-      "personal-experiment-lab"
-    ]
+    "banner": []
   },
   "files": [
     {
@@ -1200,6 +1198,12 @@
     {
       "file": "transfer-mission-banner.webp",
       "bytes": 138464,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "personal-experiment-lab-banner.webp",
+      "bytes": 90048,
       "width": 1536,
       "height": 1024
     }

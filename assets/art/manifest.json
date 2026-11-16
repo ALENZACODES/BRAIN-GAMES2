@@ -200,7 +200,8 @@
     "alternative-explanation",
     "perspective-switch",
     "decision-journal",
-    "transfer-mission"
+    "transfer-mission",
+    "personal-experiment-lab"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
