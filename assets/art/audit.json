@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 89,
+  "validated_images": 91,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -15,7 +15,6 @@
       "confirmation-trap",
       "construction-blueprint",
       "cross-section-studio",
-      "cube-net",
       "data-detective",
       "decision-journal",
       "distraction-budget",
@@ -80,7 +79,6 @@
       "estimate-first",
       "evidence-match",
       "evidence-updater",
-      "folded-paper",
       "forecast-tournament",
       "framing-mirror",
       "hidden-blocks",
@@ -391,6 +389,12 @@
       "height": 1536
     },
     {
+      "file": "cube-net.webp",
+      "bytes": 91300,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -651,6 +655,12 @@
     {
       "file": "plandoreview-banner.webp",
       "bytes": 127396,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "folded-paper-banner.webp",
+      "bytes": 76936,
       "width": 1536,
       "height": 1024
     }

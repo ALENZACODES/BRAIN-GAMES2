@@ -44,7 +44,8 @@
     "tool-before-task",
     "time-estimate-lab",
     "plandoreview",
-    "folded-paper"
+    "folded-paper",
+    "cube-net"
   ],
   "banner": [
     "circuit-path",
@@ -90,7 +91,8 @@
     "checkpoint-planner",
     "tool-before-task",
     "time-estimate-lab",
-    "plandoreview"
+    "plandoreview",
+    "folded-paper"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
