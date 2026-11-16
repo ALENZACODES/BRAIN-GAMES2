@@ -403,5 +403,10 @@
     "id": "folded-paper",
     "kind": "poster",
     "blob_sha": "3c3585f5899507e513c21ef9228c7bc3cf9f170d"
+  },
+  {
+    "id": "folded-paper",
+    "kind": "banner",
+    "blob_sha": "eddee7aef52791a03e6ec27b022a505253586aa0"
   }
 ]
