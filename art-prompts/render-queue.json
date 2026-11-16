@@ -944,5 +944,10 @@
     "id": "decision-journal",
     "kind": "banner",
     "blob_sha": "9c456b1f3a597440d37efa424926db140641b9d2"
+  },
+  {
+    "id": "transfer-mission",
+    "kind": "poster",
+    "blob_sha": "50b51e04e7ef0f41b4ec55ed47fcb76aaebd79c1"
   }
 ]
