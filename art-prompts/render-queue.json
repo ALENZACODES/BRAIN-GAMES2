@@ -18,5 +18,10 @@
     "id": "fraction-duel",
     "kind": "banner",
     "blob_sha": "59e404bdd5b6d0aa74551b88a3346abd721ea25b"
+  },
+  {
+    "id": "rule-detective",
+    "kind": "poster",
+    "blob_sha": "3801bd51cd18ed3392e5cc6b0eae362f87b4be0f"
   }
 ]
