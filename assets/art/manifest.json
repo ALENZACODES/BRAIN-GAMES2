@@ -34,7 +34,8 @@
     "dependency-builder",
     "travel-buffer",
     "packing-constraints",
-    "rescue-sequence"
+    "rescue-sequence",
+    "maintenance-window"
   ],
   "banner": [
     "circuit-path",

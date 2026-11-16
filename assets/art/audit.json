@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 70,
+  "validated_images": 71,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -35,7 +35,6 @@
       "instruction-builder",
       "landmark-ordering",
       "main-idea-finder",
-      "maintenance-window",
       "map-rotation",
       "meaning-in-context",
       "mental-checkout",
@@ -346,6 +345,12 @@
     {
       "file": "rescue-sequence.webp",
       "bytes": 149700,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "maintenance-window.webp",
+      "bytes": 157916,
       "width": 1024,
       "height": 1536
     },
