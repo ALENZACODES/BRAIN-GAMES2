@@ -48,7 +48,8 @@
     "cube-net",
     "perspective-finder",
     "shape-assembly",
-    "hidden-blocks"
+    "hidden-blocks",
+    "map-rotation"
   ],
   "banner": [
     "circuit-path",
