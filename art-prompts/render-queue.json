@@ -48,5 +48,10 @@
     "id": "balance-mystery",
     "kind": "banner",
     "blob_sha": "e223e841e0c5680ecc616e582ca8dcb3cb3c899f"
+  },
+  {
+    "id": "sequence-laboratory",
+    "kind": "poster",
+    "blob_sha": "1ca8ca33d4f956bd52fda199a12bb9b02536406f"
   }
 ]
