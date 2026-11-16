@@ -52,7 +52,8 @@
     "invariant-hunt",
     "analogy-workshop",
     "proof-path",
-    "delivery-planner"
+    "delivery-planner",
+    "calendar-tetris"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
