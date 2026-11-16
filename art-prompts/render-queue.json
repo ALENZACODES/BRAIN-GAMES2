@@ -733,5 +733,10 @@
     "id": "probability-marbles",
     "kind": "poster",
     "blob_sha": "7a5d5fbe20aa2f57477d8dbdb8afab1d2f25f5b1"
+  },
+  {
+    "id": "probability-marbles",
+    "kind": "banner",
+    "blob_sha": "b4f65dae1383aa14252130d161e7ff60387a155a"
   }
 ]
