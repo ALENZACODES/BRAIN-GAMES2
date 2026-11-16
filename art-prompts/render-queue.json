@@ -833,5 +833,10 @@
     "id": "framing-mirror",
     "kind": "banner",
     "blob_sha": "e0b375f13eca7ed75bcb9b03fc02a20b621f3091"
+  },
+  {
+    "id": "forecast-tournament",
+    "kind": "poster",
+    "blob_sha": "ee6ff14afc789530fbcc0838eb3ede22d4f998bb"
   }
 ]
