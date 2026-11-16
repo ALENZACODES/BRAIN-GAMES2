@@ -124,7 +124,8 @@
     "scale-mapper",
     "landmark-ordering",
     "tile-navigation",
-    "occlusion-detective"
+    "occlusion-detective",
+    "construction-blueprint"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

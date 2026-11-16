@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 123,
+  "validated_images": 124,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -53,7 +53,6 @@
       "concise-messenger",
       "confidence-compass",
       "confirmation-trap",
-      "construction-blueprint",
       "data-detective",
       "decision-journal",
       "distraction-budget",
@@ -821,6 +820,12 @@
     {
       "file": "occlusion-detective-banner.webp",
       "bytes": 106972,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "construction-blueprint-banner.webp",
+      "bytes": 81070,
       "width": 1536,
       "height": 1024
     }
