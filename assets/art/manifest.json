@@ -50,7 +50,8 @@
     "set-builder",
     "invariant-hunt",
     "analogy-workshop",
-    "proof-path"
+    "proof-path",
+    "delivery-planner"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
