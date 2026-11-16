@@ -929,5 +929,10 @@
     "id": "perspective-switch",
     "kind": "poster",
     "blob_sha": "13c6188af0f1203f30fbca692b6c9325f3b711ed"
+  },
+  {
+    "id": "perspective-switch",
+    "kind": "banner",
+    "blob_sha": "8a23c1a132d4f158276bfc92a7066e7090a3bf75"
   }
 ]
