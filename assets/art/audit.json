@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 31,
+  "validated_images": 32,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -97,7 +97,6 @@
       "base-rate-detective",
       "battery-expedition",
       "breakpoint-planner",
-      "bridge-limits",
       "budget-builder",
       "calendar-tetris",
       "category-sprint",
@@ -361,6 +360,12 @@
     {
       "file": "counterexample-hunt-banner.webp",
       "bytes": 90840,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "bridge-limits-banner.webp",
+      "bytes": 145444,
       "width": 1536,
       "height": 1024
     }

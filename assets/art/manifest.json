@@ -32,7 +32,8 @@
     "constraint-garden",
     "cause-and-effect-machine",
     "minimal-clue",
-    "counterexample-hunt"
+    "counterexample-hunt",
+    "bridge-limits"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
