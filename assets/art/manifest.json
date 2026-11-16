@@ -3,7 +3,8 @@
     "circuit-path",
     "number-lock",
     "rotation-match",
-    "mirror-maze"
+    "mirror-maze",
+    "number-line-navigator"
   ],
   "banner": [
     "circuit-path",
