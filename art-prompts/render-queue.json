@@ -765,5 +765,10 @@
     "id": "confidence-compass",
     "kind": "poster",
     "blob_sha": "5fda75b6439fe705b005480e72ccbf50a1fd33bc"
+  },
+  {
+    "id": "confidence-compass",
+    "kind": "banner",
+    "blob_sha": "419cf7364e0d009954849605c08bbc653247e31f"
   }
 ]
