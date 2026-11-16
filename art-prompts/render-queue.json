@@ -28,5 +28,10 @@
     "id": "rule-detective",
     "kind": "banner",
     "blob_sha": "14846cfa997034a9bbd8abc9dc9f92a3b775c697"
+  },
+  {
+    "id": "mini-logic-houses",
+    "kind": "poster",
+    "blob_sha": "75b194e22e886aca4883a12c3131a6bc22b3f9ea"
   }
 ]
