@@ -58,5 +58,10 @@
     "id": "sequence-laboratory",
     "kind": "banner",
     "blob_sha": "6a8230bf28c91d7ec38ba9699f9c4dac25c6159a"
+  },
+  {
+    "id": "truthful-robots",
+    "kind": "poster",
+    "blob_sha": "3db3e097eeccec9b9c62879400c42d97e1cce00f"
   }
 ]
