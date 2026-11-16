@@ -413,5 +413,10 @@
     "id": "cube-net",
     "kind": "poster",
     "blob_sha": "360aaade624c7d75df7444f4ceac97c379ef33ef"
+  },
+  {
+    "id": "cube-net",
+    "kind": "banner",
+    "blob_sha": "acb5a66185d075686211c1e81ed5e1ea447f89da"
   }
 ]
