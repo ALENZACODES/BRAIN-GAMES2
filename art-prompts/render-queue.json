@@ -743,5 +743,10 @@
     "id": "unit-switch",
     "kind": "poster",
     "blob_sha": "3c964b7c8479482db714a324e4f4684bac7fe271"
+  },
+  {
+    "id": "unit-switch",
+    "kind": "banner",
+    "blob_sha": "1267940e86d98cda0b6c0fb796ef6b55e02b1666"
   }
 ]
