@@ -1,13 +1,12 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 44,
+  "validated_images": 45,
   "missing": {
     "poster": [
       "alternative-explanation",
       "ambiguity-detective",
       "analogy-bridge",
-      "analogy-workshop",
       "base-rate-detective",
       "battery-expedition",
       "breakpoint-planner",
@@ -294,6 +293,12 @@
     {
       "file": "invariant-hunt.webp",
       "bytes": 90158,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "analogy-workshop.webp",
+      "bytes": 92764,
       "width": 1024,
       "height": 1536
     },
