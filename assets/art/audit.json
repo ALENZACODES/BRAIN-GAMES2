@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 114,
+  "validated_images": 115,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -38,7 +38,6 @@
       "probability-marbles",
       "ratio-kitchen",
       "sample-size-studio",
-      "scale-mapper",
       "sentence-repair",
       "stop-searching-challenge",
       "strategy-selector",
@@ -434,6 +433,12 @@
     {
       "file": "packing-rotation.webp",
       "bytes": 75122,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "scale-mapper.webp",
+      "bytes": 103190,
       "width": 1024,
       "height": 1536
     },

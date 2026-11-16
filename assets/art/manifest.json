@@ -56,7 +56,8 @@
     "shadow-match",
     "route-reconstruction",
     "symmetry-workshop",
-    "packing-rotation"
+    "packing-rotation",
+    "scale-mapper"
   ],
   "banner": [
     "circuit-path",
