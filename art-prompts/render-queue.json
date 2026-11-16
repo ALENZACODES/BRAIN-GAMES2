@@ -253,5 +253,10 @@
     "id": "warehouse-stack",
     "kind": "poster",
     "blob_sha": "0fa6132e96e30aa38c7d59431510fdccf893c54f"
+  },
+  {
+    "id": "warehouse-stack",
+    "kind": "banner",
+    "blob_sha": "4ab87941f43fc210bb7c45c9fc1330a8ca9fafce"
   }
 ]
