@@ -428,5 +428,10 @@
     "id": "perspective-finder",
     "kind": "banner",
     "blob_sha": "243e78fbe3417a6569e23124e8add91d99504178"
+  },
+  {
+    "id": "shape-assembly",
+    "kind": "poster",
+    "blob_sha": "8b8fda548390f6add0cdc5b3acbeb66cc32aa178"
   }
 ]
