@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 142,
+  "validated_images": 143,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -14,7 +14,6 @@
       "distraction-budget",
       "error-detective",
       "estimate-first",
-      "evidence-match",
       "evidence-updater",
       "forecast-tournament",
       "framing-mirror",
@@ -490,6 +489,12 @@
     {
       "file": "main-idea-finder.webp",
       "bytes": 80484,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "evidence-match.webp",
+      "bytes": 83452,
       "width": 1024,
       "height": 1536
     },

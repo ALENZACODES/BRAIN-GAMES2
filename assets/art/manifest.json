@@ -70,7 +70,8 @@
     "ambiguity-detective",
     "analogy-bridge",
     "instruction-builder",
-    "main-idea-finder"
+    "main-idea-finder",
+    "evidence-match"
   ],
   "banner": [
     "circuit-path",
