@@ -693,5 +693,10 @@
     "id": "percentage-transformer",
     "kind": "poster",
     "blob_sha": "4fb271e647c2a67a5dab52317c5699afa15db958"
+  },
+  {
+    "id": "percentage-transformer",
+    "kind": "banner",
+    "blob_sha": "27051654c8bd7ec95aacc0b64098634b5b08eb08"
   }
 ]
