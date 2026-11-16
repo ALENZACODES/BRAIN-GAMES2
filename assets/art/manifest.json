@@ -86,7 +86,8 @@
     "budget-builder",
     "queue-manager",
     "checkpoint-planner",
-    "tool-before-task"
+    "tool-before-task",
+    "time-estimate-lab"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

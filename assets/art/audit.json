@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 85,
+  "validated_images": 86,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -117,7 +117,6 @@
       "sunk-cost-expedition",
       "symmetry-workshop",
       "tile-navigation",
-      "time-estimate-lab",
       "transfer-mission",
       "unit-switch",
       "word-ladder"
@@ -631,6 +630,12 @@
     {
       "file": "tool-before-task-banner.webp",
       "bytes": 136494,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "time-estimate-lab-banner.webp",
+      "bytes": 125650,
       "width": 1536,
       "height": 1024
     }
