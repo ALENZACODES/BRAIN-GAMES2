@@ -1,13 +1,13 @@
-import { $, h, hashStr, dateKey, store, configureStore, getProfile, saveProfile, getGameRec, recordRun, runSession, dailyPicks, playerLevel, xpForLevel, titleFor,
+import { $, h, slug, hashStr, dateKey, store, configureStore, getProfile, saveProfile, getGameRec, recordRun, runSession, dailyPicks, playerLevel, xpForLevel, titleFor, starThresholds, totalStars, getMissions, daysBetween, RNG,
   THEMES, ACHIEVEMENTS, audio, defaultSummary, median } from './engine.js';
 import { CONFIG } from './config.js';
 import { LIVE } from './games/index.js';
 import { posterEl, CAT_SHORT, catHue } from './art.js';
 import { burst } from './kit.js';
 
-const slug = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const fmt = (n) => Math.round(n).toLocaleString();
 let GAMES = [], BY_ID = {}, SESSION = { alive: false }, deferredInstall = null;
+const QA = new URLSearchParams(location.search); // test hook: ?qa=3&lv=max shortens runs for automated checks
 const root = () => $('#app');
 
 // ---------- boot ----------
@@ -48,7 +48,8 @@ function frame(content, active) {
       h('a', { href: '#/', class: 'brand', 'aria-label': 'Home' }, h('span', { class: 'logo', html: '<svg viewBox="0 0 40 40" width="34" height="34"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="hsl(var(--h) 90% 65%)"/></linearGradient></defs><path d="M20 3 36 12v16L20 37 4 28V12z" fill="none" stroke="url(#lg)" stroke-width="2.6"/><circle cx="20" cy="20" r="5.5" fill="url(#lg)"/><path d="M20 14.5V6M25 17l7-4M25 23l7 4M20 25.5V34M15 23l-7 4M15 17l-7-4" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/></svg>' }),
         h('span', { class: 'wm' }, h('b', {}, CONFIG.brand), h('small', {}, CONFIG.sub))),
       h('div', { class: 'chips' },
-        h('span', { class: 'chip flame' + (streakLive ? '' : ' cold'), title: 'Day streak' }, '🔥 ', p.streak.last === dateKey() || streakLive ? p.streak.count : 0),
+        h('span', { class: 'chip flame' + (streakLive ? '' : ' cold'), title: `Day streak${p.freezes ? ` · ${p.freezes} streak freeze${p.freezes > 1 ? 's' : ''}` : ''}` }, '🔥 ', streakLive ? p.streak.count : 0, p.freezes ? h('small', { class: 'frz' }, ' ❄' + p.freezes) : null),
+        h('a', { class: 'chip star', href: '#/progress', title: 'Mastery stars' }, '★ ', totalStars(GAMES.map((g) => g.id)), h('small', {}, `/${GAMES.length * 3}`)),
         h('a', { class: 'chip lvl', href: '#/progress', title: `${titleFor(lvl)} · ${fmt(p.xp)} XP` }, `Lv ${lvl}`, h('i', { class: 'xpbar' }, h('u', { style: { width: pct + '%' } }))))),
     h('main', { class: 'main' }, content),
     h('nav', { class: 'tabs', 'aria-label': 'Main' },
@@ -77,7 +78,7 @@ function gameCard(g) {
     h('div', { class: 'gmeta' },
       h('span', { class: 'gcat', style: { '--c': catHue(g.cat) } }, CAT_SHORT[g.cat]),
       h('b', {}, g.title),
-      g.live ? h('span', { class: 'gsub' }, best ? `Best: level ${best}` : 'New', ' · Solo & Duel') : h('span', { class: 'gsub' }, 'In development')),
+      g.live ? h('span', { class: 'gsub' }, rec.plays ? h('span', { class: 'stars' }, '★'.repeat(rec.stars || 0), h('i', {}, '★'.repeat(3 - (rec.stars || 0)))) : h('span', { class: 'newtag' }, 'NEW'), best ? ` Lv ${best}` : '') : h('span', { class: 'gsub' }, 'In development')),
     g.live ? null : h('span', { class: 'lock', 'aria-hidden': 'true' }, '🔒'));
 }
 function soonSheet(g) {
@@ -93,21 +94,41 @@ function installBanner() {
     deferredInstall ? h('button', { class: 'btn sm', onclick: async () => { deferredInstall.prompt(); await deferredInstall.userChoice; deferredInstall = null; render(); } }, 'Install') : null,
     h('button', { class: 'x', 'aria-label': 'Dismiss', onclick: () => { store.set('hideInstall', true); render(); } }, '×'));
 }
+const catsAll = () => [...new Set(GAMES.map((g) => g.cat))];
+const missionsToday = () => getMissions(dateKey(), catsAll(), (c) => CAT_SHORT[c]);
+function recommend(n = 4, exclude = []) {
+  // Weakest area first: the category with the lowest share of stars earned, then games not yet played there.
+  const cats = catsAll().map((c) => { const gs = live().filter((g) => g.cat === c); return { c, gs, share: gs.reduce((a, g) => a + (getGameRec(g.id).stars || 0), 0) / (3 * gs.length || 1) }; }).sort((x, y) => x.share - y.share);
+  const out = [], r = new RNG('rec:' + dateKey());
+  for (const { gs } of cats) { for (const g of r.shuffle(gs.filter((g) => !getGameRec(g.id).plays && !exclude.includes(g.id)))) { if (out.length < n) out.push(g); } if (out.length >= n) break; }
+  if (out.length < n) live().filter((g) => !out.includes(g) && !exclude.includes(g.id)).sort((x, y) => (getGameRec(x.id).stars || 0) - (getGameRec(y.id).stars || 0)).slice(0, n - out.length).forEach((g) => out.push(g));
+  return out;
+}
+const rowOf = (title, sub, games) => h('section', {}, h('h2', { class: 'sec' }, title, sub ? h('small', {}, sub) : null), h('div', { class: 'hrow' }, games.map(gameCard)));
 function hub() {
   const p = getProfile(), today = dateKey(), picks = picksToday(), done = picks.map((id) => getGameRec(id).daily[today] != null), nDone = done.filter(Boolean).length;
+  const newbie = p.totals.runs === 0, away = p.lastPlayed ? daysBetween(p.lastPlayed, today) : 0;
+  const hero = newbie ? h('section', { class: 'hero-start' }, h('h1', {}, 'Train your brain, one quick game at a time'), h('p', {}, `${live().length} games that adapt to you. Start with today’s three-game workout: about five minutes.`), h('a', { class: 'btn big', href: `#/g/${picks[0]}?daily=1` }, '▶ Start my first workout'))
+    : away >= 3 && p.comebackFor !== today ? h('div', { class: 'banner win' }, `👋 Welcome back! Your next run earns DOUBLE XP.${p.freezes ? '' : ''}`) : null;
   const dailyCard = h('section', { class: 'daily' },
-    h('div', { class: 'dhead' }, h('div', {}, h('h2', {}, 'Today’s Workout'), h('p', { class: 'muted' }, nDone === 3 ? 'All done. Come back tomorrow for a new set.' : 'Three games, same puzzles for everyone today.')),
+    h('div', { class: 'dhead' }, h('div', {}, h('h2', {}, 'Today’s Workout'), h('p', { class: 'muted' }, nDone === 3 ? 'All done. Come back tomorrow for a new set.' : 'Three games, same puzzles for everyone today. +100 XP for all three.')),
       h('div', { class: 'ring', style: { '--p': nDone / 3 } }, h('span', {}, h('b', {}, nDone), '/3'))),
     h('div', { class: 'dgames' }, picks.map((id, i) => h('a', { class: 'dg' + (done[i] ? ' done' : ''), href: `#/g/${id}?daily=1` }, posterEl(BY_ID[id]), h('span', {}, BY_ID[id].title), done[i] ? h('i', { class: 'tick' }, '✓') : null))),
     nDone < 3 ? h('a', { class: 'btn', href: `#/g/${picks[done.indexOf(false)]}?daily=1` }, nDone ? 'Next daily game' : 'Start workout') : null);
-  const cats = [...new Set(GAMES.map((g) => g.cat))];
+  const m = missionsToday(), mDone = m.list.filter((x) => x.prog >= x.goal).length;
+  const missions = h('section', { class: 'missions' }, h('div', { class: 'dhead' }, h('h2', {}, 'Daily missions'), h('span', { class: 'chest' + (m.done ? ' open' : '') }, m.done ? '🎁 Claimed +150' : `🎁 ${mDone}/3`)),
+    m.list.map((x) => h('div', { class: 'mission' + (x.prog >= x.goal ? ' done' : '') }, h('span', {}, x.prog >= x.goal ? '✅ ' : '◻️ ', x.text), h('small', {}, `${Math.min(x.prog, x.goal)}/${x.goal} · +50 XP`), h('i', { class: 'mbar' }, h('u', { style: { width: (100 * Math.min(x.prog, x.goal)) / x.goal + '%' } })))));
+  const recent = live().filter((g) => getGameRec(g.id).plays).sort((a, b) => (getGameRec(b.id).last || 0) - (getGameRec(a.id).last || 0)).slice(0, 6);
+  const next = recommend(6, recent.map((g) => g.id));
+  const cats = catsAll();
   const chip = (id, label) => h('button', { class: 'fchip' + (FILTER === id ? ' on' : ''), onclick: () => { FILTER = id; hub(); } }, label);
   const list = GAMES.filter((g) => FILTER === 'all' || g.cat === FILTER);
-  const liveL = list.filter((g) => g.live), soon = list.filter((g) => !g.live);
-  frame(h('div', {}, installBanner(), dailyCard,
+  frame(h('div', {}, installBanner(), hero, dailyCard, missions,
+    recent.length ? rowOf('Jump back in', '', recent) : null,
+    rowOf(newbie ? 'Good first games' : 'Try next', newbie ? '' : 'picked from your least-practised area', next),
+    h('h2', { class: 'sec' }, 'All games ', h('small', {}, `${live().length} games · ★ ${totalStars(GAMES.map((g) => g.id))}/${GAMES.length * 3} stars`)),
     h('div', { class: 'filters', role: 'tablist' }, chip('all', 'All'), cats.map((c) => chip(c, CAT_SHORT[c]))),
-    liveL.length ? h('section', {}, h('h2', { class: 'sec' }, 'Play now ', h('small', {}, `${live().length} games`)), h('div', { class: 'grid' }, liveL.map(gameCard))) : null,
-    soon.length ? h('section', {}, h('h2', { class: 'sec' }, 'In development ', h('small', {}, `${soon.length} concepts`)), h('div', { class: 'grid small' }, soon.map(gameCard))) : null,
+    h('div', { class: 'grid' }, list.map(gameCard)),
     h('p', { class: 'foot' }, 'Your scores and progress are saved on this device. They are results from these games, not a measure of intelligence or “brain age”.')), 'play');
 }
 
@@ -137,7 +158,8 @@ async function gamePage(meta, q) {
     h('section', { class: 'cols' },
       h('div', { class: 'panel' }, h('h3', {}, 'How to play'), h('ol', {}, game.how.map((t) => h('li', {}, t))),
         h('button', { class: 'link', onclick: () => solo(game, meta, { forcePractice: true }) }, 'Replay the practice round')),
-      h('div', { class: 'panel' }, h('h3', {}, 'Your record'),
+      h('div', { class: 'panel' }, h('h3', {}, 'Your record ', h('span', { class: 'stars big' }, '★'.repeat(rec.stars || 0), h('i', {}, '★'.repeat(3 - (rec.stars || 0))))),
+        h('p', { class: 'muted' }, (rec.stars || 0) < 3 ? `Reach level ${starThresholds(game.max)[rec.stars || 0]} for ${'★'.repeat((rec.stars || 0) + 1)}.` : 'All three stars earned. Chase your best score.'),
         rec.plays ? h('div', { class: 'stats' }, h('div', {}, h('b', {}, rec.best.level), h('small', {}, 'best level')), h('div', {}, h('b', {}, fmt(rec.best.score)), h('small', {}, 'best score')), h('div', {}, h('b', {}, rec.plays), h('small', {}, 'runs'))) : h('p', { class: 'muted' }, 'No runs yet. Your first run starts with a short practice round.'),
         hist.length > 1 ? h('div', { class: 'sparkrow' }, spark(hist.map((x) => x.level)), h('small', { class: 'muted' }, 'level reached, last runs')) : null))), 'play');
 }
@@ -191,7 +213,8 @@ async function execute(game, meta, o) {
   const startLevel = fixed ? game.min : Math.max(game.min, Math.min(game.max, Math.round(rec.best.level * 0.55)));
   const practice = o.forcePractice || (!rec.seen && !o.skipPractice);
   let stats;
-  try { stats = await runSession(game, { seed: o.seed, startLevel, practice }, host); }
+  const qaN = +QA.get('qa') || 0, qaLv = QA.get('lv');
+  try { stats = await runSession(game, { seed: o.seed, startLevel: qaLv ? (qaLv === 'max' ? game.max : +qaLv) : startLevel, practice: qaLv ? false : practice, maxTrials: qaN || undefined }, host); }
   catch (e) { console.error(e); toast('Something went wrong in that game. Your progress is safe.'); location.hash = `#/g/${meta.id}`; return null; }
   if (!stats || sess !== SESSION || !sess.alive) return null;
   if (practice && !rec.seen) { rec.seen = true; store.set('g:' + meta.id, rec); }
@@ -202,7 +225,7 @@ async function solo(game, meta, o = {}) {
   const out = await execute(game, meta, { ...o, seed, label: o.daily ? 'Daily' : o.from ? 'Challenge' : '' });
   if (!out) return;
   const { stats, settings } = out;
-  const ids = picksToday(), res = recordRun(meta, stats, { daily: !!o.daily, picks: ids, allIds: live().map((g) => g.id), untimed: settings.untimed });
+  const ids = picksToday(), res = recordRun(meta, stats, { daily: !!o.daily, picks: ids, allIds: live().map((g) => g.id), untimed: settings.untimed, max: game.max, cat: meta.cat, cats: catsAll(), catLabel: (c) => CAT_SHORT[c] });
   results(game, meta, stats, res, { seed, daily: o.daily, from: o.from, target: o.target, untimed: settings.untimed });
 }
 
@@ -235,20 +258,43 @@ function results(game, meta, stats, res, o) {
     h('div', { class: 'tiles' },
       h('div', {}, h('b', {}, stats.maxLevel), h('small', {}, 'level reached')), h('div', {}, h('b', {}, acc + '%'), h('small', {}, 'correct')), h('div', {}, h('b', {}, stats.bestStreak), h('small', {}, 'best streak')),
       stats.rts.length ? h('div', {}, h('b', {}, (median(stats.rts) / 1000).toFixed(1) + 's'), h('small', {}, 'median time (correct)')) : null),
+    h('div', { class: 'starrow' }, [0, 1, 2].map((i) => h('i', { class: 'bigstar' + (i < res.stars ? ' on' : '') + (i >= res.stars - res.newStars && i < res.stars ? ' new' : '') }, '★')),
+      h('small', {}, res.newStars ? `+${res.newStars} new star${res.newStars > 1 ? 's' : ''}!` : res.stars < 3 ? `Reach level ${starThresholds(game.max)[res.stars]} for the next star` : 'Mastered')),
+    nearMiss(stats, res, game) ? h('div', { class: 'banner' }, nearMiss(stats, res, game)) : null,
     h('p', { class: 'summary' }, sum),
     recent != null ? h('p', { class: 'muted' }, `Your recent runs averaged level ${recent.toFixed(1)}; this one reached ${stats.maxLevel}.`) : null,
     o.untimed ? h('p', { class: 'muted' }, 'Untimed mode: this run does not change your personal bests.') : null,
     stats.replayed ? h('p', { class: 'muted' }, `${stats.replayed} trial(s) were replayed because you switched away mid-trial.`) : null,
     h('div', { class: 'xp' }, h('div', { class: 'xrow' }, h('b', {}, `+${fmt(res.xp)} XP`), h('span', {}, `Lv ${lvl} · ${titleFor(lvl)}`)), h('i', { class: 'xpbar wide' }, h('u', { style: { width: Math.round(((p.xp - lo) / (hi - lo)) * 100) + '%' } })),
       res.levelUp ? h('p', { class: 'up' }, `Level up! You are now level ${res.levelUp}.${THEMES.find((t) => t.at === res.levelUp) ? ' New theme unlocked.' : ''}`) : null,
-      res.dailyBonus ? h('p', { class: 'up' }, 'Daily Workout complete: +100 XP') : null),
+      res.dailyBonus ? h('p', { class: 'up' }, 'Daily Workout complete: +100 XP') : null,
+      res.comeback ? h('p', { class: 'up' }, 'Welcome back: double XP on this run!') : null,
+      res.missionsDone.map((x) => h('p', { class: 'up' }, `✅ Mission done: ${x.text} (+50 XP)`)),
+      res.missionChest ? h('p', { class: 'up' }, '🎁 All three missions done: +150 XP') : null,
+      res.freezeEarned ? h('p', { class: 'up' }, `❄ Streak freeze earned (${res.freezes}/2). It protects your streak if you miss one day.`) : null,
+      res.freezeUsed ? h('p', { class: 'up' }, '❄ A streak freeze saved your streak!') : null),
     res.newAch.length ? h('div', { class: 'achs' }, res.newAch.map((a) => h('div', { class: 'ach on' }, h('b', {}, '🏅 ', a.title), h('small', {}, a.desc)))) : null,
     h('div', { class: 'actions' },
       h('button', { class: 'btn big', onclick: () => solo(game, meta, o.daily ? { daily: true } : {}) }, '↻ Play again'),
       h('button', { class: 'btn ghost', onclick: () => share(`I scored ${fmt(stats.score)} on ${meta.title} (level ${stats.maxLevel}). Beat me:`, challengeUrl(meta, o.seed, stats.score)) }, '🎯 Challenge a friend'),
-      h('a', { class: 'btn ghost', href: '#/' }, 'All games'))), 'play');
+      h('a', { class: 'btn ghost', href: '#/' }, 'All games')),
+    upNext(meta, o)), 'play');
   countUp(scoreEl, stats.score);
   if (res.newBest || res.levelUp || res.newAch.length) { audio.win(); setTimeout(() => burst(innerWidth / 2, 180, 60, getProfile().settings.reduceMotion), 300); }
+}
+
+function nearMiss(stats, res, game) {
+  if (res.newBest || res.firstRun || !res.prevBestScore) return '';
+  const gap = res.prevBestScore - stats.score;
+  if (gap > 0 && gap <= res.prevBestScore * 0.2) return `So close: only ${fmt(gap)} points short of your best (${fmt(res.prevBestScore)}). One more run?`;
+  const t = starThresholds(game.max)[res.stars]; if (res.stars < 3 && t && t - stats.maxLevel === 1) return `One level away from your next star: reach level ${t}.`;
+  return '';
+}
+function upNext(meta, o) {
+  const today = dateKey(), picks = picksToday(), left = picks.filter((id) => getGameRec(id).daily[today] == null);
+  const g = o.daily && left.length ? BY_ID[left[0]] : recommend(1, [meta.id])[0];
+  if (!g) return null;
+  return h('a', { class: 'upnext', href: `#/g/${g.id}${o.daily && left.length ? '?daily=1' : ''}` }, posterEl(g), h('div', {}, h('small', {}, o.daily && left.length ? 'Next in today’s workout' : 'Up next for you'), h('b', {}, g.title), h('span', {}, CAT_SHORT[g.cat])), h('span', { class: 'go' }, '▶'));
 }
 
 // ---------- two-player duel (same seed, pass the phone) ----------
@@ -291,7 +337,10 @@ function progress() {
       delta != null ? h('small', { class: delta >= 0 ? 'up' : 'muted' }, `Last 3 runs avg level ${(lv.slice(-3).reduce((a, b) => a + b, 0) / 3).toFixed(1)} vs first 3: ${(lv.slice(0, 3).reduce((a, b) => a + b, 0) / 3).toFixed(1)}`) : null), spark(lv.slice(-12)));
   };
   frame(h('div', { class: 'prog' }, h('h1', {}, 'Your progress'),
-    h('div', { class: 'tiles' }, h('div', {}, h('b', {}, `Lv ${lvl}`), h('small', {}, titleFor(lvl))), h('div', {}, h('b', {}, fmt(p.xp)), h('small', {}, `XP · ${fmt(hi - p.xp)} to next`)), h('div', {}, h('b', {}, p.streak.count), h('small', {}, `day streak · best ${p.bestStreak}`)), h('div', {}, h('b', {}, fmt(p.totals.trials)), h('small', {}, 'trials played'))),
+    h('div', { class: 'tiles' }, h('div', {}, h('b', {}, `Lv ${lvl}`), h('small', {}, titleFor(lvl))), h('div', {}, h('b', {}, fmt(p.xp)), h('small', {}, `XP · ${fmt(hi - p.xp)} to next`)), h('div', {}, h('b', {}, p.streak.count), h('small', {}, `day streak · best ${p.bestStreak}${p.freezes ? ` · ❄${p.freezes}` : ''}`)), h('div', {}, h('b', {}, `★ ${totalStars(GAMES.map((g) => g.id))}`), h('small', {}, `of ${GAMES.length * 3} stars`)), h('div', {}, h('b', {}, fmt(p.totals.trials)), h('small', {}, 'trials played'))),
+    h('h2', { class: 'sec' }, 'Skill map ', h('small', {}, 'share of mastery stars earned in each area')),
+    h('div', { class: 'skillmap' }, catsAll().map((c) => { const gs = live().filter((g) => g.cat === c), st = gs.reduce((a, g) => a + (getGameRec(g.id).stars || 0), 0), pct = Math.round((100 * st) / (3 * gs.length));
+      return h('a', { class: 'skill', href: '#/', onclick: () => { FILTER = c; } }, h('span', {}, CAT_SHORT[c]), h('i', { class: 'mbar', style: { '--c': catHue(c) } }, h('u', { style: { width: pct + '%' } })), h('small', {}, `${st}/${3 * gs.length} ★`)); })),
     h('h2', { class: 'sec' }, 'Last 4 weeks'), h('div', { class: 'heat' }, days.map(([k, n]) => h('i', { title: `${k}: ${n} run${n === 1 ? '' : 's'}`, class: 'd' + Math.min(4, n) }))),
     h('h2', { class: 'sec' }, 'Your games'), played.length ? h('div', { class: 'plist' }, played.map(row)) : h('p', { class: 'muted' }, 'Play a game and your results appear here.'),
     h('h2', { class: 'sec' }, 'Badges ', h('small', {}, `${Object.keys(p.ach).length}/${ACHIEVEMENTS.length}`)),

@@ -2,6 +2,7 @@
 // No DOM access at import time, so game logic can be unit-tested in Node.
 
 export const $ = (s, r = document) => r.querySelector(s);
+export const slug = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’']/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 export const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
 export const now = () => (typeof performance !== 'undefined' ? performance.now() : Date.now());
 
@@ -86,7 +87,7 @@ export const store = {
 
 const DEFAULT_PROFILE = () => ({
   v: 1, name: 'Player', created: Date.now(), xp: 0,
-  streak: { count: 0, last: '' }, bestStreak: 0,
+  streak: { count: 0, last: '' }, bestStreak: 0, freezes: 0, lastPlayed: '',
   days: {}, ach: {}, totals: { runs: 0, trials: 0, duels: 0 },
   settings: { sound: true, haptics: true, reduceMotion: false, untimed: false, theme: 'aurora', name2: 'Player 2' },
 });
@@ -118,61 +119,133 @@ export const ACHIEVEMENTS = [
   { id: 'first', title: 'First Run', desc: 'Finish any game.', test: (c) => c.p.totals.runs >= 1 },
   { id: 'streak3', title: 'Three Days Running', desc: 'Play 3 days in a row.', test: (c) => c.p.streak.count >= 3 },
   { id: 'streak7', title: 'Week Warrior', desc: 'Play 7 days in a row.', test: (c) => c.p.streak.count >= 7 },
+  { id: 'streak30', title: 'Habit Formed', desc: 'Play 30 days in a row.', test: (c) => c.p.streak.count >= 30 },
   { id: 'lvl8', title: 'Climber', desc: 'Reach level 8 in any game.', test: (c) => c.stats.maxLevel >= 8 },
-  { id: 'lvl15', title: 'Summit', desc: 'Reach level 15 in any game.', test: (c) => c.stats.maxLevel >= 15 },
+  { id: 'lvl12', title: 'Summit', desc: 'Reach level 12 in any game.', test: (c) => c.stats.maxLevel >= 12 },
   { id: 'combo10', title: 'Ten in a Row', desc: 'Ten correct answers in a row.', test: (c) => c.stats.bestStreak >= 10 },
   { id: 'clear', title: 'Full Clear', desc: 'Finish a run without a single strike.', test: (c) => c.stats.strikes === 0 && c.stats.trials >= 10 },
   { id: 'trials100', title: 'Century', desc: '100 trials played in total.', test: (c) => c.p.totals.trials >= 100 },
   { id: 'trials1000', title: 'Thousand Club', desc: '1,000 trials played in total.', test: (c) => c.p.totals.trials >= 1000 },
   { id: 'daily3', title: 'Daily Workout', desc: 'Finish all three Daily Workout games in one day.', test: (c) => c.dailyBonus },
+  { id: 'missions', title: 'Mission Complete', desc: 'Finish all three daily missions in one day.', test: (c) => c.missionChest },
   { id: 'duel', title: 'Face-Off', desc: 'Finish a two-player duel.', test: (c) => c.p.totals.duels >= 1 },
-  { id: 'explorer', title: 'Explorer', desc: 'Play 5 different games.', test: (c) => c.playedGames >= 5 },
+  { id: 'explorer', title: 'Explorer', desc: 'Play 10 different games.', test: (c) => c.playedGames >= 10 },
+  { id: 'voyager', title: 'Voyager', desc: 'Play 50 different games.', test: (c) => c.playedGames >= 50 },
+  { id: 'stars25', title: 'Star Collector', desc: 'Earn 25 mastery stars.', test: (c) => c.totalStars >= 25 },
+  { id: 'stars100', title: 'Constellation', desc: 'Earn 100 mastery stars.', test: (c) => c.totalStars >= 100 },
+  { id: 'stars300', title: 'Galaxy', desc: 'Earn all 300 mastery stars.', test: (c) => c.totalStars >= 300 },
+  { id: 'comeback', title: 'Welcome Back', desc: 'Return after a few days away.', test: (c) => c.comeback },
 ];
 
-/** Persist one finished run. `meta` = {daily, liveIds}. Returns what changed for the results screen. */
-export function recordRun(game, stats, meta = {}) {
-  const p = getProfile();
-  const rec = getGameRec(game.id);
-  const today = dateKey();
-  const acc = stats.trials ? stats.correct / stats.trials : 0;
-  const newBest = !meta.untimed && stats.score > rec.best.score;
-  const beforeLevel = playerLevel(p.xp);
-  const prevBestLevel = rec.best.level;
+// ---------- mastery stars ----------
+export const starThresholds = (max) => [Math.ceil(max * 0.3), Math.ceil(max * 0.55), Math.ceil(max * 0.8)];
+export const starsFor = (level, max) => starThresholds(max).filter((t) => level >= t).length;
+export function totalStars(ids) { return ids.reduce((a, id) => a + (getGameRec(id).stars || 0), 0); }
 
-  rec.plays++; rec.seen = true;
-  if (newBest) rec.best.score = stats.score;
-  if (!meta.untimed && stats.maxLevel > rec.best.level) rec.best.level = stats.maxLevel;
+// ---------- dates ----------
+export function addDays(key, n) { const [y, m, d] = key.split('-').map(Number), dt = new Date(y, m - 1, d); dt.setDate(dt.getDate() + n); return dateKey(dt); }
+export function daysBetween(a, b) { const f = (k) => { const [y, m, d] = k.split('-').map(Number); return Date.UTC(y, m - 1, d); }; return Math.round((f(b) - f(a)) / 864e5); }
+
+/** Streak rules: a day in a row extends it; missing exactly one day is covered by a freeze if you have one. Every 7th day earns a freeze (max 2). */
+export function advanceStreak(p, today) {
+  const out = { freezeUsed: false, freezeEarned: false };
+  if (p.streak.last === today) return out;
+  const gap = p.streak.last ? daysBetween(p.streak.last, today) : 99;
+  if (gap === 1) p.streak.count++;
+  else if (gap === 2 && (p.freezes || 0) > 0) { p.freezes--; p.streak.count++; out.freezeUsed = true; }
+  else p.streak.count = 1;
+  p.streak.last = today;
+  if (p.streak.count % 7 === 0 && (p.freezes || 0) < 2) { p.freezes = (p.freezes || 0) + 1; out.freezeEarned = true; }
+  p.bestStreak = Math.max(p.bestStreak, p.streak.count);
+  return out;
+}
+
+// ---------- daily missions ----------
+const MISSIONS = [
+  { id: 'play3', kind: 'distinct', goal: 3, text: 'Play 3 different games' },
+  { id: 'star', kind: 'stars', goal: 1, text: 'Earn a new mastery star' },
+  { id: 'streak8', kind: 'combo', goal: 8, text: 'Get 8 right in a row in one run' },
+  { id: 'cat', kind: 'cat', goal: 1, text: 'Finish a {cat} game' },
+  { id: 'workout', kind: 'daily', goal: 3, text: 'Finish today’s Daily Workout' },
+  { id: 'level6', kind: 'level', goal: 6, text: 'Reach level 6 in any game' },
+  { id: 'new', kind: 'newgame', goal: 1, text: 'Try a game you have never played' },
+  { id: 'runs4', kind: 'runs', goal: 4, text: 'Finish 4 runs' },
+  { id: 'best', kind: 'pb', goal: 1, text: 'Beat one of your personal bests' },
+];
+export function getMissions(today, cats, label = (c) => c) {
+  const k = 'missions:' + today; let m = store.get(k, null);
+  if (!m) {
+    const r = new RNG('missions:' + today), pick = r.sample(MISSIONS, 3), cat = r.pick(cats);
+    m = { date: today, done: false, list: pick.map((x) => ({ ...x, text: x.text.replace('{cat}', label(cat)), cat, prog: 0 })) };
+    store.set(k, m);
+  }
+  return m;
+}
+function updateMissions(today, ev) {
+  const k = 'missions:' + today, m = store.get(k, null); if (!m) return { completed: [], chest: false };
+  const completed = [];
+  for (const x of m.list) {
+    if (x.prog >= x.goal) continue;
+    const before = x.prog;
+    if (x.kind === 'distinct') x.prog = ev.distinctToday;
+    else if (x.kind === 'stars') x.prog += ev.newStars;
+    else if (x.kind === 'combo') x.prog = Math.max(x.prog, ev.bestStreak);
+    else if (x.kind === 'cat') x.prog += ev.cat === x.cat ? 1 : 0;
+    else if (x.kind === 'daily') x.prog = ev.dailyDone;
+    else if (x.kind === 'level') x.prog = Math.max(x.prog, ev.maxLevel);
+    else if (x.kind === 'newgame') x.prog += ev.firstRun ? 1 : 0;
+    else if (x.kind === 'runs') x.prog += 1;
+    else if (x.kind === 'pb') x.prog += ev.newBest ? 1 : 0;
+    x.prog = Math.min(x.goal, x.prog);
+    if (before < x.goal && x.prog >= x.goal) completed.push(x);
+  }
+  let chest = false; if (!m.done && m.list.every((x) => x.prog >= x.goal)) { m.done = true; chest = true; }
+  store.set(k, m);
+  return { completed, chest };
+}
+
+/** Persist one finished run. meta = {daily, picks, allIds, untimed, max, cat, cats}. Returns everything the results screen needs. */
+export function recordRun(game, stats, meta = {}) {
+  const p = getProfile(), rec = getGameRec(game.id), today = meta.today || dateKey();
+  const acc = stats.trials ? stats.correct / stats.trials : 0, beforeLevel = playerLevel(p.xp), prevBestLevel = rec.best.level, prevBestScore = rec.best.score;
+  const firstRun = rec.plays === 0, counted = !meta.untimed && stats.trials > 0;
+  const newBest = counted && stats.score > rec.best.score && !firstRun;
+  const lastPlayed = p.lastPlayed || '', gapDays = lastPlayed ? daysBetween(lastPlayed, today) : 0, comeback = gapDays >= 3 && p.comebackFor !== today;
+  rec.plays++; rec.seen = true; rec.last = Date.now();
+  if (counted && stats.score > rec.best.score) rec.best.score = stats.score;
+  if (counted && stats.maxLevel > rec.best.level) rec.best.level = stats.maxLevel;
+  const starsBefore = rec.stars || 0; if (meta.max && counted) rec.stars = Math.max(starsBefore, starsFor(rec.best.level, meta.max));
+  const newStars = (rec.stars || 0) - starsBefore;
   rec.history.push({ t: Date.now(), date: today, level: stats.maxLevel, score: stats.score, acc: +acc.toFixed(3), trials: stats.trials, u: meta.untimed ? 1 : 0 });
   rec.history = rec.history.slice(-40);
   let dailyFirst = false;
   if (meta.daily) { dailyFirst = rec.daily[today] == null; if (dailyFirst || stats.score > rec.daily[today]) rec.daily[today] = stats.score; rec.daily = Object.fromEntries(Object.entries(rec.daily).slice(-14)); }
   saveGameRec(game.id, rec);
 
-  let xp = Math.floor(stats.score / 25) + stats.trials * 2 + (newBest && rec.plays > 1 ? 50 : 0) + (dailyFirst ? 30 : 0);
-  p.xp += xp;
+  let xp = Math.floor(stats.score / 25) + stats.trials * 2 + (newBest ? 50 : 0) + (dailyFirst ? 30 : 0) + newStars * 40;
+  if (comeback) { xp *= 2; p.comebackFor = today; }
   p.totals.runs++; p.totals.trials += stats.trials;
-  const y = yesterdayKey();
-  if (p.streak.last !== today) { p.streak.count = p.streak.last === y ? p.streak.count + 1 : 1; p.streak.last = today; }
-  p.bestStreak = Math.max(p.bestStreak, p.streak.count);
-  const day = (p.days[today] ||= { runs: 0, xp: 0 });
-  day.runs++; day.xp += xp;
+  const streakEv = advanceStreak(p, today);
+  p.lastPlayed = today;
+  const day = (p.days[today] ||= { runs: 0, xp: 0, games: [] });
+  day.runs++; if (!(day.games ||= []).includes(game.id)) day.games.push(game.id);
   p.days = Object.fromEntries(Object.entries(p.days).slice(-60));
 
-  let dailyBonus = false;
-  if (meta.daily && meta.picks) {
-    const done = meta.picks.every((id) => getGameRec(id).daily[today] != null);
-    const key = 'dailyBonus:' + today;
-    if (done && !store.get(key, false)) { store.set(key, true); dailyBonus = true; p.xp += 100; xp += 100; }
-  }
-  const playedGames = (meta.allIds || []).filter((id) => getGameRec(id).plays > 0).length;
+  let dailyBonus = false, dailyDone = 0;
+  if (meta.picks) { dailyDone = meta.picks.filter((id) => getGameRec(id).daily[today] != null).length;
+    const key = 'dailyBonus:' + today; if (meta.daily && dailyDone === meta.picks.length && !store.get(key, false)) { store.set(key, true); dailyBonus = true; xp += 100; } }
+  if (meta.cats) getMissions(today, meta.cats, meta.catLabel);
+  const mis = updateMissions(today, { distinctToday: day.games.length, newStars, bestStreak: stats.bestStreak, cat: meta.cat, dailyDone, maxLevel: stats.maxLevel, firstRun, newBest });
+  xp += mis.completed.length * 50 + (mis.chest ? 150 : 0);
+  p.xp += xp; day.xp += xp;
+
+  const ids = meta.allIds || [], playedGames = ids.filter((id) => getGameRec(id).plays > 0).length, stars = totalStars(ids);
   const newAch = [];
-  for (const a of ACHIEVEMENTS) {
-    if (!p.ach[a.id] && a.test({ p, stats, dailyBonus, playedGames })) { p.ach[a.id] = Date.now(); newAch.push(a); }
-  }
+  for (const a of ACHIEVEMENTS) if (!p.ach[a.id] && a.test({ p, stats, dailyBonus, playedGames, totalStars: stars, missionChest: mis.chest, comeback })) { p.ach[a.id] = Date.now(); newAch.push(a); }
   saveProfile(p);
   const afterLevel = playerLevel(p.xp);
-  return { xp, newBest: newBest && rec.plays > 1, firstRun: rec.plays === 1, levelUp: afterLevel > beforeLevel ? afterLevel : 0, newAch, dailyBonus,
-    newBestLevel: stats.maxLevel > prevBestLevel && prevBestLevel > 0, rec, streak: p.streak.count };
+  return { xp, newBest, firstRun, levelUp: afterLevel > beforeLevel ? afterLevel : 0, newAch, dailyBonus, comeback, newStars, stars: rec.stars || 0, totalStars: stars,
+    missionsDone: mis.completed, missionChest: mis.chest, ...streakEv, prevBestScore, prevBestLevel, newBestLevel: counted && stats.maxLevel > prevBestLevel && prevBestLevel > 0, rec, streak: p.streak.count, freezes: p.freezes || 0 };
 }
 
 export function dailyPicks(ids, key = dateKey(), n = 3) { return new RNG('daily:' + key).sample(ids, Math.min(n, ids.length)); }
@@ -248,6 +321,7 @@ export async function runSession(game, opts, host) {
     const base = { level, practice: false, index: stats.trials, rng };
     const res = await play(trial, base);
     if (!host.alive()) return null;
+    if (res.endRun) break;
     if (base._ctx?.wasHidden && !res.noReplay) { stats.replayed++; host.toast('You switched away, so that trial was replayed.'); continue; }
     stats.trials++; stats.levels.push(level);
     if (res.rt != null && res.correct) stats.rts.push(res.rt);
@@ -263,6 +337,7 @@ export async function runSession(game, opts, host) {
     host.hud({ level: st.level, score: stats.score, streak: stats.streak, strikes: stats.strikes, trial: stats.trials, max: MAX_TRIALS });
     await host.feedback(res, { practice: false, gained, change, stats, level: st.level });
   }
+  game.onEnd?.(stats);
   stats.cleared = stats.trials >= MAX_TRIALS && stats.strikes < MAX_STRIKES;
   if (stats.cleared) stats.score += 500 * stats.maxLevel; // full-clear bonus
   return stats;

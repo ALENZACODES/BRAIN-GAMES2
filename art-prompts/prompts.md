@@ -1,7 +1,7 @@
 # Per-game image prompts (games 101–200)
 
 Paste the **master command** from `MASTER_IMAGE_PROMPT.md` into the image generator once, then send these one at a time.
-Games marked ★ are playable now; their prompts were written by hand. The rest are drafted from the concept text, so review them before use.
+All 100 games here are playable. Prompts marked ★ were written by hand for the first 12 games built; the rest are drafted from each game’s concept text, so give them a quick read before use.
 
 ## 101. Rule Detective
 Save as `assets/art/rule-detective.webp` (poster) and `assets/art/rule-detective-banner.webp` (banner).
@@ -394,13 +394,13 @@ BANNER for "time-estimate-lab" (landscape 3:2, same world and palette, wider est
 ```
 
 ## 140. Plan–Do–Review
-Save as `assets/art/plan-do-review.webp` (poster) and `assets/art/plan-do-review-banner.webp` (banner).
+Save as `assets/art/plandoreview.webp` (poster) and `assets/art/plandoreview-banner.webp` (banner).
 
 ```
-POSTER for "plan-do-review". Scene: A cinematic scene that visualises this game concept without any text: Write or select a plan, execute it in a simulation, and choose a revision afterward. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.
+POSTER for "plandoreview". Scene: A cinematic scene that visualises this game concept without any text: Write or select a plan, execute it in a simulation, and choose a revision afterward. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: emerald and jade with warm lantern light.
 ```
 ```
-BANNER for "plan-do-review" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).
+BANNER for "plandoreview" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).
 ```
 
 ## 141. Rotation Match ★
@@ -904,13 +904,13 @@ BANNER for "stop-searching-challenge" (landscape 3:2, same world and palette, wi
 ```
 
 ## 191. If–Then Builder
-Save as `assets/art/if-then-builder.webp` (poster) and `assets/art/if-then-builder-banner.webp` (banner).
+Save as `assets/art/ifthen-builder.webp` (poster) and `assets/art/ifthen-builder-banner.webp` (banner).
 
 ```
-POSTER for "if-then-builder". Scene: A cinematic scene that visualises this game concept without any text: Turn a fictional intention into a specific cue–action plan. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.
+POSTER for "ifthen-builder". Scene: A cinematic scene that visualises this game concept without any text: Turn a fictional intention into a specific cue–action plan. Treat it as a mysterious, beautiful world, using physical objects and light rather than UI screens. Palette: copper and amber with dusk-purple shadows.
 ```
 ```
-BANNER for "if-then-builder" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).
+BANNER for "ifthen-builder" (landscape 3:2, same world and palette, wider establishing shot, subject on the right third).
 ```
 
 ## 192. Distraction Budget

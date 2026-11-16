@@ -36,12 +36,34 @@ const EMB = {
   'fraction-duel': (g, st) => `<circle cx="-48" cy="0" r="40" ${st}/><path d="M-48 0V-40A40 40 0 1 1 -88 0z" fill="${g}"/><circle cx="48" cy="0" r="40" ${st}/><path d="M48 0V-40A40 40 0 0 1 48 40z" fill="${g}" opacity=".7"/><text x="0" y="78" text-anchor="middle" font-size="26" font-weight="900" fill="#fff" font-family="system-ui">VS</text>`,
 };
 
-function emblem(cat, hue, id, gid) {
+
+// Generic motifs so every game gets distinct key art (category sets the colour, the game number picks the motif).
+const MOTIFS = [
+  (g, st, r) => [0, 1, 2, 3].map((i) => `<circle r="${22 + i * 18}" ${st} opacity="${1 - i * 0.18}"/>`).join('') + `<circle r="14" fill="${g}"/>`,
+  (g, st, r) => { const pts = Array.from({ length: 6 }, () => [r.int(-80, 80), r.int(-80, 70)]); return `<polyline points="${pts.map((p) => p.join(',')).join(' ')}" ${st}/>` + pts.map(([x, y], i) => `<circle cx="${x}" cy="${y}" r="${i % 2 ? 7 : 11}" fill="${g}"/>`).join(''); },
+  (g, st, r) => Array.from({ length: 4 }, (_, i) => `<rect x="${-70 + i * 36}" y="${-20 - i * 18}" width="28" height="${40 + i * 36}" rx="6" ${i === 3 ? `fill="${g}"` : st}/>`).join(''),
+  (g, st, r) => `<path d="M-90 0 C-60 -60 -30 60 0 0 S60 -60 90 0" ${st} stroke-width="6"/><path d="M-90 30 C-60 -30 -30 90 0 30 S60 -30 90 30" ${st} opacity=".5"/><circle cx="0" cy="0" r="12" fill="${g}"/>`,
+  (g, st, r) => { let d = 'M0 0'; for (let a = 0; a < 18; a++) { const rr = 4 + a * 4.6, t = a * 0.7; d += `L${(Math.cos(t) * rr).toFixed(1)} ${(Math.sin(t) * rr).toFixed(1)}`; } return `<path d="${d}" ${st} stroke-linejoin="round"/><circle r="10" fill="${g}"/>`; },
+  (g, st, r) => `<path d="M0-80 70 40H-70z" ${st}/><path d="M0-80 0 40" ${st}/><path d="M-20 -10 -100 10M20 -10 100 -20M20 0 100 20" stroke="${g}" stroke-width="5" stroke-linecap="round"/>`,
+  (g, st, r) => `<ellipse rx="86" ry="30" ${st}/><ellipse rx="86" ry="30" ${st} transform="rotate(60)"/><ellipse rx="86" ry="30" ${st} transform="rotate(-60)"/><circle r="16" fill="${g}"/>`,
+  (g, st, r) => [[0, 0], [40, 23], [-40, 23], [0, -46], [40, -23], [-40, -23], [0, 46]].map(([x, y], i) => `<path d="M${x} ${y - 22}l19 11v22l-19 11-19-11v-22z" ${i === r.int(0, 6) ? `fill="${g}"` : st}/>`).join(''),
+  (g, st, r) => [0, 1, 2].map((i) => `<path d="M${-70 + i * 30} ${50 - i * 40}h50l-14-14M${-20 + i * 30} ${50 - i * 40}l-14 14" ${st} stroke-linecap="round" stroke-linejoin="round"/>`).join('') + `<circle cx="60" cy="-60" r="14" fill="${g}"/>`,
+  (g, st, r) => `<path d="M-80 70h40v-40h40v-40h40v-40h40" ${st} stroke-width="6" stroke-linejoin="round"/><circle cx="80" cy="-50" r="14" fill="${g}"/>`,
+  (g, st, r) => `<rect x="-80" y="-80" width="160" height="160" rx="10" ${st}/><path d="M-80 -40h120M-40 0h120M-80 40h120M0 -80v40M40 40v40" ${st}/><circle cx="60" cy="60" r="10" fill="${g}"/><circle cx="-60" cy="-60" r="10" fill="#fff"/>`,
+  (g, st, r) => Array.from({ length: 7 }, (_, i) => { const a = (i / 7) * 6.283; return `<line x1="0" y1="0" x2="${(Math.cos(a) * 70).toFixed(1)}" y2="${(Math.sin(a) * 70).toFixed(1)}" ${st}/><circle cx="${(Math.cos(a) * 76).toFixed(1)}" cy="${(Math.sin(a) * 76).toFixed(1)}" r="9" fill="${g}"/>`; }).join('') + `<circle r="18" ${st}/>`,
+  (g, st, r) => `<path d="M-90 0Q0 -80 90 0Q0 80 -90 0z" ${st}/><circle r="30" ${st}/><circle r="14" fill="${g}"/>`,
+  (g, st, r) => `<circle cx="-24" cy="0" r="40" ${st}/><rect x="10" y="-6" width="80" height="12" rx="6" fill="${g}"/><path d="M60 6v20M80 6v14" stroke="${g}" stroke-width="10" stroke-linecap="round"/>`,
+  (g, st, r) => `<circle r="80" ${st}/><path d="M0-60 14 0 0 60-14 0z" fill="${g}"/><path d="M-80 0h-10M80 0h10M0-80v-10M0 80v10" ${st}/>`,
+  (g, st, r) => `<path d="M-50-80h100M-50 80h100M-40-80c0 50 80 110 80 160M40-80c0 50-80 110-80 160" ${st}/><path d="M-20 50h40l-20-24z" fill="${g}"/>`,
+];
+
+function emblem(cat, hue, id, gid, n) {
   const g = `url(#g${id})`, glow = `filter="url(#b${id})"`;
   const c = CAT_SHORT[cat] || '';
   const stroke = `stroke="${hsl(hue, 90, 85)}" stroke-width="3" fill="none"`;
   let s = '';
   if (EMB[gid]) s = EMB[gid](g, stroke);
+  else if (n) s = MOTIFS[(n * 7 + Math.floor(n / 16)) % MOTIFS.length](g, stroke, new RNG('motif' + n));
   else if (c === 'Working memory') { for (let r = 0; r < 3; r++) for (let q = 0; q < 3; q++) { const lit = (r * 3 + q) % 4 === 0; s += `<rect x="${-66 + q * 46}" y="${-66 + r * 46}" width="40" height="40" rx="10" fill="${lit ? g : 'none'}" ${lit ? '' : stroke} opacity="${lit ? 1 : .55}"/>`; } }
   else if (c === 'Learning') s = `<path d="M-70 20c30-26 50-26 70 0 20-26 40-26 70 0v-60c-30-26-50-26-70 0-20-26-40-26-70 0z" fill="${g}"/><path d="M0-40v60" ${stroke}/>`;
   else if (c === 'Attention') s = `<circle r="66" ${stroke}/><circle r="42" ${stroke}/><circle r="18" fill="${g}"/><path d="M-90 0h40M50 0h40M0-90v40M0 50v40" ${stroke}/>`;
@@ -56,7 +78,7 @@ function emblem(cat, hue, id, gid) {
 }
 
 export function posterSVG(g, { w = 300, h: hh = 400 } = {}) {
-  const hue = catHue(g.cat) + ((g.n * 17) % 28) - 14, r = new RNG('art' + g.n), id = g.n;
+  const hue = catHue(g.cat) + ((g.n * 23) % 40) - 20, r = new RNG('art' + g.n), id = g.n;
   let stars = '';
   for (let i = 0; i < 38; i++) stars += `<circle cx="${r.int(4, w - 4)}" cy="${r.int(4, 230)}" r="${(r.next() * 1.4 + 0.3).toFixed(2)}" fill="#fff" opacity="${(r.next() * 0.6 + 0.15).toFixed(2)}"/>`;
   let hills = '';
@@ -76,7 +98,7 @@ export function posterSVG(g, { w = 300, h: hh = 400 } = {}) {
 <rect width="${w}" height="${hh}" fill="url(#s${id})"/>${stars}
 <circle cx="150" cy="175" r="170" fill="url(#o${id})"/>
 ${hills}
-${emblem(g.cat, hue, id, g.id)}
+${emblem(g.cat, hue, id, g.id, g.n)}
 <rect width="${w}" height="${hh}" fill="url(#v${id})"/>
 </svg>`;
 }

@@ -21,7 +21,7 @@ export function timerBar(ctx, ms) {
  * options: [{label|node, value, cls}] ; answer: value that is correct.
  * Returns {correct, rt, timedOut, picked, speed}.
  */
-export function choiceTrial(ctx, { prompt, promptNode, options, answer, timeMs = 0, cols, flashMs = 420, hint, keys }) {
+export function choiceTrial(ctx, { prompt, promptNode, options, answer, timeMs = 0, cols, flashMs = 420, hint, keys, reveal = true, quiet = false }) {
   return new Promise((resolve) => {
     let done = false;
     const limited = timeMs > 0 && !ctx.settings.untimed;
@@ -40,8 +40,8 @@ export function choiceTrial(ctx, { prompt, promptNode, options, answer, timeMs =
       const rt = now() - t0;
       const picked = timedOut ? null : options[idx].value;
       const correct = !timedOut && picked === answer;
-      btns.forEach((b, i) => { b.disabled = true; if (options[i].value === answer) b.classList.add('right'); });
-      if (!timedOut && !correct) btns[idx].classList.add('wrong');
+      btns.forEach((b, i) => { b.disabled = true; if (!quiet && (reveal || timedOut) && options[i].value === answer) b.classList.add('right'); });
+      if (!quiet && !timedOut) btns[idx].classList.add(correct ? 'right' : 'wrong');
       if (!timedOut) btns[idx].classList.add('picked');
       setTimeout(() => resolve({ correct, rt, timedOut, picked, speed: limited ? Math.max(0, 1 - rt / timeMs) : 0 }), flashMs);
     };

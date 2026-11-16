@@ -1,53 +1,53 @@
 # BRAIN GAMES · Logic & Reasoning
 
-Logic, planning, spatial reasoning, language & numbers, and judgment (concepts 101–200). A fast, installable web app with adaptive difficulty, saved progress, daily challenges, and two-player duels.
-It has no server, no accounts, and no build step.
+100 brain games for logic, planning, spatial reasoning, language & numbers, and judgment (concepts 101–200). An installable web app with adaptive difficulty, saved progress, daily goals and two-player modes. No server, no accounts, no build step. Companion app: BRAIN-GAMES1 (memory & focus, concepts 1–100).
 
-**Status:** 6 games are playable now. The other 94 concepts from the catalogue appear in the app as "In development" and run on the same engine, so they can be added next. The companion app is BRAIN-GAMES1 (memory & focus).
+**All 100 games in this repo are playable.** Areas: Logic · Planning · Spatial · Language & numbers · Judgment.
 
-## Playable games
-| Game | Concept | What you do |
-|---|---|---|
-| Number Lock | #111 | Crack a code from right-place / wrong-place clues |
-| Circuit Path | #103 | Rotate wires to power the socket within a turn budget |
-| Mirror Maze | #145 | Trace a light beam through mirrors |
-| Rotation Match | #141 | Find the rotated shape, avoid mirror-image traps |
-| Number Line Navigator | #171 | Place numbers, decimals, negatives, fractions on a line |
-| Fraction Duel | #173 | Which fraction is larger, or are they equal? |
-
-Every game has: a practice round on the first play, **adaptive difficulty** (2 right in a row = level up, 1 miss = level down), 3 lives per run, combo scoring, a results screen with concrete numbers (e.g. "remembered 7 lit windows at once"), and per-game history.
-
-## Why people come back
-- **Daily Workout:** 3 games picked by date, with the same puzzles for everyone that day, plus bonus XP.
-- **Day streak** (🔥), **XP and player levels** with titles, **12 badges**, and **themes** unlocked by level.
-- **Personal bests** and a progress page with a 4-week activity grid and level trend per game.
-- **Challenge a friend:** sends a link with the same seed and your score to beat.
-- **2-player duel:** same puzzles, pass the phone, a winner screen and rematch.
+## What keeps people coming back
+- **Adaptive difficulty** in every game: 2 right in a row moves you up a level, a miss moves you down. Runs have 3 lives.
+- **Mastery stars:** 1–3 stars per game for reaching set levels (300 to collect per app). Cards, the header and the Progress page show them.
+- **Daily Workout:** 3 games picked by date (same puzzles for everyone that day) and +100 XP for finishing all three.
+- **3 daily missions** (e.g. “Play 3 different games”, “Earn a new star”), +50 XP each and a +150 XP bonus for all three.
+- **Day streak** with **streak freezes**: one is earned every 7-day streak (hold up to 2); a freeze covers a single missed day.
+- **Comeback bonus:** double XP on the first run after 3+ days away.
+- **XP, player levels, 19 badges, unlockable colour themes.**
+- **Personal recommendations:** “Jump back in” (recent games) and “Try next” (unplayed games from your least-practised area), plus an “Up next” card after every run.
+- **Close-call messages:** “only 120 points short of your best”, “one level from your next star”.
+- **Results with real numbers** (e.g. “remembered 7 lit windows at once”) and a per-area skill map. No IQ or “brain age” claims.
+- **Multiplayer:** challenge links (same puzzles plus your score to beat) and 2-player pass-the-phone duels in every game.
 
 ## Put it on a phone (no app store)
-1. In the GitHub repo go to **Settings → Pages**, set Source to **Deploy from a branch**, Branch **main**, folder **/ (root)**, then Save.
-2. After about a minute it is live at `https://alenzacodes.github.io/BRAIN-GAMES2/`.
-3. Open that link on the phone. **Android/Chrome:** tap *Install*. **iPhone/Safari:** Share → *Add to Home Screen*.
-It then opens full-screen and works offline. Progress stays on the phone; Settings has backup and restore.
+1. GitHub repo → **Settings → Pages** → Source: **Deploy from a branch**, Branch **main**, folder **/ (root)** → Save.
+2. After a minute it is live at `https://alenzacodes.github.io/BRAIN-GAMES2/`.
+3. Open it on the phone. **Android/Chrome:** tap *Install*. **iPhone/Safari:** Share → *Add to Home Screen*. It opens full-screen and works offline. Progress stays on the phone (Settings has backup and restore).
 
-## Run locally
+## How it is built
+| File | What it does |
+|---|---|
+| `js/engine.js` | seeded random puzzles, difficulty staircase, run loop, scoring, saves, streaks and freezes, stars, missions, badges, synthesised sound |
+| `js/play.js` | shared trial templates: multiple choice, sequence/order, multi-select, number pad, stimulus stream, matching, multi-step, typing, plus study and distraction phases |
+| `js/gfx.js` | SVG glyphs, icons, charts and small content banks |
+| `js/games/*.js` | the games: 6 hand-built single files plus 5 packs of about 19 games each |
+| `js/app.js` | hub, game pages, results, duel, progress, settings |
+| `js/art.js` | procedural key art for every game, auto-replaced by your images |
+| `sw.js` | offline cache (bump `VERSION` after changes) |
+
+## Testing
 ```
-python3 -m http.server 8080      # then open http://localhost:8080
-node tests/run.mjs               # logic tests (no browser needed)
+python3 -m http.server 8080        # play at http://localhost:8080
+node tests/run.mjs                 # engine + determinism tests for every game
+node tests/validate.mjs            # every game, every level, 30 seeds: answer present, unique, accepted by the game's own checker
+node tests/retention.mjs           # streaks, freezes, stars, missions, comeback
+node tools/gen-index.mjs           # regenerate the game registry; confirms all catalogue games are present
 ```
+Add `?qa=3` (or `?qa=3&lv=max`) to the URL to make runs 3 trials long, for quick manual checks.
 
 ## Artwork
-The app draws its own cinematic poster for every game, so it looks finished with no downloads.
-To upgrade to studio-style art, use **`MASTER_IMAGE_PROMPT.md`** (paste it once into the image generator) and then the per-game prompts in **`art-prompts/prompts.md`**. Save images to `assets/art/<game-id>.webp` and list the id in `assets/art/manifest.json`.
-
-## Adding a game from the catalogue
-1. Copy any file in `js/games/` and keep its shape: `makeTrial(rng, level)` builds a puzzle from a seed (pure, testable); `play(trial, ctx)` shows it and returns `{correct, rt, tags, metric, explain}`; `summary()` writes the concrete results line.
-2. Register it in `js/games/index.js`. The id must be the title in kebab-case (e.g. `Parcel Sequence` → `parcel-sequence`).
-3. Add logic tests in `tests/run.mjs`. Add the file to `CORE` in `sw.js` and bump `VERSION`.
-
-## Files
-`js/engine.js` seeded RNG, difficulty staircase, session loop, scoring, local saves, XP/streak/badges, synthesised sound · `js/app.js` hub, game pages, runs, results, duel, progress, settings · `js/kit.js` timed choices, confetti, fruit sprites · `js/art.js` procedural posters and artwork loader · `js/catalog.json` all 200 concepts · `sw.js` offline cache.
+Use **`MASTER_IMAGE_PROMPT.md`** (paste it once into the image generator), then the per-game prompts in **`art-prompts/prompts.md`**. Save as `assets/art/<game-id>.webp` and list the id in `assets/art/manifest.json`.
 
 ## Honest notes
-- Scores describe performance in these games on this device. The app does not give an IQ or "brain age", and it does not claim the skills transfer outside the games.
-- Timed trials are replayed if the app is backgrounded mid-trial. Untimed mode is available in Settings; untimed runs do not change personal bests.
+- Scores describe performance in these games on this device. The app does not claim the skills transfer to everyday life.
+- Some concepts are simplified to fit a phone screen; each game’s *How to play* describes exactly what it does.
+- Games that rely on written content (vocabulary, passages, word lists) draw from small built-in banks, so items repeat after many runs.
+- Retention features are built and tested for correctness. Whether they make people return can only be measured with real players.
