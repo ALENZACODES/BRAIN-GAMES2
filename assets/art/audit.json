@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 180,
+  "validated_images": 182,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -9,7 +9,6 @@
       "decision-journal",
       "distraction-budget",
       "error-detective",
-      "ifthen-builder",
       "personal-experiment-lab",
       "perspective-switch",
       "strategy-selector",
@@ -21,7 +20,6 @@
       "decision-journal",
       "distraction-budget",
       "error-detective",
-      "ifthen-builder",
       "personal-experiment-lab",
       "perspective-switch",
       "strategy-selector",
@@ -570,6 +568,12 @@
       "height": 1536
     },
     {
+      "file": "ifthen-builder.webp",
+      "bytes": 97402,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -1106,6 +1110,12 @@
     {
       "file": "stop-searching-challenge-banner.webp",
       "bytes": 97388,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "ifthen-builder-banner.webp",
+      "bytes": 108964,
       "width": 1536,
       "height": 1024
     }

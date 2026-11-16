@@ -89,7 +89,8 @@
     "framing-mirror",
     "forecast-tournament",
     "information-value",
-    "stop-searching-challenge"
+    "stop-searching-challenge",
+    "ifthen-builder"
   ],
   "banner": [
     "circuit-path",
@@ -181,7 +182,8 @@
     "framing-mirror",
     "forecast-tournament",
     "information-value",
-    "stop-searching-challenge"
+    "stop-searching-challenge",
+    "ifthen-builder"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
