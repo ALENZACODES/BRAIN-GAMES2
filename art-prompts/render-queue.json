@@ -748,5 +748,10 @@
     "id": "unit-switch",
     "kind": "banner",
     "blob_sha": "1267940e86d98cda0b6c0fb796ef6b55e02b1666"
+  },
+  {
+    "id": "patterned-arithmetic",
+    "kind": "poster",
+    "blob_sha": "9749e28a0b4990c2e22b76846738337ae2d9bbac"
   }
 ]
