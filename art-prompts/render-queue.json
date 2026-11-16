@@ -298,5 +298,10 @@
     "id": "packing-constraints",
     "kind": "banner",
     "blob_sha": "9d788e69c5fa4f0efa62fbd8abe51e90c9f14b92"
+  },
+  {
+    "id": "rescue-sequence",
+    "kind": "poster",
+    "blob_sha": "79fe3ce91ea6f3769ec8c7398630d76d1915f41d"
   }
 ]
