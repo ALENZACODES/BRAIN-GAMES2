@@ -1,11 +1,10 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 136,
+  "validated_images": 137,
   "missing": {
     "poster": [
       "alternative-explanation",
-      "analogy-bridge",
       "base-rate-detective",
       "breakpoint-planner",
       "confidence-compass",
@@ -478,6 +477,12 @@
     {
       "file": "ambiguity-detective.webp",
       "bytes": 110272,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "analogy-bridge.webp",
+      "bytes": 115708,
       "width": 1024,
       "height": 1536
     },

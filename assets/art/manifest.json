@@ -67,7 +67,8 @@
     "meaning-in-context",
     "sentence-repair",
     "concise-messenger",
-    "ambiguity-detective"
+    "ambiguity-detective",
+    "analogy-bridge"
   ],
   "banner": [
     "circuit-path",
