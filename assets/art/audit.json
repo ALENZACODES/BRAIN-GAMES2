@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 155,
+  "validated_images": 156,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -44,7 +44,6 @@
       "patterned-arithmetic",
       "personal-experiment-lab",
       "perspective-switch",
-      "probability-marbles",
       "sample-size-studio",
       "stop-searching-challenge",
       "strategy-selector",
@@ -981,6 +980,12 @@
     {
       "file": "data-detective-banner.webp",
       "bytes": 92438,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "probability-marbles-banner.webp",
+      "bytes": 106932,
       "width": 1536,
       "height": 1024
     }

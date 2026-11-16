@@ -156,7 +156,8 @@
     "percentage-transformer",
     "mental-checkout",
     "ratio-kitchen",
-    "data-detective"
+    "data-detective",
+    "probability-marbles"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
