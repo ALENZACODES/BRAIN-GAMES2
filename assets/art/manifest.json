@@ -148,7 +148,8 @@
     "instruction-builder",
     "main-idea-finder",
     "evidence-match",
-    "estimate-first"
+    "estimate-first",
+    "percentage-transformer"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
