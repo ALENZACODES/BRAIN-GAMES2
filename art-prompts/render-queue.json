@@ -959,5 +959,10 @@
     "id": "personal-experiment-lab",
     "kind": "poster",
     "blob_sha": "17a3e08f60fb3607529ab3ad2cdc882c5451754a"
+  },
+  {
+    "id": "personal-experiment-lab",
+    "kind": "banner",
+    "blob_sha": "a295439a9bf8bb80eeb33300845e17ef81a1adf4"
   }
 ]
