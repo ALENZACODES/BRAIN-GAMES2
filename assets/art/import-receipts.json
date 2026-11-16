@@ -63,7 +63,7 @@
   "queue-manager-banner.webp": "b753374efccc2b7a9a9def7e188f0e8d4725eb58",
   "checkpoint-planner.webp": "743f5623c1f284341397986265792924604a04f3",
   "checkpoint-planner-banner.webp": "38254ccae93b8ddd5fdf2e11f1dc1c1c4faa7fb8",
-  "tool-before-task.webp": "2acc53ae2bce5efded63a8b460705fa3b9e0c83e",
+  "tool-before-task.webp": "2ced4434efd97bfc9f30f9faa659a4417c3a7456",
   "tool-before-task-banner.webp": "8ede602d7985c57166679c6f758904d3bafb6fe8",
   "time-estimate-lab.webp": "792ee62d08a400c2b351cd8d703f57cc81c5cc8d",
   "time-estimate-lab-banner.webp": "f059af3043cef7846e25634f6cfc97549bb59b4a",
@@ -140,5 +140,6 @@
   "unit-switch.webp": "3c964b7c8479482db714a324e4f4684bac7fe271",
   "unit-switch-banner.webp": "1267940e86d98cda0b6c0fb796ef6b55e02b1666",
   "patterned-arithmetic.webp": "9749e28a0b4990c2e22b76846738337ae2d9bbac",
-  "patterned-arithmetic-banner.webp": "a80aba622162f58ba95d4e1ac5ccefdb3b8ac862"
+  "patterned-arithmetic-banner.webp": "a80aba622162f58ba95d4e1ac5ccefdb3b8ac862",
+  "confidence-compass.webp": "5fda75b6439fe705b005480e72ccbf50a1fd33bc"
 }

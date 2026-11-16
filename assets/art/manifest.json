@@ -79,7 +79,8 @@
     "data-detective",
     "probability-marbles",
     "unit-switch",
-    "patterned-arithmetic"
+    "patterned-arithmetic",
+    "confidence-compass"
   ],
   "banner": [
     "circuit-path",

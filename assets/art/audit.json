@@ -1,13 +1,12 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 160,
+  "validated_images": 161,
   "missing": {
     "poster": [
       "alternative-explanation",
       "base-rate-detective",
       "breakpoint-planner",
-      "confidence-compass",
       "confirmation-trap",
       "decision-journal",
       "distraction-budget",
@@ -297,7 +296,7 @@
     },
     {
       "file": "tool-before-task.webp",
-      "bytes": 150604,
+      "bytes": 128490,
       "width": 1024,
       "height": 1536
     },
@@ -526,6 +525,12 @@
     {
       "file": "patterned-arithmetic.webp",
       "bytes": 81516,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "confidence-compass.webp",
+      "bytes": 108456,
       "width": 1024,
       "height": 1536
     },
