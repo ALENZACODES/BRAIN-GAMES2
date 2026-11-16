@@ -41,7 +41,8 @@
     "budget-builder",
     "queue-manager",
     "checkpoint-planner",
-    "tool-before-task"
+    "tool-before-task",
+    "time-estimate-lab"
   ],
   "banner": [
     "circuit-path",
