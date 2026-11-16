@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 50,
+  "validated_images": 51,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -11,7 +11,6 @@
       "battery-expedition",
       "breakpoint-planner",
       "budget-builder",
-      "calendar-tetris",
       "category-sprint",
       "checkpoint-planner",
       "concise-messenger",
@@ -306,6 +305,12 @@
     {
       "file": "delivery-planner.webp",
       "bytes": 183832,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "calendar-tetris.webp",
+      "bytes": 140898,
       "width": 1024,
       "height": 1536
     },
