@@ -42,7 +42,8 @@
     "tile-equation",
     "hidden-transformation",
     "necessary-or-sufficient",
-    "puzzle-repair"
+    "puzzle-repair",
+    "set-builder"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 41,
+  "validated_images": 42,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -150,7 +150,6 @@
       "sample-size-studio",
       "scale-mapper",
       "sentence-repair",
-      "set-builder",
       "shadow-match",
       "shape-assembly",
       "stop-searching-challenge",
@@ -411,6 +410,12 @@
     {
       "file": "puzzle-repair-banner.webp",
       "bytes": 106816,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "set-builder-banner.webp",
+      "bytes": 89884,
       "width": 1536,
       "height": 1024
     }
