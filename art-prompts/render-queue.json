@@ -713,5 +713,10 @@
     "id": "ratio-kitchen",
     "kind": "poster",
     "blob_sha": "8295e071bb181e19f2bedabb6e2b364fbabb917e"
+  },
+  {
+    "id": "ratio-kitchen",
+    "kind": "banner",
+    "blob_sha": "00ec3cd976674d6d1041984b7631b803a38d2005"
   }
 ]
