@@ -14,7 +14,8 @@
     "constraint-garden",
     "cause-and-effect-machine",
     "minimal-clue",
-    "counterexample-hunt"
+    "counterexample-hunt",
+    "bridge-limits"
   ],
   "banner": [
     "circuit-path",
