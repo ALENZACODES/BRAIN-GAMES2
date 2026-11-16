@@ -118,5 +118,10 @@
     "id": "bridge-limits",
     "kind": "banner",
     "blob_sha": "5aea76591daaf206302d95ec2f86956e19e23e11"
+  },
+  {
+    "id": "tile-equation",
+    "kind": "poster",
+    "blob_sha": "34e0c21208a63c72dd98fa5db535f6a52eb294cd"
   }
 ]
