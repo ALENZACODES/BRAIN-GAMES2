@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 54,
+  "validated_images": 56,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -36,7 +36,6 @@
       "information-value",
       "instruction-builder",
       "landmark-ordering",
-      "limited-moves",
       "main-idea-finder",
       "maintenance-window",
       "map-rotation",
@@ -111,7 +110,6 @@
       "information-value",
       "instruction-builder",
       "landmark-ordering",
-      "limited-moves",
       "main-idea-finder",
       "maintenance-window",
       "map-rotation",
@@ -318,6 +316,12 @@
       "height": 1536
     },
     {
+      "file": "limited-moves.webp",
+      "bytes": 141240,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -476,6 +480,12 @@
     {
       "file": "kitchen-conductor-banner.webp",
       "bytes": 113852,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "limited-moves-banner.webp",
+      "bytes": 117078,
       "width": 1536,
       "height": 1024
     }

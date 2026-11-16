@@ -26,7 +26,8 @@
     "proof-path",
     "delivery-planner",
     "calendar-tetris",
-    "kitchen-conductor"
+    "kitchen-conductor",
+    "limited-moves"
   ],
   "banner": [
     "circuit-path",
@@ -55,7 +56,8 @@
     "proof-path",
     "delivery-planner",
     "calendar-tetris",
-    "kitchen-conductor"
+    "kitchen-conductor",
+    "limited-moves"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
