@@ -38,5 +38,10 @@
     "id": "mini-logic-houses",
     "kind": "banner",
     "blob_sha": "2ea4fd885606e59bc673d3def4009d9b904aaf01"
+  },
+  {
+    "id": "balance-mystery",
+    "kind": "poster",
+    "blob_sha": "2f6677126a83a5f1e814ff47543cee9a09a8f584"
   }
 ]
