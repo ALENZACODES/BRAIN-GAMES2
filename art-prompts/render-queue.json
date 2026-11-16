@@ -293,5 +293,10 @@
     "id": "packing-constraints",
     "kind": "poster",
     "blob_sha": "ff002586e37fc28f0c16117190fb5a9796020583"
+  },
+  {
+    "id": "packing-constraints",
+    "kind": "banner",
+    "blob_sha": "9d788e69c5fa4f0efa62fbd8abe51e90c9f14b92"
   }
 ]
