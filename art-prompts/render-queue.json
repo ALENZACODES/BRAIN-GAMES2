@@ -533,5 +533,10 @@
     "id": "scale-mapper",
     "kind": "poster",
     "blob_sha": "1cd98fa537a6d2df045ef2fb1c1d429a242a6ada"
+  },
+  {
+    "id": "scale-mapper",
+    "kind": "banner",
+    "blob_sha": "205b18a378bb70603457737a6f102fa9e0e08199"
   }
 ]
