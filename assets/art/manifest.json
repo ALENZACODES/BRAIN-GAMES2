@@ -58,7 +58,8 @@
     "symmetry-workshop",
     "packing-rotation",
     "scale-mapper",
-    "landmark-ordering"
+    "landmark-ordering",
+    "tile-navigation"
   ],
   "banner": [
     "circuit-path",
@@ -118,7 +119,8 @@
     "route-reconstruction",
     "symmetry-workshop",
     "packing-rotation",
-    "scale-mapper"
+    "scale-mapper",
+    "landmark-ordering"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

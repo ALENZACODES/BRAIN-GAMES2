@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 117,
+  "validated_images": 119,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -41,7 +41,6 @@
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
-      "tile-navigation",
       "transfer-mission",
       "unit-switch",
       "word-ladder"
@@ -69,7 +68,6 @@
       "ifthen-builder",
       "information-value",
       "instruction-builder",
-      "landmark-ordering",
       "main-idea-finder",
       "meaning-in-context",
       "mental-checkout",
@@ -447,6 +445,12 @@
       "height": 1536
     },
     {
+      "file": "tile-navigation.webp",
+      "bytes": 109238,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -791,6 +795,12 @@
     {
       "file": "scale-mapper-banner.webp",
       "bytes": 87920,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "landmark-ordering-banner.webp",
+      "bytes": 106430,
       "width": 1536,
       "height": 1024
     }
