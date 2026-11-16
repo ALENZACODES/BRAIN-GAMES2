@@ -143,5 +143,10 @@
     "id": "necessary-or-sufficient",
     "kind": "poster",
     "blob_sha": "97ceaa355f3a0ed23f9481bc2679ed1a06283055"
+  },
+  {
+    "id": "necessary-or-sufficient",
+    "kind": "banner",
+    "blob_sha": "be85c10b7f078876ba0a7c94f99afc655ac7f144"
   }
 ]
