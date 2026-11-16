@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 37,
+  "validated_images": 38,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -130,7 +130,6 @@
       "map-rotation",
       "meaning-in-context",
       "mental-checkout",
-      "necessary-or-sufficient",
       "occlusion-detective",
       "packing-constraints",
       "packing-rotation",
@@ -391,6 +390,12 @@
     {
       "file": "hidden-transformation-banner.webp",
       "bytes": 90552,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "necessary-or-sufficient-banner.webp",
+      "bytes": 114254,
       "width": 1536,
       "height": 1024
     }

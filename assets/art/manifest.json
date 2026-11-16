@@ -38,7 +38,8 @@
     "counterexample-hunt",
     "bridge-limits",
     "tile-equation",
-    "hidden-transformation"
+    "hidden-transformation",
+    "necessary-or-sufficient"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
