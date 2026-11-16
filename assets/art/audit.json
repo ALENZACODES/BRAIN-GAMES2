@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 148,
+  "validated_images": 149,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -18,7 +18,6 @@
       "framing-mirror",
       "ifthen-builder",
       "information-value",
-      "mental-checkout",
       "patterned-arithmetic",
       "personal-experiment-lab",
       "perspective-switch",
@@ -502,6 +501,12 @@
     {
       "file": "percentage-transformer.webp",
       "bytes": 119612,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "mental-checkout.webp",
+      "bytes": 114344,
       "width": 1024,
       "height": 1536
     },

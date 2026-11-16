@@ -73,7 +73,8 @@
     "main-idea-finder",
     "evidence-match",
     "estimate-first",
-    "percentage-transformer"
+    "percentage-transformer",
+    "mental-checkout"
   ],
   "banner": [
     "circuit-path",
