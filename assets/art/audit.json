@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 65,
+  "validated_images": 67,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -40,7 +40,6 @@
       "meaning-in-context",
       "mental-checkout",
       "occlusion-detective",
-      "packing-constraints",
       "packing-rotation",
       "path-integration",
       "patterned-arithmetic",
@@ -138,7 +137,6 @@
       "time-estimate-lab",
       "tool-before-task",
       "transfer-mission",
-      "travel-buffer",
       "unit-switch",
       "word-ladder"
     ]
@@ -343,6 +341,12 @@
       "height": 1536
     },
     {
+      "file": "packing-constraints.webp",
+      "bytes": 144352,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -531,6 +535,12 @@
     {
       "file": "dependency-builder-banner.webp",
       "bytes": 145140,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "travel-buffer-banner.webp",
+      "bytes": 149226,
       "width": 1536,
       "height": 1024
     }
