@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 103,
+  "validated_images": 105,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -38,7 +38,6 @@
       "perspective-switch",
       "probability-marbles",
       "ratio-kitchen",
-      "relative-position",
       "route-reconstruction",
       "sample-size-studio",
       "scale-mapper",
@@ -64,7 +63,6 @@
       "confidence-compass",
       "confirmation-trap",
       "construction-blueprint",
-      "cross-section-studio",
       "data-detective",
       "decision-journal",
       "distraction-budget",
@@ -419,6 +417,12 @@
       "height": 1536
     },
     {
+      "file": "relative-position.webp",
+      "bytes": 82092,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -721,6 +725,12 @@
     {
       "file": "path-integration-banner.webp",
       "bytes": 129096,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "cross-section-studio-banner.webp",
+      "bytes": 61738,
       "width": 1536,
       "height": 1024
     }

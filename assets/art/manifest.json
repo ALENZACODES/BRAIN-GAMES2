@@ -51,7 +51,8 @@
     "hidden-blocks",
     "map-rotation",
     "path-integration",
-    "cross-section-studio"
+    "cross-section-studio",
+    "relative-position"
   ],
   "banner": [
     "circuit-path",
@@ -104,7 +105,8 @@
     "shape-assembly",
     "hidden-blocks",
     "map-rotation",
-    "path-integration"
+    "path-integration",
+    "cross-section-studio"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
