@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 25,
+  "validated_images": 26,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -104,7 +104,6 @@
       "budget-builder",
       "calendar-tetris",
       "category-sprint",
-      "cause-and-effect-machine",
       "checkpoint-planner",
       "concise-messenger",
       "confidence-compass",
@@ -331,6 +330,12 @@
     {
       "file": "constraint-garden-banner.webp",
       "bytes": 177654,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "cause-and-effect-machine-banner.webp",
+      "bytes": 114494,
       "width": 1536,
       "height": 1024
     }

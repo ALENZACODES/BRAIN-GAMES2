@@ -26,7 +26,8 @@
     "balance-mystery",
     "sequence-laboratory",
     "truthful-robots",
-    "constraint-garden"
+    "constraint-garden",
+    "cause-and-effect-machine"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
