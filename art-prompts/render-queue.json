@@ -443,5 +443,10 @@
     "id": "hidden-blocks",
     "kind": "poster",
     "blob_sha": "fb26fd2a250d7d7302a0137264963de67c30c019"
+  },
+  {
+    "id": "hidden-blocks",
+    "kind": "banner",
+    "blob_sha": "b1241ea99c24fd82c1afb04aee5427b489fb689f"
   }
 ]
