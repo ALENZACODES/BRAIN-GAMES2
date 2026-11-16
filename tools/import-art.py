@@ -7,7 +7,7 @@ import json, os, re, sys
 from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INBOX, MAN = os.path.join(ROOT, 'art-inbox'), os.path.join(ROOT, 'assets/art/manifest.json')
-SHAPES = ['circle', 'square', 'triangle', 'diamond', 'star', 'hexagon', 'heart', 'plus']
+SHAPES = ['circle', 'square', 'triangle', 'diamond', 'star', 'hexagon', 'heart', 'cross']
 COLOURS = {'red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'teal'}
 os.makedirs(os.path.join(ROOT, 'assets/sprites'), exist_ok=True); os.makedirs(os.path.join(ROOT, 'assets/bg'), exist_ok=True)
 man = json.load(open(MAN)); sprites, bgs = set(man.get('sprites', [])), set(man.get('bg', []))

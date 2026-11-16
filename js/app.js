@@ -178,7 +178,7 @@ function sessionScreen(meta, label) {
   const sess = h('div', { class: 'session', style: { '--h2': catHue(meta.cat) } },
     h('div', { class: 'stop' }, h('button', { class: 'x', 'aria-label': 'Quit this run', onclick: () => { SESSION.alive = false; location.hash = `#/g/${meta.id}`; } }, '✕'), h('b', {}, meta.title), label ? h('span', { class: 'ribbon' }, label) : null, mBtn), hud, h('div', { class: 'stagewrap' }, stage, overlay));
   root().replaceChildren(sess);
-  const bgId = slug(CAT_SHORT[meta.cat] || ''); artManifest().then((m) => { if ((m.bg || []).includes(bgId)) sess.style.setProperty('--bgimg', `url(assets/bg/${bgId}.webp)`); });
+  const bgId = slug(CAT_SHORT[meta.cat] || ''); artManifest().then((m) => { if ((m.bg || []).includes(bgId)) sess.style.setProperty('--bgimg', `url("${new URL(`assets/bg/${bgId}.webp`, document.baseURI).href}")`); });
   return { stage, hud, overlay };
 }
 function callout(text, cls = '') { const el = h('div', { class: 'callout ' + cls, role: 'status' }, text); document.body.append(el); setTimeout(() => el.remove(), 1500); }
