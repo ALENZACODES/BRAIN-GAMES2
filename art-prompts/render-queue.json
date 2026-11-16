@@ -818,5 +818,10 @@
     "id": "sunk-cost-expedition",
     "kind": "poster",
     "blob_sha": "c67e22fdb30c9f2adc51775284ce6056626b0b43"
+  },
+  {
+    "id": "sunk-cost-expedition",
+    "kind": "banner",
+    "blob_sha": "b4994d7f2a3a729c6b9a63f072cd6a1c2999fe40"
   }
 ]
