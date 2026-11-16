@@ -192,7 +192,8 @@
     "distraction-budget",
     "error-detective",
     "strategy-selector",
-    "breakpoint-planner"
+    "breakpoint-planner",
+    "alternative-explanation"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

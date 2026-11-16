@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 191,
+  "validated_images": 192,
   "missing": {
     "poster": [
       "decision-journal",
@@ -10,7 +10,6 @@
       "transfer-mission"
     ],
     "banner": [
-      "alternative-explanation",
       "decision-journal",
       "personal-experiment-lab",
       "perspective-switch",
@@ -1161,6 +1160,12 @@
     {
       "file": "breakpoint-planner-banner.webp",
       "bytes": 74106,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "alternative-explanation-banner.webp",
+      "bytes": 101732,
       "width": 1536,
       "height": 1024
     }
