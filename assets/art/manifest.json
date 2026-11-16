@@ -16,7 +16,8 @@
     "mirror-maze",
     "number-line-navigator",
     "fraction-duel",
-    "rule-detective"
+    "rule-detective",
+    "mini-logic-houses"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
