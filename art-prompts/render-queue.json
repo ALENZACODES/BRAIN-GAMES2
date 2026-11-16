@@ -808,5 +808,10 @@
     "id": "confirmation-trap",
     "kind": "poster",
     "blob_sha": "f21604ee6cae55826396d6acc244d7eff208c21e"
+  },
+  {
+    "id": "confirmation-trap",
+    "kind": "banner",
+    "blob_sha": "1ed82502976263f1103b740b0c606c998be4d41d"
   }
 ]
