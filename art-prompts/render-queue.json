@@ -573,5 +573,10 @@
     "id": "construction-blueprint",
     "kind": "poster",
     "blob_sha": "0036ac5c0508400627624f1bea8dc2ea139ac4ef"
+  },
+  {
+    "id": "construction-blueprint",
+    "kind": "banner",
+    "blob_sha": "69561070aa07cfff880f9805bae31d4eb2bdb925"
   }
 ]
