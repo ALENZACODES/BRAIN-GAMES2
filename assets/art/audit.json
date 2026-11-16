@@ -1,13 +1,12 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 182,
+  "validated_images": 183,
   "missing": {
     "poster": [
       "alternative-explanation",
       "breakpoint-planner",
       "decision-journal",
-      "distraction-budget",
       "error-detective",
       "personal-experiment-lab",
       "perspective-switch",
@@ -570,6 +569,12 @@
     {
       "file": "ifthen-builder.webp",
       "bytes": 97402,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "distraction-budget.webp",
+      "bytes": 97732,
       "width": 1024,
       "height": 1536
     },

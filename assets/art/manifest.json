@@ -90,7 +90,8 @@
     "forecast-tournament",
     "information-value",
     "stop-searching-challenge",
-    "ifthen-builder"
+    "ifthen-builder",
+    "distraction-budget"
   ],
   "banner": [
     "circuit-path",
