@@ -23,7 +23,8 @@
     "set-builder",
     "invariant-hunt",
     "analogy-workshop",
-    "proof-path"
+    "proof-path",
+    "delivery-planner"
   ],
   "banner": [
     "circuit-path",

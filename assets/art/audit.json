@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 48,
+  "validated_images": 49,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -22,7 +22,6 @@
       "cube-net",
       "data-detective",
       "decision-journal",
-      "delivery-planner",
       "dependency-builder",
       "distraction-budget",
       "error-detective",
@@ -302,6 +301,12 @@
     {
       "file": "proof-path.webp",
       "bytes": 121330,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "delivery-planner.webp",
+      "bytes": 183832,
       "width": 1024,
       "height": 1536
     },
