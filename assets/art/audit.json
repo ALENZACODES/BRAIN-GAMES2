@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 139,
+  "validated_images": 140,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -52,7 +52,6 @@
       "framing-mirror",
       "ifthen-builder",
       "information-value",
-      "instruction-builder",
       "main-idea-finder",
       "mental-checkout",
       "patterned-arithmetic",
@@ -901,6 +900,12 @@
     {
       "file": "analogy-bridge-banner.webp",
       "bytes": 118966,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "instruction-builder-banner.webp",
+      "bytes": 97950,
       "width": 1536,
       "height": 1024
     }

@@ -140,7 +140,8 @@
     "sentence-repair",
     "concise-messenger",
     "ambiguity-detective",
-    "analogy-bridge"
+    "analogy-bridge",
+    "instruction-builder"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
