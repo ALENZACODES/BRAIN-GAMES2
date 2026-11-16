@@ -363,5 +363,10 @@
     "id": "checkpoint-planner",
     "kind": "poster",
     "blob_sha": "743f5623c1f284341397986265792924604a04f3"
+  },
+  {
+    "id": "checkpoint-planner",
+    "kind": "banner",
+    "blob_sha": "38254ccae93b8ddd5fdf2e11f1dc1c1c4faa7fb8"
   }
 ]
