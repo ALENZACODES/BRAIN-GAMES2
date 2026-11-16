@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 161,
+  "validated_images": 163,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -11,7 +11,6 @@
       "decision-journal",
       "distraction-budget",
       "error-detective",
-      "evidence-updater",
       "forecast-tournament",
       "framing-mirror",
       "ifthen-builder",
@@ -28,7 +27,6 @@
       "alternative-explanation",
       "base-rate-detective",
       "breakpoint-planner",
-      "confidence-compass",
       "confirmation-trap",
       "decision-journal",
       "distraction-budget",
@@ -535,6 +533,12 @@
       "height": 1536
     },
     {
+      "file": "evidence-updater.webp",
+      "bytes": 81140,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -782,7 +786,7 @@
     },
     {
       "file": "tool-before-task-banner.webp",
-      "bytes": 136494,
+      "bytes": 124642,
       "width": 1536,
       "height": 1024
     },
@@ -1011,6 +1015,12 @@
     {
       "file": "patterned-arithmetic-banner.webp",
       "bytes": 82482,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "confidence-compass-banner.webp",
+      "bytes": 119854,
       "width": 1536,
       "height": 1024
     }
