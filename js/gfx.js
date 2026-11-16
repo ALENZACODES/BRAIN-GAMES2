@@ -11,12 +11,19 @@ const SP = {
   cross: '<path d="M36 8h28v28h28v28H64v28H36V64H8V36h28z"/>',
 };
 const col = (c) => (c && c[0] === '#' ? c : (COLORS.find((x) => x[0] === c) || COLORS[1])[1]);
+const hexAdj = (hex, k) => { const n = parseInt(hex.slice(1), 16), f = (v) => Math.max(0, Math.min(255, Math.round(k > 0 ? v + (255 - v) * k : v * (1 + k)))); return '#' + [n >> 16, (n >> 8) & 255, n & 255].map((v) => f(v).toString(16).padStart(2, '0')).join(''); };
+const colorName = (c) => (c && c[0] === '#' ? (COLORS.find((x) => x[1] === c) || [null])[0] : c);
+/** Gem-style shape. If real sprite art has been added (assets/sprites/gem-<shape>-<colour>.webp, listed in the art manifest), that image is used instead. */
 export function glyph({ shape = 'circle', color = 'blue', pattern = 'solid', rot = 0, scale = 1, cls = '' } = {}) {
-  const c = col(color), id = `pt-${pattern}-${c.slice(1)}`;
-  const defs = pattern === 'stripes' ? `<pattern id="${id}" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="${c}" opacity=".28"/><rect width="6" height="12" fill="${c}"/></pattern>`
-    : pattern === 'dots' ? `<pattern id="${id}" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="${c}" opacity=".28"/><circle cx="7" cy="7" r="4.2" fill="${c}"/></pattern>` : '';
-  const fill = pattern === 'solid' ? c : pattern === 'outline' ? 'none' : `url(#${id})`, stroke = pattern === 'outline' ? c : 'rgba(255,255,255,.55)', sw = pattern === 'outline' ? 8 : 3;
-  return `<svg viewBox="0 0 100 100" class="gl ${cls}"><defs>${defs}</defs><g transform="translate(50 50) rotate(${rot}) scale(${scale}) translate(-50 -50)" fill="${fill}" stroke="${stroke}" stroke-width="${sw}" stroke-linejoin="round">${SP[shape]}</g></svg>`;
+  const c = col(color), cn = colorName(color);
+  if (pattern === 'solid' && cn && globalThis.__SPRITES && globalThis.__SPRITES.has(`${shape}-${cn}`)) return `<img class="gl spr ${cls}" src="assets/sprites/gem-${shape}-${cn}.webp" alt="" draggable="false" style="transform:rotate(${rot}deg) scale(${scale})">`;
+  const id = `pt-${pattern}-${c.slice(1)}`, gid = `gg-${c.slice(1)}`, cid = `cp-${shape}`;
+  const grad = `<radialGradient id="${gid}" cx="34%" cy="26%" r="85%"><stop offset="0" stop-color="${hexAdj(c, 0.55)}"/><stop offset=".42" stop-color="${c}"/><stop offset="1" stop-color="${hexAdj(c, -0.45)}"/></radialGradient>`;
+  const defs = grad + `<clipPath id="${cid}">${SP[shape]}</clipPath>` + (pattern === 'stripes' ? `<pattern id="${id}" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="${c}" opacity=".3"/><rect width="6" height="12" fill="url(#${gid})"/></pattern>`
+    : pattern === 'dots' ? `<pattern id="${id}" width="14" height="14" patternUnits="userSpaceOnUse"><rect width="14" height="14" fill="${c}" opacity=".3"/><circle cx="7" cy="7" r="4.4" fill="${hexAdj(c, 0.15)}"/></pattern>` : '');
+  const fill = pattern === 'solid' ? `url(#${gid})` : pattern === 'outline' ? 'none' : `url(#${id})`, stroke = pattern === 'outline' ? c : hexAdj(c, 0.6), sw = pattern === 'outline' ? 8 : 2.5;
+  const gloss = pattern === 'outline' ? '' : `<g clip-path="url(#${cid})"><ellipse cx="36" cy="26" rx="34" ry="16" fill="#fff" opacity=".32" transform="rotate(-18 36 26)"/><path d="M8 78 Q50 96 92 78 L92 100 L8 100z" fill="#000" opacity=".18"/></g>`;
+  return `<svg viewBox="0 0 100 100" class="gl gem ${cls}"><defs>${defs}</defs><g transform="translate(50 50) rotate(${rot}) scale(${scale}) translate(-50 -50)"><g fill="${fill}" stroke="${stroke}" stroke-width="${sw}" stroke-linejoin="round">${SP[shape]}</g>${gloss}</g></svg>`;
 }
 export const tok = (label, hue = 260, cls = '') => `<span class="tok ${cls}" style="--th:${hue}">${label}</span>`;
 export const card = (title, body = '', hue = 260) => `<span class="mcard" style="--th:${hue}"><b>${title}</b>${body ? `<small>${body}</small>` : ''}</span>`;

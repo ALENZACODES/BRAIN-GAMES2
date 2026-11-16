@@ -1,13 +1,15 @@
 import { $, h, slug, hashStr, dateKey, store, configureStore, getProfile, saveProfile, getGameRec, recordRun, runSession, dailyPicks, playerLevel, xpForLevel, titleFor, starThresholds, totalStars, getMissions, daysBetween, RNG,
   THEMES, ACHIEVEMENTS, audio, defaultSummary, median } from './engine.js';
 import { CONFIG } from './config.js';
+import { music, SOUND_STYLES } from './audio.js';
 import { LIVE } from './games/index.js';
-import { posterEl, CAT_SHORT, catHue } from './art.js';
+import { posterEl, CAT_SHORT, catHue, artManifest } from './art.js';
 import { burst } from './kit.js';
 
 const fmt = (n) => Math.round(n).toLocaleString();
 let GAMES = [], BY_ID = {}, SESSION = { alive: false }, deferredInstall = null;
 const QA = new URLSearchParams(location.search); // test hook: ?qa=3&lv=max shortens runs for automated checks
+if (QA.get('qa')) window.__QA = {};
 const root = () => $('#app');
 
 // ---------- boot ----------
@@ -16,7 +18,11 @@ async function boot() {
   const cat = await (await fetch('js/catalog.json')).json();
   GAMES = cat.filter((g) => g.n >= CONFIG.range[0] && g.n <= CONFIG.range[1]).map((g) => ({ ...g, id: slug(g.title), live: !!LIVE[slug(g.title)] }));
   BY_ID = Object.fromEntries(GAMES.map((g) => [g.id, g]));
+  music.setTracks(CONFIG.music || []);
   applySettings();
+  try { const m = await artManifest(); if (m.sprites?.length) globalThis.__SPRITES = new Set(m.sprites); } catch {}
+  const unlock = () => { audio.unlock(); music.start(); };
+  addEventListener('pointerdown', unlock, { once: true }); addEventListener('keydown', unlock, { once: true });
   try { navigator.storage?.persist?.(); } catch {}
   window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredInstall = e; if (location.hash === '' || location.hash === '#/') render(); });
   window.addEventListener('appinstalled', () => { deferredInstall = null; toast('Installed. Find it on your home screen.'); });
@@ -29,7 +35,8 @@ function applySettings() {
   const p = getProfile(), s = p.settings, t = THEMES.find((x) => x.id === s.theme) || THEMES[0];
   document.documentElement.style.setProperty('--h', t.id === 'aurora' ? CONFIG.hue : t.hue);
   document.documentElement.classList.toggle('reduce', !!s.reduceMotion);
-  audio.on = s.sound; audio.haptics = s.haptics;
+  audio.on = s.sound; audio.haptics = s.haptics; audio.setStyle(s.soundStyle || 'glass');
+  if (music.on !== (s.music !== false)) music.setOn(s.music !== false);
 }
 function toast(msg) {
   const t = h('div', { class: 'toast', role: 'status' }, msg); document.body.append(t);
@@ -167,13 +174,18 @@ async function gamePage(meta, q) {
 // ---------- running a game ----------
 function sessionScreen(meta, label) {
   const stage = h('div', { class: 'stage' }), hud = h('div', { class: 'hud' }), overlay = h('div', { class: 'overlay', 'aria-live': 'polite' });
-  root().replaceChildren(h('div', { class: 'session' },
-    h('div', { class: 'stop' }, h('button', { class: 'x', 'aria-label': 'Quit this run', onclick: () => { SESSION.alive = false; location.hash = `#/g/${meta.id}`; } }, '✕'), h('b', {}, meta.title), label ? h('span', { class: 'ribbon' }, label) : null), hud, h('div', { class: 'stagewrap' }, stage, overlay)));
+  const mBtn = h('button', { class: 'x mus' + (music.on ? ' on' : ''), 'aria-label': 'Music on or off', title: 'Music', onclick: () => { const p = getProfile(); p.settings.music = !music.on; saveProfile(p); applySettings(); mBtn.classList.toggle('on', music.on); } }, '♪');
+  const sess = h('div', { class: 'session', style: { '--h2': catHue(meta.cat) } },
+    h('div', { class: 'stop' }, h('button', { class: 'x', 'aria-label': 'Quit this run', onclick: () => { SESSION.alive = false; location.hash = `#/g/${meta.id}`; } }, '✕'), h('b', {}, meta.title), label ? h('span', { class: 'ribbon' }, label) : null, mBtn), hud, h('div', { class: 'stagewrap' }, stage, overlay));
+  root().replaceChildren(sess);
+  const bgId = slug(CAT_SHORT[meta.cat] || ''); artManifest().then((m) => { if ((m.bg || []).includes(bgId)) sess.style.setProperty('--bgimg', `url(assets/bg/${bgId}.webp)`); });
   return { stage, hud, overlay };
 }
-function makeHost(meta, ui, settings) {
+function callout(text, cls = '') { const el = h('div', { class: 'callout ' + cls, role: 'status' }, text); document.body.append(el); setTimeout(() => el.remove(), 1500); }
+function makeHost(meta, ui, settings, game) {
   const sess = SESSION;
-  let practiceRibbon = null;
+  let practiceRibbon = null, starsNow = getGameRec(meta.id).stars || 0;
+  const th = game ? starThresholds(game.max) : [99, 99, 99];
   return {
     stage: ui.stage, settings, alive: () => sess.alive && SESSION === sess,
     toast,
@@ -186,14 +198,19 @@ function makeHost(meta, ui, settings) {
     setPractice(on) { practiceRibbon = on; ui.hud.replaceChildren(h('span', { class: 'ribbon wide' }, on ? 'Practice round · not scored' : '')); },
     async feedback(res, o) {
       const ok = !!res.correct;
-      if (ok) { audio.ok(o.stats.streak); audio.buzz(12); } else { audio.bad(); audio.buzz(60); }
+      const bigWin = ok && !o.practice && (res.rt || 0) > 8000;
+      if (ok) { (bigWin ? audio.big() : audio.ok(o.stats.streak)); audio.buzz(bigWin ? [20, 40, 30] : 12); } else { audio.bad(); audio.buzz(60); }
+      const r0 = ui.stage.getBoundingClientRect();
+      if (bigWin) { music.duck(); callout(['Brilliant!', 'Nailed it!', 'Solved!', 'Masterful!'][o.stats.correct % 4], 'big'); burst(r0.left + r0.width / 2, r0.top + r0.height / 3, 46, settings.reduceMotion); }
+      else if (ok && !o.practice && [3, 5, 10, 15, 20, 25].includes(o.stats.streak)) { setTimeout(() => audio.streak(), 120); callout(`🔥 ${o.stats.streak} in a row!`, o.stats.streak >= 10 ? 'big' : ''); }
+      if (!o.practice && o.change === 1 && !settings.untimed) { while (starsNow < 3 && o.level >= th[starsNow]) { starsNow++; const n = starsNow; setTimeout(() => { audio.star(); music.duck(); callout(`${'★'.repeat(n)} Star ${n} unlocked!`, 'star'); burst(innerWidth / 2, innerHeight / 3, 50, settings.reduceMotion); }, 450); } }
       const chip = h('div', { class: 'fb ' + (ok ? 'good' : 'bad') },
         h('b', {}, ok ? (o.practice ? 'Correct' : `+${fmt(o.gained)}`) : (res.timedOut ? 'Time' : 'Missed')),
         res.explain ? h('span', {}, res.explain) : null,
         !o.practice && o.change === 1 ? h('em', { class: 'up' }, `Level ${o.level} ▲`) : !o.practice && o.change === -1 ? h('em', { class: 'dn' }, `Level ${o.level} ▼`) : null);
       ui.overlay.replaceChildren(chip);
       if (!o.practice && o.change === 1) { audio.level(); const r = ui.stage.getBoundingClientRect(); burst(r.left + r.width / 2, r.top + 60, 22, settings.reduceMotion); }
-      const wait = ok ? (o.practice ? 900 : 350) : (res.explain ? 1900 : 900);
+      const wait = ok ? (o.practice ? 900 : bigWin ? 1100 : 380) : (res.explain ? 1900 : 900);
       await new Promise((r) => { const t = setTimeout(r, wait), skip = () => { clearTimeout(t); r(); }; ui.overlay.addEventListener('click', skip, { once: true }); });
       ui.overlay.replaceChildren();
     },
@@ -207,7 +224,8 @@ function makeHost(meta, ui, settings) {
 async function execute(game, meta, o) {
   SESSION = { alive: true }; const sess = SESSION;
   const ui = sessionScreen(meta, o.label), settings = getProfile().settings;
-  const host = makeHost(meta, ui, settings);
+  const host = makeHost(meta, ui, settings, game);
+  audio.start();
   const rec = getGameRec(meta.id);
   const fixed = o.daily || o.seed || o.fixedStart;
   const startLevel = fixed ? game.min : Math.max(game.min, Math.min(game.max, Math.round(rec.best.level * 0.55)));
@@ -280,7 +298,8 @@ function results(game, meta, stats, res, o) {
       h('a', { class: 'btn ghost', href: '#/' }, 'All games')),
     upNext(meta, o)), 'play');
   countUp(scoreEl, stats.score);
-  if (res.newBest || res.levelUp || res.newAch.length) { audio.win(); setTimeout(() => burst(innerWidth / 2, 180, 60, getProfile().settings.reduceMotion), 300); }
+  if (res.newStars) setTimeout(() => audio.star(), 500); else if (res.newAch.length) audio.badge(); else if (res.newBest || res.levelUp) audio.win();
+  if (res.newBest || res.levelUp || res.newAch.length || res.newStars) { music.duck(2000); setTimeout(() => burst(innerWidth / 2, 180, 60, getProfile().settings.reduceMotion), 300); }
 }
 
 function nearMiss(stats, res, game) {
@@ -356,7 +375,8 @@ function settings() {
   const data = h('textarea', { rows: 3, placeholder: 'Paste a backup here to restore', 'aria-label': 'Backup data' });
   frame(h('div', { class: 'settings' }, h('h1', {}, 'Settings'),
     h('label', { class: 'field' }, 'Your name', name),
-    sw('sound', 'Sound', 'Synthesised in the app. Nothing to download.'), sw('haptics', 'Vibration on phones'),
+    sw('sound', 'Sound effects'), sw('music', 'Music', 'Calm background tracks (CC0).'), sw('haptics', 'Vibration on phones'),
+    h('h3', {}, 'Sound style'), h('div', { class: 'themes' }, SOUND_STYLES.map((st) => h('button', { class: 'theme' + ((s.soundStyle || 'glass') === st.id ? ' on' : ''), style: { '--th': 200 }, onclick: () => { const pp = getProfile(); pp.settings.soundStyle = st.id; saveProfile(pp); applySettings(); audio.unlock(); setTimeout(() => { audio.ok(); setTimeout(() => audio.level(), 450); }, 250); settings(); } }, st.name, h('small', {}, st.desc)))),
     sw('reduceMotion', 'Reduce motion', 'Fewer animations and no confetti.'), sw('untimed', 'Untimed mode', 'Turns off countdown timers. Runs then do not change personal bests.'),
     h('h3', {}, 'Themes'), h('div', { class: 'themes' }, THEMES.map((t) => h('button', { class: 'theme' + (s.theme === t.id ? ' on' : ''), disabled: lvl < t.at, style: { '--th': t.id === 'aurora' ? CONFIG.hue : t.hue }, onclick: () => { const pp = getProfile(); pp.settings.theme = t.id; saveProfile(pp); applySettings(); settings(); } }, t.name, lvl < t.at ? h('small', {}, `Lv ${t.at}`) : null))),
     h('h3', {}, 'On your phone'), h('p', { class: 'muted' }, 'This is a web app. Open this page in your phone’s browser, then use “Install” (Android/Chrome) or Share → Add to Home Screen (iPhone). It then opens full-screen and works offline.'),

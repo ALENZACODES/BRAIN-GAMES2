@@ -86,3 +86,8 @@ BRAIN-GAMES2/
 ├── README.md               # This file
 └── sw.js                   # Service worker for offline use
 ```
+
+## Sound and music
+- Sound effects: UI SFX by Yuki Capital (npm `uisfx`), CC0 public domain, in `assets/sfx/` (5 styles; switch in Settings → Sound style).
+- Music: CC0 tracks from OpenGameArt (cynicmusic, Kistol, Komiku / Loyalty Freak Music), in `assets/music/`. Toggle with the ♪ button while playing or in Settings.
+- In-game art (gem pieces, play backgrounds): see `IN_GAME_ART_PROMPT.md`; drop PNGs in `art-inbox/` and run `python3 tools/import-art.py`.

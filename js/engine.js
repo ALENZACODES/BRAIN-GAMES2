@@ -1,3 +1,4 @@
+import { audio, music } from './audio.js';
 // Core engine: seeded RNG, adaptive difficulty, session loop, local progress, audio.
 // No DOM access at import time, so game logic can be unit-tested in Node.
 
@@ -58,8 +59,11 @@ export function yesterdayKey() { const d = new Date(); d.setDate(d.getDate() - 1
 
 // ---------- Difficulty: change ONE parameter (level) at a time; 2-up / 1-down ----------
 export class Staircase {
-  constructor(min, max, start) { this.min = min; this.max = max; this.level = clamp(start, min, max); this.run = 0; }
+  /** warm = true: until the first miss, every correct answer moves up a level (fast start), then the usual 2-up / 1-down. */
+  constructor(min, max, start, warm = false) { this.min = min; this.max = max; this.level = clamp(start, min, max); this.run = 0; this.warm = warm; }
   update(correct) {
+    if (correct && this.warm && this.level < Math.ceil(this.max * 0.5)) { this.level++; return 1; }
+    if (!correct) this.warm = false;
     if (correct) {
       this.run++;
       if (this.run >= 2) { this.run = 0; if (this.level < this.max) { this.level++; return 1; } }
@@ -89,7 +93,7 @@ const DEFAULT_PROFILE = () => ({
   v: 1, name: 'Player', created: Date.now(), xp: 0,
   streak: { count: 0, last: '' }, bestStreak: 0, freezes: 0, lastPlayed: '',
   days: {}, ach: {}, totals: { runs: 0, trials: 0, duels: 0 },
-  settings: { sound: true, haptics: true, reduceMotion: false, untimed: false, theme: 'aurora', name2: 'Player 2' },
+  settings: { sound: true, music: true, soundStyle: 'glass', haptics: true, reduceMotion: false, untimed: false, theme: 'aurora', name2: 'Player 2' },
 });
 export function getProfile() {
   const p = store.get('profile', null) || DEFAULT_PROFILE();
@@ -250,30 +254,8 @@ export function recordRun(game, stats, meta = {}) {
 
 export function dailyPicks(ids, key = dateKey(), n = 3) { return new RNG('daily:' + key).sample(ids, Math.min(n, ids.length)); }
 
-// ---------- Audio + haptics (synthesised; no files to download) ----------
-let AC = null;
-function ac() {
-  if (!AC) { try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch { return null; } }
-  if (AC && AC.state === 'suspended') AC.resume();
-  return AC;
-}
-export const audio = {
-  on: true, haptics: true,
-  tone(f, d = 0.12, type = 'sine', vol = 0.14, delay = 0) {
-    if (!this.on) return; const c = ac(); if (!c) return;
-    const t = c.currentTime + delay, o = c.createOscillator(), g = c.createGain();
-    o.type = type; o.frequency.setValueAtTime(f, t);
-    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + d);
-    o.connect(g); g.connect(c.destination); o.start(t); o.stop(t + d + 0.03);
-  },
-  tap() { this.tone(520, 0.05, 'triangle', 0.09); },
-  ok(streak = 0) { const b = 523 * Math.pow(2, Math.min(streak, 12) / 12); this.tone(b, 0.1, 'sine', 0.13); this.tone(b * 1.5, 0.16, 'sine', 0.11, 0.07); },
-  bad() { this.tone(170, 0.22, 'sawtooth', 0.09); this.tone(120, 0.26, 'sawtooth', 0.07, 0.08); },
-  level() { [523, 659, 784, 1046].forEach((f, i) => this.tone(f, 0.16, 'triangle', 0.13, i * 0.07)); },
-  win() { [392, 523, 659, 784, 1046].forEach((f, i) => this.tone(f, 0.22, 'triangle', 0.14, i * 0.09)); },
-  note(i) { const pent = [261.63, 293.66, 329.63, 392.0, 440.0, 523.25, 587.33, 659.25, 783.99, 880.0, 1046.5, 1174.7, 1318.5, 1568.0, 1760.0, 2093.0]; this.tone(pent[i % pent.length], 0.28, 'sine', 0.16); },
-  buzz(ms = 18) { if (this.haptics && navigator.vibrate) { try { navigator.vibrate(ms); } catch {} } },
-};
+// ---------- Audio: see audio.js (CC0 samples, synth, music) ----------
+export { audio, music };
 
 // ---------- Session loop ----------
 /**
@@ -283,7 +265,7 @@ export const audio = {
  */
 export async function runSession(game, opts, host) {
   const { seed, startLevel = game.min, practice = false } = opts;
-  const st = new Staircase(game.min, game.max, startLevel);
+  const st = new Staircase(game.min, game.max, startLevel, opts.warm ?? true);
   const MAX_TRIALS = opts.maxTrials ?? game.maxTrials ?? 30, MAX_STRIKES = 3;
   const stats = { trials: 0, correct: 0, streak: 0, bestStreak: 0, score: 0, strikes: 0, maxLevel: st.level, startLevel: st.level,
     tags: {}, rts: [], replayed: 0, levels: [], best: {} };

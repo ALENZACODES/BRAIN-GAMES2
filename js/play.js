@@ -180,7 +180,7 @@ async function kStream(t, ctx) {
   await wait(ctx, 700);
   const show = t.showMs || t.intervalMs;
   for (let i = 0; i < t.items.length; i++) {
-    cur = i; btn.classList.remove('pressed');
+    cur = i; btn.classList.remove('pressed'); if (globalThis.__QA) __QA.streamIdx = i;
     const it = t.items[i];
     slot.replaceChildren(...[rich(it.html ?? '', 'rich big'), it.label != null ? h('b', { class: 'slabel' }, it.label) : null].filter(Boolean));
     if (it.tones) playTones(it.tones, it.toneGap); if (it.tones && !ctx.settings.sound) slot.append(rich(toneBars(it.tones)));
@@ -266,9 +266,12 @@ function autoExplain(t) {
 }
 
 export async function runTrial(t, ctx, game = {}) {
+  if (globalThis.__QA) { __QA.cur = t; __QA.seq = (__QA.seq || 0) + 1; __QA.phase = 'study'; }
   await runStudy(ctx, t.study);
   let side = null;
+  if (globalThis.__QA) __QA.phase = 'distract';
   if (t.distract) side = await runDistract(ctx, t.distract);
+  if (globalThis.__QA) __QA.phase = 'answer';
   const r = await KINDS[t.kind](t, ctx, game);
   r.tags = { ...(r.tags || {}) };
   if (side != null) r.tags[side ? 'sideRight' : 'sideWrong'] = 1;

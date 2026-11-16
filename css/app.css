@@ -282,3 +282,15 @@ input[type=text],input:not([type]),textarea{width:100%;margin-top:4px;padding:12
 .bover h1{text-shadow:0 2px 14px #000}.rhead.rb .bover{padding-top:90px}.rhead.rb .muted{color:#ffffffcc}
 .gpage>.lede{margin-top:4px}
 @media(min-width:760px){.bhero,.rhead.rb{aspect-ratio:16/7}}
+
+/* ===== feel: callouts, music button, session backgrounds, gems ===== */
+.callout{position:fixed;left:50%;top:30%;transform:translate(-50%,-50%);z-index:70;padding:14px 26px;border-radius:999px;font:900 clamp(22px,6vw,34px) "Avenir Next",system-ui;color:#fff;background:linear-gradient(135deg,#ff9f1c,#ff5a5f);box-shadow:0 18px 50px #0009,0 0 40px #ff9f1c66;pointer-events:none;animation:callout 1.5s cubic-bezier(.2,1.4,.4,1) forwards;white-space:nowrap}
+.callout.big{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#150f2c;font-size:clamp(28px,8vw,46px)}
+.callout.star{background:linear-gradient(135deg,#ffe27a,#ffb703);color:#3b2a00;font-size:clamp(26px,7vw,40px);box-shadow:0 0 70px #ffc94aaa}
+@keyframes callout{0%{opacity:0;transform:translate(-50%,-30%) scale(.6)}18%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}30%{transform:translate(-50%,-50%) scale(1)}80%{opacity:1}100%{opacity:0;transform:translate(-50%,-70%) scale(.96)}}
+.x.mus{margin-left:auto;font-size:16px;opacity:.5}.x.mus.on{opacity:1;color:var(--acc)}
+.session{position:relative;isolation:isolate}
+.session::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,#0006,#000c 70%),var(--bgimg,radial-gradient(900px 700px at 50% 0%,hsl(var(--h2,var(--h)) 70% 22% /.75),transparent 70%)) center/cover no-repeat}
+.gl.gem{filter:drop-shadow(0 5px 6px rgba(0,0,0,.35))}.opt .gl.gem{filter:drop-shadow(0 3px 3px rgba(0,0,0,.3))}
+img.gl.spr{display:block;width:min(42vw,150px);height:auto;object-fit:contain;filter:drop-shadow(0 6px 8px rgba(0,0,0,.4))}.opt img.gl.spr{width:100%;max-width:110px}.scene img.gl.spr{width:min(15vw,58px)}
+.reduce .callout{animation:none;opacity:1}
