@@ -52,7 +52,8 @@
     "map-rotation",
     "path-integration",
     "cross-section-studio",
-    "relative-position"
+    "relative-position",
+    "shadow-match"
   ],
   "banner": [
     "circuit-path",
