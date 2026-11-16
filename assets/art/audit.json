@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 27,
+  "validated_images": 28,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -138,7 +138,6 @@
       "map-rotation",
       "meaning-in-context",
       "mental-checkout",
-      "minimal-clue",
       "necessary-or-sufficient",
       "occlusion-detective",
       "packing-constraints",
@@ -341,6 +340,12 @@
     {
       "file": "cause-and-effect-machine-banner.webp",
       "bytes": 114494,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "minimal-clue-banner.webp",
+      "bytes": 106784,
       "width": 1536,
       "height": 1024
     }
