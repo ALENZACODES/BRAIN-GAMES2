@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 150,
+  "validated_images": 151,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -22,7 +22,6 @@
       "personal-experiment-lab",
       "perspective-switch",
       "probability-marbles",
-      "ratio-kitchen",
       "sample-size-studio",
       "stop-searching-challenge",
       "strategy-selector",
@@ -506,6 +505,12 @@
     {
       "file": "mental-checkout.webp",
       "bytes": 114344,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "ratio-kitchen.webp",
+      "bytes": 105688,
       "width": 1024,
       "height": 1536
     },

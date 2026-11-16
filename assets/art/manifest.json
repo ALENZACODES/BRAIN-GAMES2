@@ -74,7 +74,8 @@
     "evidence-match",
     "estimate-first",
     "percentage-transformer",
-    "mental-checkout"
+    "mental-checkout",
+    "ratio-kitchen"
   ],
   "banner": [
     "circuit-path",
