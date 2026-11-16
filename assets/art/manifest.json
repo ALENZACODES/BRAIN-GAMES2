@@ -186,7 +186,8 @@
     "information-value",
     "stop-searching-challenge",
     "ifthen-builder",
-    "distraction-budget"
+    "distraction-budget",
+    "error-detective"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
