@@ -12,7 +12,8 @@
     "number-lock",
     "rotation-match",
     "mirror-maze",
-    "number-line-navigator"
+    "number-line-navigator",
+    "fraction-duel"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
