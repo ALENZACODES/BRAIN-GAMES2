@@ -708,5 +708,10 @@
     "id": "mental-checkout",
     "kind": "banner",
     "blob_sha": "8392b175516c43c332719d92e77f64b06a3192ef"
+  },
+  {
+    "id": "ratio-kitchen",
+    "kind": "poster",
+    "blob_sha": "8295e071bb181e19f2bedabb6e2b364fbabb917e"
   }
 ]
