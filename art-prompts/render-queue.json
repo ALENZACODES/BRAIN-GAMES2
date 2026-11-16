@@ -368,5 +368,10 @@
     "id": "checkpoint-planner",
     "kind": "banner",
     "blob_sha": "38254ccae93b8ddd5fdf2e11f1dc1c1c4faa7fb8"
+  },
+  {
+    "id": "tool-before-task",
+    "kind": "poster",
+    "blob_sha": "2acc53ae2bce5efded63a8b460705fa3b9e0c83e"
   }
 ]
