@@ -588,5 +588,10 @@
     "id": "word-ladder",
     "kind": "banner",
     "blob_sha": "edb4e9c4b545f2a0c95b7d312ca832616733a9f5"
+  },
+  {
+    "id": "category-sprint",
+    "kind": "poster",
+    "blob_sha": "e7e7e81e1815630f67fe6b2f5c6a2704ddd5bb4c"
   }
 ]
