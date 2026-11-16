@@ -180,7 +180,8 @@
     "sunk-cost-expedition",
     "framing-mirror",
     "forecast-tournament",
-    "information-value"
+    "information-value",
+    "stop-searching-challenge"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 179,
+  "validated_images": 180,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -24,7 +24,6 @@
       "ifthen-builder",
       "personal-experiment-lab",
       "perspective-switch",
-      "stop-searching-challenge",
       "strategy-selector",
       "transfer-mission"
     ]
@@ -1101,6 +1100,12 @@
     {
       "file": "information-value-banner.webp",
       "bytes": 95224,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "stop-searching-challenge-banner.webp",
+      "bytes": 97388,
       "width": 1536,
       "height": 1024
     }
