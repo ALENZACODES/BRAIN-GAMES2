@@ -247,7 +247,8 @@
   {
     "id": "priority-desk",
     "kind": "banner",
-    "blob_sha": "14fb6932fd43613de45738d8b12e17446c93f8f2"
+    "blob_sha": "be1e0187875d49edc3fd94f538d8b1bdf7785bf6",
+    "replace": true
   },
   {
     "id": "warehouse-stack",
