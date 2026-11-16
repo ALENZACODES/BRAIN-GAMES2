@@ -473,5 +473,10 @@
     "id": "cross-section-studio",
     "kind": "poster",
     "blob_sha": "f4c6c8a7ad766c46244f342ce77bcd504cf2281e"
+  },
+  {
+    "id": "cross-section-studio",
+    "kind": "banner",
+    "blob_sha": "f6ccd43530ba92bdc8920e1890ddff6351beaad1"
   }
 ]
