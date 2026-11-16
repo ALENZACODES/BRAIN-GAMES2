@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 144,
+  "validated_images": 145,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -13,7 +13,6 @@
       "decision-journal",
       "distraction-budget",
       "error-detective",
-      "estimate-first",
       "evidence-updater",
       "forecast-tournament",
       "framing-mirror",
@@ -494,6 +493,12 @@
     {
       "file": "evidence-match.webp",
       "bytes": 83452,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "estimate-first.webp",
+      "bytes": 86090,
       "width": 1024,
       "height": 1536
     },

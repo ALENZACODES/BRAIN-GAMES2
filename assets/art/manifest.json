@@ -71,7 +71,8 @@
     "analogy-bridge",
     "instruction-builder",
     "main-idea-finder",
-    "evidence-match"
+    "evidence-match",
+    "estimate-first"
   ],
   "banner": [
     "circuit-path",
