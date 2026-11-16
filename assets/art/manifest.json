@@ -37,7 +37,8 @@
     "rescue-sequence",
     "maintenance-window",
     "goal-decomposer",
-    "replanning-storm"
+    "replanning-storm",
+    "budget-builder"
   ],
   "banner": [
     "circuit-path",
