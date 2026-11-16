@@ -109,7 +109,7 @@
   "word-ladder-banner.webp": "edb4e9c4b545f2a0c95b7d312ca832616733a9f5",
   "category-sprint.webp": "e7e7e81e1815630f67fe6b2f5c6a2704ddd5bb4c",
   "category-sprint-banner.webp": "1eb3826800f3c438630ec7606da1042d66f41785",
-  "meaning-in-context.webp": "2a65df357fb7aed8c4de2b0908e6a14e821300be",
+  "meaning-in-context.webp": "99f8d74bc9c23a4680410df7dd8338b315ae320a",
   "meaning-in-context-banner.webp": "16717bb071d8f0d73ef8d280d64185c33e6c6e14",
   "sentence-repair.webp": "799b24ea2f7feeaa7ddae231125e871fe11b8199",
   "sentence-repair-banner.webp": "8e6929750e25479ef42d3556a5a8183ba17dcd23",
@@ -143,5 +143,6 @@
   "patterned-arithmetic-banner.webp": "a80aba622162f58ba95d4e1ac5ccefdb3b8ac862",
   "confidence-compass.webp": "5fda75b6439fe705b005480e72ccbf50a1fd33bc",
   "confidence-compass-banner.webp": "419cf7364e0d009954849605c08bbc653247e31f",
-  "evidence-updater.webp": "74027bd38ba69e3f90e2256bd44250c80c4651b3"
+  "evidence-updater.webp": "74027bd38ba69e3f90e2256bd44250c80c4651b3",
+  "evidence-updater-banner.webp": "f185ddbf4357c74351f5b6e948a84c8f35905480"
 }

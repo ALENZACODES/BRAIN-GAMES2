@@ -164,7 +164,8 @@
     "probability-marbles",
     "unit-switch",
     "patterned-arithmetic",
-    "confidence-compass"
+    "confidence-compass",
+    "evidence-updater"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

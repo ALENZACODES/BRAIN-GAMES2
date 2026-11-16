@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 163,
+  "validated_images": 164,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -31,7 +31,6 @@
       "decision-journal",
       "distraction-budget",
       "error-detective",
-      "evidence-updater",
       "forecast-tournament",
       "framing-mirror",
       "ifthen-builder",
@@ -432,7 +431,7 @@
     },
     {
       "file": "meaning-in-context.webp",
-      "bytes": 85668,
+      "bytes": 151420,
       "width": 1024,
       "height": 1536
     },
@@ -1021,6 +1020,12 @@
     {
       "file": "confidence-compass-banner.webp",
       "bytes": 119854,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "evidence-updater-banner.webp",
+      "bytes": 103444,
       "width": 1536,
       "height": 1024
     }
