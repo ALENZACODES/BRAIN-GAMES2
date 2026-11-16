@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 21,
+  "validated_images": 22,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -181,7 +181,6 @@
       "tool-before-task",
       "transfer-mission",
       "travel-buffer",
-      "truthful-robots",
       "unit-switch",
       "warehouse-stack",
       "word-ladder"
@@ -311,6 +310,12 @@
     {
       "file": "sequence-laboratory-banner.webp",
       "bytes": 101530,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "truthful-robots-banner.webp",
+      "bytes": 98534,
       "width": 1536,
       "height": 1024
     }

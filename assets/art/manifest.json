@@ -22,7 +22,8 @@
     "rule-detective",
     "mini-logic-houses",
     "balance-mystery",
-    "sequence-laboratory"
+    "sequence-laboratory",
+    "truthful-robots"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
