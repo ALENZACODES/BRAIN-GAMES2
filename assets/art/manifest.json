@@ -96,7 +96,8 @@
     "strategy-selector",
     "breakpoint-planner",
     "alternative-explanation",
-    "perspective-switch"
+    "perspective-switch",
+    "decision-journal"
   ],
   "banner": [
     "circuit-path",
