@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 152,
+  "validated_images": 153,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -9,7 +9,6 @@
       "breakpoint-planner",
       "confidence-compass",
       "confirmation-trap",
-      "data-detective",
       "decision-journal",
       "distraction-budget",
       "error-detective",
@@ -510,6 +509,12 @@
     {
       "file": "ratio-kitchen.webp",
       "bytes": 105688,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "data-detective.webp",
+      "bytes": 100900,
       "width": 1024,
       "height": 1536
     },
