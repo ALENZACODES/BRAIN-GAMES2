@@ -1,0 +1,37 @@
+name: Import generated artwork
+on:
+  push:
+    branches: [main]
+    paths: ['art-prompts/render-queue.json', 'art-prompts/import_art.py', '.github/workflows/art-import.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: art-import
+  cancel-in-progress: false
+jobs:
+  import-art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install WebP encoder
+        run: python -m pip install Pillow==11.3.0
+      - name: Convert and validate queued art
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python art-prompts/import_art.py
+      - name: Save artwork and manifest
+        run: |
+          git config user.name "John Khan"
+          git config user.email "309250657+ALENZACODES@users.noreply.github.com"
+          git add assets/art
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Import validated WebP artwork and update manifest"
+          git pull --rebase origin main
+          git push origin HEAD:main
