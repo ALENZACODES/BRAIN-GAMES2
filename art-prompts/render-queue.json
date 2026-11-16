@@ -358,5 +358,10 @@
     "id": "queue-manager",
     "kind": "banner",
     "blob_sha": "b753374efccc2b7a9a9def7e188f0e8d4725eb58"
+  },
+  {
+    "id": "checkpoint-planner",
+    "kind": "poster",
+    "blob_sha": "743f5623c1f284341397986265792924604a04f3"
   }
 ]
