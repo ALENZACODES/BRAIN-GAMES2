@@ -136,7 +136,8 @@
     "category-sprint",
     "meaning-in-context",
     "sentence-repair",
-    "concise-messenger"
+    "concise-messenger",
+    "ambiguity-detective"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 135,
+  "validated_images": 136,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -39,7 +39,6 @@
     ],
     "banner": [
       "alternative-explanation",
-      "ambiguity-detective",
       "analogy-bridge",
       "base-rate-detective",
       "breakpoint-planner",
@@ -881,6 +880,12 @@
     {
       "file": "concise-messenger-banner.webp",
       "bytes": 71156,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "ambiguity-detective-banner.webp",
+      "bytes": 104594,
       "width": 1536,
       "height": 1024
     }
