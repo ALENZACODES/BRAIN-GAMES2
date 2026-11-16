@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 77,
+  "validated_images": 78,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -72,7 +72,6 @@
       "analogy-bridge",
       "base-rate-detective",
       "breakpoint-planner",
-      "budget-builder",
       "category-sprint",
       "checkpoint-planner",
       "concise-messenger",
@@ -591,6 +590,12 @@
     {
       "file": "replanning-storm-banner.webp",
       "bytes": 151532,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "budget-builder-banner.webp",
+      "bytes": 135446,
       "width": 1536,
       "height": 1024
     }

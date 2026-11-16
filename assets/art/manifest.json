@@ -78,7 +78,8 @@
     "rescue-sequence",
     "maintenance-window",
     "goal-decomposer",
-    "replanning-storm"
+    "replanning-storm",
+    "budget-builder"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
