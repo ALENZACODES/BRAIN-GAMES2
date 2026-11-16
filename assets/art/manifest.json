@@ -184,7 +184,8 @@
     "forecast-tournament",
     "information-value",
     "stop-searching-challenge",
-    "ifthen-builder"
+    "ifthen-builder",
+    "distraction-budget"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
