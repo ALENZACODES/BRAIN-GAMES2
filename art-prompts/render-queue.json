@@ -398,5 +398,10 @@
     "id": "plan-do-review",
     "kind": "banner",
     "blob_sha": "735c2a3445f09e751db7667e003f2a4919473320"
+  },
+  {
+    "id": "folded-paper",
+    "kind": "poster",
+    "blob_sha": "3c3585f5899507e513c21ef9228c7bc3cf9f170d"
   }
 ]
