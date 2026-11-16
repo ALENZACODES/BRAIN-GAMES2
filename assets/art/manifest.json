@@ -40,7 +40,8 @@
     "replanning-storm",
     "budget-builder",
     "queue-manager",
-    "checkpoint-planner"
+    "checkpoint-planner",
+    "tool-before-task"
   ],
   "banner": [
     "circuit-path",
@@ -83,7 +84,8 @@
     "replanning-storm",
     "budget-builder",
     "queue-manager",
-    "checkpoint-planner"
+    "checkpoint-planner",
+    "tool-before-task"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 82,
+  "validated_images": 84,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -59,7 +59,6 @@
       "symmetry-workshop",
       "tile-navigation",
       "time-estimate-lab",
-      "tool-before-task",
       "transfer-mission",
       "unit-switch",
       "word-ladder"
@@ -120,7 +119,6 @@
       "symmetry-workshop",
       "tile-navigation",
       "time-estimate-lab",
-      "tool-before-task",
       "transfer-mission",
       "unit-switch",
       "word-ladder"
@@ -374,6 +372,12 @@
       "height": 1536
     },
     {
+      "file": "tool-before-task.webp",
+      "bytes": 150604,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -616,6 +620,12 @@
     {
       "file": "checkpoint-planner-banner.webp",
       "bytes": 133890,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "tool-before-task-banner.webp",
+      "bytes": 136494,
       "width": 1536,
       "height": 1024
     }
