@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 39,
+  "validated_images": 40,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -142,7 +142,6 @@
       "priority-desk",
       "probability-marbles",
       "proof-path",
-      "puzzle-repair",
       "queue-manager",
       "ratio-kitchen",
       "relative-position",
@@ -401,6 +400,12 @@
     {
       "file": "necessary-or-sufficient-banner.webp",
       "bytes": 114254,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "puzzle-repair-banner.webp",
+      "bytes": 106816,
       "width": 1536,
       "height": 1024
     }

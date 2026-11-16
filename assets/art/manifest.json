@@ -40,7 +40,8 @@
     "bridge-limits",
     "tile-equation",
     "hidden-transformation",
-    "necessary-or-sufficient"
+    "necessary-or-sufficient",
+    "puzzle-repair"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
