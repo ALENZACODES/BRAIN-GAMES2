@@ -558,5 +558,10 @@
     "id": "tile-navigation",
     "kind": "banner",
     "blob_sha": "5ff6cd0d25fbd2e49190e6059abb721c5d72a07d"
+  },
+  {
+    "id": "occlusion-detective",
+    "kind": "poster",
+    "blob_sha": "ffbb0a606a495907634c5a09287085982eaf0e25"
   }
 ]
