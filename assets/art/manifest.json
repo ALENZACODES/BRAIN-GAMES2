@@ -10,7 +10,8 @@
     "circuit-path",
     "number-lock",
     "rotation-match",
-    "mirror-maze"
+    "mirror-maze",
+    "number-line-navigator"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
