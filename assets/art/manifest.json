@@ -5,7 +5,8 @@
     "rotation-match",
     "mirror-maze",
     "number-line-navigator",
-    "fraction-duel"
+    "fraction-duel",
+    "rule-detective"
   ],
   "banner": [
     "circuit-path",
@@ -13,7 +14,8 @@
     "rotation-match",
     "mirror-maze",
     "number-line-navigator",
-    "fraction-duel"
+    "fraction-duel",
+    "rule-detective"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
