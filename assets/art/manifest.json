@@ -18,7 +18,8 @@
     "bridge-limits",
     "tile-equation",
     "hidden-transformation",
-    "necessary-or-sufficient"
+    "necessary-or-sufficient",
+    "puzzle-repair"
   ],
   "banner": [
     "circuit-path",
