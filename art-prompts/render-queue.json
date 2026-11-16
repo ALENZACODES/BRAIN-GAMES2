@@ -313,5 +313,10 @@
     "id": "maintenance-window",
     "kind": "poster",
     "blob_sha": "de187fb71fd8ab7babc65d1e73616c6a3042b749"
+  },
+  {
+    "id": "maintenance-window",
+    "kind": "banner",
+    "blob_sha": "56c84d0d58e831dea4a702ff9ed72273af641381"
   }
 ]
