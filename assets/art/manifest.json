@@ -72,7 +72,8 @@
     "dependency-builder",
     "travel-buffer",
     "packing-constraints",
-    "rescue-sequence"
+    "rescue-sequence",
+    "maintenance-window"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
