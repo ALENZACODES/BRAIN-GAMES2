@@ -939,5 +939,10 @@
     "id": "decision-journal",
     "kind": "poster",
     "blob_sha": "6953c65c42194cf96e8ae1847e3e56e5058b4028"
+  },
+  {
+    "id": "decision-journal",
+    "kind": "banner",
+    "blob_sha": "9c456b1f3a597440d37efa424926db140641b9d2"
   }
 ]
