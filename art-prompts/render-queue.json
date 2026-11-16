@@ -563,5 +563,10 @@
     "id": "occlusion-detective",
     "kind": "poster",
     "blob_sha": "ffbb0a606a495907634c5a09287085982eaf0e25"
+  },
+  {
+    "id": "occlusion-detective",
+    "kind": "banner",
+    "blob_sha": "e1674e9338a6db997211969ba3faefa2e7ae9ef0"
   }
 ]
