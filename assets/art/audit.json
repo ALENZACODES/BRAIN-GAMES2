@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 64,
+  "validated_images": 65,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -69,7 +69,6 @@
       "time-estimate-lab",
       "tool-before-task",
       "transfer-mission",
-      "travel-buffer",
       "unit-switch",
       "word-ladder"
     ],
@@ -334,6 +333,12 @@
     {
       "file": "dependency-builder.webp",
       "bytes": 144620,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "travel-buffer.webp",
+      "bytes": 132066,
       "width": 1024,
       "height": 1536
     },

@@ -31,7 +31,8 @@
     "priority-desk",
     "warehouse-stack",
     "battery-expedition",
-    "dependency-builder"
+    "dependency-builder",
+    "travel-buffer"
   ],
   "banner": [
     "circuit-path",
