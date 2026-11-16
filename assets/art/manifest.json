@@ -33,7 +33,8 @@
     "battery-expedition",
     "dependency-builder",
     "travel-buffer",
-    "packing-constraints"
+    "packing-constraints",
+    "rescue-sequence"
   ],
   "banner": [
     "circuit-path",
