@@ -528,5 +528,10 @@
     "id": "packing-rotation",
     "kind": "banner",
     "blob_sha": "dde57d9041cacd507c2cf55d77c97fc7919d3d79"
+  },
+  {
+    "id": "scale-mapper",
+    "kind": "poster",
+    "blob_sha": "1cd98fa537a6d2df045ef2fb1c1d429a242a6ada"
   }
 ]
