@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 146,
+  "validated_images": 147,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -20,7 +20,6 @@
       "information-value",
       "mental-checkout",
       "patterned-arithmetic",
-      "percentage-transformer",
       "personal-experiment-lab",
       "perspective-switch",
       "probability-marbles",
@@ -498,6 +497,12 @@
     {
       "file": "estimate-first.webp",
       "bytes": 86090,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "percentage-transformer.webp",
+      "bytes": 119612,
       "width": 1024,
       "height": 1536
     },

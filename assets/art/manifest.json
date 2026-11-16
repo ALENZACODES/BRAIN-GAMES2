@@ -72,7 +72,8 @@
     "instruction-builder",
     "main-idea-finder",
     "evidence-match",
-    "estimate-first"
+    "estimate-first",
+    "percentage-transformer"
   ],
   "banner": [
     "circuit-path",
