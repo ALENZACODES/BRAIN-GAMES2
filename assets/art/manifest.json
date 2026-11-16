@@ -1,1 +1,7 @@
-{ "poster": [], "banner": [], "_note": "Add a game id (e.g. \"window-watch\") to the poster/banner lists after dropping assets/art/<id>.webp or <id>-banner.webp." }
+{
+  "poster": [
+    "circuit-path"
+  ],
+  "banner": [],
+  "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
+}
