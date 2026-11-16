@@ -178,5 +178,10 @@
     "id": "invariant-hunt",
     "kind": "banner",
     "blob_sha": "66044d019008f31734b7332a2b95cc296520597b"
+  },
+  {
+    "id": "analogy-workshop",
+    "kind": "poster",
+    "blob_sha": "abf958ab2ec4d921e1b49238002b869a49e442ec"
   }
 ]
