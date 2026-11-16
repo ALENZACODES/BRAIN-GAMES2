@@ -643,5 +643,10 @@
     "id": "analogy-bridge",
     "kind": "poster",
     "blob_sha": "a205c36da39f6c54be7820e2cb27bd43cf98c7ba"
+  },
+  {
+    "id": "analogy-bridge",
+    "kind": "banner",
+    "blob_sha": "d7564a6a9f7f70e7457091fa0bc8afa02f454ee3"
   }
 ]
