@@ -798,5 +798,10 @@
     "id": "sample-size-studio",
     "kind": "poster",
     "blob_sha": "35766b9be752a898d7cb17ff94d7b9574b687343"
+  },
+  {
+    "id": "sample-size-studio",
+    "kind": "banner",
+    "blob_sha": "76ee4cfd4441be0fdcbe3ec7233022caf1364efb"
   }
 ]
