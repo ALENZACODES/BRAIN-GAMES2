@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 121,
+  "validated_images": 123,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -13,7 +13,6 @@
       "concise-messenger",
       "confidence-compass",
       "confirmation-trap",
-      "construction-blueprint",
       "data-detective",
       "decision-journal",
       "distraction-budget",
@@ -70,7 +69,6 @@
       "main-idea-finder",
       "meaning-in-context",
       "mental-checkout",
-      "occlusion-detective",
       "patterned-arithmetic",
       "percentage-transformer",
       "personal-experiment-lab",
@@ -455,6 +453,12 @@
       "height": 1536
     },
     {
+      "file": "construction-blueprint.webp",
+      "bytes": 80108,
+      "width": 1024,
+      "height": 1536
+    },
+    {
       "file": "circuit-path-banner.webp",
       "bytes": 119396,
       "width": 1536,
@@ -811,6 +815,12 @@
     {
       "file": "tile-navigation-banner.webp",
       "bytes": 109878,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "occlusion-detective-banner.webp",
+      "bytes": 106972,
       "width": 1536,
       "height": 1024
     }

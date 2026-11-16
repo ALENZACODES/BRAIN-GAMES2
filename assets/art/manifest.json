@@ -60,7 +60,8 @@
     "scale-mapper",
     "landmark-ordering",
     "tile-navigation",
-    "occlusion-detective"
+    "occlusion-detective",
+    "construction-blueprint"
   ],
   "banner": [
     "circuit-path",
@@ -122,7 +123,8 @@
     "packing-rotation",
     "scale-mapper",
     "landmark-ordering",
-    "tile-navigation"
+    "tile-navigation",
+    "occlusion-detective"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
