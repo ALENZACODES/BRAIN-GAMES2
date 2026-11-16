@@ -568,5 +568,10 @@
     "id": "occlusion-detective",
     "kind": "banner",
     "blob_sha": "e1674e9338a6db997211969ba3faefa2e7ae9ef0"
+  },
+  {
+    "id": "construction-blueprint",
+    "kind": "poster",
+    "blob_sha": "0036ac5c0508400627624f1bea8dc2ea139ac4ef"
   }
 ]
