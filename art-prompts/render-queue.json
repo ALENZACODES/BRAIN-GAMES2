@@ -258,5 +258,10 @@
     "id": "warehouse-stack",
     "kind": "banner",
     "blob_sha": "4ab87941f43fc210bb7c45c9fc1330a8ca9fafce"
+  },
+  {
+    "id": "battery-expedition",
+    "kind": "poster",
+    "blob_sha": "a7d192e28a4124a59a3738a6764efba1606b131c"
   }
 ]
