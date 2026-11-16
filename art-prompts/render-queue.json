@@ -658,5 +658,10 @@
     "id": "instruction-builder",
     "kind": "banner",
     "blob_sha": "ced49ff4510c229eb21b0d4124f133280056ad4d"
+  },
+  {
+    "id": "main-idea-finder",
+    "kind": "poster",
+    "blob_sha": "a9ba10dd612216b1392eac03b884ca1a32318a3a"
   }
 ]
