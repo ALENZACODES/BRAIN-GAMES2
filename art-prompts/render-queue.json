@@ -213,5 +213,10 @@
     "id": "calendar-tetris",
     "kind": "poster",
     "blob_sha": "8b0daf11007f37ed55d658e69f0a7e815c051258"
+  },
+  {
+    "id": "calendar-tetris",
+    "kind": "banner",
+    "blob_sha": "665e3211cd0757b8e129b15f623d2c3372f2290b"
   }
 ]
