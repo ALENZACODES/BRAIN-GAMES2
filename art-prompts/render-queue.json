@@ -378,5 +378,10 @@
     "id": "tool-before-task",
     "kind": "banner",
     "blob_sha": "8ede602d7985c57166679c6f758904d3bafb6fe8"
+  },
+  {
+    "id": "time-estimate-lab",
+    "kind": "poster",
+    "blob_sha": "792ee62d08a400c2b351cd8d703f57cc81c5cc8d"
   }
 ]
