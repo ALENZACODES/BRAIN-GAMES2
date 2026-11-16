@@ -949,5 +949,10 @@
     "id": "transfer-mission",
     "kind": "poster",
     "blob_sha": "50b51e04e7ef0f41b4ec55ed47fcb76aaebd79c1"
+  },
+  {
+    "id": "transfer-mission",
+    "kind": "banner",
+    "blob_sha": "bbe494b6b2e1c2e0ae7c7dfb10592325a6992949"
   }
 ]
