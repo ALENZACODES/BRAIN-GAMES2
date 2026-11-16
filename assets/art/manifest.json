@@ -154,7 +154,8 @@
     "estimate-first",
     "percentage-transformer",
     "mental-checkout",
-    "ratio-kitchen"
+    "ratio-kitchen",
+    "data-detective"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
