@@ -283,5 +283,10 @@
     "id": "travel-buffer",
     "kind": "poster",
     "blob_sha": "34eca0bc4aa04e536c0ddf6959d7fc2d67221d6c"
+  },
+  {
+    "id": "travel-buffer",
+    "kind": "banner",
+    "blob_sha": "1e0e7114a0b6f000b062cb63622c27379718cef0"
   }
 ]
