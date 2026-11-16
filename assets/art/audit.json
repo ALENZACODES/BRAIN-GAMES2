@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 131,
+  "validated_images": 132,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -69,7 +69,6 @@
       "probability-marbles",
       "ratio-kitchen",
       "sample-size-studio",
-      "sentence-repair",
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
@@ -861,6 +860,12 @@
     {
       "file": "meaning-in-context-banner.webp",
       "bytes": 91330,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "sentence-repair-banner.webp",
+      "bytes": 87608,
       "width": 1536,
       "height": 1024
     }

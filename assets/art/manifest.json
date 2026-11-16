@@ -132,7 +132,8 @@
     "construction-blueprint",
     "word-ladder",
     "category-sprint",
-    "meaning-in-context"
+    "meaning-in-context",
+    "sentence-repair"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
