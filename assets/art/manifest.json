@@ -82,7 +82,8 @@
     "goal-decomposer",
     "replanning-storm",
     "budget-builder",
-    "queue-manager"
+    "queue-manager",
+    "checkpoint-planner"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 81,
+  "validated_images": 82,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -71,7 +71,6 @@
       "base-rate-detective",
       "breakpoint-planner",
       "category-sprint",
-      "checkpoint-planner",
       "concise-messenger",
       "confidence-compass",
       "confirmation-trap",
@@ -611,6 +610,12 @@
     {
       "file": "queue-manager-banner.webp",
       "bytes": 142318,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "checkpoint-planner-banner.webp",
+      "bytes": 133890,
       "width": 1536,
       "height": 1024
     }
