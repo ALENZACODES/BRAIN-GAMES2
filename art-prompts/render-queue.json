@@ -503,5 +503,10 @@
     "id": "route-reconstruction",
     "kind": "poster",
     "blob_sha": "0fdb6f0917ff509748ef1a870ff068f107c07498"
+  },
+  {
+    "id": "route-reconstruction",
+    "kind": "banner",
+    "blob_sha": "fec9bc16e4ea683c8b55962ba9cc2d9287bb2b9d"
   }
 ]
