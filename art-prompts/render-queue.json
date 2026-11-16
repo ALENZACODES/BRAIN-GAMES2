@@ -303,5 +303,10 @@
     "id": "rescue-sequence",
     "kind": "poster",
     "blob_sha": "79fe3ce91ea6f3769ec8c7398630d76d1915f41d"
+  },
+  {
+    "id": "rescue-sequence",
+    "kind": "banner",
+    "blob_sha": "0521fd730f38ca0c097c3b1ef70c638f97208e02"
   }
 ]
