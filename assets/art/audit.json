@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 111,
+  "validated_images": 112,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -90,7 +90,6 @@
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
-      "symmetry-workshop",
       "tile-navigation",
       "transfer-mission",
       "unit-switch",
@@ -761,6 +760,12 @@
     {
       "file": "route-reconstruction-banner.webp",
       "bytes": 108796,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "symmetry-workshop-banner.webp",
+      "bytes": 104110,
       "width": 1536,
       "height": 1024
     }
