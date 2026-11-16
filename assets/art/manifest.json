@@ -22,7 +22,8 @@
     "puzzle-repair",
     "set-builder",
     "invariant-hunt",
-    "analogy-workshop"
+    "analogy-workshop",
+    "proof-path"
   ],
   "banner": [
     "circuit-path",
