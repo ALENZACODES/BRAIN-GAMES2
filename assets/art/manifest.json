@@ -35,7 +35,8 @@
     "travel-buffer",
     "packing-constraints",
     "rescue-sequence",
-    "maintenance-window"
+    "maintenance-window",
+    "goal-decomposer"
   ],
   "banner": [
     "circuit-path",

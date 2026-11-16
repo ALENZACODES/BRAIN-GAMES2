@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 72,
+  "validated_images": 73,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -28,7 +28,6 @@
       "folded-paper",
       "forecast-tournament",
       "framing-mirror",
-      "goal-decomposer",
       "hidden-blocks",
       "ifthen-builder",
       "information-value",
@@ -350,6 +349,12 @@
     {
       "file": "maintenance-window.webp",
       "bytes": 157916,
+      "width": 1024,
+      "height": 1536
+    },
+    {
+      "file": "goal-decomposer.webp",
+      "bytes": 169050,
       "width": 1024,
       "height": 1536
     },
