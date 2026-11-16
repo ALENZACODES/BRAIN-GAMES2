@@ -859,5 +859,10 @@
     "id": "stop-searching-challenge",
     "kind": "poster",
     "blob_sha": "ac8ed2278e03e74bab1b6dba9c9c48285d5e9733"
+  },
+  {
+    "id": "stop-searching-challenge",
+    "kind": "banner",
+    "blob_sha": "420312d2cf62ea6df8296e757552c0c555f83f28"
   }
 ]
