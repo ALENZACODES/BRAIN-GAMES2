@@ -102,7 +102,8 @@
     "perspective-finder",
     "shape-assembly",
     "hidden-blocks",
-    "map-rotation"
+    "map-rotation",
+    "path-integration"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

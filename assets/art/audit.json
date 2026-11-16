@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 101,
+  "validated_images": 102,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -84,7 +84,6 @@
       "mental-checkout",
       "occlusion-detective",
       "packing-rotation",
-      "path-integration",
       "patterned-arithmetic",
       "percentage-transformer",
       "personal-experiment-lab",
@@ -711,6 +710,12 @@
     {
       "file": "map-rotation-banner.webp",
       "bytes": 123456,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "path-integration-banner.webp",
+      "bytes": 129096,
       "width": 1536,
       "height": 1024
     }
