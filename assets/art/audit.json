@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 33,
+  "validated_images": 34,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -164,7 +164,6 @@
       "strategy-selector",
       "sunk-cost-expedition",
       "symmetry-workshop",
-      "tile-equation",
       "tile-navigation",
       "time-estimate-lab",
       "tool-before-task",
@@ -371,6 +370,12 @@
     {
       "file": "bridge-limits-banner.webp",
       "bytes": 145444,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "tile-equation-banner.webp",
+      "bytes": 106220,
       "width": 1536,
       "height": 1024
     }

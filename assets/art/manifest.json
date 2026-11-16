@@ -34,7 +34,8 @@
     "cause-and-effect-machine",
     "minimal-clue",
     "counterexample-hunt",
-    "bridge-limits"
+    "bridge-limits",
+    "tile-equation"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }
