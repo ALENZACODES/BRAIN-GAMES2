@@ -66,7 +66,8 @@
     "category-sprint",
     "meaning-in-context",
     "sentence-repair",
-    "concise-messenger"
+    "concise-messenger",
+    "ambiguity-detective"
   ],
   "banner": [
     "circuit-path",
