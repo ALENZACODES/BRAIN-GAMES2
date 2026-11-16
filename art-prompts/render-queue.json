@@ -543,5 +543,10 @@
     "id": "landmark-ordering",
     "kind": "poster",
     "blob_sha": "85bcf9e7747550b6386f5c1523a2b652039a841e"
+  },
+  {
+    "id": "landmark-ordering",
+    "kind": "banner",
+    "blob_sha": "9194cd2b737c0ab3611048b0b8b1370359bba19c"
   }
 ]
