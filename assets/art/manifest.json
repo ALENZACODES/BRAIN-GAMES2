@@ -108,7 +108,8 @@
     "map-rotation",
     "path-integration",
     "cross-section-studio",
-    "relative-position"
+    "relative-position",
+    "shadow-match"
   ],
   "_note": "Add a game id to poster/banner after saving its WebP in assets/art/."
 }

@@ -1,7 +1,7 @@
 {
   "complete": false,
   "expected_images": 200,
-  "validated_images": 107,
+  "validated_images": 108,
   "missing": {
     "poster": [
       "alternative-explanation",
@@ -90,7 +90,6 @@
       "sample-size-studio",
       "scale-mapper",
       "sentence-repair",
-      "shadow-match",
       "stop-searching-challenge",
       "strategy-selector",
       "sunk-cost-expedition",
@@ -741,6 +740,12 @@
     {
       "file": "relative-position-banner.webp",
       "bytes": 93038,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "file": "shadow-match-banner.webp",
+      "bytes": 108366,
       "width": 1536,
       "height": 1024
     }
