@@ -71,7 +71,7 @@ Send each line as its own message. Save the PNG with the file name shown.
 | `PLAY BACKGROUND — Language & numbers: a scriptorium of glowing glyphs and numerals as abstract shapes, no readable text; hue rose` | `bg-language-numbers.png` |
 | `PLAY BACKGROUND — Judgment: a candle-lit study with balance scales in shadow; hue copper` | `bg-judgment.png` |
 
-The first five backgrounds go in **BRAIN-GAMES1**, the last five in **BRAIN-GAMES2**. Upload all 8 gem sheets to **both** repos.
+The first five backgrounds go in **brain-games-memory**, the last five in **brain-games-logic**. Upload all 8 gem sheets to **both** repos.
 
 ## Sound and music (already included)
 - **Sound effects:** UI SFX by Yuki Capital, CC0 public domain (`assets/sfx/`). You can switch the style in Settings → Sound style.

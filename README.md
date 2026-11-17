@@ -1,6 +1,6 @@
 # BRAIN GAMES · Logic & Reasoning
 
-100 brain games for logic, planning, spatial reasoning, language & numbers, and judgment (concepts 101–200). An installable web app with adaptive difficulty, saved progress, daily goals and two-player modes. No server, no accounts, no build step. Companion app: BRAIN-GAMES1 (memory & focus, concepts 1–100).
+100 brain games for logic, planning, spatial reasoning, language & numbers, and judgment (concepts 101–200). An installable web app with adaptive difficulty, saved progress, daily goals and two-player modes. No server, no accounts, no build step. Companion app: brain-games-memory (memory & focus, concepts 1–100).
 
 **All 100 games in this repo are playable.** Areas: Logic · Planning · Spatial · Language & numbers · Judgment.
 
@@ -19,7 +19,7 @@
 
 ## Put it on a phone (no app store)
 1. GitHub repo → **Settings → Pages** → Source: **Deploy from a branch**, Branch **main**, folder **/ (root)** → Save.
-2. After a minute it is live at `https://alenzacodes.github.io/BRAIN-GAMES2/`.
+2. After a minute it is live at `https://alenzacodes.github.io/brain-games-logic/`.
 3. Open it on the phone. **Android/Chrome:** tap *Install*. **iPhone/Safari:** Share → *Add to Home Screen*. It opens full-screen and works offline. Progress stays on the phone (Settings has backup and restore).
 
 ## How it is built
@@ -55,7 +55,7 @@ Use **`MASTER_IMAGE_PROMPT.md`** (paste it once into the image generator), then 
 ## Project structure
 
 ```text
-BRAIN-GAMES2/
+brain-games-logic/
 ├── .github/
 │   └── workflows/          # CI workflows (1 file)
 ├── art-prompts/            # Artwork prompts and import script (4 files)

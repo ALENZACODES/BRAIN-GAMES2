@@ -80,8 +80,8 @@ emblem centred and kept inside the middle 60% (phones crop the corners into circ
 
 | Send this after the block above | Save as | Upload to |
 |---|---|---|
-| `Background: deep violet to black radial glow. Emblem: a faceted violet crystal shaped like a stylised brain, with one bright golden focus ring orbiting it.` | `app-icon.png` | BRAIN-GAMES1 |
-| `Background: deep teal to black radial glow. Emblem: a faceted teal crystal cube with fine glowing light-paths running across its faces like a logic circuit.` | `app-icon.png` | BRAIN-GAMES2 |
+| `Background: deep violet to black radial glow. Emblem: a faceted violet crystal shaped like a stylised brain, with one bright golden focus ring orbiting it.` | `app-icon.png` | brain-games-memory |
+| `Background: deep teal to black radial glow. Emblem: a faceted teal crystal cube with fine glowing light-paths running across its faces like a logic circuit.` | `app-icon.png` | brain-games-logic |
 
 ## Pack D: patterned gems (optional, 24 requests)
 
