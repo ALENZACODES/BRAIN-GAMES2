@@ -312,3 +312,43 @@ input[type=text],input:not([type]),textarea{width:100%;margin-top:4px;padding:12
 .ach.on .bdg{animation:none}
 .logo img{display:block;width:34px;height:34px;border-radius:9px;box-shadow:0 2px 10px #0008}
 @media (max-width:440px){.logo img{width:28px;height:28px;border-radius:7px}}
+
+/* ===== Prismind: consent, online play, season, recap, tiers, pace ===== */
+.consent{position:fixed;left:12px;right:12px;bottom:calc(76px + env(safe-area-inset-bottom));z-index:80;max-width:560px;margin:0 auto;background:#1b1435f2;border:1px solid #ffffff26;border-radius:16px;padding:14px 16px;box-shadow:0 18px 50px #000a;backdrop-filter:blur(10px)}
+.consent p{margin:0 0 10px;font-size:14px;line-height:1.45}.consent a{color:var(--acc)}.consent .actions{margin:0}
+.legal{font-size:12px;color:var(--mut,#a79fc6);text-align:center;margin:18px 0 8px}.legal a{color:inherit}
+.small{font-size:12px}.center{text-align:center}
+.olcard{display:flex;align-items:center;gap:14px;margin:14px 0;padding:14px 16px;border-radius:18px;background:linear-gradient(135deg,hsl(var(--h) 60% 30% /.55),#ffffff0a);border:1px solid #ffffff1f;color:inherit;text-decoration:none}
+.olcard b{display:block;font-size:16px}.olcard small{color:var(--mut,#a79fc6)}.olcard .go{margin-left:auto;opacity:.7}
+.olic{font-size:26px;width:44px;height:44px;display:grid;place-items:center;border-radius:12px;background:#ffffff12}.olic .uic{width:30px;height:30px}
+.olcard.sib .olic{color:hsl(var(--h) 90% 75%)}
+.online h1{display:flex;align-items:center;gap:8px}.online h1 .uic{width:1.1em;height:1.1em}
+.olbox{display:grid;gap:12px}.joinrow{display:flex;gap:8px;align-items:center}.joinrow input{flex:1;min-width:0}
+.codein{font:900 22px/1 ui-monospace,monospace;letter-spacing:.3em;text-transform:uppercase;text-align:center}
+.bigcode{font:900 clamp(40px,13vw,64px)/1.1 ui-monospace,monospace;letter-spacing:.18em;margin:6px 0 10px;color:#fff;text-shadow:0 0 30px hsl(var(--h) 90% 60% /.6)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--acc);animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.spin{width:34px;height:34px;margin:8px auto;border-radius:50%;border:4px solid #ffffff26;border-top-color:var(--acc);animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vs{display:flex;align-items:center;justify-content:center;gap:14px;margin:6px 0 4px;font-size:20px}.vs i{font-style:normal;font-weight:900;color:var(--acc);font-size:14px;letter-spacing:.2em}
+.pickbar{display:flex;gap:8px;margin:8px 0}.pickbar input{flex:1;min-width:0}
+.pickgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:10px;margin:8px 0 14px}
+.pick{display:flex;flex-direction:column;gap:6px;padding:6px;border-radius:14px;background:#ffffff0a;border:1px solid #ffffff14;color:inherit;font:600 12px/1.25 inherit;text-align:left;cursor:pointer}
+.pick .poster{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:3/4}.pick:hover,.pick:focus-visible{border-color:var(--acc)}
+.readyrow{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}.rd{padding:12px;border-radius:14px;background:#ffffff0a;border:1px solid #ffffff14;display:flex;flex-direction:column;gap:2px}
+.rd.on{border-color:#2fd38a;background:#2fd38a1a}.rd.on span{color:#2fd38a;font-weight:800}
+.cd{display:block;font:900 120px/1 "Avenir Next",system-ui;margin:10px 0;color:#fff;text-shadow:0 0 40px hsl(var(--h) 90% 60%)}
+.oppbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;margin:6px auto 0;padding:7px 14px;border-radius:999px;background:#ffffff10;border:1px solid #ffffff1f;font-size:14px;max-width:420px}
+.oppbar b{color:var(--acc)}.oppbar .hrt{color:#ff5a7a;letter-spacing:1px}.oppbar .gone{color:#ff9f1c}
+.pace{margin:6px auto 0;text-align:center;font-size:13px;font-weight:800;padding:4px 12px;border-radius:999px;width:max-content;max-width:100%;background:#ffffff0d}
+.pace.ahead{color:#2fd38a}.pace.behind{color:#c9c0e8}
+.season .bracelet{display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin:10px 0 12px;padding:10px;border-radius:999px;background:#0006;border:1px solid #ffffff14}
+.sgem{width:24px;height:24px;object-fit:contain;filter:grayscale(1) brightness(.8);opacity:.38;transition:.3s}.sgem.on{filter:drop-shadow(0 0 6px #fff6);opacity:1}
+.sgem.txt{font-style:normal;color:#666;text-align:center}.sgem.txt.on{color:var(--acc)}
+.season .hrow .sg{flex:0 0 112px;display:flex;flex-direction:column;gap:4px;color:inherit;text-decoration:none;font-size:12px}
+.season .hrow .sg .poster{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:3/4}.season .sg small{color:var(--mut,#a79fc6)}.season .sg.done small{color:#2fd38a;font-weight:800}
+.season,.recap{margin:16px 0;padding:16px;border-radius:20px;background:#ffffff08;border:1px solid #ffffff14}
+.recap .tiles{margin:8px 0}.recap a{color:var(--acc)}
+.tier{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.04em;vertical-align:middle;margin-left:4px}
+.t-bronze{background:#cd7f3233;color:#e8a46a}.t-silver{background:#c0c8d633;color:#dfe6f2}.t-gold{background:#ffc94a33;color:#ffd76a}.t-diamond{background:#7fe8ff33;color:#a8f1ff}
+.daily .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}

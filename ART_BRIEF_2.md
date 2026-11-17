@@ -21,7 +21,7 @@ The posters, banners, solid gems and play backgrounds are done. These images rep
 ## Master command (paste once)
 
 ```
-You are the lead UI artist for BRAIN GAMES, a premium puzzle series. The house style is high-end cinematic 3D:
+You are the lead UI artist for PRISMIND, a premium puzzle series. The house style is high-end cinematic 3D:
 polished glass, faceted gems and brushed gold/silver/bronze metal, a strong soft key light from the top left,
 crisp specular highlights, a subtle inner glow and deep but clean shadows. Everything must read clearly at 48 px
 on a dark purple-black screen. For the rest of this chat, follow these rules exactly.

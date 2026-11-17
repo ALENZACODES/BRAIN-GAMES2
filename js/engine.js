@@ -92,8 +92,8 @@ export const store = {
 const DEFAULT_PROFILE = () => ({
   v: 1, name: 'Player', created: Date.now(), xp: 0,
   streak: { count: 0, last: '' }, bestStreak: 0, freezes: 0, lastPlayed: '',
-  days: {}, ach: {}, totals: { runs: 0, trials: 0, duels: 0 },
-  settings: { sound: true, music: true, soundStyle: 'glass', haptics: true, reduceMotion: false, untimed: false, theme: 'aurora', name2: 'Player 2' },
+  days: {}, ach: {}, rivals: {}, totals: { runs: 0, trials: 0, duels: 0 },
+  settings: { sound: true, music: true, soundStyle: 'glass', haptics: true, reduceMotion: false, untimed: false, theme: 'aurora', name2: 'Player 2', analytics: null, reminder: '19:00' },
 });
 export function getProfile() {
   const p = store.get('profile', null) || DEFAULT_PROFILE();
@@ -268,7 +268,7 @@ export async function runSession(game, opts, host) {
   const st = new Staircase(game.min, game.max, startLevel, opts.warm ?? true);
   const MAX_TRIALS = opts.maxTrials ?? game.maxTrials ?? 30, MAX_STRIKES = 3;
   const stats = { trials: 0, correct: 0, streak: 0, bestStreak: 0, score: 0, strikes: 0, maxLevel: st.level, startLevel: st.level,
-    tags: {}, rts: [], replayed: 0, levels: [], best: {} };
+    tags: {}, rts: [], replayed: 0, levels: [], best: {}, curve: [] };
   const trialCtx = (base) => ({
     ...base, stage: host.stage, settings: host.settings, alive: host.alive, now, sleep: (ms) => new Promise((r) => setTimeout(() => host.alive() && r(), ms)),
     hidden: typeof document !== 'undefined' && document.hidden, audio, host,
@@ -314,6 +314,7 @@ export async function runSession(game, opts, host) {
       stats.correct++; stats.streak++; stats.bestStreak = Math.max(stats.bestStreak, stats.streak);
       gained = points(level, stats.streak, res.speed || 0); stats.score += gained;
     } else { stats.streak = 0; stats.strikes++; }
+    stats.curve.push(stats.score);
     const change = st.update(!!res.correct);
     stats.maxLevel = Math.max(stats.maxLevel, st.level);
     host.hud({ level: st.level, score: stats.score, streak: stats.streak, strikes: stats.strikes, trial: stats.trials, max: MAX_TRIALS });

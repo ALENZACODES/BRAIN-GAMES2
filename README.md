@@ -1,6 +1,6 @@
-# BRAIN GAMES · Logic & Reasoning
+# PRISMIND · Logic & Reasoning
 
-100 brain games for logic, planning, spatial reasoning, language & numbers, and judgment (concepts 101–200). An installable web app with adaptive difficulty, saved progress, daily goals and two-player modes. No server, no accounts, no build step. Companion app: brain-games-memory (memory & focus, concepts 1–100).
+100 Prismind games for logic, planning, spatial reasoning, language & numbers, and judgment (concepts 101–200). An installable web app with adaptive difficulty, saved progress, daily goals and two-player modes. No server, no accounts, no build step. Companion app: brain-games-memory (memory & focus, concepts 1–100).
 
 **All 100 games in this repo are playable.** Areas: Logic · Planning · Spatial · Language & numbers · Judgment.
 

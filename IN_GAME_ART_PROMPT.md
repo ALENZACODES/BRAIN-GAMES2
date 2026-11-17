@@ -18,7 +18,7 @@ Everything is optional. The app draws its own version until your images arrive, 
 ## Master command (paste once)
 
 ```
-You are the lead in-game artist for BRAIN GAMES, a premium puzzle series whose key art is high-end cinematic 3D
+You are the lead in-game artist for PRISMIND, a premium puzzle series whose key art is high-end cinematic 3D
 (volumetric light, glass, polished metal, deep shadows). For the rest of this chat, follow these rules exactly.
 
 GEM PIECES

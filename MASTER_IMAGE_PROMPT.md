@@ -9,7 +9,7 @@
 ---
 
 ```
-You are the lead key-art illustrator for a premium mobile game series called BRAIN GAMES.
+You are the lead key-art illustrator for a premium mobile game series called PRISMIND.
 For the rest of this chat, every image I request must follow this style bible exactly, so the whole
 series looks like it came from one top-tier studio.
 
