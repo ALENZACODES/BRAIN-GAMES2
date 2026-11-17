@@ -16,7 +16,8 @@ const colorName = (c) => (c && c[0] === '#' ? (COLORS.find((x) => x[1] === c) ||
 /** Gem-style shape. If real sprite art has been added (assets/sprites/gem-<shape>-<colour>.webp, listed in the art manifest), that image is used instead. */
 export function glyph({ shape = 'circle', color = 'blue', pattern = 'solid', rot = 0, scale = 1, cls = '' } = {}) {
   const c = col(color), cn = colorName(color);
-  if (pattern === 'solid' && cn && globalThis.__SPRITES && globalThis.__SPRITES.has(`${shape}-${cn}`)) return `<img class="gl spr ${cls}" src="assets/sprites/gem-${shape}-${cn}.webp" alt="" draggable="false" style="transform:rotate(${rot}deg) scale(${scale})">`;
+  const sk = pattern === 'solid' ? `${shape}-${cn}` : `${shape}-${cn}-${pattern}`;
+  if (cn && globalThis.__SPRITES && globalThis.__SPRITES.has(sk)) return `<img class="gl spr ${cls}" src="assets/sprites/gem-${sk}.webp" alt="" draggable="false" style="transform:rotate(${rot}deg) scale(${scale})">`;
   const id = `pt-${pattern}-${c.slice(1)}`, gid = `gg-${c.slice(1)}`, cid = `cp-${shape}`;
   const grad = `<radialGradient id="${gid}" cx="34%" cy="26%" r="85%"><stop offset="0" stop-color="${hexAdj(c, 0.55)}"/><stop offset=".42" stop-color="${c}"/><stop offset="1" stop-color="${hexAdj(c, -0.45)}"/></radialGradient>`;
   const defs = grad + `<clipPath id="${cid}">${SP[shape]}</clipPath>` + (pattern === 'stripes' ? `<pattern id="${id}" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="12" fill="${c}" opacity=".3"/><rect width="6" height="12" fill="url(#${gid})"/></pattern>`

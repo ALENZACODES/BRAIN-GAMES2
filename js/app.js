@@ -20,7 +20,7 @@ async function boot() {
   BY_ID = Object.fromEntries(GAMES.map((g) => [g.id, g]));
   music.setTracks(CONFIG.music || []);
   applySettings();
-  try { const m = await artManifest(); if (m.sprites?.length) globalThis.__SPRITES = new Set(m.sprites); } catch {}
+  try { const m = await artManifest(); if (m.sprites?.length) globalThis.__SPRITES = new Set(m.sprites); globalThis.__UI = new Set(m.ui || []); globalThis.__BADGES = new Set(m.badges || []); } catch {}
   const unlock = () => { audio.unlock(); music.start(); };
   addEventListener('pointerdown', unlock, { once: true }); addEventListener('keydown', unlock, { once: true });
   try { navigator.storage?.persist?.(); } catch {}
@@ -52,11 +52,11 @@ function frame(content, active) {
   const nav = (id, label, href, icon) => h('a', { href, class: 'tab' + (active === id ? ' on' : ''), 'aria-current': active === id ? 'page' : null }, h('span', { class: 'ico', html: icon }), h('span', {}, label));
   root().replaceChildren(
     h('header', { class: 'top' },
-      h('a', { href: '#/', class: 'brand', 'aria-label': 'Home' }, h('span', { class: 'logo', html: '<svg viewBox="0 0 40 40" width="34" height="34"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="hsl(var(--h) 90% 65%)"/></linearGradient></defs><path d="M20 3 36 12v16L20 37 4 28V12z" fill="none" stroke="url(#lg)" stroke-width="2.6"/><circle cx="20" cy="20" r="5.5" fill="url(#lg)"/><path d="M20 14.5V6M25 17l7-4M25 23l7 4M20 25.5V34M15 23l-7 4M15 17l-7-4" stroke="url(#lg)" stroke-width="2" stroke-linecap="round"/></svg>' }),
+      h('a', { href: '#/', class: 'brand', 'aria-label': 'Home' }, h('span', { class: 'logo' }, h('img', { src: 'icons/icon-192.png', alt: '', width: 34, height: 34 })),
         h('span', { class: 'wm' }, h('b', {}, CONFIG.brand), h('small', {}, CONFIG.sub))),
       h('div', { class: 'chips' },
-        h('span', { class: 'chip flame' + (streakLive ? '' : ' cold'), title: `Day streak${p.freezes ? ` · ${p.freezes} streak freeze${p.freezes > 1 ? 's' : ''}` : ''}` }, '🔥 ', streakLive ? p.streak.count : 0, p.freezes ? h('small', { class: 'frz' }, ' ❄' + p.freezes) : null),
-        h('a', { class: 'chip star', href: '#/progress', title: 'Mastery stars' }, '★ ', totalStars(GAMES.map((g) => g.id)), h('small', {}, `/${GAMES.length * 3}`)),
+        h('span', { class: 'chip flame' + (streakLive ? '' : ' cold'), title: `Day streak${p.freezes ? ` · ${p.freezes} streak freeze${p.freezes > 1 ? 's' : ''}` : ''}` }, ic('flame', '🔥 '), streakLive ? p.streak.count : 0, p.freezes ? h('small', { class: 'frz' }, ' ', ic('freeze', '❄'), p.freezes) : null),
+        h('a', { class: 'chip star', href: '#/progress', title: 'Mastery stars' }, ic('star', '★ '), totalStars(GAMES.map((g) => g.id)), h('small', {}, `/${GAMES.length * 3}`)),
         h('a', { class: 'chip lvl', href: '#/progress', title: `${titleFor(lvl)} · ${fmt(p.xp)} XP` }, `Lv ${lvl}`, h('i', { class: 'xpbar' }, h('u', { style: { width: pct + '%' } }))))),
     h('main', { class: 'main' }, content),
     h('nav', { class: 'tabs', 'aria-label': 'Main' },
@@ -85,7 +85,7 @@ function gameCard(g) {
     h('div', { class: 'gmeta' },
       h('span', { class: 'gcat', style: { '--c': catHue(g.cat) } }, CAT_SHORT[g.cat]),
       h('b', {}, g.title),
-      g.live ? h('span', { class: 'gsub' }, rec.plays ? h('span', { class: 'stars' }, '★'.repeat(rec.stars || 0), h('i', {}, '★'.repeat(3 - (rec.stars || 0)))) : h('span', { class: 'newtag' }, 'NEW'), best ? ` Lv ${best}` : '') : h('span', { class: 'gsub' }, 'In development')),
+      g.live ? h('span', { class: 'gsub' }, rec.plays ? starsEl(rec.stars || 0) : h('span', { class: 'newtag' }, 'NEW'), best ? ` Lv ${best}` : '') : h('span', { class: 'gsub' }, 'In development')),
     g.live ? null : h('span', { class: 'lock', 'aria-hidden': 'true' }, '🔒'));
 }
 function soonSheet(g) {
@@ -123,7 +123,7 @@ function hub() {
     h('div', { class: 'dgames' }, picks.map((id, i) => h('a', { class: 'dg' + (done[i] ? ' done' : ''), href: `#/g/${id}?daily=1` }, posterEl(BY_ID[id]), h('span', {}, BY_ID[id].title), done[i] ? h('i', { class: 'tick' }, '✓') : null))),
     nDone < 3 ? h('a', { class: 'btn', href: `#/g/${picks[done.indexOf(false)]}?daily=1` }, nDone ? 'Next daily game' : 'Start workout') : null);
   const m = missionsToday(), mDone = m.list.filter((x) => x.prog >= x.goal).length;
-  const missions = h('section', { class: 'missions' }, h('div', { class: 'dhead' }, h('h2', {}, 'Daily missions'), h('span', { class: 'chest' + (m.done ? ' open' : '') }, m.done ? '🎁 Claimed +150' : `🎁 ${mDone}/3`)),
+  const missions = h('section', { class: 'missions' }, h('div', { class: 'dhead' }, h('h2', {}, 'Daily missions'), h('span', { class: 'mchest' + (m.done ? ' open' : '') }, ic('chest', '🎁 '), m.done ? ' Claimed +150' : ` ${mDone}/3`)),
     m.list.map((x) => h('div', { class: 'mission' + (x.prog >= x.goal ? ' done' : '') }, h('span', {}, x.prog >= x.goal ? '✅ ' : '◻️ ', x.text), h('small', {}, `${Math.min(x.prog, x.goal)}/${x.goal} · +50 XP`), h('i', { class: 'mbar' }, h('u', { style: { width: (100 * Math.min(x.prog, x.goal)) / x.goal + '%' } })))));
   const recent = live().filter((g) => getGameRec(g.id).plays).sort((a, b) => (getGameRec(b.id).last || 0) - (getGameRec(a.id).last || 0)).slice(0, 6);
   const next = recommend(6, recent.map((g) => g.id));
@@ -133,7 +133,7 @@ function hub() {
   frame(h('div', {}, installBanner(), hero, dailyCard, missions,
     recent.length ? rowOf('Jump back in', '', recent) : null,
     rowOf(newbie ? 'Good first games' : 'Try next', newbie ? '' : 'picked from your least-practised area', next),
-    h('h2', { class: 'sec' }, 'All games ', h('small', {}, `${live().length} games · ★ ${totalStars(GAMES.map((g) => g.id))}/${GAMES.length * 3} stars`)),
+    h('h2', { class: 'sec' }, 'All games ', h('small', {}, `${live().length} games · `, ic('star', '★ '), ` ${totalStars(GAMES.map((g) => g.id))}/${GAMES.length * 3} stars`)),
     h('div', { class: 'filters', role: 'tablist' }, chip('all', 'All'), cats.map((c) => chip(c, CAT_SHORT[c]))),
     h('div', { class: 'grid' }, list.map(gameCard)),
     h('p', { class: 'foot' }, 'Your scores and progress are saved on this device. They are results from these games, not a measure of intelligence or “brain age”.')), 'play');
@@ -156,16 +156,16 @@ async function gamePage(meta, q) {
     h('div', { class: 'bhero' }, posterEl(meta, 'banner'), h('a', { href: '#/', class: 'back' }, '← All games'), h('div', { class: 'bover' },
       h('span', { class: 'gcat', style: { '--c': catHue(meta.cat) } }, CAT_SHORT[meta.cat]), h('h1', {}, meta.title))),
     h('p', { class: 'lede' }, meta.play), h('p', { class: 'muted' }, h('b', {}, 'Trains: '), meta.skill),
-    from ? h('div', { class: 'banner' }, `🎯 ${from} challenged you${target ? ` to beat ${fmt(target)} points` : ''}. Same puzzles, same start. Go!`) : null,
-    daily ? h('div', { class: 'banner' }, hasDaily ? `Today’s run done: ${fmt(rec.daily[today])}. You can still beat it.` : '📅 Today’s seed: everyone gets the same puzzles.') : null,
+    from ? h('div', { class: 'banner' }, ic('missions', '🎯'), ` ${from} challenged you${target ? ` to beat ${fmt(target)} points` : ''}. Same puzzles, same start. Go!`) : null,
+    daily ? h('div', { class: 'banner' }, hasDaily ? `Today’s run done: ${fmt(rec.daily[today])}. You can still beat it.` : [ic('daily', '📅'), ' Today’s seed: everyone gets the same puzzles.']) : null,
     h('div', { class: 'actions' },
       h('button', { class: 'btn big', onclick: () => solo(game, meta, { daily, seed: seedQ, from, target }) }, daily ? '▶ Play today’s seed' : seedQ ? '▶ Accept challenge' : '▶ Play'),
-      h('button', { class: 'btn ghost', onclick: () => duelSetup(game, meta) }, '⚔ 2-player duel'),
-      !daily && !seedQ ? h('a', { class: 'btn ghost', href: `#/g/${meta.id}?daily=1` }, '📅 Daily seed') : null),
+      h('button', { class: 'btn ghost', onclick: () => duelSetup(game, meta) }, ic('duel', '⚔'), ' 2-player duel'),
+      !daily && !seedQ ? h('a', { class: 'btn ghost', href: `#/g/${meta.id}?daily=1` }, ic('daily', '📅'), ' Daily seed') : null),
     h('section', { class: 'cols' },
       h('div', { class: 'panel' }, h('h3', {}, 'How to play'), h('ol', {}, game.how.map((t) => h('li', {}, t))),
         h('button', { class: 'link', onclick: () => solo(game, meta, { forcePractice: true }) }, 'Replay the practice round')),
-      h('div', { class: 'panel' }, h('h3', {}, 'Your record ', h('span', { class: 'stars big' }, '★'.repeat(rec.stars || 0), h('i', {}, '★'.repeat(3 - (rec.stars || 0))))),
+      h('div', { class: 'panel' }, h('h3', {}, 'Your record ', starsEl(rec.stars || 0, 'stars big')),
         h('p', { class: 'muted' }, (rec.stars || 0) < 3 ? `Reach level ${starThresholds(game.max)[rec.stars || 0]} for ${'★'.repeat((rec.stars || 0) + 1)}.` : 'All three stars earned. Chase your best score.'),
         rec.plays ? h('div', { class: 'stats' }, h('div', {}, h('b', {}, rec.best.level), h('small', {}, 'best level')), h('div', {}, h('b', {}, fmt(rec.best.score)), h('small', {}, 'best score')), h('div', {}, h('b', {}, rec.plays), h('small', {}, 'runs'))) : h('p', { class: 'muted' }, 'No runs yet. Your first run starts with a short practice round.'),
         hist.length > 1 ? h('div', { class: 'sparkrow' }, spark(hist.map((x) => x.level)), h('small', { class: 'muted' }, 'level reached, last runs')) : null))), 'play');
@@ -180,6 +180,19 @@ function sessionScreen(meta, label) {
   root().replaceChildren(sess);
   const bgId = slug(CAT_SHORT[meta.cat] || ''); artManifest().then((m) => { if ((m.bg || []).includes(bgId)) sess.style.setProperty('--bgimg', `url("${new URL(`assets/bg/${bgId}.webp`, document.baseURI).href}")`); });
   return { stage, hud, overlay };
+}
+// ---------- art icons (fall back to emoji / text when an image is missing) ----------
+function ic(name, fb = '') { return globalThis.__UI?.has(name) ? h('img', { class: 'uic', src: `assets/ui/${name}.webp`, alt: '', draggable: 'false' }) : fb; }
+function starsEl(n, cls = 'stars') {
+  if (!globalThis.__UI?.has('star')) return h('span', { class: cls }, '★'.repeat(n), h('i', {}, '★'.repeat(3 - n)));
+  return h('span', { class: cls + ' img', 'aria-label': `${n} of 3 stars` }, [0, 1, 2].map((i) => h('img', { class: 'uic' + (i < n ? '' : ' off'), src: 'assets/ui/star.webp', alt: '' })));
+}
+function achCard(a, on) {
+  const B = globalThis.__BADGES;
+  if (!B?.has(a.id)) return h('div', { class: 'ach' + (on ? ' on' : '') }, h('b', {}, (on ? '🏅 ' : '🔒 ') + a.title), h('small', {}, a.desc));
+  return h('div', { class: 'ach wimg' + (on ? ' on' : '') },
+    h('span', { class: 'bwrap' }, h('img', { class: 'bdg', src: `assets/badges/${a.id}.webp`, alt: '', loading: 'lazy' }), !on && B.has('locked') ? h('img', { class: 'blk', src: 'assets/badges/locked.webp', alt: 'Locked' }) : null),
+    h('div', {}, h('b', {}, a.title), h('small', {}, a.desc)));
 }
 function callout(text, cls = '') { const el = h('div', { class: 'callout ' + cls, role: 'status' }, text); document.body.append(el); setTimeout(() => el.remove(), 1500); }
 function makeHost(meta, ui, settings, game) {
@@ -202,8 +215,8 @@ function makeHost(meta, ui, settings, game) {
       if (ok) { (bigWin ? audio.big() : audio.ok(o.stats.streak)); audio.buzz(bigWin ? [20, 40, 30] : 12); } else { audio.bad(); audio.buzz(60); }
       const r0 = ui.stage.getBoundingClientRect();
       if (bigWin) { music.duck(); callout(['Brilliant!', 'Nailed it!', 'Solved!', 'Masterful!'][o.stats.correct % 4], 'big'); burst(r0.left + r0.width / 2, r0.top + r0.height / 3, 46, settings.reduceMotion); }
-      else if (ok && !o.practice && [3, 5, 10, 15, 20, 25].includes(o.stats.streak)) { setTimeout(() => audio.streak(), 120); callout(`🔥 ${o.stats.streak} in a row!`, o.stats.streak >= 10 ? 'big' : ''); }
-      if (!o.practice && o.change === 1 && !settings.untimed) { while (starsNow < 3 && o.level >= th[starsNow]) { starsNow++; const n = starsNow; setTimeout(() => { audio.star(); music.duck(); callout(`${'★'.repeat(n)} Star ${n} unlocked!`, 'star'); burst(innerWidth / 2, innerHeight / 3, 50, settings.reduceMotion); }, 450); } }
+      else if (ok && !o.practice && [3, 5, 10, 15, 20, 25].includes(o.stats.streak)) { setTimeout(() => audio.streak(), 120); callout([ic('flame', '🔥'), ` ${o.stats.streak} in a row!`], o.stats.streak >= 10 ? 'big' : ''); }
+      if (!o.practice && o.change === 1 && !settings.untimed) { while (starsNow < 3 && o.level >= th[starsNow]) { starsNow++; const n = starsNow; setTimeout(() => { audio.star(); music.duck(); callout([...Array.from({ length: n }, () => ic('star', '★')), ` Star ${n} unlocked!`], 'star'); burst(innerWidth / 2, innerHeight / 3, 50, settings.reduceMotion); }, 450); } }
       const chip = h('div', { class: 'fb ' + (ok ? 'good' : 'bad') },
         h('b', {}, ok ? (o.practice ? 'Correct' : `+${fmt(o.gained)}`) : (res.timedOut ? 'Time' : 'Missed')),
         res.explain ? h('span', {}, res.explain) : null,
@@ -267,16 +280,16 @@ function results(game, meta, stats, res, o) {
   const sum = (game.summary ? game.summary(meta, stats) : '') || defaultSummary(meta, stats);
   const scoreEl = h('b', { class: 'big' }, '0');
   let versus = null;
-  if (o.target) versus = h('div', { class: 'banner ' + (stats.score >= o.target ? 'win' : '') }, stats.score >= o.target ? `🏆 You beat ${o.from}: ${fmt(stats.score)} vs ${fmt(o.target)}` : `${o.from} still leads: ${fmt(o.target)} vs your ${fmt(stats.score)}. Rematch?`);
+  if (o.target) versus = h('div', { class: 'banner ' + (stats.score >= o.target ? 'win' : '') }, stats.score >= o.target ? [ic('trophy', '🏆'), ` You beat ${o.from}: ${fmt(stats.score)} vs ${fmt(o.target)}`] : `${o.from} still leads: ${fmt(o.target)} vs your ${fmt(stats.score)}. Rematch?`);
   frame(h('div', { class: 'results' },
     h('div', { class: 'rhead rb' }, posterEl(meta, 'banner'), h('div', { class: 'bover' }, h('span', { class: 'muted' }, o.daily ? 'Daily run' : 'Run complete'), h('h1', {}, meta.title), scoreEl, h('small', {}, 'points'),
-      res.newBest ? h('span', { class: 'badge gold' }, '★ New personal best') : res.firstRun ? h('span', { class: 'badge' }, 'First run!') : null,
+      res.newBest ? h('span', { class: 'badge gold' }, ic('trophy', '★'), ' New personal best') : res.firstRun ? h('span', { class: 'badge' }, 'First run!') : null,
       stats.cleared ? h('span', { class: 'badge' }, 'Full clear +' + fmt(500 * stats.maxLevel)) : null)),
     versus,
     h('div', { class: 'tiles' },
       h('div', {}, h('b', {}, stats.maxLevel), h('small', {}, 'level reached')), h('div', {}, h('b', {}, acc + '%'), h('small', {}, 'correct')), h('div', {}, h('b', {}, stats.bestStreak), h('small', {}, 'best streak')),
       stats.rts.length ? h('div', {}, h('b', {}, (median(stats.rts) / 1000).toFixed(1) + 's'), h('small', {}, 'median time (correct)')) : null),
-    h('div', { class: 'starrow' }, [0, 1, 2].map((i) => h('i', { class: 'bigstar' + (i < res.stars ? ' on' : '') + (i >= res.stars - res.newStars && i < res.stars ? ' new' : '') }, '★')),
+    h('div', { class: 'starrow' }, [0, 1, 2].map((i) => h('i', { class: 'bigstar' + (i < res.stars ? ' on' : '') + (i >= res.stars - res.newStars && i < res.stars ? ' new' : '') }, ic('star', '★'))),
       h('small', {}, res.newStars ? `+${res.newStars} new star${res.newStars > 1 ? 's' : ''}!` : res.stars < 3 ? `Reach level ${starThresholds(game.max)[res.stars]} for the next star` : 'Mastered')),
     nearMiss(stats, res, game) ? h('div', { class: 'banner' }, nearMiss(stats, res, game)) : null,
     h('p', { class: 'summary' }, sum),
@@ -288,13 +301,13 @@ function results(game, meta, stats, res, o) {
       res.dailyBonus ? h('p', { class: 'up' }, 'Daily Workout complete: +100 XP') : null,
       res.comeback ? h('p', { class: 'up' }, 'Welcome back: double XP on this run!') : null,
       res.missionsDone.map((x) => h('p', { class: 'up' }, `✅ Mission done: ${x.text} (+50 XP)`)),
-      res.missionChest ? h('p', { class: 'up' }, '🎁 All three missions done: +150 XP') : null,
-      res.freezeEarned ? h('p', { class: 'up' }, `❄ Streak freeze earned (${res.freezes}/2). It protects your streak if you miss one day.`) : null,
-      res.freezeUsed ? h('p', { class: 'up' }, '❄ A streak freeze saved your streak!') : null),
-    res.newAch.length ? h('div', { class: 'achs' }, res.newAch.map((a) => h('div', { class: 'ach on' }, h('b', {}, '🏅 ', a.title), h('small', {}, a.desc)))) : null,
+      res.missionChest ? h('p', { class: 'up' }, ic('chest', '🎁'), ' All three missions done: +150 XP') : null,
+      res.freezeEarned ? h('p', { class: 'up' }, ic('freeze', '❄'), ` Streak freeze earned (${res.freezes}/2). It protects your streak if you miss one day.`) : null,
+      res.freezeUsed ? h('p', { class: 'up' }, ic('freeze', '❄'), ' A streak freeze saved your streak!') : null),
+    res.newAch.length ? h('div', { class: 'achs' }, res.newAch.map((a) => achCard(a, true))) : null,
     h('div', { class: 'actions' },
       h('button', { class: 'btn big', onclick: () => solo(game, meta, o.daily ? { daily: true } : {}) }, '↻ Play again'),
-      h('button', { class: 'btn ghost', onclick: () => share(`I scored ${fmt(stats.score)} on ${meta.title} (level ${stats.maxLevel}). Beat me:`, challengeUrl(meta, o.seed, stats.score)) }, '🎯 Challenge a friend'),
+      h('button', { class: 'btn ghost', onclick: () => share(`I scored ${fmt(stats.score)} on ${meta.title} (level ${stats.maxLevel}). Beat me:`, challengeUrl(meta, o.seed, stats.score)) }, ic('missions', '🎯'), ' Challenge a friend'),
       h('a', { class: 'btn ghost', href: '#/' }, 'All games')),
     upNext(meta, o)), 'play');
   countUp(scoreEl, stats.score);
@@ -319,7 +332,7 @@ function upNext(meta, o) {
 // ---------- two-player duel (same seed, pass the phone) ----------
 function duelSetup(game, meta) {
   const p = getProfile(), a = h('input', { value: p.name, maxlength: 14, 'aria-label': 'Player 1 name' }), b = h('input', { value: p.settings.name2, maxlength: 14, 'aria-label': 'Player 2 name' });
-  const dlg = h('dialog', { class: 'sheet' }, h('h3', {}, '⚔ 2-player duel'), h('p', { class: 'muted' }, 'Same puzzles for both. Play one after the other on this device, highest score wins.'),
+  const dlg = h('dialog', { class: 'sheet' }, h('h3', {}, ic('duel', '⚔'), ' 2-player duel'), h('p', { class: 'muted' }, 'Same puzzles for both. Play one after the other on this device, highest score wins.'),
     h('label', {}, 'Player 1', a), h('label', {}, 'Player 2', b),
     h('div', { class: 'actions' }, h('button', { class: 'btn', onclick: () => { const pp = getProfile(); pp.name = a.value.trim() || 'Player 1'; pp.settings.name2 = b.value.trim() || 'Player 2'; saveProfile(pp); dlg.close(); duel(game, meta, [pp.name, pp.settings.name2]); } }, 'Start'), h('button', { class: 'btn ghost', onclick: () => dlg.close() }, 'Cancel')));
   dlg.addEventListener('close', () => dlg.remove()); document.body.append(dlg); dlg.showModal();
@@ -337,7 +350,7 @@ async function duel(game, meta, names) {
   const p = getProfile(); p.totals.duels++; p.xp += 40;
   const ach = ACHIEVEMENTS.find((x) => x.id === 'duel'); if (!p.ach.duel && ach) p.ach.duel = Date.now(); saveProfile(p);
   const [s1, s2] = rs, w = s1.score === s2.score ? -1 : s1.score > s2.score ? 0 : 1;
-  const col = (i) => h('div', { class: 'dcol' + (w === i ? ' win' : '') }, w === i ? h('span', { class: 'crown' }, '👑') : null, h('h3', {}, names[i]), h('b', { class: 'big' }, fmt(rs[i].score)), h('small', {}, `Level ${rs[i].maxLevel} · ${rs[i].correct}/${rs[i].trials} correct`));
+  const col = (i) => h('div', { class: 'dcol' + (w === i ? ' win' : '') }, w === i ? h('span', { class: 'crown' }, ic('trophy', '👑')) : null, h('h3', {}, names[i]), h('b', { class: 'big' }, fmt(rs[i].score)), h('small', {}, `Level ${rs[i].maxLevel} · ${rs[i].correct}/${rs[i].trials} correct`));
   frame(h('div', { class: 'results' }, h('h1', {}, w < 0 ? 'A tie!' : `${names[w]} wins!`), h('div', { class: 'duelrow' }, col(0), col(1)),
     h('div', { class: 'actions' }, h('button', { class: 'btn big', onclick: () => duel(game, meta, names) }, '↻ Rematch'), h('a', { class: 'btn ghost', href: `#/g/${meta.id}` }, 'Back'))), 'play');
   audio.win(); burst(innerWidth / 2, 200, 70, getProfile().settings.reduceMotion);
@@ -359,11 +372,11 @@ function progress() {
     h('div', { class: 'tiles' }, h('div', {}, h('b', {}, `Lv ${lvl}`), h('small', {}, titleFor(lvl))), h('div', {}, h('b', {}, fmt(p.xp)), h('small', {}, `XP · ${fmt(hi - p.xp)} to next`)), h('div', {}, h('b', {}, p.streak.count), h('small', {}, `day streak · best ${p.bestStreak}${p.freezes ? ` · ❄${p.freezes}` : ''}`)), h('div', {}, h('b', {}, `★ ${totalStars(GAMES.map((g) => g.id))}`), h('small', {}, `of ${GAMES.length * 3} stars`)), h('div', {}, h('b', {}, fmt(p.totals.trials)), h('small', {}, 'trials played'))),
     h('h2', { class: 'sec' }, 'Skill map ', h('small', {}, 'share of mastery stars earned in each area')),
     h('div', { class: 'skillmap' }, catsAll().map((c) => { const gs = live().filter((g) => g.cat === c), st = gs.reduce((a, g) => a + (getGameRec(g.id).stars || 0), 0), pct = Math.round((100 * st) / (3 * gs.length));
-      return h('a', { class: 'skill', href: '#/', onclick: () => { FILTER = c; } }, h('span', {}, CAT_SHORT[c]), h('i', { class: 'mbar', style: { '--c': catHue(c) } }, h('u', { style: { width: pct + '%' } })), h('small', {}, `${st}/${3 * gs.length} ★`)); })),
+      return h('a', { class: 'skill', href: '#/', onclick: () => { FILTER = c; } }, h('span', {}, CAT_SHORT[c]), h('i', { class: 'mbar', style: { '--c': catHue(c) } }, h('u', { style: { width: pct + '%' } })), h('small', {}, `${st}/${3 * gs.length} `, ic('star', '★'))); })),
     h('h2', { class: 'sec' }, 'Last 4 weeks'), h('div', { class: 'heat' }, days.map(([k, n]) => h('i', { title: `${k}: ${n} run${n === 1 ? '' : 's'}`, class: 'd' + Math.min(4, n) }))),
     h('h2', { class: 'sec' }, 'Your games'), played.length ? h('div', { class: 'plist' }, played.map(row)) : h('p', { class: 'muted' }, 'Play a game and your results appear here.'),
     h('h2', { class: 'sec' }, 'Badges ', h('small', {}, `${Object.keys(p.ach).length}/${ACHIEVEMENTS.length}`)),
-    h('div', { class: 'achs' }, ACHIEVEMENTS.map((a) => h('div', { class: 'ach' + (p.ach[a.id] ? ' on' : '') }, h('b', {}, (p.ach[a.id] ? '🏅 ' : '🔒 ') + a.title), h('small', {}, a.desc)))),
+    h('div', { class: 'achs' }, ACHIEVEMENTS.map((a) => achCard(a, !!p.ach[a.id]))),
     h('p', { class: 'foot' }, 'These numbers describe how you did in these games on this device. They are not an IQ, a “brain age”, or evidence of improvement outside the games.')), 'progress');
 }
 
