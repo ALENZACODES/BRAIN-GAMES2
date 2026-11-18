@@ -185,7 +185,7 @@ export const G = [
       const pool = lv >= 6 ? pairs : pairs.filter(([i, j]) => j === i + 1); let cand = perm; const used = [];
       for (const [i, j] of rng.shuffle(pool)) { const f = (p) => p.indexOf(i) < p.indexOf(j); const nc = cand.filter(f); if (nc.length < cand.length) { used.push([i, j]); cand = nc; } if (cand.length === 1) break; }
       for (const [i, j] of pairs) { if (cand.length === 1) break; const nc = cand.filter((p) => p.indexOf(i) < p.indexOf(j)); if (nc.length < cand.length) { used.push([i, j]); cand = nc; } }
-      return { kind: 'order', promptHtml: `<span class="memo list">${rng.shuffle(used).map(([i, j]) => `<span>👁 ${L[i]} … ${L[j]}  (left → right)</span>`).join('')}</span>`, items: rng.shuffle(range(k)).map((i) => ({ label: L[i], value: i })), answer: range(k), prompt: 'Left to right' };
+      return { kind: 'order', promptHtml: `<span class="memo list">${rng.shuffle(used).map(([i, j]) => `<span>👁 ${L[i]} … ${L[j]}  (left → right)</span>`).join('')}</span>`, items: rng.shuffle(range(k)).map((i) => ({ label: L[i], value: i })), answer: range(k), prompt: 'Left to right', cols: 3 };
     } }),
   std({ num: 158, title: 'Tile Navigation', max: 12,
     how: ['A robot starts on the star, facing UP.', 'Commands are relative to the way it faces: F = forward one, L/R = turn left/right on the spot.', 'Tap where it ends. Longer programs as you improve.'],

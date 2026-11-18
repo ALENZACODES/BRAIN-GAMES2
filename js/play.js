@@ -108,7 +108,7 @@ function kSequence(t, ctx, game) {
     const back = () => { if (done) return; const i = picks.pop(); if (i != null) btns[i].classList.remove('used'); draw(); };
     const onKey = (e) => { if (e.repeat) return; if (/^[1-9]$/.test(e.key) && +e.key <= pal.length && pal.length <= 9 && !t.textItems) press(+e.key - 1); else if (e.key === 'Backspace') back(); };
     btns.forEach((b, i) => b.addEventListener('click', () => press(i))); undo.addEventListener('click', back); document.addEventListener('keydown', onKey);
-    ctx.stage.replaceChildren(h('div', { class: 'trial' }, status, slots, h('div', { class: 'palette' + (t.textItems ? ' text' : ''), style: { '--cols': t.cols || (t.textItems ? 1 : Math.min(5, pal.length + 1)) } }, btns, undo),
+    ctx.stage.replaceChildren(h('div', { class: 'trial' }, t.promptHtml ? rich(t.promptHtml, 'rich big') : null, status, slots, h('div', { class: 'palette' + (t.textItems ? ' text' : ''), style: { '--cols': t.cols || (t.textItems ? 1 : Math.min(5, pal.length + 1)) } }, btns, undo),
       ctx.practice && t.hint ? h('p', { class: 'hint' }, t.hint) : null));
     draw();
   });

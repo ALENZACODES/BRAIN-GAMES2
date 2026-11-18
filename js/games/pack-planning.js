@@ -3,7 +3,7 @@ import { std, runTrial } from '../play.js';
 import { h, now, audio } from '../engine.js';
 import { tok, card, mc, numOpts, yesNo, HUES, range, sum, permutations } from '../gfx.js';
 
-const L = 'ABCDEFGH';
+const L = 'ABCEFGHJ';   // no D: D is the depot
 const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
 const routeLen = (pts, depot, order) => { let d = 0, cur = depot; for (const i of order) { d += dist(cur, pts[i]); cur = pts[i]; } return d + dist(cur, depot); };
 const hm = (m) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
@@ -27,9 +27,19 @@ export const G = [
   std({ num: 121, title: 'Delivery Planner', max: 12,
     how: ['Start at the depot (D), visit every drop-off point, and return to the depot.', 'Tap the points in the order you would visit them.', 'Your route must be within the distance budget, which gets tighter as you improve.'],
     makeTrial(rng, lv) {
-      const k = Math.min(7, 3 + Math.floor(lv / 2)), pts = []; while (pts.length < k) { const p = [rng.int(1, 9), rng.int(1, 9)]; if (!pts.some((q) => dist(p, q) < 1.6) && dist(p, [5, 5]) > 1.5) pts.push(p); }
-      const depot = [5, 5]; let best = null, bl = 1e9; for (const o of permutations(range(k))) { const d = routeLen(pts, depot, o); if (d < bl - 1e-9) { bl = d; best = o; } }
-      const slack = Math.max(0.03, 0.25 - lv * 0.02), budget = +(bl * (1 + slack)).toFixed(1);
+      const k = Math.min(7, 3 + Math.floor(lv / 2)), depot = [5, 5], slack = Math.max(0.03, 0.25 - lv * 0.02);
+      // pick a map where order matters: at least 40% of visiting orders must go over budget
+      // (keeps the map where the most orders fail if none reaches that)
+      let pts, best, bl, budget, keep = null;
+      for (let tries = 0; tries < 60; tries++) {
+        const P = []; while (P.length < k) { const p = [rng.int(1, 9), rng.int(1, 9)]; if (!P.some((q) => dist(p, q) < 1.6) && dist(p, [5, 5]) > 1.5) P.push(p); }
+        const lens = permutations(range(k)).map((o) => [o, routeLen(P, depot, o)]);
+        let b = null, l = 1e9; for (const [o, d] of lens) if (d < l - 1e-9) { l = d; b = o; }
+        const bud = +(l * (1 + slack)).toFixed(1), share = lens.filter(([, d]) => d <= bud + 1e-9).length / lens.length;
+        if (!keep || share < keep.share) keep = { share, P, b, l, bud };
+        if (share <= 0.6) break;
+      }
+      ({ P: pts, b: best, l: bl, bud: budget } = keep);
       const svg = `<svg viewBox="0 0 100 100" class="gl mapsvg"><rect width="100" height="100" rx="8" fill="rgba(255,255,255,.04)"/>${range(11).map((i) => `<path d="M${i * 10} 0V100M0 ${i * 10}H100" stroke="rgba(255,255,255,.05)"/>`).join('')}<rect x="44" y="44" width="12" height="12" rx="3" fill="#7ef0ff"/><text x="50" y="53.5" text-anchor="middle" font-size="8" font-weight="900" fill="#041a1f">D</text>${pts.map((p, i) => `<circle cx="${p[0] * 10}" cy="${p[1] * 10}" r="5.5" fill="#ff7ac6"/><text x="${p[0] * 10}" y="${p[1] * 10 + 3}" text-anchor="middle" font-size="7" font-weight="900" fill="#150f2c">${L[i]}</text>`).join('')}</svg>`;
       return { kind: 'order', promptHtml: `${svg}<span class="rule">Budget: ${budget} km (best possible ${bl.toFixed(1)} km)</span>`, items: range(k).map((i) => ({ label: L[i], value: i })), answer: best, pts, depot, budget, prompt: 'Tap stops in visiting order' };
     },

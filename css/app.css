@@ -352,3 +352,12 @@ input[type=text],input:not([type]),textarea{width:100%;margin-top:4px;padding:12
 .tier{display:inline-block;padding:1px 8px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.04em;vertical-align:middle;margin-left:4px}
 .t-bronze{background:#cd7f3233;color:#e8a46a}.t-silver{background:#c0c8d633;color:#dfe6f2}.t-gold{background:#ffc94a33;color:#ffd76a}.t-diamond{background:#7fe8ff33;color:#a8f1ff}
 .daily .actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+/* compact empty order rows so long story/recipe lists keep the items on screen */
+.seqslots.text{gap:5px}
+.seqslots.text i:empty{min-height:28px;padding:3px 12px 3px 26px}
+.seqslots.text i:empty::before{top:7px}
+.trial:has(.seqslots.text i:nth-child(6)) .palette.text .opt.pal{min-height:40px;padding:6px 12px}
+/* clue cards on ordering screens stay compact so the buttons remain on screen */
+.trial:has(.seqslots) > .rich .memo.list{padding:8px 12px;gap:0}
+.trial:has(.seqslots) > .rich .memo.list span{font-size:13px;line-height:1.3}
+.trial:has(.seqslots) > .rich .mapsvg{max-height:230px}

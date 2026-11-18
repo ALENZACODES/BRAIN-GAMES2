@@ -278,10 +278,10 @@ export async function runSession(game, opts, host) {
     const onVis = () => { if (document.hidden) ctx.hidden = true; };
     document.addEventListener('visibilitychange', onVis);
     host.stage.replaceChildren();
-    try { return await game.play(trial, ctx); } finally { document.removeEventListener('visibilitychange', onVis); if (ctx.hidden) ctx.wasHidden = true; base._ctx = ctx; }
+    try { if (globalThis.__QA) { __QA.native = trial; __QA.nseq = (__QA.nseq || 0) + 1; } return await game.play(trial, ctx); } finally { document.removeEventListener('visibilitychange', onVis); if (ctx.hidden) ctx.wasHidden = true; base._ctx = ctx; }
   };
 
-  if (practice) {
+  if (practice && (game.practiceTrials ?? 2) > 0) {
     host.setPractice(true);
     for (let p = 0; p < (game.practiceTrials ?? 2) && host.alive(); p++) {
       const rng = new RNG(`${seed}:practice:${p}`);

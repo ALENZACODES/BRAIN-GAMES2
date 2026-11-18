@@ -61,11 +61,13 @@ export default {
     // rotate the entry arrow to the beam direction
     { const s = logic.portStart(n, trial.entry), a = Math.atan2(s.dr, s.dc) * 180 / Math.PI, { x, y } = portPos(trial.entry); gates[trial.entry].querySelector('text').setAttribute('transform', `rotate(${a} ${x} ${y})`); }
     ctx.stage.replaceChildren(h('div', { class: 'trial' }, tb.bar, status, h('div', { class: 'mazewrap' }, svg), ctx.practice ? h('p', { class: 'hint' }, 'Practice: a "/" mirror turns a beam heading right into one heading up.') : null));
+    // the answer promise exists before any gate can be tapped, so an early tap is never lost
     let t0 = now(), resolve, to, done = false;
+    const answered = new Promise((r) => { resolve = r; });
     const pick = (p) => { if (done) return; done = true; clearTimeout(to); tb.stop(); audio.tap(); resolve(p); };
     await new Promise((r) => requestAnimationFrame(r));
-    t0 = now(); tb.start();
-    const choice = await new Promise((r) => { resolve = r; to = setTimeout(() => { done = true; r(null); }, ctx.settings.untimed ? 1e9 : trial.timeMs); });
+    if (!done) { t0 = now(); tb.start(); to = setTimeout(() => { if (done) return; done = true; resolve(null); }, ctx.settings.untimed ? 1e9 : trial.timeMs); }
+    const choice = await answered;
     const rt = now() - t0, correct = choice === trial.exit;
     const poly = trial.pts.map(([x, y]) => `${pad + x * cs},${pad + y * cs}`).join(' ');
     const path = document.createElementNS(ns, 'polyline'); path.setAttribute('points', poly); path.setAttribute('class', 'beam'); svg.insertBefore(path, svg.querySelector('.gate'));
